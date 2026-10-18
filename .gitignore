@@ -1,0 +1,11 @@
+.venv/
+data/
+.cache/
+__pycache__/
+*.pyc
+tmp/
+output/pdf/
+artifacts/
+*.log
+.env*
+!.env.example
