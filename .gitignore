@@ -6,6 +6,7 @@ __pycache__/
 tmp/
 output/pdf/*
 !output/pdf/sc4001_j_pilot_report_zh.pdf
+!output/pdf/sc4001_j_preliminary_report_en.pdf
 artifacts/
 *.log
 .env*

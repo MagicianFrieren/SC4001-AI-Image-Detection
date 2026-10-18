@@ -57,7 +57,7 @@ def main():
         ax.spines[['top','right']].set_visible(False)
     axes[0].set_ylabel('AUROC')
     axes[0].legend(loc='lower left',frameon=False,fontsize=8)
-    fig.suptitle('SC4001 feasibility pilot: 100 real + 100 fake per comparison')
+    fig.suptitle('Cross-generator AI image detection: development results')
     fig.text(0.5,0.015,'Exploratory subset, one training seed; shared real pool. Dotted line: chance ranking.',ha='center',fontsize=9)
     fig.tight_layout(rect=[0,0.04,1,0.95])
     fig.savefig(folder/'pilot_auroc.png',dpi=180)

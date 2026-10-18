@@ -1,10 +1,9 @@
 # SC4001 AI Image Detection
 
-Run a small cross-generator experiment before committing to project direction J.
-This repository contains the local feasibility pilot, its data manifest, and measured results.
+A frozen-CLIP baseline for evaluating cross-generator AI image detection.
+This repository contains a preliminary experiment, its data manifest, and measured results.
 
-For group discussion, read the [two-page Chinese pilot report](output/pdf/sc4001_j_pilot_report_zh.pdf).
-The [Chinese message draft](output/sc4001_j_group_message_zh.txt) provides a short introduction you can forward.
+Read the [preliminary experimental report](output/pdf/sc4001_j_preliminary_report_en.pdf) for the method, results, limitations, and proposed follow-up experiments.
 
 ## Measured results
 
@@ -28,7 +27,7 @@ The full metric table includes both variants and diagnostic classifiers.
 
 ![AUROC for clean and augmented training across three generators and three image conditions](results/pilot_auroc.png)
 
-The pipeline is affordable on this laptop, but this baseline does not demonstrate cross-generator generalization.
+This baseline does not demonstrate cross-generator generalization.
 Dataset bias also needs attention: original dimensions alone yield 0.9100 AUROC on SD1.5.
 All selected real sources are JPEG; generated sources are PNG.
 SD1.5 images are 512 pixels square; BigGAN images are 128; ADM images are 256.
