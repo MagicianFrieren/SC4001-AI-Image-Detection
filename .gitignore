@@ -4,7 +4,8 @@ data/
 __pycache__/
 *.pyc
 tmp/
-output/pdf/
+output/pdf/*
+!output/pdf/sc4001_j_pilot_report_zh.pdf
 artifacts/
 *.log
 .env*

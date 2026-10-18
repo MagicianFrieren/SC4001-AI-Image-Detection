@@ -3,6 +3,9 @@
 Run a small cross-generator experiment before committing to project direction J.
 This repository contains the local feasibility pilot, its data manifest, and measured results.
 
+For group discussion, read the [two-page Chinese pilot report](output/pdf/sc4001_j_pilot_report_zh.pdf).
+The [Chinese message draft](output/sc4001_j_group_message_zh.txt) provides a short introduction you can forward.
+
 ## Measured results
 
 The RTX 4050 run completed feature extraction and evaluation in 64.4 seconds.
