@@ -4,7 +4,7 @@
   "model_revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
   "model_weight_sha256": "a63082132ba4f97a80bea76823f544493bffa8082296d62d71581a4feff1576f",
   "feature_dimension": 512,
-  "manifest_sha256": "265010a4e7be817cf9d57898029654a1acd4b17dee33f78438618c3d868d251b",
+  "manifest_sha256": "e9fcc837ae484b084691a57b803db9af2bd0eef21f45cb9d7606d665fdc8dae0",
   "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU",
   "torch": "2.2.0+cu121",
   "sklearn": "1.8.0",

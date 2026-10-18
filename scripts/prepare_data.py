@@ -130,7 +130,7 @@ def main():
             offset += count
     result = ROOT/'results'
     result.mkdir(exist_ok=True)
-    with (result/'manifest.jsonl').open('w', encoding='utf-8') as handle:
+    with (result/'manifest.jsonl').open('w', encoding='utf-8', newline='\n') as handle:
         for row in selected:
             handle.write(json.dumps(row)+'\n')
     metadata = {'dataset': DATASET, 'revision': REVISION, 'source_split': 'train',

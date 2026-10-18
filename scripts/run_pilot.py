@@ -203,7 +203,7 @@ def main():
     folder = ROOT/'results'
     for filename, rows in [('metrics.csv',metrics), ('predictions.csv',predictions)]:
         with (folder/filename).open('w', newline='', encoding='utf-8') as handle:
-            writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
+            writer = csv.DictWriter(handle, fieldnames=list(rows[0]), lineterminator='\n')
             writer.writeheader()
             writer.writerows(rows)
     import joblib
