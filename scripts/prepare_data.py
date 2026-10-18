@@ -32,12 +32,25 @@ def download_shard(info):
     if not destination.exists():
         url = f'https://huggingface.co/datasets/{DATASET}/resolve/{REVISION}/{info["path"]}'
         print(f'Downloading {destination.name} ({info["size"]/1e6:.0f} MB)', flush=True)
-        with requests.get(url, stream=True, timeout=(30, 90)) as response:
+        partial = destination.with_suffix('.ranged.part')
+        with partial.open('wb') as handle:
+            handle.truncate(info['size'])
+        def fetch(start):
+            end = min(start+16*1024*1024, info['size'])-1
+            response = requests.get(url, headers={'Range':f'bytes={start}-{end}'}, timeout=(30,60))
             response.raise_for_status()
-            partial = destination.with_suffix('.parquet.part')
-            with partial.open('wb') as handle:
-                for chunk in response.iter_content(1024*1024):
-                    handle.write(chunk)
+            assert response.status_code==206 and len(response.content)==end-start+1
+            assert response.headers['Content-Range'].startswith(f'bytes {start}-{end}/')
+            with partial.open('r+b') as handle:
+                handle.seek(start)
+                handle.write(response.content)
+        with futures.ThreadPoolExecutor(max_workers=3) as executor:
+            jobs = [executor.submit(fetch,start) for start in range(0,info['size'],16*1024*1024)]
+            for i, job in enumerate(futures.as_completed(jobs),1):
+                job.result()
+                if i%10==0:
+                    print(f'{destination.name}: {i}/{len(jobs)} blocks',flush=True)
+        assert sha256(partial)==info['lfs']['oid'], f'Checksum mismatch: {destination}'
         partial.replace(destination)
     actual = sha256(destination)
     assert actual == info['lfs']['oid'], f'Checksum mismatch: {destination}'

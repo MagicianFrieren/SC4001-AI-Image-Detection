@@ -3,6 +3,38 @@
 Run a small cross-generator experiment before committing to project direction J.
 This repository contains the local feasibility pilot, its data manifest, and measured results.
 
+## Measured results
+
+The RTX 4050 run completed feature extraction and evaluation in 64.4 seconds.
+Feature extraction took 48.1 seconds; peak PyTorch GPU allocation was 239 MB.
+This excludes data preparation, environment setup, and the earlier weight download.
+The successful data-preparation run took 210.9 seconds, including reused downloads.
+
+Clean-trained CLIP achieved these AUROC scores; random ranking scores 0.5.
+Each cell compares 100 real images with 100 generated images.
+
+| Generator | Clean | JPEG50 | Half-resolution |
+|---|---:|---:|---:|
+| SD1.5, seen during training | 0.9669 | 0.8803 | 0.9445 |
+| BigGAN, unseen during training | 0.4709 | 0.3975 | 0.4881 |
+| ADM, unseen during training | 0.5596 | 0.3349 | 0.5626 |
+
+Augmented training raised SD1.5 JPEG50 AUROC to 0.8899.
+It did not consistently improve unseen-generator results.
+The full metric table includes both variants and diagnostic classifiers.
+
+![AUROC for clean and augmented training across three generators and three image conditions](results/pilot_auroc.png)
+
+The pipeline is affordable on this laptop, but this baseline does not demonstrate cross-generator generalization.
+Dataset bias also needs attention: original dimensions alone yield 0.9100 AUROC on SD1.5.
+All selected real sources are JPEG; generated sources are PNG.
+SD1.5 images are 512 pixels square; BigGAN images are 128; ADM images are 256.
+Uniform model inputs do not erase their different processing histories.
+These diagnostics identify confounds; they do not prove which cues CLIP used.
+
+Before developing fusion, test a source-controlled protocol and an additional training generator.
+Keep these exploratory generators separate from any future final evaluation.
+
 ## Run the pilot
 
 Use Python 3.12 and an NVIDIA GPU with a compatible driver.
@@ -14,6 +46,7 @@ py -3.12 -m venv .venv
 ./.venv/Scripts/python.exe -m pip install -r requirements.txt
 ./.venv/Scripts/python.exe -u scripts/prepare_data.py
 ./.venv/Scripts/python.exe -u scripts/run_pilot.py --batch-size 32
+./.venv/Scripts/python.exe scripts/summarize_results.py
 ```
 
 The original run reused installed PyTorch through `venv --system-site-packages`.
@@ -53,6 +86,7 @@ Raw images are excluded from Git.
 
 The script pins the dataset revision and verifies four source shards by SHA-256.
 It samples those shards with seed `20261018`.
+The four shards total approximately 1.90 GB; model weights add 605 MB.
 It removes matching decoded pixels and matching normalized crops before splitting.
 It also rejects difference hashes within three bits of an earlier image.
 This heuristic catches some near-duplicates; it cannot establish semantic independence.
@@ -70,6 +104,9 @@ The CLIP classifier never receives source paths, dimensions, or generator labels
 | `results/metrics.csv` | Scores for each model, generator, and transformation |
 | `results/predictions.csv` | Per-image development predictions |
 | `results/run_metadata.json` | Hardware, revisions, timings, settings, and limitations |
+| `results/verification.json` | Independent metric checks and source-format audit |
+| `results/pilot_auroc.png` | AUROC chart for both CLIP training variants |
+| `results/environment.json` | Package versions used for the measured run |
 | `artifacts/linear_heads.joblib` | Locally saved classifiers |
 
 The feature cache checks the manifest and preprocessing identity before reuse.

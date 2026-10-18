@@ -52,7 +52,7 @@ def main():
         ax.axhline(0.5,color='#bbbbbb',linestyle=':',linewidth=1)
         ax.set_title(generator+(' (seen)' if generator=='SD15' else ' (unseen)'))
         ax.set_xticks(range(3),['Clean','JPEG 50','Resize 0.5x'])
-        ax.set_ylim(0.4,1.02)
+        ax.set_ylim(0,1.02)
         ax.grid(axis='y',alpha=0.2)
         ax.spines[['top','right']].set_visible(False)
     axes[0].set_ylabel('AUROC')

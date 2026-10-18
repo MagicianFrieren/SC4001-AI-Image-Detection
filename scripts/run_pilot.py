@@ -27,6 +27,7 @@ from transformers import CLIPVisionModelWithProjection
 
 MODEL = 'openai/clip-vit-base-patch32'
 MODEL_REVISION = '3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268'
+MODEL_SHA256 = 'a63082132ba4f97a80bea76823f544493bffa8082296d62d71581a4feff1576f'
 SEED = 20261018
 CONDITIONS = ['clean', 'jpeg70', 'jpeg50', 'resize05']
 MEAN = np.array([0.48145466, 0.4578275, 0.40821073], dtype=np.float32)
@@ -48,6 +49,8 @@ def download_model():
                 for chunk in response.iter_content(1024*1024):
                     handle.write(chunk)
         destination.with_suffix(destination.suffix + '.part').replace(destination)
+    with (folder/'pytorch_model.bin').open('rb') as handle:
+        assert hashlib.file_digest(handle,'sha256').hexdigest()==MODEL_SHA256, 'Model checksum mismatch'
     return folder
 
 
@@ -206,6 +209,7 @@ def main():
     import joblib
     joblib.dump(saved_heads, ROOT/'artifacts'/'linear_heads.joblib')
     metadata = {'seed':SEED, 'model':MODEL, 'model_revision':MODEL_REVISION,
+                'model_weight_sha256':MODEL_SHA256,'feature_dimension':512,
                 'manifest_sha256':hashlib.sha256(manifest.read_bytes()).hexdigest(),
                 'gpu':torch.cuda.get_device_name(0) if torch.cuda.is_available() else None,
                 'torch':torch.__version__, 'sklearn':sklearn.__version__, 'python':platform.python_version(),

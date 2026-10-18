@@ -1,0 +1,80 @@
+{
+  "dataset": "TheKernel01/Tiny-GenImage",
+  "revision": "89c4fe9efd0ebc7ce5c7641ef57d578ccd639c69",
+  "source_split": "train",
+  "seed": 20261018,
+  "shards": [
+    0,
+    4,
+    8,
+    12
+  ],
+  "source_shards": [
+    {
+      "type": "file",
+      "oid": "b0ee1f8c1ef533b943bcf4df88feb20eed772da4",
+      "size": 477111524,
+      "lfs": {
+        "oid": "27cfe6c9f36c97246107bd7e54f0ddf55c8584833d7843d96f6674e6536140ce",
+        "size": 477111524,
+        "pointerSize": 134
+      },
+      "xetHash": "6babc8843a2128be29d741892c388ad0c08a5b67ddd192a16d1929b44da1e986",
+      "path": "data/train-00000-of-00014.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "700493e7403c7fe07b2a6ab1d3d4b3a3c1d7e205",
+      "size": 496744353,
+      "lfs": {
+        "oid": "ddd3d8bb10997ea93dfc09bd0fe53a5f41851ddcf0e30c1718070086025875d3",
+        "size": 496744353,
+        "pointerSize": 134
+      },
+      "xetHash": "ac0d4208c8631763fd4060d8c4dff2aa9f3ba91e01038535edec8bcd18f5129c",
+      "path": "data/train-00004-of-00014.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "dc14e8ed214f829accf2415c65f750077dbf1853",
+      "size": 459604947,
+      "lfs": {
+        "oid": "3aeda2590afb21f04530dd0ed65581a7c8ddaa0aecd6fb98dbb7965efa3fe05d",
+        "size": 459604947,
+        "pointerSize": 134
+      },
+      "xetHash": "4de457dd093f2ebc948e6e62f61910ac96bf11bbe300938279463dce9a94dab7",
+      "path": "data/train-00008-of-00014.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "cf4d889c1b20ebc230dc149ff16f41957f96f0a8",
+      "size": 467135306,
+      "lfs": {
+        "oid": "31cb1c6e05b6c1068069588438b4d03f3de69c3228d0f5ef55bf778007d4f3bc",
+        "size": 467135306,
+        "pointerSize": 134
+      },
+      "xetHash": "2858933079cf8c19321568ef430f47a51b3197af3f8384378ac9668ab8a79751",
+      "path": "data/train-00012-of-00014.parquet"
+    }
+  ],
+  "selected": 1200,
+  "unique_candidates": 5713,
+  "removed_duplicates": {
+    "dhash_distance_le_3": 2
+  },
+  "counts": {
+    "train/Real": 300,
+    "validation/Real": 100,
+    "development/Real": 100,
+    "development/ADM": 100,
+    "development/BigGAN": 100,
+    "train/SD15": 300,
+    "validation/SD15": 100,
+    "development/SD15": 100
+  },
+  "seconds": 210.85374240000237,
+  "sampling": "Fixed four spread-out shards; random candidate ordering and split assignment; not a representative global benchmark.",
+  "note": "Third-party Tiny-GenImage; generator labels inherited, not independently authenticated. All evaluation is exploratory development, not final blind testing."
+}
