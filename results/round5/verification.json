@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "metric_cells": 720,
+  "aggregate_cells": 432,
+  "gates_reconstructed": 48,
+  "experts_refit": 8,
+  "temperatures_independently_optimized": 8,
+  "paired_contrasts": 648,
+  "max_numpy_vs_torch_alpha_error": 3.5762786865234375e-07,
+  "checks": [
+    "Five disjoint original-level partitions; all four arms use identical data",
+    "Weighted expert refits; clean expert logits match round4",
+    "Raw branch inputs rebound to source feature rows",
+    "Temperatures independently checked by convex inverse-temperature gradient root",
+    "Held-out expert ranking invariant to temperature",
+    "Gate scaler and variance scaling checked; early stopping histories verified",
+    "48 gates reconstructed with NumPy; all fixed weights and thresholds reselected from validation",
+    "All AUROC/AP/BCE/Brier/BA/FPR/weight metrics recomputed"
+  ],
+  "scope": "Saved artifact verification plus expert refits/calibration optimization; gate training not independently repeated"
+}

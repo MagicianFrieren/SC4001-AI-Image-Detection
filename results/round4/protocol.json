@@ -1,0 +1,78 @@
+{
+  "id": "round4_disjoint_quality_gate",
+  "created_utc": "2026-10-22T15:28:22.153606+00:00",
+  "question": "Does quality information add useful gating beyond expert scores and local-view variability?",
+  "manifest_sha256": "c98c84990f2499920ab8b408771817a5500a6893193a177c73360d09d1c6d1f5",
+  "partition_seed": 20261022,
+  "partitions": {
+    "expert_train": "200 Real + 100 SD15 + 100 BigGAN, clean only",
+    "gate_train": "100 Real + 50 SD15 + 50 BigGAN; disjoint from experts",
+    "validation": "100 Real + 50 SD15 + 50 BigGAN, unchanged",
+    "development": "Original 400 images, unchanged; ADM never trains or selects models"
+  },
+  "profiles": [
+    "original",
+    "common128"
+  ],
+  "gate_train_and_validation_conditions": [
+    "clean",
+    "jpeg70",
+    "resize05"
+  ],
+  "development_conditions": [
+    "clean",
+    "jpeg50",
+    "resize05"
+  ],
+  "experts": "Retrain clean linear heads on 400 originals; identical frozen experts for all compared fusions",
+  "gate_features": [
+    "p_global",
+    "p_local",
+    "absolute_probability_gap",
+    "mean_binary_entropy",
+    "log1p_local_view_logit_variance",
+    "q_laplacian",
+    "q_high_frequency",
+    "q_block"
+  ],
+  "gate_normalization": "StandardScaler fitted only on 600 gate-training views",
+  "architecture": "8 -> 32 ReLU -> 1 sigmoid; score gate zeros final three standardized quality inputs; 321 parameters each",
+  "initialization": "Paired hidden initialization, output layer zero so initial global weight=0.5",
+  "seeds": [
+    20261022,
+    20261023,
+    20261024
+  ],
+  "training": {
+    "optimizer": "AdamW",
+    "learning_rate": 0.003,
+    "weight_decay": 0.0001,
+    "max_epochs": 400,
+    "patience": 40,
+    "min_delta": 1e-06,
+    "batch": "Full batch, 600 views",
+    "loss": "BCEWithLogits on fused logit"
+  },
+  "selection": "Minimum pooled validation BCE for each gate; epoch 0 eligible; same policy for both variants",
+  "fixed_fusion": "Alpha 0..1 step0.1 maximizes validation AUROC macro over 2 generators x 3 conditions; tie closest0.5 then smaller",
+  "thresholds": "Each model uses pooled 600-view validation maximum Youden J, fixed on development",
+  "comparisons": [
+    "global",
+    "local",
+    "average",
+    "fixed",
+    "score_gate",
+    "quality_gate"
+  ],
+  "main_contrast": "Mean across 3 initialization-specific AUROCs: quality_gate minus score_gate",
+  "uncertainty": "2000 class-stratified paired draws per development cell, same image draws across models and seeds; no multiplicity correction",
+  "limits": [
+    "One expert/gate data split; three gate initialization seeds are not three independent data experiments",
+    "ADM and JPEG50 are previously inspected exploratory development conditions",
+    "resize05 is now seen during gate training and validation; JPEG50 intensity is not",
+    "Experts have 400 rather than prior 600 training originals; compare methods within this round",
+    "Validation selects early stopping, fixed alpha and thresholds; no final blind test",
+    "Source/content/quality confounding and PatchShuffle alignment limitations remain",
+    "Quality proxies may encode shortcuts; changed weights alone do not establish useful adaptation"
+  ]
+}

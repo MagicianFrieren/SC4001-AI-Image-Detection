@@ -1,0 +1,130 @@
+{
+  "original/clean": {
+    "global": {
+      "temperature": 8.142383683581413,
+      "fit_n": 300,
+      "fit_bce_before": 1.804537878162609,
+      "fit_bce_after": 0.5926175114095439,
+      "at_boundary": false
+    },
+    "local": {
+      "temperature": 6.049427651825194,
+      "fit_n": 300,
+      "fit_bce_before": 1.318667872191308,
+      "fit_bce_after": 0.5860012065235839,
+      "at_boundary": false
+    }
+  },
+  "original/jpeg_only": {
+    "global": {
+      "temperature": 5.325123783106189,
+      "fit_n": 300,
+      "fit_bce_before": 1.2072700192310686,
+      "fit_bce_after": 0.5437194904369275,
+      "at_boundary": false
+    },
+    "local": {
+      "temperature": 6.134855188211973,
+      "fit_n": 300,
+      "fit_bce_before": 1.3227292185704638,
+      "fit_bce_after": 0.5885428902306173,
+      "at_boundary": false
+    }
+  },
+  "original/resize_only": {
+    "global": {
+      "temperature": 6.25141290288862,
+      "fit_n": 300,
+      "fit_bce_before": 1.2939294511055754,
+      "fit_bce_after": 0.5720492564759742,
+      "at_boundary": false
+    },
+    "local": {
+      "temperature": 5.41140556981717,
+      "fit_n": 300,
+      "fit_bce_before": 1.1600354184530393,
+      "fit_bce_after": 0.5887280593454729,
+      "at_boundary": false
+    }
+  },
+  "original/augmented": {
+    "global": {
+      "temperature": 4.560369728559683,
+      "fit_n": 300,
+      "fit_bce_before": 0.9920056875489602,
+      "fit_bce_after": 0.5448000168719097,
+      "at_boundary": false
+    },
+    "local": {
+      "temperature": 5.596426910586682,
+      "fit_n": 300,
+      "fit_bce_before": 1.1618155833070296,
+      "fit_bce_after": 0.5966670802830267,
+      "at_boundary": false
+    }
+  },
+  "common128/clean": {
+    "global": {
+      "temperature": 7.133164719349272,
+      "fit_n": 300,
+      "fit_bce_before": 1.4508195433452762,
+      "fit_bce_after": 0.586027881013727,
+      "at_boundary": false
+    },
+    "local": {
+      "temperature": 6.709359070080974,
+      "fit_n": 300,
+      "fit_bce_before": 1.3341640781041584,
+      "fit_bce_after": 0.6199956151003905,
+      "at_boundary": false
+    }
+  },
+  "common128/jpeg_only": {
+    "global": {
+      "temperature": 5.017857701879853,
+      "fit_n": 300,
+      "fit_bce_before": 1.0438871600931183,
+      "fit_bce_after": 0.5582374363012861,
+      "at_boundary": false
+    },
+    "local": {
+      "temperature": 6.889000208323794,
+      "fit_n": 300,
+      "fit_bce_before": 1.3338600165263534,
+      "fit_bce_after": 0.6236495970742207,
+      "at_boundary": false
+    }
+  },
+  "common128/resize_only": {
+    "global": {
+      "temperature": 5.7230503590382025,
+      "fit_n": 300,
+      "fit_bce_before": 1.1946003024287937,
+      "fit_bce_after": 0.5629065110986458,
+      "at_boundary": false
+    },
+    "local": {
+      "temperature": 6.341120046063429,
+      "fit_n": 300,
+      "fit_bce_before": 1.2836788420548044,
+      "fit_bce_after": 0.6144333693729785,
+      "at_boundary": false
+    }
+  },
+  "common128/augmented": {
+    "global": {
+      "temperature": 4.793966750339622,
+      "fit_n": 300,
+      "fit_bce_before": 1.0083369760550864,
+      "fit_bce_after": 0.5500403398523253,
+      "at_boundary": false
+    },
+    "local": {
+      "temperature": 6.712499984050361,
+      "fit_n": 300,
+      "fit_bce_before": 1.293860397765498,
+      "fit_bce_after": 0.6210479436544173,
+      "at_boundary": false
+    }
+  }
+}

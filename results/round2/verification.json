@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "metric_cells_checked": 108,
+  "heads_checked": 12,
+  "paired_contrasts": 162,
+  "bootstrap_draws": 2000,
+  "pilot_prediction_max_absolute_error": 1.6653345369377348e-15,
+  "checks": [
+    "Original 1200 records and development pool unchanged",
+    "Fixed 600/200 training/validation budgets and no partition overlap",
+    "ADM absent from training and validation",
+    "Source IDs and labels checked against manifest",
+    "All thresholds recomputed from saved validation predictions only",
+    "All AUROC/AP/balanced accuracy/FPR values recomputed",
+    "AUROC additionally checked with direct pairwise comparisons",
+    "Original CLIP arm compared against saved pilot predictions"
+  ],
+  "scope": "Artifact and metric verification; not an independent end-to-end rerun"
+}

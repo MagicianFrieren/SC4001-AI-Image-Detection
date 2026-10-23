@@ -1,0 +1,50 @@
+{
+  "status": "completed",
+  "run_seconds": 121.18384530000003,
+  "local_extraction": {
+    "original/clean": {
+      "cache_reused": false,
+      "extraction_seconds": 18.27009129999999
+    },
+    "original/jpeg50": {
+      "cache_reused": false,
+      "extraction_seconds": 18.814756699999975
+    },
+    "original/resize05": {
+      "cache_reused": false,
+      "extraction_seconds": 19.021919799999978
+    },
+    "common128/clean": {
+      "cache_reused": false,
+      "extraction_seconds": 17.604441700000052
+    },
+    "common128/jpeg50": {
+      "cache_reused": false,
+      "extraction_seconds": 18.931961399999977
+    },
+    "common128/resize05": {
+      "cache_reused": false,
+      "extraction_seconds": 19.452203199999985
+    }
+  },
+  "peak_cuda_memory_mb": 239.0595703125,
+  "batch_size": 32,
+  "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU",
+  "code_sha256": {
+    "run_round3.py": "1cbd1400d6b2b2743925b6f438a48318f9ef2219371c0e2d92550820f5159a84",
+    "local_branch.py": "13d0e37fd6774570d4ebda9d8c5740f4da268589b2424f641bf13188773b7acd",
+    "run_round2.py": "e018ec2ac549c0e9f3603937a0bc046c19edb4cbdc87c16c1957efb8e4c4775a",
+    "run_pilot.py": "df7aaa39873513c942d0d89998f70981959ba23323c00209016235be8d3d4e5f"
+  },
+  "protocol_sha256": "eeab68bd0760f53fc9ec1f3049c4cdd65b9aed450a00e71d2debe00c6270eb0f",
+  "global_cache_sha256": "01146f60392270a67950d69897447b3dd1bd71b5075f859cfe3b858e565ef5bb",
+  "manifest_sha256": "c98c84990f2499920ab8b408771817a5500a6893193a177c73360d09d1c6d1f5",
+  "environment": {
+    "torch": "2.2.0+cu121",
+    "numpy": "1.26.4",
+    "Pillow": "12.2.0",
+    "transformers": "4.39.3",
+    "scikit-learn": "1.8.0",
+    "scipy": "1.17.1"
+  }
+}

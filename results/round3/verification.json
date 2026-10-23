@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "verified_metric_cells": 144,
+  "verified_overlap_cells": 36,
+  "verified_alpha_searches": 4,
+  "paired_contrasts": 180,
+  "global_prediction_max_error_vs_round2": 1.6653345369377348e-15,
+  "checks": [
+    "Manifest/code/cache identity and disjoint original-level partitions",
+    "All alpha searches and 16 thresholds recomputed from validation only",
+    "Every saved fusion probability reconstructed from branch logits",
+    "All development metrics recomputed; AUROC with direct pairwise comparisons",
+    "All error overlap counts and correlations recomputed",
+    "Global baseline compared against round two"
+  ],
+  "scope": "Saved-artifact verification, not independent end-to-end model reproduction"
+}

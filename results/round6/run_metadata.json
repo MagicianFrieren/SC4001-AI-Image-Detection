@@ -1,0 +1,33 @@
+{
+  "status": "completed",
+  "run_seconds": 39.51505690000022,
+  "feature_sha256": {
+    "artifacts/round2_features.npz": "01146f60392270a67950d69897447b3dd1bd71b5075f859cfe3b858e565ef5bb",
+    "artifacts/round4_global_jpeg70.npz": "7daca1593c4b693f3b29d21c739913ef5fec0ef166cb59bf101b3792c08c503b",
+    "artifacts/round3_local_original_clean.npz": "1f6aff291dc33aa70811cbd653b2bff9539c368508b8f199a4c4f49801bcfc78",
+    "artifacts/round3_local_original_jpeg70.npz": "20242459179680597c7475125152b45cb08e49153cc3ad4f3c06a4b331ff2a82",
+    "artifacts/round3_local_original_resize05.npz": "cb3e17d6a1f45ea66f0cc600456864ec456c2849468728cf21b70109f5ca42f2",
+    "artifacts/round3_local_original_jpeg50.npz": "f1d471bad15f7cb873f08bfc9a081458ec63bea4c198f523e2efd0f4f3134461",
+    "artifacts/round3_local_common128_clean.npz": "c517c946bde885bea765f9c8f0e177139953b07d1b84bf0d57b877587eee2e8b",
+    "artifacts/round3_local_common128_jpeg70.npz": "eb6bc07119e388b694927acc6459cff4173cd2f8edba7785d7b8355ef0ad7b44",
+    "artifacts/round3_local_common128_resize05.npz": "d0440568074ef1051d4658b8fd32f21aadcfa15d4ac77f06dca5ef3664734ccb",
+    "artifacts/round3_local_common128_jpeg50.npz": "24b61a646e38738fd6f477a554d7da5d2d9d2495d4a02ac007c49dda2171723b"
+  },
+  "protocol_sha256": "1595f5266030df817b2ae4f94cfbafe85baba0ccf2be6b480b7b29818224d971",
+  "assignments_sha256": "dcb5643882f771a7bb276d291c968f7ac41fb4e202544f27f4d757c8a2ef8a82",
+  "code_sha256": {
+    "run_round6.py": "eef0f9b3817b994d9a93d8fcb9969b54e3bcb2a9d646c2f21d7e14cad2c24a47",
+    "score_calibration.py": "b5ec91b05bba2f0327f2b7a3ec6f36ebc1bdb1742256a33de24b1003c0bdf526",
+    "run_round4.py": "ddb2c8cd1a2a25215a50c5dcedb11e4624800e75f46c6178244e6ef1d0d5f6d2",
+    "gate_models.py": "417cd36b667f33046a903c1d51cc867301db3206ffba978aba594d3fb9bfc12a",
+    "run_pilot.py": "df7aaa39873513c942d0d89998f70981959ba23323c00209016235be8d3d4e5f"
+  },
+  "environment": {
+    "torch": "2.2.0+cu121",
+    "numpy": "1.26.4",
+    "Pillow": "12.2.0",
+    "transformers": "4.39.3",
+    "scikit-learn": "1.8.0",
+    "scipy": "1.17.1"
+  }
+}

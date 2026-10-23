@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "metric_cells": 180,
+  "gate_models": 12,
+  "expert_heads_refit": 4,
+  "paired_contrasts": 90,
+  "max_numpy_vs_torch_alpha_error": 2.980232238769531e-07,
+  "checks": [
+    "Disjoint expert/gate/validation/development originals and original development pool",
+    "Refitted all four expert heads from declared 400 clean originals",
+    "Every branch logit, variance and quality proxy rebound to hashed feature cache",
+    "Scalers fitted only on gate training; early stopping selection checked against histories",
+    "All gate outputs reconstructed with NumPy from exported weights",
+    "Fixed alpha and all thresholds recomputed from validation only",
+    "Metrics and seed-mean paired bootstrap recomputed from predictions"
+  ],
+  "scope": "Artifact verification plus expert refit; gate optimization not independently repeated"
+}

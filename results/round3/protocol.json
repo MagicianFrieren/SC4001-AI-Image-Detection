@@ -1,0 +1,133 @@
+{
+  "id": "round3_global_local_fixed_fusion",
+  "created_utc": "2026-10-22T15:05:44.193636+00:00",
+  "purpose": "Measure local branch behavior, error complementarity and fixed fusion before training a gate",
+  "source": "https://arxiv.org/abs/2502.17105",
+  "implementation_scope": "SFLD-inspired small pilot, not a paper reproduction",
+  "manifest_sha256": "c98c84990f2499920ab8b408771817a5500a6893193a177c73360d09d1c6d1f5",
+  "assignments_sha256": "39ddef4fb178e06676e1ecc6b9f2d4ab90065df8ee1abc70bd23a8f64e6c8ad1",
+  "profiles": [
+    "original",
+    "common128"
+  ],
+  "conditions": [
+    "clean",
+    "jpeg50",
+    "resize05"
+  ],
+  "local": {
+    "patch_size": 56,
+    "seeds": [
+      202610220,
+      202610221,
+      202610222,
+      202610223
+    ],
+    "permutations": [
+      [
+        13,
+        15,
+        11,
+        6,
+        14,
+        12,
+        10,
+        5,
+        4,
+        8,
+        3,
+        0,
+        1,
+        9,
+        7,
+        2
+      ],
+      [
+        0,
+        10,
+        7,
+        1,
+        6,
+        2,
+        5,
+        13,
+        9,
+        14,
+        15,
+        8,
+        4,
+        12,
+        11,
+        3
+      ],
+      [
+        4,
+        3,
+        8,
+        11,
+        14,
+        5,
+        0,
+        10,
+        7,
+        1,
+        15,
+        12,
+        6,
+        9,
+        2,
+        13
+      ],
+      [
+        8,
+        6,
+        10,
+        9,
+        14,
+        0,
+        15,
+        4,
+        1,
+        7,
+        5,
+        12,
+        2,
+        3,
+        13,
+        11
+      ]
+    ],
+    "rule": "Same four label-independent permutations for every image and condition; degrade before shuffle",
+    "pooling": "Arithmetic mean of four L2-normalized 512D embeddings, without renormalizing mean"
+  },
+  "model": "openai/clip-vit-base-patch32",
+  "model_revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+  "train": "Same clean 600 originals as round two per training variant; independent global/local scaler + C=1 liblinear",
+  "fusion": "sigmoid(alpha * global_logit + (1-alpha) * local_logit)",
+  "alpha_grid": [
+    0.0,
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9,
+    1.0
+  ],
+  "alpha_selection": "Maximum clean validation generator-macro AUROC; ties closest to 0.5 then smaller alpha",
+  "thresholds": "Separate threshold per model from pooled clean validation Youden J, then fixed for all conditions",
+  "diagnostics": "Both correct, only global correct, only local correct, both wrong at separate validation thresholds; score correlation",
+  "uncertainty": "2000 paired class-stratified bootstrap draws per development cell, no multiplicity correction",
+  "limits": [
+    "Exploratory development only; no final holdout or gate in this round",
+    "Single training subset and one four-view ensemble; no training-seed repetition",
+    "Quality/source/semantic confounding remains unresolved",
+    "PatchShuffle view is not pure texture; rearrangement creates artificial boundaries",
+    "56px shuffle tiles do not align with 32px ViT tokens; backbone/view-count/training differ from SFLD",
+    "Validation selects both alpha and threshold; its performance is optimistic",
+    "Shared real pool induces dependent comparisons; intervals condition on fitted models"
+  ]
+}

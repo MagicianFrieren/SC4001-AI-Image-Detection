@@ -1,0 +1,19 @@
+{
+  "status": "completed",
+  "seed": 20261022,
+  "feature_cache_reused": false,
+  "run_seconds": 119.45931120000023,
+  "extraction_seconds": 116.15831719999915,
+  "peak_cuda_memory_mb": 239.0595703125,
+  "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU",
+  "python": "3.12.5",
+  "torch": "2.2.0+cu121",
+  "model": "openai/clip-vit-base-patch32",
+  "model_revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+  "model_sha256": "a63082132ba4f97a80bea76823f544493bffa8082296d62d71581a4feff1576f",
+  "manifest_sha256": "c98c84990f2499920ab8b408771817a5500a6893193a177c73360d09d1c6d1f5",
+  "protocol_sha256": "4fd6875935756098a342ab5230dd67bcd7f91703372a6bae449a06d51dbbab5a",
+  "script_sha256": "e018ec2ac549c0e9f3603937a0bc046c19edb4cbdc87c16c1957efb8e4c4775a",
+  "pilot_script_sha256": "df7aaa39873513c942d0d89998f70981959ba23323c00209016235be8d3d4e5f",
+  "data_script_sha256": "8c5611cb81d5faf4d59df87419684bd70ec60b5ece429009d4dd6574ba19e102"
+}

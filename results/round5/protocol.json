@@ -1,0 +1,73 @@
+{
+  "id": "round5_expert_augmentation_temperature",
+  "created_utc": "2026-10-22T15:40:42.626584+00:00",
+  "question": "Separate augmentation and score-scale effects on expert robustness and useful gating",
+  "design": "2 expert training modes x 2 calibration modes x 2 preprocessing profiles",
+  "manifest_sha256": "c98c84990f2499920ab8b408771817a5500a6893193a177c73360d09d1c6d1f5",
+  "partitions": {
+    "expert_train": "Same 400 originals as round4: 200 Real + 100 SD15 + 100 BigGAN",
+    "gate_train": "Same 200 originals as round4: 100 Real + 50 SD15 + 50 BigGAN",
+    "calibration": "100 prior validation originals: 50 Real + 25 SD15 + 25 BigGAN",
+    "validation": "Other 100 prior validation originals: same counts",
+    "development": "Original 400 development images unchanged"
+  },
+  "split_seed": 20261025,
+  "profiles": [
+    "original",
+    "common128"
+  ],
+  "expert_modes": {
+    "clean": [
+      "clean"
+    ],
+    "augmented": [
+      "clean",
+      "jpeg70",
+      "resize05"
+    ]
+  },
+  "expert_loss_weighting": "Each view weight 1/number_of_views; total 400 per expert; C=1 unchanged",
+  "gate_and_calibration_and_validation_conditions": [
+    "clean",
+    "jpeg70",
+    "resize05"
+  ],
+  "development_conditions": [
+    "clean",
+    "jpeg50",
+    "resize05"
+  ],
+  "temperature": {
+    "rule": "Independent positive scalar per expert, shared across generators and conditions",
+    "objective": "Mean BCE on 300 calibration views only; no intercept",
+    "bounds": [
+      0.05,
+      100.0
+    ],
+    "variance_rule": "Divide local view logit variance by local temperature squared"
+  },
+  "gate": "Round4 architecture, feature masking, training policy and initialization seeds unchanged",
+  "gate_seeds": [
+    20261022,
+    20261023,
+    20261024
+  ],
+  "early_stopping": "Pooled 300-view validation BCE; epoch0 eligible",
+  "fixed_weight": "Validation generator x condition macro AUROC, 0..1 grid by0.1, ties nearest0.5 then smaller",
+  "threshold": "Each model maximum Youden J on validation probabilities, fixed during development",
+  "ranking_metrics": "AUROC and AP use logits to avoid sigmoid saturation; BCE uses stable logits; Brier uses probability",
+  "primary_contrasts": [
+    "Augmented minus clean within each calibration mode",
+    "Temperature minus raw within each expert mode",
+    "Quality gate minus score gate and simple fusion within each cell"
+  ],
+  "uncertainty": "2000 paired class-stratified image draws per generator/condition, synchronized across seeds and arms",
+  "limits": [
+    "One data partition; three gate initializations only",
+    "Calibration/select subsets smaller than prior validation; use within-round comparisons",
+    "Positive temperature preserves each expert logit ranking, but fusion and gate ranking can change",
+    "Source/content confounds remain; all development has already been inspected",
+    "resize05 seen in expert augmentation and gating; JPEG50 strength not used for training/calibration/selection",
+    "Intervals condition on fitted models and calibration set; no multiplicity correction"
+  ]
+}

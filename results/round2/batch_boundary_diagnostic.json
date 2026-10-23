@@ -1,0 +1,38 @@
+{
+  "initial_verification": "failed strict pilot probability equivalence",
+  "max_probability_error": 0.004327125852024216,
+  "affected_source_indices": [
+    1184,
+    1185,
+    1186,
+    1187,
+    1188,
+    1189,
+    1190,
+    1191,
+    1192,
+    1193,
+    1194,
+    1195,
+    1196,
+    1197,
+    1198,
+    1199
+  ],
+  "training_feature_max_difference": 0.0,
+  "validation_feature_max_difference": 0.0,
+  "development_feature_max_difference": {
+    "clean": 0.0006093047559261322,
+    "jpeg50": 0.00045937299728393555,
+    "resize05": 0.0007111132144927979
+  },
+  "initial_auroc_difference": {
+    "SD15/jpeg50": -0.0001,
+    "other_original_arm_cells": 0.0
+  },
+  "cause": "Appending 400 rows changed the pilot final FP16 inference batch from 16 to 32 images. Only the original final 16 embeddings changed.",
+  "fix": "Keep the original 1200-record batch boundary for every preprocessing arm; regenerate features and refit all heads.",
+  "protocol_change": "No data selection, hyperparameter, threshold rule, profile, or evaluation changes.",
+  "resolved": true,
+  "final_probability_max_error": 1.6653345369377348e-15
+}

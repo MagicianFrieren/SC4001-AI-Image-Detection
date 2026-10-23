@@ -1,0 +1,594 @@
+{
+  "original/clean/raw": {
+    "global_temperature": 1.0,
+    "local_temperature": 1.0,
+    "fixed_alpha": 0.5,
+    "models": {
+      "global/-1": {
+        "threshold": 0.12110237773668624
+      },
+      "local/-1": {
+        "threshold": 0.11529357018916328
+      },
+      "average/-1": {
+        "threshold": 0.04536055782640536
+      },
+      "fixed/-1": {
+        "threshold": 0.04536055782640536
+      },
+      "score_gate/20261022": {
+        "threshold": 0.11417094921210853
+      },
+      "quality_gate/20261022": {
+        "threshold": 0.12870864515318953
+      },
+      "score_gate/20261023": {
+        "threshold": 0.11218777506599355
+      },
+      "quality_gate/20261023": {
+        "threshold": 0.11526649070104392
+      },
+      "score_gate/20261024": {
+        "threshold": 0.11469988090191367
+      },
+      "quality_gate/20261024": {
+        "threshold": 0.2311024171237724
+      }
+    }
+  },
+  "original/clean/temperature": {
+    "global_temperature": 8.142383683581413,
+    "local_temperature": 6.049427651825194,
+    "fixed_alpha": 0.5,
+    "models": {
+      "global/-1": {
+        "threshold": 0.4394433221099118
+      },
+      "local/-1": {
+        "threshold": 0.41657386744608815
+      },
+      "average/-1": {
+        "threshold": 0.41583004971166326
+      },
+      "fixed/-1": {
+        "threshold": 0.41583004971166326
+      },
+      "score_gate/20261022": {
+        "threshold": 0.4473024339346138
+      },
+      "quality_gate/20261022": {
+        "threshold": 0.41421590136873077
+      },
+      "score_gate/20261023": {
+        "threshold": 0.43594202836816054
+      },
+      "quality_gate/20261023": {
+        "threshold": 0.4154022802386843
+      },
+      "score_gate/20261024": {
+        "threshold": 0.40162782481172576
+      },
+      "quality_gate/20261024": {
+        "threshold": 0.4113843118529959
+      }
+    }
+  },
+  "original/jpeg_only/raw": {
+    "global_temperature": 1.0,
+    "local_temperature": 1.0,
+    "fixed_alpha": 0.4,
+    "models": {
+      "global/-1": {
+        "threshold": 0.6311780006932536
+      },
+      "local/-1": {
+        "threshold": 0.36354766696970864
+      },
+      "average/-1": {
+        "threshold": 0.4406261289354554
+      },
+      "fixed/-1": {
+        "threshold": 0.5498179933537136
+      },
+      "score_gate/20261022": {
+        "threshold": 0.5457040322219353
+      },
+      "quality_gate/20261022": {
+        "threshold": 0.45816722851084957
+      },
+      "score_gate/20261023": {
+        "threshold": 0.4287032686358788
+      },
+      "quality_gate/20261023": {
+        "threshold": 0.45746673967657137
+      },
+      "score_gate/20261024": {
+        "threshold": 0.5010140027096776
+      },
+      "quality_gate/20261024": {
+        "threshold": 0.49532748715702757
+      }
+    }
+  },
+  "original/jpeg_only/temperature": {
+    "global_temperature": 5.325123783106189,
+    "local_temperature": 6.134855188211973,
+    "fixed_alpha": 0.3,
+    "models": {
+      "global/-1": {
+        "threshold": 0.5252021591239948
+      },
+      "local/-1": {
+        "threshold": 0.47719544431868316
+      },
+      "average/-1": {
+        "threshold": 0.49074544203955184
+      },
+      "fixed/-1": {
+        "threshold": 0.499692674169639
+      },
+      "score_gate/20261022": {
+        "threshold": 0.5990373608636255
+      },
+      "quality_gate/20261022": {
+        "threshold": 0.4882322039813685
+      },
+      "score_gate/20261023": {
+        "threshold": 0.5085649201210503
+      },
+      "quality_gate/20261023": {
+        "threshold": 0.5064590195196886
+      },
+      "score_gate/20261024": {
+        "threshold": 0.5717198824470511
+      },
+      "quality_gate/20261024": {
+        "threshold": 0.5272481965479432
+      }
+    }
+  },
+  "original/resize_only/raw": {
+    "global_temperature": 1.0,
+    "local_temperature": 1.0,
+    "fixed_alpha": 0.5,
+    "models": {
+      "global/-1": {
+        "threshold": 0.09035413258044155
+      },
+      "local/-1": {
+        "threshold": 0.20818022499684397
+      },
+      "average/-1": {
+        "threshold": 0.41112977128636957
+      },
+      "fixed/-1": {
+        "threshold": 0.41112977128636957
+      },
+      "score_gate/20261022": {
+        "threshold": 0.3924565547006745
+      },
+      "quality_gate/20261022": {
+        "threshold": 0.33397906862776233
+      },
+      "score_gate/20261023": {
+        "threshold": 0.3882842179431724
+      },
+      "quality_gate/20261023": {
+        "threshold": 0.2934202923797849
+      },
+      "score_gate/20261024": {
+        "threshold": 0.4756962481411068
+      },
+      "quality_gate/20261024": {
+        "threshold": 0.32014044064794644
+      }
+    }
+  },
+  "original/resize_only/temperature": {
+    "global_temperature": 6.25141290288862,
+    "local_temperature": 5.41140556981717,
+    "fixed_alpha": 0.5,
+    "models": {
+      "global/-1": {
+        "threshold": 0.40868420596164723
+      },
+      "local/-1": {
+        "threshold": 0.43859332258474054
+      },
+      "average/-1": {
+        "threshold": 0.473038058721367
+      },
+      "fixed/-1": {
+        "threshold": 0.473038058721367
+      },
+      "score_gate/20261022": {
+        "threshold": 0.470560715234007
+      },
+      "quality_gate/20261022": {
+        "threshold": 0.4816153619069206
+      },
+      "score_gate/20261023": {
+        "threshold": 0.48646536884530167
+      },
+      "quality_gate/20261023": {
+        "threshold": 0.47587464091281134
+      },
+      "score_gate/20261024": {
+        "threshold": 0.47545702907601123
+      },
+      "quality_gate/20261024": {
+        "threshold": 0.4836067388579265
+      }
+    }
+  },
+  "original/augmented/raw": {
+    "global_temperature": 1.0,
+    "local_temperature": 1.0,
+    "fixed_alpha": 0.5,
+    "models": {
+      "global/-1": {
+        "threshold": 0.3455871386514282
+      },
+      "local/-1": {
+        "threshold": 0.6070511311656992
+      },
+      "average/-1": {
+        "threshold": 0.5215655151314962
+      },
+      "fixed/-1": {
+        "threshold": 0.5215655151314962
+      },
+      "score_gate/20261022": {
+        "threshold": 0.5215655151314962
+      },
+      "quality_gate/20261022": {
+        "threshold": 0.5314901154729889
+      },
+      "score_gate/20261023": {
+        "threshold": 0.5215655151314962
+      },
+      "quality_gate/20261023": {
+        "threshold": 0.5738278289302519
+      },
+      "score_gate/20261024": {
+        "threshold": 0.5215655151314962
+      },
+      "quality_gate/20261024": {
+        "threshold": 0.5300636562316363
+      }
+    }
+  },
+  "original/augmented/temperature": {
+    "global_temperature": 4.560369728559683,
+    "local_temperature": 5.596426910586682,
+    "fixed_alpha": 0.4,
+    "models": {
+      "global/-1": {
+        "threshold": 0.4650547715496763
+      },
+      "local/-1": {
+        "threshold": 0.5194192988547464
+      },
+      "average/-1": {
+        "threshold": 0.4962250841058843
+      },
+      "fixed/-1": {
+        "threshold": 0.5199394014286279
+      },
+      "score_gate/20261022": {
+        "threshold": 0.4999173844817427
+      },
+      "quality_gate/20261022": {
+        "threshold": 0.5130101004975031
+      },
+      "score_gate/20261023": {
+        "threshold": 0.5013991678836195
+      },
+      "quality_gate/20261023": {
+        "threshold": 0.5253443539487299
+      },
+      "score_gate/20261024": {
+        "threshold": 0.4962250841058843
+      },
+      "quality_gate/20261024": {
+        "threshold": 0.5166630273417374
+      }
+    }
+  },
+  "common128/clean/raw": {
+    "global_temperature": 1.0,
+    "local_temperature": 1.0,
+    "fixed_alpha": 0.5,
+    "models": {
+      "global/-1": {
+        "threshold": 0.531724049076452
+      },
+      "local/-1": {
+        "threshold": 0.900180294493833
+      },
+      "average/-1": {
+        "threshold": 0.552633946360754
+      },
+      "fixed/-1": {
+        "threshold": 0.552633946360754
+      },
+      "score_gate/20261022": {
+        "threshold": 0.5645609744274791
+      },
+      "quality_gate/20261022": {
+        "threshold": 0.5605998271711939
+      },
+      "score_gate/20261023": {
+        "threshold": 0.47428138943511294
+      },
+      "quality_gate/20261023": {
+        "threshold": 0.4868118233254168
+      },
+      "score_gate/20261024": {
+        "threshold": 0.543400186929513
+      },
+      "quality_gate/20261024": {
+        "threshold": 0.5810797171358628
+      }
+    }
+  },
+  "common128/clean/temperature": {
+    "global_temperature": 7.133164719349272,
+    "local_temperature": 6.709359070080974,
+    "fixed_alpha": 0.5,
+    "models": {
+      "global/-1": {
+        "threshold": 0.5044532663327388
+      },
+      "local/-1": {
+        "threshold": 0.5812204154137263
+      },
+      "average/-1": {
+        "threshold": 0.4972037188641524
+      },
+      "fixed/-1": {
+        "threshold": 0.4972037188641524
+      },
+      "score_gate/20261022": {
+        "threshold": 0.5235917939328817
+      },
+      "quality_gate/20261022": {
+        "threshold": 0.4998386180442955
+      },
+      "score_gate/20261023": {
+        "threshold": 0.5234583795227399
+      },
+      "quality_gate/20261023": {
+        "threshold": 0.502282748084859
+      },
+      "score_gate/20261024": {
+        "threshold": 0.5233991483084843
+      },
+      "quality_gate/20261024": {
+        "threshold": 0.5134543511110702
+      }
+    }
+  },
+  "common128/jpeg_only/raw": {
+    "global_temperature": 1.0,
+    "local_temperature": 1.0,
+    "fixed_alpha": 0.5,
+    "models": {
+      "global/-1": {
+        "threshold": 0.21051751942333546
+      },
+      "local/-1": {
+        "threshold": 0.8893270963481079
+      },
+      "average/-1": {
+        "threshold": 0.6265823543553435
+      },
+      "fixed/-1": {
+        "threshold": 0.6265823543553435
+      },
+      "score_gate/20261022": {
+        "threshold": 0.6247339090381621
+      },
+      "quality_gate/20261022": {
+        "threshold": 0.4517246113895521
+      },
+      "score_gate/20261023": {
+        "threshold": 0.4311147823455981
+      },
+      "quality_gate/20261023": {
+        "threshold": 0.457778322072733
+      },
+      "score_gate/20261024": {
+        "threshold": 0.42428044540421767
+      },
+      "quality_gate/20261024": {
+        "threshold": 0.47287279438752744
+      }
+    }
+  },
+  "common128/jpeg_only/temperature": {
+    "global_temperature": 5.017857701879853,
+    "local_temperature": 6.889000208323794,
+    "fixed_alpha": 0.4,
+    "models": {
+      "global/-1": {
+        "threshold": 0.4345229534202668
+      },
+      "local/-1": {
+        "threshold": 0.5750522540120934
+      },
+      "average/-1": {
+        "threshold": 0.49802031035333993
+      },
+      "fixed/-1": {
+        "threshold": 0.49199767464512045
+      },
+      "score_gate/20261022": {
+        "threshold": 0.5631197448982133
+      },
+      "quality_gate/20261022": {
+        "threshold": 0.47450964042294214
+      },
+      "score_gate/20261023": {
+        "threshold": 0.5009655419491794
+      },
+      "quality_gate/20261023": {
+        "threshold": 0.5199878007871994
+      },
+      "score_gate/20261024": {
+        "threshold": 0.4978923118679759
+      },
+      "quality_gate/20261024": {
+        "threshold": 0.5357061198618938
+      }
+    }
+  },
+  "common128/resize_only/raw": {
+    "global_temperature": 1.0,
+    "local_temperature": 1.0,
+    "fixed_alpha": 0.6,
+    "models": {
+      "global/-1": {
+        "threshold": 0.449064690991342
+      },
+      "local/-1": {
+        "threshold": 0.7024469881881504
+      },
+      "average/-1": {
+        "threshold": 0.57354513866073
+      },
+      "fixed/-1": {
+        "threshold": 0.469686817604311
+      },
+      "score_gate/20261022": {
+        "threshold": 0.5188138745212386
+      },
+      "quality_gate/20261022": {
+        "threshold": 0.5613446031052401
+      },
+      "score_gate/20261023": {
+        "threshold": 0.5467990535627607
+      },
+      "quality_gate/20261023": {
+        "threshold": 0.6964055665683173
+      },
+      "score_gate/20261024": {
+        "threshold": 0.49958729582547334
+      },
+      "quality_gate/20261024": {
+        "threshold": 0.7237884757544424
+      }
+    }
+  },
+  "common128/resize_only/temperature": {
+    "global_temperature": 5.7230503590382025,
+    "local_temperature": 6.341120046063429,
+    "fixed_alpha": 0.4,
+    "models": {
+      "global/-1": {
+        "threshold": 0.4910699414219487
+      },
+      "local/-1": {
+        "threshold": 0.533813680773317
+      },
+      "average/-1": {
+        "threshold": 0.5006635558971873
+      },
+      "fixed/-1": {
+        "threshold": 0.5268777889103
+      },
+      "score_gate/20261022": {
+        "threshold": 0.524404918459226
+      },
+      "quality_gate/20261022": {
+        "threshold": 0.5381205723985946
+      },
+      "score_gate/20261023": {
+        "threshold": 0.5238125219793202
+      },
+      "quality_gate/20261023": {
+        "threshold": 0.5358793915225926
+      },
+      "score_gate/20261024": {
+        "threshold": 0.5413219922979198
+      },
+      "quality_gate/20261024": {
+        "threshold": 0.5280315000711637
+      }
+    }
+  },
+  "common128/augmented/raw": {
+    "global_temperature": 1.0,
+    "local_temperature": 1.0,
+    "fixed_alpha": 0.5,
+    "models": {
+      "global/-1": {
+        "threshold": 0.3123285611441845
+      },
+      "local/-1": {
+        "threshold": 0.8179030932626703
+      },
+      "average/-1": {
+        "threshold": 0.676770457089807
+      },
+      "fixed/-1": {
+        "threshold": 0.676770457089807
+      },
+      "score_gate/20261022": {
+        "threshold": 0.6749081488406674
+      },
+      "quality_gate/20261022": {
+        "threshold": 0.6942839507893233
+      },
+      "score_gate/20261023": {
+        "threshold": 0.6784702399831857
+      },
+      "quality_gate/20261023": {
+        "threshold": 0.6948746719763268
+      },
+      "score_gate/20261024": {
+        "threshold": 0.7348035251040539
+      },
+      "quality_gate/20261024": {
+        "threshold": 0.6704553914621365
+      }
+    }
+  },
+  "common128/augmented/temperature": {
+    "global_temperature": 4.793966750339622,
+    "local_temperature": 6.712499984050361,
+    "fixed_alpha": 0.5,
+    "models": {
+      "global/-1": {
+        "threshold": 0.4589339269374275
+      },
+      "local/-1": {
+        "threshold": 0.5557156997516107
+      },
+      "average/-1": {
+        "threshold": 0.5432520302651529
+      },
+      "fixed/-1": {
+        "threshold": 0.5432520302651529
+      },
+      "score_gate/20261022": {
+        "threshold": 0.5252999824241462
+      },
+      "quality_gate/20261022": {
+        "threshold": 0.5459113981832062
+      },
+      "score_gate/20261023": {
+        "threshold": 0.5471855695916795
+      },
+      "quality_gate/20261023": {
+        "threshold": 0.5432700029068255
+      },
+      "score_gate/20261024": {
+        "threshold": 0.5452593982364405
+      },
+      "quality_gate/20261024": {
+        "threshold": 0.5263769190564105
+      }
+    }
+  }
+}

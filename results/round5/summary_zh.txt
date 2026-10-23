@@ -1,0 +1,78 @@
+SC4001 J：第五轮专家增强 × 温度校准（2026-10-22）
+
+Material Passport: academic-research-suite / experiment-agent; run; round5_v1.
+专家训练400原图、门控训练200原图不变；旧验证200原图分成校准100、模型选择100；开发400原图不变。
+五个分区按原图互不重叠。四组均使用同样划分：clean/raw、clean/temperature、augmented/raw、augmented/temperature。
+专家增强包含clean、JPEG70、缩放0.5。每个增强视图训练权重为1/3，保证原图总权重和C不变。
+校准只拟合每个专家的正温度，无截距；300个校准视图不参与门控训练或模型选择。
+普通与质量门控均重训3个初始化；归一化仅使用门控训练集。
+AUROC/AP用logit计算以避免sigmoid饱和；BCE/Brier检查概率质量；所有阈值从模型选择集确定。
+
+ADM AUROC均值：每行依次为全局、局部、平均、固定、普通门控、质量门控。
+  original/clean/raw
+    clean   : 0.6763, 0.6749, 0.6917, 0.6917, 0.6814, 0.6896
+    jpeg50  : 0.5204, 0.5901, 0.5561, 0.5561, 0.5923, 0.5837
+    resize05: 0.6489, 0.6420, 0.6684, 0.6684, 0.6370, 0.6496
+  original/clean/temperature
+    clean   : 0.6763, 0.6749, 0.6907, 0.6907, 0.6852, 0.6952
+    jpeg50  : 0.5204, 0.5901, 0.5590, 0.5590, 0.5835, 0.5726
+    resize05: 0.6489, 0.6420, 0.6690, 0.6690, 0.6430, 0.6799
+  original/augmented/raw
+    clean   : 0.6235, 0.5154, 0.5856, 0.5856, 0.5856, 0.5845
+    jpeg50  : 0.5600, 0.5585, 0.5676, 0.5676, 0.5676, 0.5674
+    resize05: 0.6239, 0.5738, 0.6223, 0.6223, 0.6223, 0.6225
+  original/augmented/temperature
+    clean   : 0.6235, 0.5154, 0.5922, 0.5779, 0.5918, 0.5863
+    jpeg50  : 0.5600, 0.5585, 0.5677, 0.5658, 0.5696, 0.5757
+    resize05: 0.6239, 0.5738, 0.6228, 0.6215, 0.6234, 0.6238
+  common128/clean/raw
+    clean   : 0.6898, 0.6477, 0.7021, 0.7021, 0.6890, 0.6972
+    jpeg50  : 0.5896, 0.5882, 0.6099, 0.6099, 0.5902, 0.5750
+    resize05: 0.7074, 0.6271, 0.7074, 0.7074, 0.6928, 0.7082
+  common128/clean/temperature
+    clean   : 0.6898, 0.6477, 0.7013, 0.7013, 0.7075, 0.6831
+    jpeg50  : 0.5896, 0.5882, 0.6102, 0.6102, 0.6012, 0.5865
+    resize05: 0.7074, 0.6271, 0.7057, 0.7057, 0.7068, 0.6898
+  common128/augmented/raw
+    clean   : 0.6049, 0.5606, 0.6063, 0.6063, 0.6085, 0.6080
+    jpeg50  : 0.5533, 0.5323, 0.5584, 0.5584, 0.5593, 0.5545
+    resize05: 0.6211, 0.5544, 0.6139, 0.6139, 0.6171, 0.6168
+  common128/augmented/temperature
+    clean   : 0.6049, 0.5606, 0.6114, 0.6114, 0.6146, 0.6072
+    jpeg50  : 0.5533, 0.5323, 0.5616, 0.5616, 0.5620, 0.5404
+    resize05: 0.6211, 0.5544, 0.6208, 0.6208, 0.6277, 0.6213
+
+拟合温度（单专家排序保持不变；融合和门控可以变化）：
+  original/clean: global T=8.1424, local T=6.0494
+  original/augmented: global T=4.5604, local T=5.5964
+  common128/clean: global T=7.1332, local T=6.7094
+  common128/augmented: global T=4.7940, local T=6.7125
+
+增强专家下，质量门控相对普通门控的ADM差值及成对95%区间：
+  original/augmented/raw             clean   : -0.0011 [-0.0033, +0.0007]
+  original/augmented/temperature     clean   : -0.0055 [-0.0188, +0.0065]
+  original/augmented/raw             jpeg50  : -0.0002 [-0.0017, +0.0013]
+  original/augmented/temperature     jpeg50  : +0.0061 [-0.0071, +0.0197]
+  original/augmented/raw             resize05: +0.0002 [-0.0018, +0.0024]
+  original/augmented/temperature     resize05: +0.0004 [-0.0154, +0.0156]
+  common128/augmented/raw            clean   : -0.0004 [-0.0053, +0.0036]
+  common128/augmented/temperature    clean   : -0.0074 [-0.0266, +0.0109]
+  common128/augmented/raw            jpeg50  : -0.0048 [-0.0141, +0.0034]
+  common128/augmented/temperature    jpeg50  : -0.0216 [-0.0451, -0.0027]
+  common128/augmented/raw            resize05: -0.0004 [-0.0063, +0.0053]
+  common128/augmented/temperature    resize05: -0.0064 [-0.0262, +0.0121]
+
+运行约19.4秒，使用已验证特征缓存；核验另计。
+720个指标单元、48个门控、8个专家头、8个温度拟合已复核。
+
+解释边界：
+  - One data partition; three gate initializations only
+  - Calibration/select subsets smaller than prior validation; use within-round comparisons
+  - Positive temperature preserves each expert logit ranking, but fusion and gate ranking can change
+  - Source/content confounds remain; all development has already been inspected
+  - resize05 seen in expert augmentation and gating; JPEG50 strength not used for training/calibration/selection
+  - Intervals condition on fitted models and calibration set; no multiplicity correction
+
+详细校准检查：heldout_calibration.csv；效果差值：paired_contrasts.csv。
+运行：./.venv/Scripts/python.exe -u scripts/run_round5.py
+核验：./.venv/Scripts/python.exe scripts/verify_round5.py

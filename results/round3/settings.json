@@ -1,0 +1,46 @@
+{
+  "original/single_sd15": {
+    "selected_alpha": 0.7,
+    "thresholds": {
+      "global": 0.47904391292198517,
+      "local": 0.42801353124676705,
+      "average": 0.4836134401330018,
+      "fixed": 0.7255767771848595
+    },
+    "validation_global_logit_std": 8.502864150087714,
+    "validation_local_logit_std": 7.392114221606275
+  },
+  "original/mixed_sd15_biggan": {
+    "selected_alpha": 0.9,
+    "thresholds": {
+      "global": 0.7684044477379209,
+      "local": 0.48431981786364975,
+      "average": 0.7670370118431055,
+      "fixed": 0.8872188534792609
+    },
+    "validation_global_logit_std": 8.268640623371496,
+    "validation_local_logit_std": 7.150204735600335
+  },
+  "common128/single_sd15": {
+    "selected_alpha": 0.7,
+    "thresholds": {
+      "global": 0.6294238473915917,
+      "local": 0.09346207055496587,
+      "average": 0.554862949632091,
+      "fixed": 0.3628684456114539
+    },
+    "validation_global_logit_std": 7.803546703959089,
+    "validation_local_logit_std": 7.52797648730631
+  },
+  "common128/mixed_sd15_biggan": {
+    "selected_alpha": 0.7,
+    "thresholds": {
+      "global": 0.7935469497304058,
+      "local": 0.8913858048476365,
+      "average": 0.8056773664842547,
+      "fixed": 0.5782509934197736
+    },
+    "validation_global_logit_std": 7.993651083200143,
+    "validation_local_logit_std": 6.580585683179153
+  }
+}

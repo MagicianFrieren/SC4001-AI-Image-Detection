@@ -1,0 +1,62 @@
+SC4001 J：第四轮普通门控／质量感知门控对照（2026-10-22）
+
+Material Passport: academic-research-suite / experiment-agent; run; round4_v1.
+状态：实验完成，模型与结果核验通过。
+
+专家训练400张：200真实+100 SD1.5+100 BigGAN，只用clean；门控训练200张：100真实+50 SD1.5+50 BigGAN。
+门控训练与专家训练按原图完全分开；原验证集200张及开发集400张不变。
+门控训练和验证各使用clean、JPEG70、缩放0.5三个视图，因此各600条输入；开发评估clean、JPEG50、缩放0.5。
+缩放是门控已见条件；JPEG50强度未用于门控训练；ADM从不参与训练或模型选择。
+两种门控共享分支概率、概率差、预测熵和局部视图logit波动。质量门控额外获得3个质量代理。
+两者均为8→32→1网络、321参数，普通门控最后3个标准化输入置零；初始化、训练规则相同。
+3个初始化只衡量门控优化波动，专家及数据划分保持不变。报告的是各次AUROC均值，不是预测集成。
+
+ADM AUROC均值（普通／质量门控括号内为3次初始化的样本标准差）：
+  original: fixed alpha=0.7
+    clean   : Avg=0.6917, Fixed=0.6889, Score=0.6818 (0.0006), Quality=0.6894 (0.0014)
+    jpeg50  : Avg=0.5561, Fixed=0.5452, Score=0.5927 (0.0011), Quality=0.5828 (0.0029)
+    resize05: Avg=0.6684, Fixed=0.6628, Score=0.6352 (0.0011), Quality=0.6495 (0.0008)
+  common128: fixed alpha=0.6
+    clean   : Avg=0.7021, Fixed=0.7049, Score=0.6879 (0.0048), Quality=0.6971 (0.0023)
+    jpeg50  : Avg=0.6099, Fixed=0.6075, Score=0.5902 (0.0020), Quality=0.5749 (0.0010)
+    resize05: Avg=0.7074, Fixed=0.7131, Score=0.6901 (0.0031), Quality=0.7080 (0.0010)
+
+ADM质量门控相对普通门控的成对差值区间（条件于当前专家、三个门控及开发图像）：
+  original   clean   : +0.0076 [-0.0016, +0.0179]
+  original   jpeg50  : -0.0099 [-0.0224, -0.0002]
+  original   resize05: +0.0143 [+0.0044, +0.0278]
+  common128  clean   : +0.0092 [-0.0161, +0.0359]
+  common128  jpeg50  : -0.0152 [-0.0451, +0.0132]
+  common128  resize05: +0.0179 [-0.0132, +0.0517]
+
+训练选择：
+  original/score_gate/20261022: best epoch=220, validation BCE=1.2060
+  original/quality_gate/20261022: best epoch=293, validation BCE=1.1826
+  original/score_gate/20261023: best epoch=265, validation BCE=1.2053
+  original/quality_gate/20261023: best epoch=343, validation BCE=1.1760
+  original/score_gate/20261024: best epoch=400, validation BCE=1.1720
+  original/quality_gate/20261024: best epoch=335, validation BCE=1.1786
+  common128/score_gate/20261022: best epoch=395, validation BCE=0.9643
+  common128/quality_gate/20261022: best epoch=78, validation BCE=1.0235
+  common128/score_gate/20261023: best epoch=323, validation BCE=0.9750
+  common128/quality_gate/20261023: best epoch=75, validation BCE=1.0586
+  common128/score_gate/20261024: best epoch=400, validation BCE=0.9759
+  common128/quality_gate/20261024: best epoch=64, validation BCE=1.0396
+
+实验运行约87.0秒，包括新JPEG70特征和缓存复用。
+180个指标单元、12个门控、4个专家头复算/重拟合通过；所有门控权重另用NumPy重建检查。
+
+解释边界：
+  - One expert/gate data split; three gate initialization seeds are not three independent data experiments
+  - ADM and JPEG50 are previously inspected exploratory development conditions
+  - resize05 is now seen during gate training and validation; JPEG50 intensity is not
+  - Experts have 400 rather than prior 600 training originals; compare methods within this round
+  - Validation selects early stopping, fixed alpha and thresholds; no final blind test
+  - Source/content/quality confounding and PatchShuffle alignment limitations remain
+  - Quality proxies may encode shortcuts; changed weights alone do not establish useful adaptation
+  - 区间未校正多重比较，不包含重新抽样训练集或重新训练专家的不确定性。
+  - 本轮专家仅用400张图，阈值使用混合退化验证；不能与第三轮直接归因比较。
+
+详见aggregate_metrics.csv、paired_contrasts.csv、gate_weight_summary.csv、training_curves.csv。
+运行：./.venv/Scripts/python.exe -u scripts/run_round4.py
+核验：./.venv/Scripts/python.exe scripts/verify_round4.py

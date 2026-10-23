@@ -1,0 +1,42 @@
+{
+  "id": "round2_preprocessing_generator_ablation",
+  "seed": 20261022,
+  "established_before_run": "2026-10-22T13:15:47.308100+00:00",
+  "research_question": "How do common preprocessing and fixed-budget generator mixing change development AUROC?",
+  "profiles": {
+    "original": "Pilot RGB fit224 bicubic",
+    "common128": "RGB fit128 bicubic then resize224 bicubic",
+    "common128_jpeg90": "RGB fit128 bicubic, JPEG90 subsampling2 decode, resize224 bicubic"
+  },
+  "training": {
+    "single_sd15": "300 Real + 300 SD15",
+    "mixed_sd15_biggan": "300 same Real + 150 SD15 + 150 BigGAN"
+  },
+  "validation": {
+    "single_sd15": "100 Real + 100 SD15",
+    "mixed_sd15_biggan": "100 same Real + 50 SD15 + 50 BigGAN"
+  },
+  "threshold_rule": "Maximum Youden J on corresponding clean validation only; then fixed for all development conditions",
+  "evaluation": "Original 400 development images: 100 Real shared across 100 each SD15, BigGAN, ADM",
+  "conditions_after_profile": [
+    "clean",
+    "jpeg50",
+    "resize05"
+  ],
+  "heads": [
+    "frozen CLIP logistic regression",
+    "three quality proxies logistic regression"
+  ],
+  "hyperparameters": "Inherited pilot scaler and C=1 liblinear; no development tuning; no augmentation",
+  "contrasts": "Paired AUROC differences for preprocessing within training and mixed-minus-single within profile",
+  "uncertainty": "2000 paired class-stratified bootstrap draws; per-cell 95% percentile intervals; no multiple-comparison correction",
+  "limits": [
+    "Exploratory development, including ADM already inspected in pilot; no blind final test",
+    "Common processing does not remove inherited compression, semantic or source confounding",
+    "Single training subset seed; bootstrap conditions on fitted heads",
+    "BigGAN is seen for mixed training; its gain is not unseen-generator generalization",
+    "Mixed training changes both fake composition and corresponding validation composition",
+    "Shared real pool makes cells dependent; no population-level or causal conclusion"
+  ],
+  "original_manifest_sha256": "e9fcc837ae484b084691a57b803db9af2bd0eef21f45cb9d7606d665fdc8dae0"
+}

@@ -1,0 +1,91 @@
+SC4001 J：第六轮JPEG70／缩放增强消融（2026-10-22）
+
+Material Passport: academic-research-suite / experiment-agent; run; round6_v1.
+状态：实验完成，保存的模型及指标复核通过。
+
+本轮只改变专家训练视图；门控训练、校准、模型选择和开发图像及视图均沿用第五轮。
+四组使用相同400张专家训练原图、相同C和每原图总损失权重：
+  干净：clean权重1。
+  仅JPEG：clean权重2/3，JPEG70权重1/3。
+  仅缩放：clean权重2/3，resize05权重1/3。
+  联合：clean、JPEG70、resize05各1/3。
+单项保留与联合组相同的增强份额，省去的增强用clean替代；实现中的重复clean视图不算新样本。
+两个预处理档、是否温度校准、普通与质量门控的三个初始化全部保留。
+专家训练400／门控训练200／校准100／模型选择100／开发400原图，五个分区完全不重叠。
+
+ADM三条件宏平均AUROC：clean、JPEG50、resize05等权；门控先按三个初始化平均。
+
+original / raw：全局、局部、平均融合、固定融合、普通门控、质量门控
+  干净训练: 0.6152 / 0.6357 / 0.6387 / 0.6387 / 0.6369 / 0.6409
+  仅JPEG70增强: 0.6558 / 0.6196 / 0.6546 / 0.6476 / 0.6540 / 0.6501
+  仅缩放增强: 0.6046 / 0.5726 / 0.6082 / 0.6082 / 0.5897 / 0.5968
+  联合增强: 0.6025 / 0.5492 / 0.5918 / 0.5918 / 0.5918 / 0.5915
+
+original / temperature：全局、局部、平均融合、固定融合、普通门控、质量门控
+  干净训练: 0.6152 / 0.6357 / 0.6396 / 0.6396 / 0.6372 / 0.6492
+  仅JPEG70增强: 0.6558 / 0.6196 / 0.6559 / 0.6448 / 0.6444 / 0.6493
+  仅缩放增强: 0.6046 / 0.5726 / 0.6079 / 0.6079 / 0.6029 / 0.6024
+  联合增强: 0.6025 / 0.5492 / 0.5942 / 0.5884 / 0.5950 / 0.5953
+
+common128 / raw：全局、局部、平均融合、固定融合、普通门控、质量门控
+  干净训练: 0.6623 / 0.6210 / 0.6731 / 0.6731 / 0.6573 / 0.6602
+  仅JPEG70增强: 0.6114 / 0.5820 / 0.6205 / 0.6205 / 0.6203 / 0.6198
+  仅缩放增强: 0.6358 / 0.5865 / 0.6410 / 0.6436 / 0.6219 / 0.6302
+  联合增强: 0.5931 / 0.5491 / 0.5929 / 0.5929 / 0.5950 / 0.5931
+
+common128 / temperature：全局、局部、平均融合、固定融合、普通门控、质量门控
+  干净训练: 0.6623 / 0.6210 / 0.6724 / 0.6724 / 0.6718 / 0.6531
+  仅JPEG70增强: 0.6114 / 0.5820 / 0.6230 / 0.6199 / 0.6218 / 0.6113
+  仅缩放增强: 0.6358 / 0.5865 / 0.6410 / 0.6345 / 0.6415 / 0.6395
+  联合增强: 0.5931 / 0.5491 / 0.5979 / 0.5979 / 0.6014 / 0.5896
+
+同一平均融合规则下的增强差值（ADM三条件宏平均，成对95%区间）：
+平均融合用于观察专家训练变化，避免混入门控学习和固定权重选择的变化。
+  original   raw         jpeg_only_minus_clean       : +0.0159 [-0.0149, +0.0480]
+  original   raw         resize_only_minus_clean     : -0.0305 [-0.0779, +0.0180]
+  original   raw         augmented_minus_clean       : -0.0469 [-0.0991, +0.0090]
+  original   raw         augmented_minus_jpeg_only   : -0.0628 [-0.1003, -0.0254]
+  original   raw         augmented_minus_resize_only : -0.0164 [-0.0419, +0.0090]
+  original   temperature jpeg_only_minus_clean       : +0.0164 [-0.0164, +0.0494]
+  original   temperature resize_only_minus_clean     : -0.0316 [-0.0789, +0.0171]
+  original   temperature augmented_minus_clean       : -0.0453 [-0.0993, +0.0097]
+  original   temperature augmented_minus_jpeg_only   : -0.0617 [-0.0984, -0.0254]
+  original   temperature augmented_minus_resize_only : -0.0137 [-0.0400, +0.0119]
+  common128  raw         jpeg_only_minus_clean       : -0.0526 [-0.0762, -0.0304]
+  common128  raw         resize_only_minus_clean     : -0.0321 [-0.0520, -0.0141]
+  common128  raw         augmented_minus_clean       : -0.0803 [-0.1106, -0.0510]
+  common128  raw         augmented_minus_jpeg_only   : -0.0276 [-0.0452, -0.0110]
+  common128  raw         augmented_minus_resize_only : -0.0481 [-0.0692, -0.0267]
+  common128  temperature jpeg_only_minus_clean       : -0.0494 [-0.0739, -0.0251]
+  common128  temperature resize_only_minus_clean     : -0.0314 [-0.0502, -0.0135]
+  common128  temperature augmented_minus_clean       : -0.0745 [-0.1033, -0.0446]
+  common128  temperature augmented_minus_jpeg_only   : -0.0250 [-0.0410, -0.0096]
+  common128  temperature augmented_minus_resize_only : -0.0431 [-0.0640, -0.0213]
+
+逐条件ADM：原预处理、不校准，平均融合与质量门控
+  干净训练 / clean: average=0.6917, quality_gate=0.6896
+  干净训练 / jpeg50: average=0.5561, quality_gate=0.5837
+  干净训练 / resize05: average=0.6684, quality_gate=0.6496
+  仅JPEG70增强 / clean: average=0.6875, quality_gate=0.6810
+  仅JPEG70增强 / jpeg50: average=0.6170, quality_gate=0.6120
+  仅JPEG70增强 / resize05: average=0.6594, quality_gate=0.6571
+  仅缩放增强 / clean: average=0.6101, quality_gate=0.5785
+  仅缩放增强 / jpeg50: average=0.5661, quality_gate=0.5673
+  仅缩放增强 / resize05: average=0.6484, quality_gate=0.6447
+  联合增强 / clean: average=0.5856, quality_gate=0.5845
+  联合增强 / jpeg50: average=0.5676, quality_gate=0.5674
+  联合增强 / resize05: average=0.6223, quality_gate=0.6225
+
+对照复现与解释边界：
+干净和联合增强参考组共96,000条开发预测，与第五轮logit／概率／权重的最大差异：0。
+1,440个指标单元、96个门控、16个专家头和16个温度拟合复核通过。
+宏平均bootstrap按原图同步抽取其三个条件，再计算方法差值；不会把退化视图当作独立图像。
+区间条件于已拟合的专家、校准和门控；单一数据划分，未作多重比较校正。
+对增强的结论只适用于当前剂量、数据和训练流程；特征标准化也随训练分布改变。
+不能从本轮推断某种图像处理对所有检测器普遍有害，或已经确定具体像素机制。
+ADM已被反复查看，仍为探索性开发集，未来需要新的独立评价来源。
+训练运行约39.5秒，复用特征；核验和报告另计。
+
+运行：./.venv/Scripts/python.exe -u scripts/run_round6.py
+核验：./.venv/Scripts/python.exe scripts/verify_round6.py
+报告：./.venv/Scripts/python.exe scripts/summarize_round6.py

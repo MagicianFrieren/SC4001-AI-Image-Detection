@@ -1,0 +1,60 @@
+SC4001 J：第三轮双分支试验（2026-10-22）
+
+Material Passport: academic-research-suite / experiment-agent; run; round3_v1.
+状态：实验完成，保存的预测和指标已复核；未做独立端到端复现。
+
+本轮问题：局部分支是否提供互补信息？平均／固定权重融合是否能利用这些信息？
+全局分支：沿用第二轮冻结CLIP ViT-B/32整图特征和线性分类头。
+局部分支：224图像切为16个56x56块，按4个固定排列打乱，平均4个归一化特征，再训练同样的线性头。
+同一个排列用于所有图片及退化条件，不使用标签选择排列。先施加退化，再打乱。
+融合在logit上进行；alpha表示全局分支权重。平均融合alpha=0.5。
+固定权重从0到1、步长0.1，仅按clean验证集的生成器宏平均AUROC选择。
+每个模型再用clean验证集选择一个阈值，固定用于所有开发条件。
+每个训练方案仍为300真实+300生成；混合方案中SD1.5、BigGAN各150张。
+开发集及所有划分与第二轮相同；ADM不参与训练、权重或阈值选择。
+
+验证集选择的全局权重：
+  original/single_sd15: alpha=0.7
+  original/mixed_sd15_biggan: alpha=0.9
+  common128/single_sd15: alpha=0.7
+  common128/mixed_sd15_biggan: alpha=0.7
+
+混合训练的ADM AUROC（G=全局，L=局部，Avg=平均，Fixed=验证集固定权重）：
+  original   clean   : G=0.6607, L=0.6613, Avg=0.6746, Fixed=0.6634
+  original   jpeg50  : G=0.4561, L=0.5849, Avg=0.5254, Fixed=0.4687
+  original   resize05: G=0.6195, L=0.6400, Avg=0.6461, Fixed=0.6236
+  common128  clean   : G=0.6753, L=0.6672, Avg=0.6895, Fixed=0.6870
+  common128  jpeg50  : G=0.5508, L=0.5697, Avg=0.5625, Fixed=0.5600
+  common128  resize05: G=0.6736, L=0.6438, Avg=0.6861, Fixed=0.6873
+
+混合训练ADM固定融合相对全局分支的差值（成对95%区间）：
+  original   clean   : +0.0027 [-0.0049, +0.0106]
+  original   jpeg50  : +0.0126 [+0.0023, +0.0224]
+  original   resize05: +0.0041 [-0.0053, +0.0132]
+  common128  clean   : +0.0117 [-0.0167, +0.0412]
+  common128  jpeg50  : +0.0092 [-0.0226, +0.0439]
+  common128  resize05: +0.0137 [-0.0116, +0.0407]
+
+错误互补：每行200张图；分类阈值各自在clean验证集选择，不随条件改变。
+  original   clean   : 都对=102, 仅G对=19, 仅L对=17, 都错=62
+  original   jpeg50  : 都对=81, 仅G对=18, 仅L对=25, 都错=76
+  original   resize05: 都对=95, 仅G对=13, 仅L对=17, 都错=75
+  common128  clean   : 都对=93, 仅G对=25, 仅L对=34, 都错=48
+  common128  jpeg50  : 都对=94, 仅G对=8, 仅L对=9, 都错=89
+  common128  resize05: 都对=93, 仅G对=36, 仅L对=30, 都错=41
+
+144个指标单元、36个错误重叠单元、4次权重搜索复核通过。全局预测与第二轮最大差异：1.67e-15。
+实验运行时间：121.2秒；峰值PyTorch显存分配：239.0595703125 MB。
+
+限制与待检查问题：
+这是初期探索：单一训练子集、固定四视图，尚未训练普通门控或质量门控。
+打乱视图不能等同于纯纹理，它同时破坏布局并引入人工边界。
+56像素图块与ViT-B/32的32像素token不对齐；编码器、训练方法、视图数都不同于SFLD原设置，不能称为论文复现。
+数据来源、格式、分辨率历史和内容偏差仍然存在。
+每个区间使用2000次按类别分层的成对bootstrap，只反映固定模型的开发集抽样不确定性，未校正多重比较。
+错误互补依赖验证阈值；看到某分支“补救”另一分支不代表可在未知图片上自动判断应该选谁。
+这些开发结果不能作为最终盲测证据。
+
+PatchShuffle方法出处：https://arxiv.org/abs/2502.17105
+运行：./.venv/Scripts/python.exe -u scripts/run_round3.py
+核验：./.venv/Scripts/python.exe scripts/verify_round3.py

@@ -1,3 +1,8 @@
 * text=auto eol=lf
+# Experiment metadata hashes the exact bytes of source and result files.
+# Preserve those bytes across Windows and Unix checkouts.
+scripts/*.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+results/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+*.md text eol=lf
 *.png binary
 *.pdf binary

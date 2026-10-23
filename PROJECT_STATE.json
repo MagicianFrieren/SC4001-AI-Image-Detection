@@ -1,0 +1,71 @@
+{
+  "project": "SC4001 AI image detection (J direction)",
+  "updated": "2026-10-23",
+  "user_decision": "Publish rounds 2-6 code and results, update README, and push to GitHub for teammates",
+  "stage": "Round 6 complete; teammate publication snapshot verified",
+  "entrypoints": [
+    "README.md",
+    "docs/EXPERIMENTS.md",
+    "docs/REPRODUCING.md",
+    "results/round6/interpretation_zh.txt",
+    "results/round6/verification.json"
+  ],
+  "completed": [
+    "Original pilot and English report preserved",
+    "Offline fixed-budget three-preprocessing by two-training-composition experiment",
+    "12 heads, 108 metric cells, 162 paired contrasts",
+    "Original pilot prediction equivalence restored after FP16 batch-boundary fix",
+    "Round 3: global/local/average/fixed fusion across two preprocessing profiles and two training compositions",
+    "PatchShuffle 56px tiles, four fixed label-independent views; frozen existing ViT-B/32",
+    "144 metric cells, 36 overlap cells and 4 alpha searches independently recomputed from saved predictions",
+    "Global prediction equivalence to round two verified within 1.67e-15",
+    "Round 4: split prior mixed 600 train originals into 400 expert + 200 gate originals, disjoint",
+    "Retrained common experts; compared global/local/average/fixed/score-gate/quality-gate in two profiles",
+    "Paired 3 gate initializations; matched architecture and shared non-quality inputs; new JPEG70 training features",
+    "180 metric cells, 12 gates reconstructed in NumPy, 4 expert heads refitted, 90 paired mean-AUROC contrasts verified",
+    "Post-hoc confidence and gate-weight diagnostics saved without changing models",
+    "Round5 factorial: clean/augmented experts x raw/temperature, in original/common128 profiles",
+    "Same400 expert and200 gate originals; prior200 validation split into100 calibration +100 selection, stratified and disjoint",
+    "Augmented views weighted1/3 to preserve total per-original loss weight and C",
+    "48 gates with paired3 initializations; positive temperatures fitted per expert only on calibration views",
+    "720 metric cells checked,8 weighted experts refit,8 temperatures independently optimized,48 gates reconstructed in NumPy",
+    "Held-out AUROC/AP/BCE/Brier plus648 paired contrasts and descriptive macro summaries saved",
+    "Round6: clean/JPEG-only/resize-only/joint expert-training arms, with matched one-third doses and fixed total original weight",
+    "Reused identical round5 five-way original partitions and gate/calibration/selection recipes",
+    "1440 metric cells;96 gates,16 expert refits,16 independent temperature checks passed",
+    "Clean/joint control arms reproduce all96000 round5 development logits/probabilities/weights exactly",
+    "1944 per-cell and360 paired three-condition macro contrasts; bootstrap synchronizes image IDs across conditions",
+    "Teammate-facing README links rounds 2-6, measured findings, experiment guide and reproduction instructions",
+    "Added read-only shared-result verifier; source/protocol hashes plus all1440 round6 metric cells and288 macro AUROCs passed from an exported Git staging tree",
+    "Added pinned-manifest image restoration; raw images, model weights and feature caches remain ignored",
+    "Preserved historical script/result bytes with Git attributes so published provenance survives checkout",
+    "Isolated published-tree smoke check restored all1600 images from existing pinned shards, confirmed idempotency and corrupt-image rejection, preserved result files and validated documentation links"
+  ],
+  "findings": [
+    "Original/raw average fusion ADM macro AUROC: clean0.6387,JPEG-only0.6546,resize-only0.6082,joint0.5918",
+    "Original/raw joint-minus-JPEG-only macro delta -0.0628,paired95%CI[-0.1003,-0.0254]; adding resize is a supported contributor in that comparison",
+    "Original/raw JPEG-only-minus-clean macro interval crosses zero; modest aggregate improvement not established",
+    "Common128/raw average fusion: clean0.6731,JPEG-only0.6205,resize-only0.6410,joint0.5929; both single augmentations reduce ADM macro AUC",
+    "Effect is preprocessing dependent; no universal augmentation failure mechanism established",
+    "Quality gating still does not clearly beat simple average fusion in the JPEG-only candidate"
+  ],
+  "next_suggested": [
+    "Retain clean training as main reference; original-preprocessing JPEG-only is an exploratory candidate",
+    "Repeat training partitions or add genuinely new generator sources before further architecture changes",
+    "If probing resize mechanism, prespecify controlled feature-standardization or strength experiments instead of broad tuning on ADM"
+  ],
+  "limitations": [
+    "One data split,three gate initializations; repeatedly inspected development",
+    "Matched degradation dose1/3; not50/50 augmentation",
+    "Training standardization changes with augmentation; no pixel-level causal mechanism isolated",
+    "Bootstrap conditional on fitted models; multiple comparisons uncorrected",
+    "Effects depend on preprocessing; JPEG-only macro gain in original pipeline remains uncertain"
+  ],
+  "commands": [
+    "./.venv/Scripts/python.exe scripts/verify_shared_results.py",
+    "./.venv/Scripts/python.exe -u scripts/run_round6.py",
+    "./.venv/Scripts/python.exe scripts/verify_round6.py",
+    "./.venv/Scripts/python.exe scripts/summarize_round6.py"
+  ],
+  "git_status": "Publication snapshot includes rounds 2-6 scripts/results and documentation; data, .cache, artifacts, .venv and tmp remain ignored"
+}

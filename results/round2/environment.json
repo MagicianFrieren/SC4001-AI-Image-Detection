@@ -1,0 +1,12 @@
+{
+  "torch": "2.2.0+cu121",
+  "torchvision": "0.17.0+cu121",
+  "numpy": "1.26.4",
+  "transformers": "4.39.3",
+  "scikit-learn": "1.8.0",
+  "Pillow": "12.2.0",
+  "pyarrow": "25.0.1",
+  "scipy": "1.17.1",
+  "matplotlib": "3.9.2",
+  "joblib": "1.5.3"
+}
