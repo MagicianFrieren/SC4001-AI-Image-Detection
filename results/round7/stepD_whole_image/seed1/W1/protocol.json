@@ -1,0 +1,127 @@
+{
+  "implementation_sha256": "378ffffa7ece3641da2150f4bac4dfc6838d2ab508c5aabbf64929b7f4a9c4c0",
+  "seed": 20261101,
+  "settings": {
+    "calibration": "raw only for W0/W1/W2; no temperature fitting; reuse raw W0 predictions and thresholds",
+    "clip": {
+      "batch_size": 32,
+      "frozen": true,
+      "head": "StandardScaler then LogisticRegression(C=1, liblinear, max_iter=2000, random_state=20261018)",
+      "local": "four mean-pooled normalized features from 56px PatchShuffle views; seeds 202610220..202610223",
+      "model": "openai/clip-vit-base-patch32",
+      "precision": "FP16 encoder on CUDA as Round 6; embeddings normalized in FP32",
+      "revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+      "weights_sha256": "a63082132ba4f97a80bea76823f544493bffa8082296d62d71581a4feff1576f"
+    },
+    "conditions": [
+      "clean",
+      "jpeg70",
+      "jpeg50",
+      "resize05"
+    ],
+    "epoch_selection": "Maximum mean selection AUROC over clean/jpeg70/resize05; exact tie retains earliest epoch",
+    "evaluation": "Evaluation is unchanged from Step C: conditions clean/jpeg70/jpeg50/resize05 applied to the ORIGINAL evaluation images (do not format-match evaluation images); domains SD15 selection, ADM dev, BigGAN dev.",
+    "format_match": {
+      "distribution": "discrete uniform integers, inclusive",
+      "draw": "Rejection sampling: SHA256 UTF-8 stepD|seed|source_id|counter, big-endian integer, reject >= 2^256 - (2^256 mod 36), q=60+(integer mod 36). Counter starts at 0. No label or epoch input.",
+      "pillow": "12.2.0",
+      "pipeline": "Decode original with EXIF transpose to RGB, JPEG encode once at native size with Pillow subsampling=2, optimize=False, progressive=False; decode RGB; then unchanged Step C original profile and condition.",
+      "quality_max": 95,
+      "quality_min": 60
+    },
+    "geometry": "Unchanged Step C original: ImageOps.fit 224x224 BICUBIC; then inherited condition; CLIP or ImageNet normalization.",
+    "id": "round7_stepD_whole_image",
+    "implementation_lock": "Separate stepD_whole_image/implementation.json binds this pre-training protocol and new implementation hashes before any real training.",
+    "inherited_code_sha256": {
+      "scripts/gate_models.py": "417cd36b667f33046a903c1d51cc867301db3206ffba978aba594d3fb9bfc12a",
+      "scripts/round7_baseline_clip.py": "a450c3f6bb2c4186311fec2db622a7545643902bb47e49bce4f6e73e938bea32",
+      "scripts/round7_baseline_common.py": "c93bfd3d54cd60c9991cdc6fe966cf53395450ea1c090f6e560f23206786d0ae",
+      "scripts/round7_baseline_data.py": "f3bd973f536136ff341c0bf8a0db0bc530eb94cb4467db9c3b0ea55590ddca9a",
+      "scripts/round7_baseline_resnet.py": "04e59e3f2de3ad2a26a939a056e0c80a9a2d9f32979db56e7cacd5da75048a90",
+      "scripts/round7_seed_support.py": "2f6a4ec2182ad3411b33e6fece3dd0c669c562ca0f15eea174579ff2cec8e262",
+      "scripts/round7_verify_baselines.py": "05c11d65cd13bbcd3ac98ca2abb62dbf273ca290854ab69a463cacdb9c96d872",
+      "scripts/score_calibration.py": "b5ec91b05bba2f0327f2b7a3ec6f36ebc1bdb1742256a33de24b1003c0bdf526"
+    },
+    "input_sha256": {
+      "results/round7/assignments_seed1.json": "522f2c89b75e20b2dcf0bade14fc207b3d72db4c9a351d63bff82a8ce96e94bd",
+      "results/round7/assignments_seed2.json": "8ffb8a0052a48cea921cea5e402c5d430713d6aab913117fb80380968d6e8c3e",
+      "results/round7/assignments_seed3.json": "e358cde34227a101a4b6c7e24a1109f807e2867cc610e23a943f82ca4103328b",
+      "results/round7/baselines_seed1/clip_original_predictions.csv": "18816a70b2999cb711fef2e784ad1121dbc7c6b45dd6a3b5656c209190e7d8c5",
+      "results/round7/baselines_seed1/clip_original_settings.json": "28311e3bb0cc663fa397b188ca88f3dbfcf607975d9e4068f068b19fa9ad5202",
+      "results/round7/baselines_seed1/protocol.json": "6a0424fc22c7cffaec23a934eb4e95b21dd9fe6bd51c49f9e008eed356d019e3",
+      "results/round7/baselines_seed2/clip_original_predictions.csv": "90491daa87d43c29b1a3d5e012027c61629883d7f8356459e1100d7f2178ddfa",
+      "results/round7/baselines_seed2/clip_original_settings.json": "b52f50b2670245abe40f6ec0fde5fc9602c5783f20f2c2eb9ab2fecbcbfbd31b",
+      "results/round7/baselines_seed2/protocol.json": "59a9818761f7ab07c3e1bc33794d47ae1f1a1faa51a936bbfc9b72c0947c31cc",
+      "results/round7/baselines_seed3/clip_original_predictions.csv": "bd824550906d5c78bf54500c0811b4b57ff94275e89c471db57dc42f51ae8a1a",
+      "results/round7/baselines_seed3/clip_original_settings.json": "8b7615b51fead77eeef055817c7135c5fe365d7f035f891a34d5949b6eb5f8bd",
+      "results/round7/baselines_seed3/protocol.json": "4939f2c65ca7c2f4791f1f3e9d38c39e72a2828a6ee391f8d7043d6d109ac778",
+      "results/round7/data_protocol.json": "826225696f0362a96c789cad9ba27ff743679561d894deea1c7106c5d270d76e",
+      "results/round7/data_protocol_step_b.json": "0753f0d8374ed5fca157d0a22b95acbdd406f526bfefd57ed0cef84e6712f852",
+      "results/round7/development_manifest.jsonl": "3f1b57cf4238f0739c5eadf92b321bfbfd704478c259ff1043269de7389bd77f",
+      "results/round7/fitting_pool_manifest.jsonl": "c812faaf04fa43be76e80d023374e50694a7fdfaed7c8ea540392309c114028a",
+      "results/round7/step_b_isolation.json": "b33e056ea07df94e54c4434309f583ceaa3838e25db85b89f743fefcbd2f80cd"
+    },
+    "isolation": "No reserved_test_manifest.jsonl access, no reserved-test image access. Reuse only Step C allowlisted original caches read-only, guard before any cache/image/feature access. Do not use gate-fit or calibration partitions.",
+    "limitations": [
+      "real images become double-compressed, fakes single-compressed. Reporting JPEG conditions add further compression to original images, not format-matched copies.",
+      "Native resolution and prior compression history remain confounded; this intervention does not establish sole causation. W1-W0 is architecture-matched; W2-W0 also changes architecture.",
+      "SD15 selection shares image identities with tuning, so reporting is optimistic, not independent test evidence. ADM/BigGAN are previously inspected development domains. Three seeds share the fitting pool and development images; SD is descriptive, not a confidence interval."
+    ],
+    "outputs": "results/round7/stepD_whole_image/ and artifacts/round7/stepD_whole_image/ only; immutable outputs, atomic publication, checkpoint resume",
+    "profile": "original",
+    "question": "is the global branch's below-chance AUROC on JPEG-compressed ADM/BigGAN caused by the training-set format confound (real = JPEG, fake = PNG), and does format-matched training remove it without a clean-image cost?",
+    "report": {
+      "a": "per-condition AUROC, balanced accuracy and real-FPR, each seed plus mean \u00b1 SD;",
+      "aggregation": "Each domain and condition separately; arithmetic mean and sample SD (ddof=1), three run seeds. Paired differences computed within seed for each metric. Also clean SD15 AUROC/BA/FPR costs vs W0.",
+      "b": "paired within-seed differences W1\u2212W0, W2\u2212W0 and W2\u2212W1 per condition;",
+      "c": "the success criteria check",
+      "metrics": [
+        "auroc",
+        "balanced_accuracy",
+        "real_false_positive_rate"
+      ]
+    },
+    "resnet": {
+      "all_layers_trainable": true,
+      "batch_size": 32,
+      "checkpoint": "Initialization plus every completed epoch; model, optimizer, scheduler, Python/NumPy/Torch/CUDA RNG and history; exclusive filenames; resume latest valid checkpoint",
+      "epoch_selection": "Maximum mean selection AUROC over clean/jpeg70/resize05; exact tie retains earliest epoch",
+      "epochs": 10,
+      "lr": 0.0001,
+      "normalization": "ImageNet mean/std after identical RGB geometry/degradation; CLIP uses CLIP mean/std",
+      "oom_policy": "Only CUDA OOM permits batch reduction (halving); rollback whole failed epoch to prior checkpoint, restore RNG/optimizer/scheduler and retry. Record batch changes. Never silently reduce for another reason.",
+      "optimizer": "AdamW",
+      "precision": "FP32",
+      "schedule": "CosineAnnealingLR T_max=10 eta_min=0; step once after each epoch",
+      "seed": "selected run seed",
+      "weight_decay": 0.0001,
+      "weights": "torchvision ResNet50_Weights.IMAGENET1K_V2"
+    },
+    "seeds": [
+      20261101,
+      20261102,
+      20261103
+    ],
+    "selection_tuning": "Format-matched selection views ONLY for thresholds and epoch choice. Apply inherited clean/jpeg70/resize05 conditions AFTER format matching and original-profile preprocessing; JPEG50 report-only. No development tuning.",
+    "success_criteria": [
+      "mean of JPEG70/JPEG50 ADM AUROC >= 0.50;",
+      "clean ADM and clean BigGAN AUROC drop <= 0.02 vs W0;",
+      "both holding in every seed."
+    ],
+    "success_implementation": "For W1 and W2 separately: PASS/FAIL for ADM JPEG mean, clean ADM drop and clean BigGAN drop per seed; joint pass requires all criteria in all 3 seeds. No criteria changed after results. Thresholds 0.50 and 0.02 inclusive; numerical tolerance 1e-12 only.",
+    "threshold": "Per model/profile/calibration/initialization, pooled selection Youden J over clean/jpeg70/resize05; ties closest probability threshold .5 (Round 6); fixed across all four reporting conditions",
+    "training_partition": "expert_fit only; one format-matched clean view per source; fixed quality across epochs",
+    "tuning_conditions": [
+      "clean",
+      "jpeg70",
+      "resize05"
+    ],
+    "variants": {
+      "W0": "the existing Step C global CLIP expert. Reuse its saved predictions; do not retrain.",
+      "W1": "format-matched frozen CLIP global expert. Before preprocessing, every training image (real and fake) is JPEG re-encoded once at a quality drawn uniformly from 60\u201395, with a deterministic draw per (seed, source_id). Same logistic head settings as W0. The selection partition gets the same deterministic treatment.",
+      "W2": "format-matched ResNet-50. The same W1 training input, with the Step C ResNet-50 settings otherwise unchanged (AdamW 1e-4, wd 1e-4, batch 32, 10 epochs, cosine, selection-based epoch choice, checkpoint/resume)."
+    }
+  },
+  "stepD_protocol_sha256": "a0695bf5d1ece6f590a4441b9d1e40fc41a4d93b84b8808fcdd5a615463d85d4",
+  "variant": "W1"
+}

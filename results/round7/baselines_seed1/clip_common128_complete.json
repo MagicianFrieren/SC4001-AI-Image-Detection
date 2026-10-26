@@ -1,0 +1,38 @@
+{
+  "environment": {
+    "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+    "numpy": "1.26.4",
+    "pillow": "12.2.0",
+    "pyarrow": "21.0.0",
+    "python": "3.12.7",
+    "scikit-learn": "1.5.1",
+    "scipy": "1.13.1",
+    "torch": "2.5.1+cu121",
+    "torchvision": "0.20.1+cu121",
+    "transformers": "4.39.3"
+  },
+  "files_sha256": {
+    "artifacts/round7/baselines_seed1/access_logs/clip_common128_d96c81bf651e486780b160a601957c27.json": "c0b559894b95a40c3f5a5af23603b1ca31edfd22320585fea26f2aa7ca52c58f",
+    "artifacts/round7/baselines_seed1/clip_common128_experts.joblib": "97490b8b700b140273358b5a01cb3c87ecb9f3f453f055b1adeaa653d8fc982e",
+    "artifacts/round7/baselines_seed1/features/common128_calibration_clean.npz": "a5c397f87d998b285b7d9f17dd8459fb7d2418da857b7abe71d0ff62f734814f",
+    "artifacts/round7/baselines_seed1/features/common128_calibration_jpeg70.npz": "559f4e7519e9b0918fe225dee93182799de81a32f0052785bafd8434e5ae10f1",
+    "artifacts/round7/baselines_seed1/features/common128_calibration_resize05.npz": "665624e2f95895acdba6daefcc9708ffddb127b37c51409b26e41de9a919dd92",
+    "artifacts/round7/baselines_seed1/features/common128_development_clean.npz": "20f674e373a6bf0888392395bfb84b4eb787112ddbcf84cbb82671c5ba8ba83a",
+    "artifacts/round7/baselines_seed1/features/common128_development_jpeg50.npz": "a0530832f00f1c43c9a19f8e4625d19168ef86ff00834ed1b0246e82c25b4ec3",
+    "artifacts/round7/baselines_seed1/features/common128_development_jpeg70.npz": "53905cbf15873b889cbb720581b1e1df6d0dc4de4f2e4bfff85475fa9f59f8bb",
+    "artifacts/round7/baselines_seed1/features/common128_development_resize05.npz": "e48d9189df9fa573be9175ce72bc6733a66d122f09995f3629033ae8c1a672ef",
+    "artifacts/round7/baselines_seed1/features/common128_expert_fit_clean.npz": "d79432802b08e7b0a5cb2e4f9a66a70d4ba52d4c615aaba02e879cf99ea0acd6",
+    "artifacts/round7/baselines_seed1/features/common128_gate_fit_clean.npz": "54043d2869b4acd01fa4a0d8de6b2da35b819b48a6c93475d8f4156fb715a88b",
+    "artifacts/round7/baselines_seed1/features/common128_gate_fit_jpeg70.npz": "4c8246bae24201f7c4f185332c714c2b60af21c43b0196f54f23894daf3d004d",
+    "artifacts/round7/baselines_seed1/features/common128_gate_fit_resize05.npz": "aed1735a9816421d7eddee353593a062c1789386ca7af0f9261353962d8c72e1",
+    "artifacts/round7/baselines_seed1/features/common128_selection_clean.npz": "10fa5f4806070b9ec0c018f070d70ef4f8755b84391353c97ff5e259fbeee9a8",
+    "artifacts/round7/baselines_seed1/features/common128_selection_jpeg50.npz": "54e2d0154734bb607a03f48abda928b25640a0bbd05bcbdda9731ee8d8b0ea34",
+    "artifacts/round7/baselines_seed1/features/common128_selection_jpeg70.npz": "552fa6129e7ef957e9c209293097f219307ac6710a1823e4a3b134b32b453b8a",
+    "artifacts/round7/baselines_seed1/features/common128_selection_resize05.npz": "5f6e9bcddcc1d81a6313d35059d5096848e4c12d6c73a10a8aeb7ad42ea688db",
+    "results/round7/baselines_seed1/clip_common128_predictions.csv": "56a61040594adc1994231ea10db67b5ac5378a5f17592a12619f004451acce04",
+    "results/round7/baselines_seed1/clip_common128_resources.json": "c17166065a9201329003915c0455750a031f2ad371b84d711c4437b518ca4561",
+    "results/round7/baselines_seed1/clip_common128_settings.json": "e7ad9c9208060f372ca41e6950d3ea6b15991829a65a86097f61d4179ec833b2"
+  },
+  "protocol_sha256": "6a0424fc22c7cffaec23a934eb4e95b21dd9fe6bd51c49f9e008eed356d019e3",
+  "status": "completed"
+}

@@ -1,0 +1,27 @@
+{
+  "files_sha256": {
+    "artifacts/round7/stepD_whole_image/seed2/W2/access_logs/stepD_W2_1a994ebeef9947c8af0c04593a205a95.json": "b7b06ada92d67b531988c6e4a733b74cfadc31c75ea3de81951c3ba2400f8754",
+    "artifacts/round7/stepD_whole_image/seed2/W2/checkpoints/original/epoch_000.pt": "b4ee8a3ff709dbc047a3c612e39e9b4fedcf03d45634f41401bbc54861350cb4",
+    "artifacts/round7/stepD_whole_image/seed2/W2/checkpoints/original/epoch_001.pt": "45c6acfac9588ad2229ff17a358b240ccff2e59f5a6ea7fb45cc3b27b43247b6",
+    "artifacts/round7/stepD_whole_image/seed2/W2/checkpoints/original/epoch_002.pt": "6b13432dbcd13c58c83f9a9be993d480cb90b625eedafd592f354dc0595d15f7",
+    "artifacts/round7/stepD_whole_image/seed2/W2/checkpoints/original/epoch_003.pt": "e50357fddfbaaeec44db69d1e50ae7bdc9008a3e8a43006dc2039ab476435bca",
+    "artifacts/round7/stepD_whole_image/seed2/W2/checkpoints/original/epoch_004.pt": "bbbe613feb2e4c9d2609851dfa48bf88a927760d94d51a2f37af2742a563c755",
+    "artifacts/round7/stepD_whole_image/seed2/W2/checkpoints/original/epoch_005.pt": "ffc74641a075d41fcb68845df0c68d71c6f0777c2fa46a9ac7ccb1ca194b178c",
+    "artifacts/round7/stepD_whole_image/seed2/W2/checkpoints/original/epoch_006.pt": "144a7342976fcbf043d576c17a8fa433133d8cb225802c7f76b6fb1b1964b8b8",
+    "artifacts/round7/stepD_whole_image/seed2/W2/checkpoints/original/epoch_007.pt": "b54c53dbf44377f39cb436605546d66e5e718dab8f57bf00439d475b6df9cc75",
+    "artifacts/round7/stepD_whole_image/seed2/W2/checkpoints/original/epoch_008.pt": "c9273b38888d5ae2b7542c6e5fa204b6e0dcafe16ac6acb68b884787394c3f31",
+    "artifacts/round7/stepD_whole_image/seed2/W2/checkpoints/original/epoch_009.pt": "0b264dfc2bfd995192bfb49f7e79fe0e37134da03fefe3d269eaafa97aae6705",
+    "artifacts/round7/stepD_whole_image/seed2/W2/checkpoints/original/epoch_010.pt": "1136cc5631ddf996b620a903020712b668303226bac6b4c2a9fc2a82162a98eb",
+    "artifacts/round7/stepD_whole_image/seed2/W2/result_bundle.json": "51c3aa1b3b6ef06bdbea993f5d45ecf088ac146eedded71566cc4dcdb62489ad",
+    "artifacts/round7/stepD_whole_image/seed2/W2/weights/resnet50-11ad3fa6.pth": "11ad3fa62ca79e40addfd354a8ec4b7c75143b3038b8d2a807fbc68deab379ca",
+    "results/round7/stepD_whole_image/seed2/W2/audit.json": "c68f382dcc072738a870ab2cadf13a7f0a980d924e08bd62ef841c68104c05d2",
+    "results/round7/stepD_whole_image/seed2/W2/metrics.csv": "98d2aba0da7be2e7613256e49421d4543bc9bea6140f233e63d6d1f15fb2d9de",
+    "results/round7/stepD_whole_image/seed2/W2/predictions.csv": "6a99bc4d307d63105afecd88f23e4c82a0a7dc53bfaa50858da2e87272efc7ff",
+    "results/round7/stepD_whole_image/seed2/W2/protocol.json": "77e4a996f401bc910d1b32fac066d0c421c85c1801e2101254b035a86c681fbd",
+    "results/round7/stepD_whole_image/seed2/W2/quality_draws.csv": "5ca2df1ee8d57f0252737fc92a7795e72d2ab8f3889d5891541387d37317d321",
+    "results/round7/stepD_whole_image/seed2/W2/settings.json": "6cf69f9cc0be808c09588698177aa4b447e481f8dd77e94dcbc1fe78d4280371",
+    "results/round7/stepD_whole_image/seed2/W2/tuning_predictions.csv": "86b34cee5ead07c871017bb917d3d7cccb288a2d063cfdd84f6191b5caf4d2be"
+  },
+  "protocol_sha256": "77e4a996f401bc910d1b32fac066d0c421c85c1801e2101254b035a86c681fbd",
+  "status": "completed"
+}

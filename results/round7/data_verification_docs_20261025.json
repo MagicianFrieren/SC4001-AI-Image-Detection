@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "scope": "Independent shard and original-image hashing, exclusion/deduplication, distributions, fixed test and fitting pool, all three seeded assignments, historical byte preservation; no model operations",
+  "source_images_rehashed": 28000,
+  "shards_verified": 14,
+  "previous_pool_images_checked": 1600,
+  "eligible_images": 26371,
+  "filter_counts": {
+    "eligible": 26371,
+    "old_pixel": 1600,
+    "round7_dhash_only": 24,
+    "round7_pixel": 1,
+    "old_dhash_only": 4
+  },
+  "fitting_per_class_each_seed": {
+    "expert_fit": 750,
+    "gate_fit": 250,
+    "calibration": 125,
+    "selection": 125
+  },
+  "reserved_test_counts": {
+    "Midjourney": 500,
+    "Real": 500,
+    "ADM": 500,
+    "VQDM": 500,
+    "GLIDE": 500,
+    "Wukong": 500,
+    "BigGAN": 500,
+    "SD15": 250
+  },
+  "unique_test_images": 3750,
+  "partition_seeds_verified": [
+    20261101,
+    20261102,
+    20261103
+  ],
+  "protected_files_unchanged": 135,
+  "protocol_sha256": "826225696f0362a96c789cad9ba27ff743679561d894deea1c7106c5d270d76e",
+  "seconds": 174.0
+}

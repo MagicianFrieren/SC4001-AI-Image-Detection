@@ -1,0 +1,11 @@
+{
+  "execution_addendum_sha256": "92822969aa0b690084c536b82a1bb12338bb39acf87068ef6ae1b6ec90aac6da",
+  "execution_addendum_validation": "passed",
+  "frozen_files": 10698,
+  "metric_cells": 3864,
+  "model_instances": 138,
+  "non_reserved_ids_touched": 0,
+  "prediction_rows": 2070000,
+  "scope": "Frozen inputs and final output hashes; independent metrics from saved predictions; exact coverage; seed/gate aggregation, paired differences and untouched macro; no images or models loaded",
+  "status": "passed"
+}

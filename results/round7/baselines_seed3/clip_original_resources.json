@@ -1,0 +1,397 @@
+{
+  "experts_sha256": "c416790558608a87b7e5bf20b9a0ac18dff091aab32d48826572b98890179fbf",
+  "feature_sha256": {
+    "artifacts/round7/baselines_seed3/features/original_calibration_clean.npz": "ca7db99767f38685e494f8809eb3942a0245fb6fa02342c52b4d44957db7112b",
+    "artifacts/round7/baselines_seed3/features/original_calibration_jpeg70.npz": "0d7428db3e6ebd11bb320acf3691d9fe601c871c8190868fd4e6c043da3e0b7f",
+    "artifacts/round7/baselines_seed3/features/original_calibration_resize05.npz": "43bc80adb2998e562f04de0a3a9bd9c1d35fb8fc49c9ce9bc865231da34342da",
+    "artifacts/round7/baselines_seed3/features/original_development_clean.npz": "11a505d8ee6a8de432d6c0ec34bf4380f86a716d7c04034b337a8d6f2df877b9",
+    "artifacts/round7/baselines_seed3/features/original_development_jpeg50.npz": "e54af905a124452fc2c1bc6856aa77c94d65aa0642b2e0e3ab4fe70d4a00bd7b",
+    "artifacts/round7/baselines_seed3/features/original_development_jpeg70.npz": "6857c03afe0e3b125fce3778971b04864594b54df54396a3933594789290da12",
+    "artifacts/round7/baselines_seed3/features/original_development_resize05.npz": "a8ceb799707d8b37064e4e5ab5284bf1c78f9d8285912435cad647c9f0ec66a6",
+    "artifacts/round7/baselines_seed3/features/original_expert_fit_clean.npz": "3be3ec7688806a2bed600329f2f1009be7836924379f1e5534dc5dd70c62c37b",
+    "artifacts/round7/baselines_seed3/features/original_gate_fit_clean.npz": "31f129d2fde64c5996586d9b4363bdc5db46e0c846443fc2ca5f59d2108a943b",
+    "artifacts/round7/baselines_seed3/features/original_gate_fit_jpeg70.npz": "c4c6f435fabb28030331ed1180b03c03a8e4e89264e330271d2bb0d94c1dc5cf",
+    "artifacts/round7/baselines_seed3/features/original_gate_fit_resize05.npz": "14ced0ee79ff8c41ea52c964bb461f8a7037929e68a0298cfd9cc65178008057",
+    "artifacts/round7/baselines_seed3/features/original_selection_clean.npz": "1c00a0a33425c6336de478a041b320678f6e1c7abf9e58910b7599d6460c4f00",
+    "artifacts/round7/baselines_seed3/features/original_selection_jpeg50.npz": "5cb85bff7ac055bd0aefce8feefbdba72bc6409bc04ae8326682e3a087a00632",
+    "artifacts/round7/baselines_seed3/features/original_selection_jpeg70.npz": "a424a7259985e7e3fd423358b77198b036c38cf6304212de438d8a74a6cc70cf",
+    "artifacts/round7/baselines_seed3/features/original_selection_resize05.npz": "91c695a7c990d4ddc657f99fd99c1cc81488ec3368c0297178ed5a38200a18f9"
+  },
+  "per_model": [
+    {
+      "calibration": "raw",
+      "fit_seconds": 0.34879029996227473,
+      "model": "global",
+      "note": "Expert fitting cost shared across four simple fusions; feature extraction reported separately",
+      "peak_gpu_bytes": 33554432,
+      "seed": -1
+    },
+    {
+      "calibration": "raw",
+      "fit_seconds": 0.34879029996227473,
+      "model": "local",
+      "note": "Expert fitting cost shared across four simple fusions; feature extraction reported separately",
+      "peak_gpu_bytes": 33554432,
+      "seed": -1
+    },
+    {
+      "calibration": "raw",
+      "fit_seconds": 0.34879029996227473,
+      "model": "average",
+      "note": "Expert fitting cost shared across four simple fusions; feature extraction reported separately",
+      "peak_gpu_bytes": 33554432,
+      "seed": -1
+    },
+    {
+      "calibration": "raw",
+      "fit_seconds": 0.34879029996227473,
+      "model": "fixed",
+      "note": "Expert fitting cost shared across four simple fusions; feature extraction reported separately",
+      "peak_gpu_bytes": 33554432,
+      "seed": -1
+    },
+    {
+      "calibration": "raw",
+      "fit_seconds": 1.2174508000025526,
+      "model": "score_gate",
+      "note": "Unchanged Round 6 full-batch CPU gate; feature/expert costs shared",
+      "peak_gpu_bytes": 33554432,
+      "seed": 20261022
+    },
+    {
+      "calibration": "raw",
+      "fit_seconds": 0.043577600037679076,
+      "model": "quality_gate",
+      "note": "Unchanged Round 6 full-batch CPU gate; feature/expert costs shared",
+      "peak_gpu_bytes": 33554432,
+      "seed": 20261022
+    },
+    {
+      "calibration": "raw",
+      "fit_seconds": 0.0414638000074774,
+      "model": "score_gate",
+      "note": "Unchanged Round 6 full-batch CPU gate; feature/expert costs shared",
+      "peak_gpu_bytes": 33554432,
+      "seed": 20261023
+    },
+    {
+      "calibration": "raw",
+      "fit_seconds": 0.06251769990194589,
+      "model": "quality_gate",
+      "note": "Unchanged Round 6 full-batch CPU gate; feature/expert costs shared",
+      "peak_gpu_bytes": 33554432,
+      "seed": 20261023
+    },
+    {
+      "calibration": "raw",
+      "fit_seconds": 0.04353560006711632,
+      "model": "score_gate",
+      "note": "Unchanged Round 6 full-batch CPU gate; feature/expert costs shared",
+      "peak_gpu_bytes": 33554432,
+      "seed": 20261024
+    },
+    {
+      "calibration": "raw",
+      "fit_seconds": 0.3015536000020802,
+      "model": "quality_gate",
+      "note": "Unchanged Round 6 full-batch CPU gate; feature/expert costs shared",
+      "peak_gpu_bytes": 33554432,
+      "seed": 20261024
+    },
+    {
+      "calibration": "temperature",
+      "fit_seconds": 0.34879029996227473,
+      "model": "global",
+      "note": "Expert fitting cost shared across four simple fusions; feature extraction reported separately",
+      "peak_gpu_bytes": 33554432,
+      "seed": -1
+    },
+    {
+      "calibration": "temperature",
+      "fit_seconds": 0.34879029996227473,
+      "model": "local",
+      "note": "Expert fitting cost shared across four simple fusions; feature extraction reported separately",
+      "peak_gpu_bytes": 33554432,
+      "seed": -1
+    },
+    {
+      "calibration": "temperature",
+      "fit_seconds": 0.34879029996227473,
+      "model": "average",
+      "note": "Expert fitting cost shared across four simple fusions; feature extraction reported separately",
+      "peak_gpu_bytes": 33554432,
+      "seed": -1
+    },
+    {
+      "calibration": "temperature",
+      "fit_seconds": 0.34879029996227473,
+      "model": "fixed",
+      "note": "Expert fitting cost shared across four simple fusions; feature extraction reported separately",
+      "peak_gpu_bytes": 33554432,
+      "seed": -1
+    },
+    {
+      "calibration": "temperature",
+      "fit_seconds": 0.34346890007145703,
+      "model": "score_gate",
+      "note": "Unchanged Round 6 full-batch CPU gate; feature/expert costs shared",
+      "peak_gpu_bytes": 33554432,
+      "seed": 20261022
+    },
+    {
+      "calibration": "temperature",
+      "fit_seconds": 0.2746931000147015,
+      "model": "quality_gate",
+      "note": "Unchanged Round 6 full-batch CPU gate; feature/expert costs shared",
+      "peak_gpu_bytes": 33554432,
+      "seed": 20261022
+    },
+    {
+      "calibration": "temperature",
+      "fit_seconds": 0.0527573999715969,
+      "model": "score_gate",
+      "note": "Unchanged Round 6 full-batch CPU gate; feature/expert costs shared",
+      "peak_gpu_bytes": 33554432,
+      "seed": 20261023
+    },
+    {
+      "calibration": "temperature",
+      "fit_seconds": 0.2544722000602633,
+      "model": "quality_gate",
+      "note": "Unchanged Round 6 full-batch CPU gate; feature/expert costs shared",
+      "peak_gpu_bytes": 33554432,
+      "seed": 20261023
+    },
+    {
+      "calibration": "temperature",
+      "fit_seconds": 0.057455800008028746,
+      "model": "score_gate",
+      "note": "Unchanged Round 6 full-batch CPU gate; feature/expert costs shared",
+      "peak_gpu_bytes": 33554432,
+      "seed": 20261024
+    },
+    {
+      "calibration": "temperature",
+      "fit_seconds": 0.2359493999974802,
+      "model": "quality_gate",
+      "note": "Unchanged Round 6 full-batch CPU gate; feature/expert costs shared",
+      "peak_gpu_bytes": 33554432,
+      "seed": 20261024
+    }
+  ],
+  "shared_feature_extraction": {
+    "by_partition_condition": [
+      {
+        "condition": "clean",
+        "partition": "calibration",
+        "peak_gpu_bytes": 356640256,
+        "seconds": 6.317580200033262,
+        "shared_by": "global/local/all fusions; both calibration modes and gate initializations"
+      },
+      {
+        "condition": "jpeg70",
+        "partition": "calibration",
+        "peak_gpu_bytes": 280802816,
+        "seconds": 4.771049399976619,
+        "shared_by": "global/local/all fusions; both calibration modes and gate initializations"
+      },
+      {
+        "condition": "resize05",
+        "partition": "calibration",
+        "peak_gpu_bytes": 280802816,
+        "seconds": 4.913080199970864,
+        "shared_by": "global/local/all fusions; both calibration modes and gate initializations"
+      },
+      {
+        "condition": "clean",
+        "partition": "expert_fit",
+        "peak_gpu_bytes": 280802816,
+        "seconds": 27.692801000084728,
+        "shared_by": "global/local/all fusions; both calibration modes and gate initializations"
+      },
+      {
+        "condition": "clean",
+        "partition": "gate_fit",
+        "peak_gpu_bytes": 280802816,
+        "seconds": 9.198802000028081,
+        "shared_by": "global/local/all fusions; both calibration modes and gate initializations"
+      },
+      {
+        "condition": "jpeg70",
+        "partition": "gate_fit",
+        "peak_gpu_bytes": 280802816,
+        "seconds": 9.53153190005105,
+        "shared_by": "global/local/all fusions; both calibration modes and gate initializations"
+      },
+      {
+        "condition": "resize05",
+        "partition": "gate_fit",
+        "peak_gpu_bytes": 280802816,
+        "seconds": 9.754818000015803,
+        "shared_by": "global/local/all fusions; both calibration modes and gate initializations"
+      },
+      {
+        "condition": "clean",
+        "partition": "selection",
+        "peak_gpu_bytes": 280802816,
+        "seconds": 4.658621499896981,
+        "shared_by": "global/local/all fusions; both calibration modes and gate initializations"
+      },
+      {
+        "condition": "jpeg70",
+        "partition": "selection",
+        "peak_gpu_bytes": 280802816,
+        "seconds": 4.72186699998565,
+        "shared_by": "global/local/all fusions; both calibration modes and gate initializations"
+      },
+      {
+        "condition": "jpeg50",
+        "partition": "selection",
+        "peak_gpu_bytes": 280802816,
+        "seconds": 4.75959139992483,
+        "shared_by": "global/local/all fusions; both calibration modes and gate initializations"
+      },
+      {
+        "condition": "resize05",
+        "partition": "selection",
+        "peak_gpu_bytes": 280802816,
+        "seconds": 4.856299199978821,
+        "shared_by": "global/local/all fusions; both calibration modes and gate initializations"
+      },
+      {
+        "condition": "clean",
+        "partition": "development",
+        "peak_gpu_bytes": 280802816,
+        "seconds": 13.994397500064224,
+        "shared_by": "global/local/all fusions; both calibration modes and gate initializations"
+      },
+      {
+        "condition": "jpeg70",
+        "partition": "development",
+        "peak_gpu_bytes": 280802816,
+        "seconds": 13.92079569993075,
+        "shared_by": "global/local/all fusions; both calibration modes and gate initializations"
+      },
+      {
+        "condition": "jpeg50",
+        "partition": "development",
+        "peak_gpu_bytes": 280802816,
+        "seconds": 14.196914300089702,
+        "shared_by": "global/local/all fusions; both calibration modes and gate initializations"
+      },
+      {
+        "condition": "resize05",
+        "partition": "development",
+        "peak_gpu_bytes": 280802816,
+        "seconds": 14.269805699936114,
+        "shared_by": "global/local/all fusions; both calibration modes and gate initializations"
+      }
+    ],
+    "peak_gpu_bytes": 356640256,
+    "seconds": 147.56284110003617
+  },
+  "shared_head_inference_by_condition": [
+    {
+      "condition": "clean",
+      "partition": "gate_fit",
+      "peak_gpu_bytes": 0,
+      "seconds": 0.012914399965666234,
+      "shared_by": "global and local head logits; all fusions/calibrations/initializations"
+    },
+    {
+      "condition": "jpeg70",
+      "partition": "gate_fit",
+      "peak_gpu_bytes": 0,
+      "seconds": 0.009950099978595972,
+      "shared_by": "global and local head logits; all fusions/calibrations/initializations"
+    },
+    {
+      "condition": "resize05",
+      "partition": "gate_fit",
+      "peak_gpu_bytes": 0,
+      "seconds": 0.010739100049249828,
+      "shared_by": "global and local head logits; all fusions/calibrations/initializations"
+    },
+    {
+      "condition": "clean",
+      "partition": "calibration",
+      "peak_gpu_bytes": 0,
+      "seconds": 0.0053746000630781054,
+      "shared_by": "global and local head logits; all fusions/calibrations/initializations"
+    },
+    {
+      "condition": "jpeg70",
+      "partition": "calibration",
+      "peak_gpu_bytes": 0,
+      "seconds": 0.0049597000470384955,
+      "shared_by": "global and local head logits; all fusions/calibrations/initializations"
+    },
+    {
+      "condition": "resize05",
+      "partition": "calibration",
+      "peak_gpu_bytes": 0,
+      "seconds": 0.005400100024417043,
+      "shared_by": "global and local head logits; all fusions/calibrations/initializations"
+    },
+    {
+      "condition": "clean",
+      "partition": "selection",
+      "peak_gpu_bytes": 0,
+      "seconds": 0.005247200024314225,
+      "shared_by": "global and local head logits; all fusions/calibrations/initializations"
+    },
+    {
+      "condition": "jpeg70",
+      "partition": "selection",
+      "peak_gpu_bytes": 0,
+      "seconds": 0.004757399903610349,
+      "shared_by": "global and local head logits; all fusions/calibrations/initializations"
+    },
+    {
+      "condition": "jpeg50",
+      "partition": "selection",
+      "peak_gpu_bytes": 0,
+      "seconds": 0.004002799978479743,
+      "shared_by": "global and local head logits; all fusions/calibrations/initializations"
+    },
+    {
+      "condition": "resize05",
+      "partition": "selection",
+      "peak_gpu_bytes": 0,
+      "seconds": 0.005438000080175698,
+      "shared_by": "global and local head logits; all fusions/calibrations/initializations"
+    },
+    {
+      "condition": "clean",
+      "partition": "development",
+      "peak_gpu_bytes": 0,
+      "seconds": 0.026072300039231777,
+      "shared_by": "global and local head logits; all fusions/calibrations/initializations"
+    },
+    {
+      "condition": "jpeg70",
+      "partition": "development",
+      "peak_gpu_bytes": 0,
+      "seconds": 0.026679900009185076,
+      "shared_by": "global and local head logits; all fusions/calibrations/initializations"
+    },
+    {
+      "condition": "jpeg50",
+      "partition": "development",
+      "peak_gpu_bytes": 0,
+      "seconds": 0.025094799930229783,
+      "shared_by": "global and local head logits; all fusions/calibrations/initializations"
+    },
+    {
+      "condition": "resize05",
+      "partition": "development",
+      "peak_gpu_bytes": 0,
+      "seconds": 0.020490300026722252,
+      "shared_by": "global and local head logits; all fusions/calibrations/initializations"
+    }
+  ],
+  "total": {
+    "peak_gpu_bytes": 356640256,
+    "seconds": 167.06193359999452
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "W0_metric_cells_matching_Step_C": 36,
+  "W0_reused_prediction_rows_per_seed": 4600,
+  "committed": false,
+  "existing_baseline_seed_tests": 14,
+  "historical_shared_results_verifier": "passed",
+  "implementation_lock_sha256": "378ffffa7ece3641da2150f4bac4dfc6838d2ab508c5aabbf64929b7f4a9c4c0",
+  "incomplete_summary_refusal": "passed; no run result folders or summary created",
+  "phase": "implementation only; real W1/W2 runs not started",
+  "preservation_manifest_sha256": "74b56facffd67e7e6a9a87c08089e248ec8b61c6bf189bce269976d1aee6e626",
+  "preserved_existing_files": 10606,
+  "protocol_sha256": "a0695bf5d1ece6f590a4441b9d1e40fc41a4d93b84b8808fcdd5a615463d85d4",
+  "pushed": false,
+  "real_training_run": false,
+  "reserved_test_manifest_accessed": false,
+  "status": "passed",
+  "stepD_synthetic_tests": 11
+}

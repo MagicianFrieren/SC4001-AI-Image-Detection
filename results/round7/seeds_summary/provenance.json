@@ -1,0 +1,53 @@
+{
+  "code_sha256": {
+    "scripts/round7_seed_support.py": "2f6a4ec2182ad3411b33e6fece3dd0c669c562ca0f15eea174579ff2cec8e262",
+    "scripts/round7_summarize_seeds.py": "64fd26435345de50f2f04c1d705af7e1ace39f228e708e354672012fa7c886c4"
+  },
+  "gate_aggregation": "Average fixed three gate initializations within each run, then mean/sample SD across three run seeds",
+  "limitations": "Three overlapping fitting-pool partitions and the same development images; SD is descriptive, not a confidence interval. SD15 is selection, ADM/BigGAN previously inspected development. No test data or model scoring.",
+  "n_runs": 3,
+  "paired_differences": "Subtract left minus right within each run, then summarize the three differences",
+  "sd_ddof": 1,
+  "seed1_preservation": {
+    "saved_hashes_verified": 3476,
+    "seed1_files_unchanged": 3488,
+    "status": "passed"
+  },
+  "seeds": [
+    20261101,
+    20261102,
+    20261103
+  ],
+  "source_sha256": {
+    "results/round7/baselines_seed1/clip_common128_complete.json": "bac9baa62ea51b883ccb1ebef4ae39f176df4e7c60a8a45b41ea45abbe80c72a",
+    "results/round7/baselines_seed1/clip_original_complete.json": "22c987a429e0eef60c2cfc03afa9cecaccf6f2dff58daafd22aa5e6a16e3604e",
+    "results/round7/baselines_seed1/gate_weight_summary.csv": "dc3efe86e648cdce5710644a463b34ee6fe9b6b6b73f8f1f71cf2a4638212922",
+    "results/round7/baselines_seed1/macro_summary.csv": "dad561c91cbe2d8df203019bc40c60e24ad04337b36bbdffac1da95184e43db8",
+    "results/round7/baselines_seed1/metrics.csv": "4ba29338decd6246d6f1f47108aabf89796d9616827b0f7f6ce83c51c4409fd6",
+    "results/round7/baselines_seed1/prepare_complete.json": "16e35f104fe523ab0bea64273e59ab8c59b7fab736b3e4558c55d1d38adbcee4",
+    "results/round7/baselines_seed1/protocol.json": "6a0424fc22c7cffaec23a934eb4e95b21dd9fe6bd51c49f9e008eed356d019e3",
+    "results/round7/baselines_seed1/resnet_common128_complete.json": "0a6907d26b3add4cb5b2550034c5949295877b135ab7f828839a15c74fd2ca55",
+    "results/round7/baselines_seed1/resnet_original_complete.json": "404a9acd14c3f04ca5668177a5a52b6acfd949fde80214c459774a2e5e82a070",
+    "results/round7/baselines_seed1/summarize_complete.json": "6fcbee90574114d5c75a25c59d5fa1e6729872b2bd0332123961eb1e48e45246",
+    "results/round7/baselines_seed2/clip_common128_complete.json": "f5106f0c87fc0e6e77d78427c57a278eb7653e7a286fb473239701c3f6857967",
+    "results/round7/baselines_seed2/clip_original_complete.json": "a2f5f25677edeb81e4a8cd149456827cfcd7072f8fcb825baf708ba6820e9579",
+    "results/round7/baselines_seed2/gate_weight_summary.csv": "7f8dfeca95bef397d76fd33e462835272b1648ab77cf0f1c8c98f2bf864983b5",
+    "results/round7/baselines_seed2/macro_summary.csv": "c40c804187c30e7e604983272d2c5b674f3a128f5a46684ea13a1586ff85a263",
+    "results/round7/baselines_seed2/metrics.csv": "a527fb7f30620b5e88f583ff6a3c586c01f8b6bacb3d0ebe4773cc002bfb5301",
+    "results/round7/baselines_seed2/prepare_complete.json": "6ecd5d7b3e680401115c38d4cab85d5e9a699cd9c90f8cb011e22aad2fa667be",
+    "results/round7/baselines_seed2/protocol.json": "59a9818761f7ab07c3e1bc33794d47ae1f1a1faa51a936bbfc9b72c0947c31cc",
+    "results/round7/baselines_seed2/resnet_common128_complete.json": "59ec640c7d519b547a0cac73ccf9425603bbd5c29e2d6a344799c2f8ff7b88ce",
+    "results/round7/baselines_seed2/resnet_original_complete.json": "7931a748eb9b132f81d69a338fcde48aba5937d024f21a02cf0ff1b4875f0971",
+    "results/round7/baselines_seed2/summarize_complete.json": "7289fc5786fc0c87fc47b9df6802f0c6a296fd571e86432adee2e62e5cf0bf42",
+    "results/round7/baselines_seed3/clip_common128_complete.json": "b8714e4e883173acf2fe8a50ae0ca2df58c22671d13f6797394c36855e0fb965",
+    "results/round7/baselines_seed3/clip_original_complete.json": "7f2d90346cf6e854138949d27416370d0e3edcccc45663e60d0b02ad151267cc",
+    "results/round7/baselines_seed3/gate_weight_summary.csv": "46e8d7239aa95d829c6bff1e139116f97d8293b7b79e3486ef05a4c22c4f97b4",
+    "results/round7/baselines_seed3/macro_summary.csv": "1b01297f5e802a377ce1472beb0ae50717cbcccd631bb6952e87ae7db669ee41",
+    "results/round7/baselines_seed3/metrics.csv": "e45779ea6176e0dfa98224a478eab7af6b4d64cd89f68570c9edab4896b142be",
+    "results/round7/baselines_seed3/prepare_complete.json": "2f7a91def370e48e48105f2ad93ac357fee54d4290b654606b0589f96bd99970",
+    "results/round7/baselines_seed3/protocol.json": "4939f2c65ca7c2f4791f1f3e9d38c39e72a2828a6ee391f8d7043d6d109ac778",
+    "results/round7/baselines_seed3/resnet_common128_complete.json": "853eaf14eb69d305bf115d4a3036a7b98f506b9033e187758691bb00adb5cf7d",
+    "results/round7/baselines_seed3/resnet_original_complete.json": "0034f8c2c81572c0ad8979d5e8470879307392713afc951ec6405ec6bad7f9ae",
+    "results/round7/baselines_seed3/summarize_complete.json": "7d864558569bac95352f96fd4faff8742a9cb4c9513cc18d0fa7d8fd2112c076"
+  }
+}

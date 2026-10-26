@@ -1,0 +1,17 @@
+{
+  "files_sha256": {
+    "SUMMARY.md": "b1464a157c6414f78f0bb180204ac2a199501b8054dda5983f44de58d7fdd74f",
+    "gate_global_weight_means.csv": "2ce78f0b82f1121c96f6bdfa55b482cee0071849a40cc298ac79f4cda9c34cfc",
+    "macro_auroc.csv": "6262278d00b7b4c2f3c609cedc10853c2d2cb9d805e7cd49b621d0e09e47d73b",
+    "paired_differences.csv": "4343680e9da3c063322e9fc417035e2a34ab8f86229c3a25dfd854e571b7a38e",
+    "per_condition_auroc.csv": "229adf45c33b4d8942936770f71188a805561c3c6745d86e083ad1ca4e69932d",
+    "provenance.json": "d66b82536061a9274f189e2af63e5d7dd60063d017a09f9ab2b063213f22bd93"
+  },
+  "row_counts": {
+    "gate_global_weight_means.csv": 96,
+    "macro_auroc.csv": 84,
+    "paired_differences.csv": 510,
+    "per_condition_auroc.csv": 336
+  },
+  "status": "completed"
+}

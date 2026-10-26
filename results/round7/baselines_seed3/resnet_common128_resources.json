@@ -1,0 +1,124 @@
+{
+  "checkpoint_sha256": {
+    "artifacts/round7/baselines_seed3/checkpoints/common128/epoch_000.pt": "56af120f0262384510a5aa35e7323755e396cc7ae326fc62c5bb5d00a81d7e38",
+    "artifacts/round7/baselines_seed3/checkpoints/common128/epoch_001.pt": "0cdca5a81c99bb916f36fe93d4a25c63a2cd98d3469576efb8b137019fda3f86",
+    "artifacts/round7/baselines_seed3/checkpoints/common128/epoch_002.pt": "ad414aa1bcedcea64fe64e5566de35e6416b8e5aa61962fed7d562f8399bbec9",
+    "artifacts/round7/baselines_seed3/checkpoints/common128/epoch_003.pt": "67d140c5304848f234793d1ff3e731072a2e71346b89762504deed53e75c233d",
+    "artifacts/round7/baselines_seed3/checkpoints/common128/epoch_004.pt": "88d971361e61c81895f4841c08ee13e908777781443c776daade72b19b9bff03",
+    "artifacts/round7/baselines_seed3/checkpoints/common128/epoch_005.pt": "e7b5a7d61970d18a08b9142421df6de2f849702444210a0f4c1cee05f74cf249",
+    "artifacts/round7/baselines_seed3/checkpoints/common128/epoch_006.pt": "28d67453fdc0173cee455119615b5cb091bb7f502d4b018f758e5488252f5ec3",
+    "artifacts/round7/baselines_seed3/checkpoints/common128/epoch_007.pt": "3f80c3b6dc42be8f37db19b6a6111e6f20d481a5b16b607ec3e6155104faf9fe",
+    "artifacts/round7/baselines_seed3/checkpoints/common128/epoch_008.pt": "3a7129ebf98c2344674c19bf3274a327209984013ac4ed5803825073c0fce79b",
+    "artifacts/round7/baselines_seed3/checkpoints/common128/epoch_009.pt": "4af6affb608aac868d2307504f3ae6f730f25ea443d5eb3be1bd10cad7d3bcb1",
+    "artifacts/round7/baselines_seed3/checkpoints/common128/epoch_010.pt": "e5faa5f36716e1d7f8f9f0ceaaf5fb1637605670f2ef6d330ac7f9cdb2ab1cc5"
+  },
+  "evaluation": {
+    "peak_gpu_bytes": 615316480,
+    "seconds": 47.53026000002865
+  },
+  "peak_gpu_bytes": 3186570240,
+  "per_condition_inference": [
+    {
+      "condition": "clean",
+      "model": "resnet50",
+      "partition": "calibration",
+      "peak_gpu_bytes": 615316480,
+      "profile": "common128",
+      "seconds": 2.9152154000476003,
+      "shared_across_calibration_modes": true
+    },
+    {
+      "condition": "jpeg70",
+      "model": "resnet50",
+      "partition": "calibration",
+      "peak_gpu_bytes": 615316480,
+      "profile": "common128",
+      "seconds": 2.8107451000250876,
+      "shared_across_calibration_modes": true
+    },
+    {
+      "condition": "resize05",
+      "model": "resnet50",
+      "partition": "calibration",
+      "peak_gpu_bytes": 615316480,
+      "profile": "common128",
+      "seconds": 2.868811500025913,
+      "shared_across_calibration_modes": true
+    },
+    {
+      "condition": "clean",
+      "model": "resnet50",
+      "partition": "selection",
+      "peak_gpu_bytes": 615316480,
+      "profile": "common128",
+      "seconds": 2.782776099978946,
+      "shared_across_calibration_modes": true
+    },
+    {
+      "condition": "jpeg70",
+      "model": "resnet50",
+      "partition": "selection",
+      "peak_gpu_bytes": 615316480,
+      "profile": "common128",
+      "seconds": 2.843327400041744,
+      "shared_across_calibration_modes": true
+    },
+    {
+      "condition": "jpeg50",
+      "model": "resnet50",
+      "partition": "selection",
+      "peak_gpu_bytes": 615316480,
+      "profile": "common128",
+      "seconds": 2.83349319989793,
+      "shared_across_calibration_modes": true
+    },
+    {
+      "condition": "resize05",
+      "model": "resnet50",
+      "partition": "selection",
+      "peak_gpu_bytes": 615316480,
+      "profile": "common128",
+      "seconds": 2.9604233000427485,
+      "shared_across_calibration_modes": true
+    },
+    {
+      "condition": "clean",
+      "model": "resnet50",
+      "partition": "development",
+      "peak_gpu_bytes": 615316480,
+      "profile": "common128",
+      "seconds": 6.870130499941297,
+      "shared_across_calibration_modes": true
+    },
+    {
+      "condition": "jpeg70",
+      "model": "resnet50",
+      "partition": "development",
+      "peak_gpu_bytes": 615316480,
+      "profile": "common128",
+      "seconds": 6.785345599986613,
+      "shared_across_calibration_modes": true
+    },
+    {
+      "condition": "jpeg50",
+      "model": "resnet50",
+      "partition": "development",
+      "peak_gpu_bytes": 615316480,
+      "profile": "common128",
+      "seconds": 6.717922399984673,
+      "shared_across_calibration_modes": true
+    },
+    {
+      "condition": "resize05",
+      "model": "resnet50",
+      "partition": "development",
+      "peak_gpu_bytes": 615316480,
+      "profile": "common128",
+      "seconds": 7.109452300006524,
+      "shared_across_calibration_modes": true
+    }
+  ],
+  "seconds_this_invocation": 629.9371925999876,
+  "training_seconds_all_epochs": 575.849081300199,
+  "weights_sha256": "11ad3fa62ca79e40addfd354a8ec4b7c75143b3038b8d2a807fbc68deab379ca"
+}

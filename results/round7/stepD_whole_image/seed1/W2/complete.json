@@ -1,0 +1,27 @@
+{
+  "files_sha256": {
+    "artifacts/round7/stepD_whole_image/seed1/W2/access_logs/stepD_W2_55a34d8b61f24e90bd07dbb2c914e8c8.json": "c7d3ac79b79cc72247aa5ccf1a0caa863cfac8c5b087b9d1f749785117eb57e6",
+    "artifacts/round7/stepD_whole_image/seed1/W2/checkpoints/original/epoch_000.pt": "2a94888cd004ffadae8625a31dc97194f6124189cf599282738de08ef8054695",
+    "artifacts/round7/stepD_whole_image/seed1/W2/checkpoints/original/epoch_001.pt": "2705020a02a2167c7cf3492b6fccd5671e8c076092a33d33823214ddf6466374",
+    "artifacts/round7/stepD_whole_image/seed1/W2/checkpoints/original/epoch_002.pt": "29311d28d3ea173f79614cabf4f0f1d9d6df2bbc03da0a9170ed4fccfc9b05a0",
+    "artifacts/round7/stepD_whole_image/seed1/W2/checkpoints/original/epoch_003.pt": "f002ff3fc2b3bf9eb9540677216df723052e91a6255525284a819237a00494cf",
+    "artifacts/round7/stepD_whole_image/seed1/W2/checkpoints/original/epoch_004.pt": "b805cc15b56621a9c9f98ae8ce45cd85bdcb84326d62cc241191f66910f8d162",
+    "artifacts/round7/stepD_whole_image/seed1/W2/checkpoints/original/epoch_005.pt": "6e763a3186bee15f4b87dac2aedc87c93206d4a9be9b34ebdff4caa75a220002",
+    "artifacts/round7/stepD_whole_image/seed1/W2/checkpoints/original/epoch_006.pt": "42bbc51a7b0cbb9a3aceb2bf3192643eee4b2f4c0229f04a52953fbaf4680e43",
+    "artifacts/round7/stepD_whole_image/seed1/W2/checkpoints/original/epoch_007.pt": "a7c8ae196a85126497557d78fed41610d48a5f5aea2dbdac156200647ab44b1d",
+    "artifacts/round7/stepD_whole_image/seed1/W2/checkpoints/original/epoch_008.pt": "a86bd9cc077907b76f7062e4b42e5e5147c57b6115c2e31aa0cd14910b2df634",
+    "artifacts/round7/stepD_whole_image/seed1/W2/checkpoints/original/epoch_009.pt": "761416f4ccfa415f7a6cd8250f9eb6e8b0edae846fa693b97a164cb7712e6e5c",
+    "artifacts/round7/stepD_whole_image/seed1/W2/checkpoints/original/epoch_010.pt": "63ac3c94ea222ca931c1a95c34d86032ae68cb34bfef3720b191246358e71474",
+    "artifacts/round7/stepD_whole_image/seed1/W2/result_bundle.json": "3a0e6d5eb7e0cbcf052c70b5844d681eeb1e1e7f01de1564428132e928639e6c",
+    "artifacts/round7/stepD_whole_image/seed1/W2/weights/resnet50-11ad3fa6.pth": "11ad3fa62ca79e40addfd354a8ec4b7c75143b3038b8d2a807fbc68deab379ca",
+    "results/round7/stepD_whole_image/seed1/W2/audit.json": "5a7d2cc5896018c886c3724c00d639d97b821aecc164e6250d1f830426f8199c",
+    "results/round7/stepD_whole_image/seed1/W2/metrics.csv": "846573e3577e25360470931865b08d02bc570c733c41e47567f248d56654ca02",
+    "results/round7/stepD_whole_image/seed1/W2/predictions.csv": "53a007be61157309e61896635da9a327c914a6c5f5c8e666a6c271b49991c785",
+    "results/round7/stepD_whole_image/seed1/W2/protocol.json": "b179938148ce1a1a1d5f360958eb3f29ef13c7695dab64bca3ed6ad991db4aa0",
+    "results/round7/stepD_whole_image/seed1/W2/quality_draws.csv": "6bc3d912438fdbdc5fe0c22d0bf636c54787b32353cafb31ef2ad54904eafb1a",
+    "results/round7/stepD_whole_image/seed1/W2/settings.json": "656f81416d444c84b090668cb605f2d4e64c1ab4916fcff2785cadbdc21219a1",
+    "results/round7/stepD_whole_image/seed1/W2/tuning_predictions.csv": "08700b6f017be5aafcfe11357d3015a0011847269af55e7d1bda77e4f57d11fa"
+  },
+  "protocol_sha256": "b179938148ce1a1a1d5f360958eb3f29ef13c7695dab64bca3ed6ad991db4aa0",
+  "status": "completed"
+}

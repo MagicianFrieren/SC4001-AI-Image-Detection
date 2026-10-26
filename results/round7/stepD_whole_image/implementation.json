@@ -1,0 +1,9 @@
+{
+  "code_sha256": {
+    "scripts/round7_stepD_common.py": "016ce56d66724da7d6919d41c76a74ce78d40d212536271fc138caf02776c5ec",
+    "scripts/round7_stepD_report.py": "c561afa8d4d5dc91d5fd21b052a9155db0fec3f49fce869ec31cc5ea7dec17d3",
+    "scripts/round7_stepD_run.py": "0e7892228fc9161efeaa371e84e8f65f8fef7c19348fa503db22bac83896db85",
+    "scripts/round7_stepD_verify.py": "002770842adfb6ef8c1af70de82177b10af511ea354ea5cb46762c9ca5d97bf5"
+  },
+  "protocol_sha256": "a0695bf5d1ece6f590a4441b9d1e40fc41a4d93b84b8808fcdd5a615463d85d4"
+}

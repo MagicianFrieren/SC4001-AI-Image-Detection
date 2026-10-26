@@ -1,0 +1,18 @@
+{
+  "W1": {
+    "all_criteria_every_seed": "FAIL",
+    "every_seed": {
+      "20261101": "FAIL",
+      "20261102": "FAIL",
+      "20261103": "FAIL"
+    }
+  },
+  "W2": {
+    "all_criteria_every_seed": "FAIL",
+    "every_seed": {
+      "20261101": "FAIL",
+      "20261102": "FAIL",
+      "20261103": "FAIL"
+    }
+  }
+}

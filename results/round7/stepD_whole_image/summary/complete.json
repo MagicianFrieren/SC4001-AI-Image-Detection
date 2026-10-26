@@ -1,0 +1,14 @@
+{
+  "files_sha256": {
+    "SUMMARY.md": "279f8d71c22def96e9d637672da13a67953b7bb2149d5735e6d8f36e51d7c8f1",
+    "W0_predictions.csv": "0314085694c33d8c54fb78aa7f81d9d628d3a861165a1f1e23fadabf1a1f6407",
+    "clean_SD15_cost.csv": "953962db2d08823430339e14beb9ef4038bc509f695c2e8e0a9e93010ed318b6",
+    "criteria.csv": "42141579d9cf611bd57369da38b4769a6b03955a384168d54a7748a72f0b94b9",
+    "metrics_each_seed.csv": "029a6256faf00ec36abca74b648c39d36353285e078a54b5ffdabb5c5ddeac67",
+    "metrics_mean_sd.csv": "a0fdd6c6f6f3bf6e8391d55236a208063377c337490c4e9d2ae4437d4018a3de",
+    "paired_differences.csv": "6dbd4c347b523392da68a7f4a44ccd560f99e909695d646cd24c69c5bb625d1a",
+    "provenance.json": "bbb65add4c9f09dd06457c1ba9f8d4dd78d8fcbb0e006ffd49f9373b88fa3bb5",
+    "success.json": "e54324114674686ce1adb3839ae6a8768ed063c0a57fdc6501096a5e4a753432"
+  },
+  "status": "completed"
+}

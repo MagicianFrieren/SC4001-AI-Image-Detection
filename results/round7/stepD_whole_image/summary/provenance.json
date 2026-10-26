@@ -1,0 +1,37 @@
+{
+  "W0_sources": {
+    "results/round7/baselines_seed1/clip_original_predictions.csv": "18816a70b2999cb711fef2e784ad1121dbc7c6b45dd6a3b5656c209190e7d8c5",
+    "results/round7/baselines_seed2/clip_original_predictions.csv": "90491daa87d43c29b1a3d5e012027c61629883d7f8356459e1100d7f2178ddfa",
+    "results/round7/baselines_seed3/clip_original_predictions.csv": "bd824550906d5c78bf54500c0811b4b57ff94275e89c471db57dc42f51ae8a1a"
+  },
+  "implementation_sha256": "378ffffa7ece3641da2150f4bac4dfc6838d2ab508c5aabbf64929b7f4a9c4c0",
+  "inputs_sha256": {
+    "results/round7/stepD_whole_image/seed1/W1/complete.json": "3a796ad78604c452fc2b719fe314dd912ec0a046f416c6d740c512737ad822a6",
+    "results/round7/stepD_whole_image/seed1/W1/predictions.csv": "989d3e816f610deb88fda21073ebc7968d6b5a40e4f3d5686ec49d5eba7d584c",
+    "results/round7/stepD_whole_image/seed1/W1/settings.json": "2ec47366ef61ea723c99aef76bd4517ec8f0515dc435f3f5b8abef4a0360f41a",
+    "results/round7/stepD_whole_image/seed1/W1/tuning_predictions.csv": "dfef8f633e256f9d39c532d2080d65fc9bf14e11e4ab30199211537f53768e4c",
+    "results/round7/stepD_whole_image/seed1/W2/complete.json": "7f84db7b897278274c26e03e6a11fa83301bf248370df2d6d8f05276d4fc1f8e",
+    "results/round7/stepD_whole_image/seed1/W2/predictions.csv": "53a007be61157309e61896635da9a327c914a6c5f5c8e666a6c271b49991c785",
+    "results/round7/stepD_whole_image/seed1/W2/settings.json": "656f81416d444c84b090668cb605f2d4e64c1ab4916fcff2785cadbdc21219a1",
+    "results/round7/stepD_whole_image/seed1/W2/tuning_predictions.csv": "08700b6f017be5aafcfe11357d3015a0011847269af55e7d1bda77e4f57d11fa",
+    "results/round7/stepD_whole_image/seed2/W1/complete.json": "3c9c19756cf866d7ab3619caa0427c702974877126db5c2e1e9bb7873c5f6377",
+    "results/round7/stepD_whole_image/seed2/W1/predictions.csv": "33cdc336d588f092be902e2b8be08e262eac380d1b75afe8f89f4e06343387e9",
+    "results/round7/stepD_whole_image/seed2/W1/settings.json": "a51c41186d8e60479ff7a5b5211bb0cbc6575cf8866579a6fbaa496acd9f3556",
+    "results/round7/stepD_whole_image/seed2/W1/tuning_predictions.csv": "cecc954f1122fb0a39c9e9af59cc6476bca9339415932f555f7882e65dff667e",
+    "results/round7/stepD_whole_image/seed2/W2/complete.json": "c6a563f25b5525abfda0f63ded545f08e77683ce32c0d8b73754e2a56cacfdac",
+    "results/round7/stepD_whole_image/seed2/W2/predictions.csv": "6a99bc4d307d63105afecd88f23e4c82a0a7dc53bfaa50858da2e87272efc7ff",
+    "results/round7/stepD_whole_image/seed2/W2/settings.json": "6cf69f9cc0be808c09588698177aa4b447e481f8dd77e94dcbc1fe78d4280371",
+    "results/round7/stepD_whole_image/seed2/W2/tuning_predictions.csv": "86b34cee5ead07c871017bb917d3d7cccb288a2d063cfdd84f6191b5caf4d2be",
+    "results/round7/stepD_whole_image/seed3/W1/complete.json": "f8cbc0069b8e91278c3dae7c07e7edd1644b2f5e1db5ca3035bd0671f07094cd",
+    "results/round7/stepD_whole_image/seed3/W1/predictions.csv": "0108c9da7296cf3a97d40421fecc547287dda8db1a72b8ee390817f486ef4ab7",
+    "results/round7/stepD_whole_image/seed3/W1/settings.json": "5b28eba8817f1687e47c3fff1bcf32fd718f7cc96dee538dc168fd9e0e86f1dd",
+    "results/round7/stepD_whole_image/seed3/W1/tuning_predictions.csv": "d2f0020d53b0a8c4491bd99990cb7fab5340cef47db7f90c9609db2786a2cfc4",
+    "results/round7/stepD_whole_image/seed3/W2/complete.json": "b0e97a3f249ff2d1c8caaf2b86f8f4d97678aee48f18f258debd31c590c849e1",
+    "results/round7/stepD_whole_image/seed3/W2/predictions.csv": "6b4c975bae2dc203b4ff016507d5a04f6f60c0a2914b3cca41be4ae25ef835ef",
+    "results/round7/stepD_whole_image/seed3/W2/settings.json": "e69453aace56444bd5c788a89b42a9ee7c7003b4a505944c2167a432b1a146cc",
+    "results/round7/stepD_whole_image/seed3/W2/tuning_predictions.csv": "208b3f18050f52e4733d10081cc4e59e59ab6f48be1a0158e19c8ba5c2b14f30"
+  },
+  "protocol_sha256": "a0695bf5d1ece6f590a4441b9d1e40fc41a4d93b84b8808fcdd5a615463d85d4",
+  "sd_ddof": 1,
+  "test_source_ids_touched": 0
+}

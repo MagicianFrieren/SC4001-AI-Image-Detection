@@ -1,0 +1,107 @@
+{
+  "calibration": "raw and temperature for every model, including ResNet; positive scalar per expert fitted only on calibration, clean/jpeg70/resize05; local variance divided by T squared",
+  "clip": {
+    "batch_size": 32,
+    "frozen": true,
+    "head": "StandardScaler then LogisticRegression(C=1, liblinear, max_iter=2000, random_state=20261018)",
+    "local": "four mean-pooled normalized features from 56px PatchShuffle views; seeds 202610220..202610223",
+    "model": "openai/clip-vit-base-patch32",
+    "precision": "FP16 encoder on CUDA as Round 6; embeddings normalized in FP32",
+    "revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+    "weights_sha256": "a63082132ba4f97a80bea76823f544493bffa8082296d62d71581a4feff1576f"
+  },
+  "conditions": [
+    "clean",
+    "jpeg70",
+    "jpeg50",
+    "resize05"
+  ],
+  "expert_training": "expert_fit originals, clean only; no development/test inputs",
+  "fusion": "global/local/average/fixed/score_gate/quality_gate; logits fused. Fixed alpha grid 0..1 by .1, max selection SD15 macro AUROC over tuning conditions; ties nearest .5 then smaller.",
+  "gates": {
+    "fitting": "gate_fit only; minimum pooled selection BCE over clean/jpeg70/resize05, epoch0 eligible",
+    "implementation": "unchanged gate_models.py",
+    "initializations": [
+      20261022,
+      20261023,
+      20261024
+    ]
+  },
+  "id": "round7_step_c_seed3_clean",
+  "implementation_sha256": {
+    "scripts/round7_baseline_clip.py": "a450c3f6bb2c4186311fec2db622a7545643902bb47e49bce4f6e73e938bea32",
+    "scripts/round7_baseline_common.py": "c93bfd3d54cd60c9991cdc6fe966cf53395450ea1c090f6e560f23206786d0ae",
+    "scripts/round7_baseline_data.py": "f3bd973f536136ff341c0bf8a0db0bc530eb94cb4467db9c3b0ea55590ddca9a",
+    "scripts/round7_baseline_resnet.py": "04e59e3f2de3ad2a26a939a056e0c80a9a2d9f32979db56e7cacd5da75048a90",
+    "scripts/round7_run_baselines.py": "ef7a533e22dc4daa56b429655b198a920ac7d003201539570ed35588e4506279",
+    "scripts/round7_seed_support.py": "2f6a4ec2182ad3411b33e6fece3dd0c669c562ca0f15eea174579ff2cec8e262",
+    "scripts/round7_verify_baselines.py": "05c11d65cd13bbcd3ac98ca2abb62dbf273ca290854ab69a463cacdb9c96d872"
+  },
+  "inherited_code_sha256": {
+    "results/round6/protocol.json": "1595f5266030df817b2ae4f94cfbafe85baba0ccf2be6b480b7b29818224d971",
+    "scripts/gate_models.py": "417cd36b667f33046a903c1d51cc867301db3206ffba978aba594d3fb9bfc12a",
+    "scripts/local_branch.py": "13d0e37fd6774570d4ebda9d8c5740f4da268589b2424f641bf13188773b7acd",
+    "scripts/run_pilot.py": "df7aaa39873513c942d0d89998f70981959ba23323c00209016235be8d3d4e5f",
+    "scripts/run_round2.py": "e018ec2ac549c0e9f3603937a0bc046c19edb4cbdc87c16c1957efb8e4c4775a",
+    "scripts/run_round4.py": "ddb2c8cd1a2a25215a50c5dcedb11e4624800e75f46c6178244e6ef1d0d5f6d2",
+    "scripts/run_round5.py": "dac5ff941fbfbd05b4ca935a2aab64c60c59f77fa9839e3d8ff5f067ca3c8f9c",
+    "scripts/run_round6.py": "eef0f9b3817b994d9a93d8fcb9969b54e3bcb2a9d646c2f21d7e14cad2c24a47",
+    "scripts/score_calibration.py": "b5ec91b05bba2f0327f2b7a3ec6f36ebc1bdb1742256a33de24b1003c0bdf526"
+  },
+  "input_sha256": {
+    "results/round7/assignments_seed3.json": "e358cde34227a101a4b6c7e24a1109f807e2867cc610e23a943f82ca4103328b",
+    "results/round7/data_protocol.json": "826225696f0362a96c789cad9ba27ff743679561d894deea1c7106c5d270d76e",
+    "results/round7/data_protocol_step_b.json": "0753f0d8374ed5fca157d0a22b95acbdd406f526bfefd57ed0cef84e6712f852",
+    "results/round7/development_manifest.jsonl": "3f1b57cf4238f0739c5eadf92b321bfbfd704478c259ff1043269de7389bd77f",
+    "results/round7/fitting_pool_manifest.jsonl": "c812faaf04fa43be76e80d023374e50694a7fdfaed7c8ea540392309c114028a",
+    "results/round7/source_inventory.json": "0ba7fc46aac197cf06891cd8a901f51aa0eb6954b0456e7321cfd92feee63d71",
+    "results/round7/step_b_isolation.json": "b33e056ea07df94e54c4434309f583ceaa3838e25db85b89f743fefcbd2f80cd"
+  },
+  "metrics": {
+    "bootstrap_draws": 2000,
+    "ci": "95% percentile, class-stratified original-image draws; identical draws paired across models, initializations and conditions. Gate summary averages metrics/replicates across three initializations, not logits.",
+    "limitations": "Selection estimates are optimistic after fitting thresholds/epochs/gates; bootstrap conditions on fitted models and chosen settings; no multiplicity correction. ADM/BigGAN development is previously inspected-domain evidence.",
+    "macro": "Equal mean over all four conditions; separate SD15 selection, ADM development, BigGAN development; shared real images counted once per pooled dataset",
+    "names": [
+      "auroc",
+      "average_precision",
+      "balanced_accuracy",
+      "real_false_positive_rate"
+    ],
+    "seed": 20261022
+  },
+  "outputs": "results/round7/baselines_seed3 and artifacts/round7/baselines_seed3 only; exclusive-create outputs, validated read-only resume caches",
+  "profiles": [
+    "original",
+    "common128"
+  ],
+  "resnet": {
+    "all_layers_trainable": true,
+    "batch_size": 32,
+    "checkpoint": "Initialization plus every completed epoch; model, optimizer, scheduler, Python/NumPy/Torch/CUDA RNG and history; exclusive filenames; resume latest valid checkpoint",
+    "epoch_selection": "Maximum mean selection AUROC over clean/jpeg70/resize05; exact tie retains earliest epoch",
+    "epochs": 10,
+    "lr": 0.0001,
+    "normalization": "ImageNet mean/std after identical RGB geometry/degradation; CLIP uses CLIP mean/std",
+    "oom_policy": "Only CUDA OOM permits batch reduction (halving); rollback whole failed epoch to prior checkpoint, restore RNG/optimizer/scheduler and retry. Record batch changes. Never silently reduce for another reason.",
+    "optimizer": "AdamW",
+    "precision": "FP32",
+    "schedule": "CosineAnnealingLR T_max=10 eta_min=0; step once after each epoch",
+    "seed": 20261103,
+    "weight_decay": 0.0001,
+    "weights": "torchvision ResNet50_Weights.IMAGENET1K_V2"
+  },
+  "seed": 20261103,
+  "seed1_reference": {
+    "change_scope": "Partition/run seed and output paths only; ResNet initialization/epoch shuffling use the selected run seed. CLIP logistic, PatchShuffle, gate initialization and bootstrap seeds stay fixed.",
+    "protocol_sha256": "6a0424fc22c7cffaec23a934eb4e95b21dd9fe6bd51c49f9e008eed356d019e3",
+    "provenance_sha256": "15ef1980616dfbe442e2ca0f516a2364dcd9da82da7cb085264d51e1d73e7781"
+  },
+  "test_isolation": "Read only ID-only Step B denylist, never reserved_test_manifest.jsonl. Assert allowlist/denylist before decode, feature use, fitting and predictions. GLIDE/VQDM/Midjourney/Wukong are forbidden before final evaluation.",
+  "threshold": "Per model/profile/calibration/initialization, pooled selection Youden J over clean/jpeg70/resize05; ties closest probability threshold .5 (Round 6); fixed across all four reporting conditions",
+  "tuning_conditions": [
+    "clean",
+    "jpeg70",
+    "resize05"
+  ]
+}

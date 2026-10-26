@@ -1,0 +1,23 @@
+{
+  "environment": {
+    "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+    "numpy": "1.26.4",
+    "pillow": "12.2.0",
+    "pyarrow": "21.0.0",
+    "python": "3.12.7",
+    "scikit-learn": "1.5.1",
+    "scipy": "1.13.1",
+    "torch": "2.5.1+cu121",
+    "torchvision": "0.20.1+cu121",
+    "transformers": "4.39.3"
+  },
+  "files_sha256": {
+    "artifacts/round7/baselines_seed3/access_logs/summarize_403cf636720f4084907c66e8f801b81f.json": "f8d97464d29323bc5814b9358897397d2e0c98462fa3a2c3111b99b274920159",
+    "results/round7/baselines_seed3/SUMMARY.md": "c2333d9362bd2eda86f938543aee2236acd11dc89242db6db99ba4a573b69551",
+    "results/round7/baselines_seed3/gate_weight_summary.csv": "46e8d7239aa95d829c6bff1e139116f97d8293b7b79e3486ef05a4c22c4f97b4",
+    "results/round7/baselines_seed3/macro_summary.csv": "1b01297f5e802a377ce1472beb0ae50717cbcccd631bb6952e87ae7db669ee41",
+    "results/round7/baselines_seed3/metrics.csv": "e45779ea6176e0dfa98224a478eab7af6b4d64cd89f68570c9edab4896b142be"
+  },
+  "protocol_sha256": "4939f2c65ca7c2f4791f1f3e9d38c39e72a2828a6ee391f8d7043d6d109ac778",
+  "status": "completed"
+}

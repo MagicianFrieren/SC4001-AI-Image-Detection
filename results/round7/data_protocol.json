@@ -1,0 +1,522 @@
+{
+  "counts_per_class_each_seed": {
+    "calibration": 125,
+    "expert_fit": 750,
+    "gate_fit": 250,
+    "selection": 125
+  },
+  "dataset": "TheKernel01/Tiny-GenImage",
+  "exclusions": {
+    "counts": {
+      "eligible": 26371,
+      "old_dhash_only": 4,
+      "old_pixel": 1600,
+      "round7_dhash_only": 24,
+      "round7_pixel": 1
+    },
+    "deduplication": "Exclusive row-removal reasons, not all pairwise edges: old exclusions first, then greedy global deduplication in ascending numeric source_row; retained earliest eligible representative; no crop-hash exclusion.",
+    "old_manifest": "results/round2/manifest.jsonl",
+    "reference_count": 1600,
+    "rules": [
+      "pixel_sha256 equality",
+      "64-bit dHash Hamming distance <=3"
+    ],
+    "sha256": "c98c84990f2499920ab8b408771817a5500a6893193a177c73360d09d1c6d1f5"
+  },
+  "exposure": {
+    "heavily_inspected": [
+      "ADM",
+      "BigGAN",
+      "SD15"
+    ],
+    "heavily_inspected_context": "Rounds 1-6; SD15 is now training-domain and reports in-domain only.",
+    "interpretation": "Training-unseen is not the same as blind. No cross-generator result should be described as a strictly blind generator benchmark.",
+    "lightly_exposed": [
+      "GLIDE",
+      "VQDM",
+      "Midjourney",
+      "Wukong"
+    ],
+    "lightly_exposed_context": "Seen in a separate, independent team-member pilot drawn from the same source; its results informed no Round 6 or Round 7 decision.",
+    "overlap_disclosure": "The user reports an independent check found overlap of 116/3,750 reserved-test images and 94/2,500 fitting-pool images with a separate, independent team-member pilot drawn from the same Tiny-GenImage revision. That pilot is not part of this repository, its results informed no Round 6 or Round 7 decision, and it is not used or referenced as data. No external pilot files were accessed for this documentation correction.",
+    "test_images": "Round 7 test images were not used or inspected in rounds 1–6 of this repository. Some (116 of 3,750) also appeared in a separate, independent team-member pilot drawn from the same source; that pilot did not inform any Round 7 setting."
+  },
+  "files_sha256": {
+    "docs/ROUND7_DATA.md": "9de6d38bb76ec13bd4a9d898d033ab66c2d3d01a556fcb46adb2beaf8acb7a15",
+    "results/round7/assignments_seed1.json": "522f2c89b75e20b2dcf0bade14fc207b3d72db4c9a351d63bff82a8ce96e94bd",
+    "results/round7/assignments_seed2.json": "8ffb8a0052a48cea921cea5e402c5d430713d6aab913117fb80380968d6e8c3e",
+    "results/round7/assignments_seed3.json": "e358cde34227a101a4b6c7e24a1109f807e2867cc610e23a943f82ca4103328b",
+    "results/round7/data_audit.json": "56139dda37fac55116c8c6236b7a7a0e33a1899b58713bcb7c920a32f2501791",
+    "results/round7/fitting_pool_manifest.jsonl": "c812faaf04fa43be76e80d023374e50694a7fdfaed7c8ea540392309c114028a",
+    "results/round7/reserved_test_manifest.jsonl": "0b69a1264222796885a076464bd20369fcb086be37377937b55ff06aa169e1a8"
+  },
+  "id": "round7_sd15_new_image_partitions",
+  "implementation_sha256": {
+    "scripts/round7_prepare_data.py": "39f63f5064a3130dfe94e421d38995f63d6a9f5cb2cf83c4885a4bf3b146d72d",
+    "scripts/round7_test_data.py": "36c52d933b03d98ca7309187ec5ecadc9450c5870a59e58ce36a50574bbead59",
+    "scripts/round7_verify_data.py": "581ce97af0e71739f4f0e6d6aa31e3a68b192e103c7796fd7610addb1c9e0cbc"
+  },
+  "inherited_round6": {
+    "conditions": [
+      "clean",
+      "jpeg70",
+      "jpeg50",
+      "resize05"
+    ],
+    "count_notes": "Round 6's literal 400/300 view counts are historical, not Round 7 targets. Preserve C=1, per-original total loss weight one, one-third degradation doses, architecture, gate initializations and selection rules; derive view counts from the new partitions.",
+    "file_sha256": {
+      "results/round6/protocol.json": "1595f5266030df817b2ae4f94cfbafe85baba0ccf2be6b480b7b29818224d971",
+      "scripts/gate_models.py": "417cd36b667f33046a903c1d51cc867301db3206ffba978aba594d3fb9bfc12a",
+      "scripts/local_branch.py": "13d0e37fd6774570d4ebda9d8c5740f4da268589b2424f641bf13188773b7acd",
+      "scripts/run_pilot.py": "df7aaa39873513c942d0d89998f70981959ba23323c00209016235be8d3d4e5f",
+      "scripts/run_round2.py": "e018ec2ac549c0e9f3603937a0bc046c19edb4cbdc87c16c1957efb8e4c4775a",
+      "scripts/run_round4.py": "ddb2c8cd1a2a25215a50c5dcedb11e4624800e75f46c6178244e6ef1d0d5f6d2",
+      "scripts/run_round5.py": "dac5ff941fbfbd05b4ca935a2aab64c60c59f77fa9839e3d8ff5f067ca3c8f9c",
+      "scripts/run_round6.py": "eef0f9b3817b994d9a93d8fcb9969b54e3bcb2a9d646c2f21d7e14cad2c24a47",
+      "scripts/score_calibration.py": "b5ec91b05bba2f0327f2b7a3ec6f36ebc1bdb1742256a33de24b1003c0bdf526"
+    },
+    "partition_mapping": {
+      "calibration": "calibration",
+      "expert_fit": "expert_train",
+      "gate_fit": "gate_train",
+      "reserved_test": "development condition recipe only; test remains reserved",
+      "selection": "validation"
+    },
+    "profiles": [
+      "original",
+      "common128"
+    ],
+    "protocol_snapshot": {
+      "created_utc": "2026-10-22T15:53:09.781729+00:00",
+      "design": "4 expert training modes x 2 calibration modes x 2 preprocessing profiles",
+      "development_conditions": [
+        "clean",
+        "jpeg50",
+        "resize05"
+      ],
+      "early_stopping": "Pooled 300-view validation BCE; epoch0 eligible",
+      "expert_loss_weighting": "Clean total1; single augmentation clean2/3 + degradation1/3; joint clean1/3 + JPEG1/3 + resize1/3. Total400, C=1 unchanged",
+      "expert_modes": {
+        "augmented": [
+          "clean",
+          "jpeg70",
+          "resize05"
+        ],
+        "clean": [
+          "clean"
+        ],
+        "jpeg_only": [
+          "clean",
+          "clean",
+          "jpeg70"
+        ],
+        "resize_only": [
+          "clean",
+          "clean",
+          "resize05"
+        ]
+      },
+      "fixed_weight": "Validation generator x condition macro AUROC, 0..1 grid by0.1, ties nearest0.5 then smaller",
+      "gate": "Round4 architecture, feature masking, training policy and initialization seeds unchanged",
+      "gate_and_calibration_and_validation_conditions": [
+        "clean",
+        "jpeg70",
+        "resize05"
+      ],
+      "gate_seeds": [
+        20261022,
+        20261023,
+        20261024
+      ],
+      "id": "round6_matched_dose_augmentation_ablation",
+      "limits": [
+        "One data partition; three gate initializations only",
+        "Ablation changes the full expert-training pipeline including fitted feature standardization; it does not isolate pixel-level causal mechanisms",
+        "Single-augmentation arms use a one-third degradation dose, not a fifty-fifty clean/augmented mix",
+        "Calibration/select subsets smaller than prior validation; use within-round comparisons",
+        "Positive temperature preserves each expert logit ranking, but fusion and gate ranking can change",
+        "Source/content confounds remain; all development has already been inspected",
+        "resize05 seen in expert augmentation and gating; JPEG50 strength not used for training/calibration/selection",
+        "Intervals condition on fitted models and calibration set; no multiplicity correction"
+      ],
+      "manifest_sha256": "c98c84990f2499920ab8b408771817a5500a6893193a177c73360d09d1c6d1f5",
+      "matched_dose_note": "Duplicate clean view replaces omitted augmentation; it is not an additional independent image",
+      "partitions": {
+        "calibration": "100 prior validation originals: 50 Real + 25 SD15 + 25 BigGAN",
+        "development": "Original 400 development images unchanged",
+        "expert_train": "Same 400 originals as round4: 200 Real + 100 SD15 + 100 BigGAN",
+        "gate_train": "Same 200 originals as round4: 100 Real + 50 SD15 + 50 BigGAN",
+        "validation": "Other 100 prior validation originals: same counts"
+      },
+      "primary_contrasts": [
+        "JPEG-only and resize-only minus clean; joint minus each single augmentation, within calibration mode",
+        "Temperature minus raw within each expert mode",
+        "Quality gate minus score gate and simple fusion within each cell"
+      ],
+      "profiles": [
+        "original",
+        "common128"
+      ],
+      "question": "Identify JPEG70 and resize05 contributions at the same one-third augmentation dose",
+      "ranking_metrics": "AUROC and AP use logits to avoid sigmoid saturation; BCE uses stable logits; Brier uses probability",
+      "reference_round": "Round5 clean and joint arms rerun for exact prediction-equivalence checks",
+      "split_seed": 20261025,
+      "temperature": {
+        "bounds": [
+          0.05,
+          100.0
+        ],
+        "objective": "Mean BCE on 300 calibration views only; no intercept",
+        "rule": "Independent positive scalar per expert, shared across generators and conditions",
+        "variance_rule": "Divide local view logit variance by local temperature squared"
+      },
+      "threshold": "Each model maximum Youden J on validation probabilities, fixed during development",
+      "uncertainty": "2000 paired class-stratified image draws per generator/condition, synchronized across seeds and arms"
+    },
+    "status": "All preprocessing, degradation and model settings unchanged; only source pool and partitions change. Not executed in this task."
+  },
+  "licence": {
+    "licence": "CC BY-NC-SA 4.0",
+    "redistribution": "No images are redistributed",
+    "reported_by": "user",
+    "underlying_rights": "Underlying ImageNet and generator rights still apply"
+  },
+  "limitations": [
+    "The user reports an independent check found overlap of 116/3,750 reserved-test images and 94/2,500 fitting-pool images with a separate, independent team-member pilot drawn from the same Tiny-GenImage revision. That pilot is not part of this repository, its results informed no Round 6 or Round 7 decision, and it is not used or referenced as data. No external pilot files were accessed for this documentation correction.",
+    "Training-unseen is not the same as blind; generator domains were previously exposed even though these test images were not used or inspected in rounds 1–6 of this repository.",
+    "Real sources are JPEG and fake sources PNG with generator-specific sizes; harmonisation controls but does not remove these confounds."
+  ],
+  "local_audit_artifacts_sha256": {
+    "artifacts/round7/exclusion_decisions.jsonl": "117aafef8e2dcc61a65b2326c5e29f76f1849aff0957bd21aafd838d4694720f",
+    "artifacts/round7/protected_files_before.json": "3aa4f98e18069ca9019a973269eb4e7d350bebad4838ac319edc966a9b0736fc",
+    "artifacts/round7/source_hashes_pillow12_2.jsonl": "bcf1620a7206ec2d6da005c06228ffbea33a0707f8827e29e92c323d231de6d8",
+    "artifacts/round7/source_hashes_pillow12_2_meta.json": "8f6e363dc60fd96d84e21f805788f928d18baeded2f6e1effc778eebf5aea8e8"
+  },
+  "open_decisions": [
+    "Whether to add extra test-only degradations later; no additions approved or executed here."
+  ],
+  "partition_seeds": [
+    20261101,
+    20261102,
+    20261103
+  ],
+  "pool_and_test_seed": 20261031,
+  "protocol_deviation": "SD14 has zero images in Tiny-GenImage revision 89c4fe9efd0ebc7ce5c7641ef57d578ccd639c69. User approved SD15 (ID 6) as the closest substitute; this deviates from the official GenImage SD1.4 training protocol.",
+  "requested_fitting_per_class": {
+    "calibration": 125,
+    "expert_fit": 750,
+    "gate_fit": 250,
+    "selection": 125
+  },
+  "requested_test": {
+    "ADM": 500,
+    "BigGAN": 500,
+    "GLIDE": 500,
+    "Midjourney": 500,
+    "Real": 500,
+    "SD15": 250,
+    "VQDM": 500,
+    "Wukong": 500
+  },
+  "reserved_test_counts": {
+    "ADM": 500,
+    "BigGAN": 500,
+    "GLIDE": 500,
+    "Midjourney": 500,
+    "Real": 500,
+    "SD15": 250,
+    "VQDM": 500,
+    "Wukong": 500
+  },
+  "revision": "89c4fe9efd0ebc7ce5c7641ef57d578ccd639c69",
+  "sampling": "Sort ascending by (SHA256(ASCII f'{seed}|{purpose}|{source_id}|{pixel_sha256}'), source_id); purposes test/{generator}, fit/{generator}, partition/{generator}. Reserve test first; choose one fixed fitting pool; partition each class separately for each seed.",
+  "scaling": "Budget per class=min(1250, remaining SD15, remaining Real); proportional 750:250:125:125 allocation with largest remainders, ties in expert_fit/gate_fit/calibration/selection order.",
+  "shards": [
+    {
+      "bytes": 477111524,
+      "counts": {
+        "ADM": 143,
+        "BigGAN": 143,
+        "GLIDE": 143,
+        "Midjourney": 143,
+        "Real": 1000,
+        "SD15": 143,
+        "VQDM": 143,
+        "Wukong": 142
+      },
+      "lfs_sha256": "27cfe6c9f36c97246107bd7e54f0ddf55c8584833d7843d96f6674e6536140ce",
+      "local_path": "artifacts/round7/source/data/shards/train-00000-of-00014.parquet",
+      "path": "data/train-00000-of-00014.parquet",
+      "rows": 2000,
+      "verified_sha256": "27cfe6c9f36c97246107bd7e54f0ddf55c8584833d7843d96f6674e6536140ce"
+    },
+    {
+      "bytes": 475157588,
+      "counts": {
+        "ADM": 143,
+        "BigGAN": 143,
+        "GLIDE": 143,
+        "Midjourney": 143,
+        "Real": 1000,
+        "SD15": 143,
+        "VQDM": 142,
+        "Wukong": 143
+      },
+      "lfs_sha256": "82b6605e8d46610a6c02e1e294610efea335fe5778ce97e3bdf0d727446aa262",
+      "local_path": "artifacts/round7/source/data/shards/train-00001-of-00014.parquet",
+      "path": "data/train-00001-of-00014.parquet",
+      "rows": 2000,
+      "verified_sha256": "82b6605e8d46610a6c02e1e294610efea335fe5778ce97e3bdf0d727446aa262"
+    },
+    {
+      "bytes": 459735843,
+      "counts": {
+        "ADM": 143,
+        "BigGAN": 143,
+        "GLIDE": 143,
+        "Midjourney": 143,
+        "Real": 1000,
+        "SD15": 142,
+        "VQDM": 143,
+        "Wukong": 143
+      },
+      "lfs_sha256": "d6c00cbc904cff07463b47d00bdf55a71f6ef56dd27ed8b4a07dc835544b177d",
+      "local_path": "artifacts/round7/source/data/shards/train-00002-of-00014.parquet",
+      "path": "data/train-00002-of-00014.parquet",
+      "rows": 2000,
+      "verified_sha256": "d6c00cbc904cff07463b47d00bdf55a71f6ef56dd27ed8b4a07dc835544b177d"
+    },
+    {
+      "bytes": 473256586,
+      "counts": {
+        "ADM": 143,
+        "BigGAN": 143,
+        "GLIDE": 143,
+        "Midjourney": 142,
+        "Real": 1000,
+        "SD15": 143,
+        "VQDM": 143,
+        "Wukong": 143
+      },
+      "lfs_sha256": "e1bd805829ceb886a2656ffd62c7285dbf8690a9e3de6cc4d1a81e42a2855144",
+      "local_path": "artifacts/round7/source/data/shards/train-00003-of-00014.parquet",
+      "path": "data/train-00003-of-00014.parquet",
+      "rows": 2000,
+      "verified_sha256": "e1bd805829ceb886a2656ffd62c7285dbf8690a9e3de6cc4d1a81e42a2855144"
+    },
+    {
+      "bytes": 496744353,
+      "counts": {
+        "ADM": 143,
+        "BigGAN": 143,
+        "GLIDE": 142,
+        "Midjourney": 143,
+        "Real": 1000,
+        "SD15": 143,
+        "VQDM": 143,
+        "Wukong": 143
+      },
+      "lfs_sha256": "ddd3d8bb10997ea93dfc09bd0fe53a5f41851ddcf0e30c1718070086025875d3",
+      "local_path": "artifacts/round7/source/data/shards/train-00004-of-00014.parquet",
+      "path": "data/train-00004-of-00014.parquet",
+      "rows": 2000,
+      "verified_sha256": "ddd3d8bb10997ea93dfc09bd0fe53a5f41851ddcf0e30c1718070086025875d3"
+    },
+    {
+      "bytes": 492774039,
+      "counts": {
+        "ADM": 143,
+        "BigGAN": 142,
+        "GLIDE": 143,
+        "Midjourney": 143,
+        "Real": 1000,
+        "SD15": 143,
+        "VQDM": 143,
+        "Wukong": 143
+      },
+      "lfs_sha256": "b8a75b57c899d57d8af139b83e56f9678c87aca20c0028547a3cb34045cca459",
+      "local_path": "artifacts/round7/source/data/shards/train-00005-of-00014.parquet",
+      "path": "data/train-00005-of-00014.parquet",
+      "rows": 2000,
+      "verified_sha256": "b8a75b57c899d57d8af139b83e56f9678c87aca20c0028547a3cb34045cca459"
+    },
+    {
+      "bytes": 472445879,
+      "counts": {
+        "ADM": 142,
+        "BigGAN": 143,
+        "GLIDE": 143,
+        "Midjourney": 143,
+        "Real": 1000,
+        "SD15": 143,
+        "VQDM": 143,
+        "Wukong": 143
+      },
+      "lfs_sha256": "d4e6580b743c0cacd8ef0c1482337de65e568133fe427534823f7ee7e83d6699",
+      "local_path": "artifacts/round7/source/data/shards/train-00006-of-00014.parquet",
+      "path": "data/train-00006-of-00014.parquet",
+      "rows": 2000,
+      "verified_sha256": "d4e6580b743c0cacd8ef0c1482337de65e568133fe427534823f7ee7e83d6699"
+    },
+    {
+      "bytes": 462814015,
+      "counts": {
+        "ADM": 143,
+        "BigGAN": 143,
+        "GLIDE": 143,
+        "Midjourney": 143,
+        "Real": 1000,
+        "SD15": 143,
+        "VQDM": 143,
+        "Wukong": 142
+      },
+      "lfs_sha256": "80fc59d498b2294053d948f12cc79bf157a542d722860f83255070094a300355",
+      "local_path": "artifacts/round7/source/data/shards/train-00007-of-00014.parquet",
+      "path": "data/train-00007-of-00014.parquet",
+      "rows": 2000,
+      "verified_sha256": "80fc59d498b2294053d948f12cc79bf157a542d722860f83255070094a300355"
+    },
+    {
+      "bytes": 459604947,
+      "counts": {
+        "ADM": 143,
+        "BigGAN": 143,
+        "GLIDE": 143,
+        "Midjourney": 143,
+        "Real": 1000,
+        "SD15": 143,
+        "VQDM": 142,
+        "Wukong": 143
+      },
+      "lfs_sha256": "3aeda2590afb21f04530dd0ed65581a7c8ddaa0aecd6fb98dbb7965efa3fe05d",
+      "local_path": "artifacts/round7/source/data/shards/train-00008-of-00014.parquet",
+      "path": "data/train-00008-of-00014.parquet",
+      "rows": 2000,
+      "verified_sha256": "3aeda2590afb21f04530dd0ed65581a7c8ddaa0aecd6fb98dbb7965efa3fe05d"
+    },
+    {
+      "bytes": 460808878,
+      "counts": {
+        "ADM": 143,
+        "BigGAN": 143,
+        "GLIDE": 143,
+        "Midjourney": 143,
+        "Real": 1000,
+        "SD15": 142,
+        "VQDM": 143,
+        "Wukong": 143
+      },
+      "lfs_sha256": "4b1b6078877124874625ddd90e0ab9c780b96ef088cd45e9a228fdec4c7c2c76",
+      "local_path": "artifacts/round7/source/data/shards/train-00009-of-00014.parquet",
+      "path": "data/train-00009-of-00014.parquet",
+      "rows": 2000,
+      "verified_sha256": "4b1b6078877124874625ddd90e0ab9c780b96ef088cd45e9a228fdec4c7c2c76"
+    },
+    {
+      "bytes": 464008196,
+      "counts": {
+        "ADM": 143,
+        "BigGAN": 143,
+        "GLIDE": 143,
+        "Midjourney": 142,
+        "Real": 1000,
+        "SD15": 143,
+        "VQDM": 143,
+        "Wukong": 143
+      },
+      "lfs_sha256": "460b43c615d7703909c851290fa5faa3b67f7c640025d198047c646a34e01d75",
+      "local_path": "artifacts/round7/source/data/shards/train-00010-of-00014.parquet",
+      "path": "data/train-00010-of-00014.parquet",
+      "rows": 2000,
+      "verified_sha256": "460b43c615d7703909c851290fa5faa3b67f7c640025d198047c646a34e01d75"
+    },
+    {
+      "bytes": 473944151,
+      "counts": {
+        "ADM": 143,
+        "BigGAN": 143,
+        "GLIDE": 142,
+        "Midjourney": 143,
+        "Real": 1000,
+        "SD15": 143,
+        "VQDM": 143,
+        "Wukong": 143
+      },
+      "lfs_sha256": "59687f981269b94cf85a643b220793f3a3f94ba6ee9d9123974c2c9337d4df14",
+      "local_path": "artifacts/round7/source/data/shards/train-00011-of-00014.parquet",
+      "path": "data/train-00011-of-00014.parquet",
+      "rows": 2000,
+      "verified_sha256": "59687f981269b94cf85a643b220793f3a3f94ba6ee9d9123974c2c9337d4df14"
+    },
+    {
+      "bytes": 467135306,
+      "counts": {
+        "ADM": 143,
+        "BigGAN": 142,
+        "GLIDE": 143,
+        "Midjourney": 143,
+        "Real": 1000,
+        "SD15": 143,
+        "VQDM": 143,
+        "Wukong": 143
+      },
+      "lfs_sha256": "31cb1c6e05b6c1068069588438b4d03f3de69c3228d0f5ef55bf778007d4f3bc",
+      "local_path": "artifacts/round7/source/data/shards/train-00012-of-00014.parquet",
+      "path": "data/train-00012-of-00014.parquet",
+      "rows": 2000,
+      "verified_sha256": "31cb1c6e05b6c1068069588438b4d03f3de69c3228d0f5ef55bf778007d4f3bc"
+    },
+    {
+      "bytes": 487949495,
+      "counts": {
+        "ADM": 142,
+        "BigGAN": 143,
+        "GLIDE": 143,
+        "Midjourney": 143,
+        "Real": 1000,
+        "SD15": 143,
+        "VQDM": 143,
+        "Wukong": 143
+      },
+      "lfs_sha256": "e1f4e85def8e8cb5690af39053eb9b96f1a0735c0aec5363263835600a01d090",
+      "local_path": "artifacts/round7/source/data/shards/train-00013-of-00014.parquet",
+      "path": "data/train-00013-of-00014.parquet",
+      "rows": 2000,
+      "verified_sha256": "e1f4e85def8e8cb5690af39053eb9b96f1a0735c0aec5363263835600a01d090"
+    }
+  ],
+  "shared_real_rule": "The same 500 (or available shortfall) Real originals are reused for each generator comparison and counted once in pooled metrics. The identical test manifest is bound to all three seed assignments.",
+  "shortfalls": {
+    "fitting_per_class": {
+      "calibration": 0,
+      "expert_fit": 0,
+      "gate_fit": 0,
+      "selection": 0
+    },
+    "test": {
+      "ADM": 0,
+      "BigGAN": 0,
+      "GLIDE": 0,
+      "Midjourney": 0,
+      "Real": 0,
+      "SD15": 0,
+      "VQDM": 0,
+      "Wukong": 0
+    }
+  },
+  "source_inventory_sha256": "0ba7fc46aac197cf06891cd8a901f51aa0eb6954b0456e7321cfd92feee63d71",
+  "source_split": "train",
+  "test_roles": {
+    "ADM": "cross_generator",
+    "BigGAN": "cross_generator",
+    "GLIDE": "cross_generator",
+    "Midjourney": "cross_generator",
+    "Real": "shared_real",
+    "SD15": "in_domain",
+    "VQDM": "cross_generator",
+    "Wukong": "cross_generator"
+  },
+  "training_generator": "SD15",
+  "training_generator_id": 6,
+  "verification_environment": "Verification must use the repository-pinned Pillow 12.2.0 environment because older Pillow changes JPEG pixel hashes. Use the existing isolated artifacts/round7/pillow_12_2 install or an environment with the repository-pinned version; do not regenerate data with an older decoder."
+}

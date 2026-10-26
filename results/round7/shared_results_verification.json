@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "rounds_with_provenance_checked": 5,
+  "round6_predictions": 192000,
+  "round6_metric_cells": 1440,
+  "round6_macro_cells": 288,
+  "scope": "Source/protocol hashes and round6 point metrics only; no retraining, feature reconstruction, threshold reselection or bootstrap verification"
+}

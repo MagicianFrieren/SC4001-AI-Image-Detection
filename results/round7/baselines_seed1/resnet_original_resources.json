@@ -1,0 +1,124 @@
+{
+  "checkpoint_sha256": {
+    "artifacts/round7/baselines_seed1/checkpoints/original/epoch_000.pt": "8299c817d72b8ebf18199a47a0c3062f3a9f5983128ea64983ceeffb3233f082",
+    "artifacts/round7/baselines_seed1/checkpoints/original/epoch_001.pt": "0413a8395bc42609534ae05c3da4a9b66c22250178742900b4300511e36f564e",
+    "artifacts/round7/baselines_seed1/checkpoints/original/epoch_002.pt": "af649d0076ab1d85d5fd399ba312e34ff5b7f0cce1a0a109c4a930558cb5035e",
+    "artifacts/round7/baselines_seed1/checkpoints/original/epoch_003.pt": "9ffbf8d218dd803acc8fb284d24d3800d10e093bc486c17705b3b00b8f9dfd74",
+    "artifacts/round7/baselines_seed1/checkpoints/original/epoch_004.pt": "50ee0e853bb3655de7a2fdf439b1b73534af27da633c271bf8b7c10b53c4d230",
+    "artifacts/round7/baselines_seed1/checkpoints/original/epoch_005.pt": "21b075f7ed6b3a67d0b435d91d46fe3fc55b9e1ca62f9224dc08599ef656f07d",
+    "artifacts/round7/baselines_seed1/checkpoints/original/epoch_006.pt": "0ef57898d6a5b3da0b5fe03e0f15a2c8b2fd2c7ed85cbe42a184d9803a40abc8",
+    "artifacts/round7/baselines_seed1/checkpoints/original/epoch_007.pt": "e98a72cc397d8cab8f0a9b36b63891c4f02c6e24137ed224e0a015dd3398eaff",
+    "artifacts/round7/baselines_seed1/checkpoints/original/epoch_008.pt": "376992666fcef547b8b9a81096a70a9cf964c63506064c09327fb12cfb575583",
+    "artifacts/round7/baselines_seed1/checkpoints/original/epoch_009.pt": "8969befdd4e465c5e9299c11b980751c2612f860805ed10f729c2e3407dc5fa3",
+    "artifacts/round7/baselines_seed1/checkpoints/original/epoch_010.pt": "00b3090cc848fa96b2c94306a77107f9326cb3b2bb3d36133aac9fa51ebcd01f"
+  },
+  "evaluation": {
+    "peak_gpu_bytes": 615857152,
+    "seconds": 47.277232999913394
+  },
+  "peak_gpu_bytes": 3184145408,
+  "per_condition_inference": [
+    {
+      "condition": "clean",
+      "model": "resnet50",
+      "partition": "calibration",
+      "peak_gpu_bytes": 615857152,
+      "profile": "original",
+      "seconds": 3.0444586999947205,
+      "shared_across_calibration_modes": true
+    },
+    {
+      "condition": "jpeg70",
+      "model": "resnet50",
+      "partition": "calibration",
+      "peak_gpu_bytes": 615857152,
+      "profile": "original",
+      "seconds": 2.925132400006987,
+      "shared_across_calibration_modes": true
+    },
+    {
+      "condition": "resize05",
+      "model": "resnet50",
+      "partition": "calibration",
+      "peak_gpu_bytes": 615857152,
+      "profile": "original",
+      "seconds": 2.9697729999898,
+      "shared_across_calibration_modes": true
+    },
+    {
+      "condition": "clean",
+      "model": "resnet50",
+      "partition": "selection",
+      "peak_gpu_bytes": 615857152,
+      "profile": "original",
+      "seconds": 2.747251100023277,
+      "shared_across_calibration_modes": true
+    },
+    {
+      "condition": "jpeg70",
+      "model": "resnet50",
+      "partition": "selection",
+      "peak_gpu_bytes": 615857152,
+      "profile": "original",
+      "seconds": 2.845716799958609,
+      "shared_across_calibration_modes": true
+    },
+    {
+      "condition": "jpeg50",
+      "model": "resnet50",
+      "partition": "selection",
+      "peak_gpu_bytes": 615857152,
+      "profile": "original",
+      "seconds": 2.8369587999768555,
+      "shared_across_calibration_modes": true
+    },
+    {
+      "condition": "resize05",
+      "model": "resnet50",
+      "partition": "selection",
+      "peak_gpu_bytes": 615857152,
+      "profile": "original",
+      "seconds": 2.933012400055304,
+      "shared_across_calibration_modes": true
+    },
+    {
+      "condition": "clean",
+      "model": "resnet50",
+      "partition": "development",
+      "peak_gpu_bytes": 615857152,
+      "profile": "original",
+      "seconds": 6.761110099963844,
+      "shared_across_calibration_modes": true
+    },
+    {
+      "condition": "jpeg70",
+      "model": "resnet50",
+      "partition": "development",
+      "peak_gpu_bytes": 615857152,
+      "profile": "original",
+      "seconds": 6.541315800044686,
+      "shared_across_calibration_modes": true
+    },
+    {
+      "condition": "jpeg50",
+      "model": "resnet50",
+      "partition": "development",
+      "peak_gpu_bytes": 615857152,
+      "profile": "original",
+      "seconds": 6.544476100010797,
+      "shared_across_calibration_modes": true
+    },
+    {
+      "condition": "resize05",
+      "model": "resnet50",
+      "partition": "development",
+      "peak_gpu_bytes": 615857152,
+      "profile": "original",
+      "seconds": 7.094567299936898,
+      "shared_across_calibration_modes": true
+    }
+  ],
+  "seconds_this_invocation": 634.5062543000095,
+  "training_seconds_all_epochs": 577.3298644998576,
+  "weights_sha256": "11ad3fa62ca79e40addfd354a8ec4b7c75143b3038b8d2a807fbc68deab379ca"
+}

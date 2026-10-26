@@ -1,0 +1,10 @@
+{
+  "bootstrap_replayed": true,
+  "isolation_logs_checked": 6,
+  "macro_cells": 84,
+  "metric_cells": 528,
+  "predictions": 202400,
+  "scope": "Saved predictions/metrics, selection-only thresholds, access logs, immutable artifact hashes; no reserved-test manifest or images opened",
+  "status": "passed",
+  "test_source_ids_touched": 0
+}

@@ -1,0 +1,33 @@
+{
+  "environment": {
+    "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+    "numpy": "1.26.4",
+    "pillow": "12.2.0",
+    "pyarrow": "21.0.0",
+    "python": "3.12.7",
+    "scikit-learn": "1.5.1",
+    "scipy": "1.13.1",
+    "torch": "2.5.1+cu121",
+    "torchvision": "0.20.1+cu121",
+    "transformers": "4.39.3"
+  },
+  "files_sha256": {
+    "artifacts/round7/baselines_seed2/access_logs/resnet_original_3ba84a02e46f41648d4483ab396c701a.json": "944fc10cb8849de7c29d3540098b2922ad127e5f507d045209324c15adfaf4ec",
+    "artifacts/round7/baselines_seed2/checkpoints/original/epoch_000.pt": "8139b0712396edbfe8dbc1921f1c855001d0da43cc5820cf7a94537c8b3ce204",
+    "artifacts/round7/baselines_seed2/checkpoints/original/epoch_001.pt": "796d59d5d2b1803b17bf35b27bb947d6bc189b0a971f6fca2b57024c4ecdf432",
+    "artifacts/round7/baselines_seed2/checkpoints/original/epoch_002.pt": "a5f557d545284615731007fd63312020db7945344c29d0000e8220751f8b3450",
+    "artifacts/round7/baselines_seed2/checkpoints/original/epoch_003.pt": "f143aa586f2d1d6aecfdebc5595d413932d6a3535f8c8ba5240bddc993ad4f2a",
+    "artifacts/round7/baselines_seed2/checkpoints/original/epoch_004.pt": "d8e331df0739525a631a4105f781ae7eb8c542ffc8a1cea077e9d448acaa0acb",
+    "artifacts/round7/baselines_seed2/checkpoints/original/epoch_005.pt": "3566dd7ae60051791ec695c44043de0d23695a9eb02635350324c0bb6bd20f00",
+    "artifacts/round7/baselines_seed2/checkpoints/original/epoch_006.pt": "aeb8a4405d28ee6454e2988ea6086e5bbd181dd0d73ef8066b72221cf44ac9cc",
+    "artifacts/round7/baselines_seed2/checkpoints/original/epoch_007.pt": "7162f90fb0ef21d86558d8f0d41adce9ddd06834953ffb8a78910336d0e8f55f",
+    "artifacts/round7/baselines_seed2/checkpoints/original/epoch_008.pt": "7ddaecf4f99992e59a62c083a943c7d780678ebff6e9d1ce52a618607d7bc066",
+    "artifacts/round7/baselines_seed2/checkpoints/original/epoch_009.pt": "17d76e71c1157c4cd7ffc92269cfdb1037743a11cc53736e7c876cdf6777e828",
+    "artifacts/round7/baselines_seed2/checkpoints/original/epoch_010.pt": "28aafea2e31031e10f5e59130d495d387875e31184f35d39c94d872831746303",
+    "results/round7/baselines_seed2/resnet_original_predictions.csv": "df40907f951ca1b1d96a8d0dfa91e2a90288c2bdc66fb67a873d67704283469d",
+    "results/round7/baselines_seed2/resnet_original_resources.json": "ed88414b377940160b5293d5956524da50459174f820e83e12fb7df9863448f8",
+    "results/round7/baselines_seed2/resnet_original_settings.json": "4b0bab59b2ceb2f5d884dc42b728bb5221ab50eb6b1311a50d3023445363e397"
+  },
+  "protocol_sha256": "59a9818761f7ab07c3e1bc33794d47ae1f1a1faa51a936bbfc9b72c0947c31cc",
+  "status": "completed"
+}

@@ -1,0 +1,33 @@
+{
+  "environment": {
+    "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+    "numpy": "1.26.4",
+    "pillow": "12.2.0",
+    "pyarrow": "21.0.0",
+    "python": "3.12.7",
+    "scikit-learn": "1.5.1",
+    "scipy": "1.13.1",
+    "torch": "2.5.1+cu121",
+    "torchvision": "0.20.1+cu121",
+    "transformers": "4.39.3"
+  },
+  "files_sha256": {
+    "artifacts/round7/baselines_seed1/access_logs/resnet_common128_b7c4e8e03d2a4e16adb01fb2604be3f5.json": "6ec97e75e30a182110b3ce2b9f32e379a44d3445b92f4d6170070135651d6858",
+    "artifacts/round7/baselines_seed1/checkpoints/common128/epoch_000.pt": "120904591e69c13486d8817c650177aab5132c72418b86aad2f90a446238fba6",
+    "artifacts/round7/baselines_seed1/checkpoints/common128/epoch_001.pt": "27dd09729b58c317b7cbf61ef5466776f0fd3fae34fce692611a9d3c762d79e4",
+    "artifacts/round7/baselines_seed1/checkpoints/common128/epoch_002.pt": "cce72a07a3a0ff704721e573d381de4cb30da57911b1bebf784bd160c807f33c",
+    "artifacts/round7/baselines_seed1/checkpoints/common128/epoch_003.pt": "d4563ee5302a3bf58bd721fde83136cddbecd51fa5006b118d70eb7fdc7bff7b",
+    "artifacts/round7/baselines_seed1/checkpoints/common128/epoch_004.pt": "6f7c7c8a8e7d52a5b5f1a65353e028c5079045e5fc7194f902ef3cc58a19cfec",
+    "artifacts/round7/baselines_seed1/checkpoints/common128/epoch_005.pt": "117474fe0b85ffb1bcf265e1e6002b7e0c039f4c6c031b173a7bc1abc8ad9ceb",
+    "artifacts/round7/baselines_seed1/checkpoints/common128/epoch_006.pt": "d193710a97e286f1060e3c0b525d467a051592645e8e4e75279c5cd676a532bd",
+    "artifacts/round7/baselines_seed1/checkpoints/common128/epoch_007.pt": "169127429a7f22f98067395ba57ca2d3e635be97d4b79810241d6598567ab243",
+    "artifacts/round7/baselines_seed1/checkpoints/common128/epoch_008.pt": "314bde51b9241427013ca567db4eaa1010bf2b4048850acd18d9421b5662f5eb",
+    "artifacts/round7/baselines_seed1/checkpoints/common128/epoch_009.pt": "88b5c128102be41980d308294eb82a2dc48920a4378506626db3ca313872099c",
+    "artifacts/round7/baselines_seed1/checkpoints/common128/epoch_010.pt": "0fb1fb86f944ea85900d851472cdf4d60185518798cbf94ee7ecc31d2d767ffd",
+    "results/round7/baselines_seed1/resnet_common128_predictions.csv": "f198ed46470a481f2480e404b327db2581118386403715e89fad31d208cb5b4b",
+    "results/round7/baselines_seed1/resnet_common128_resources.json": "bb3090bc4048f524cf4c01f403918f90ef7342c8a27ea24fb14431e4ed465f72",
+    "results/round7/baselines_seed1/resnet_common128_settings.json": "107dc46dd60c108ee13eae12479c199df620c6b9ed9e8908e2413c943033d56e"
+  },
+  "protocol_sha256": "6a0424fc22c7cffaec23a934eb4e95b21dd9fe6bd51c49f9e008eed356d019e3",
+  "status": "completed"
+}

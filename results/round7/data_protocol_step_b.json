@@ -1,0 +1,31 @@
+{
+  "base_protocol_sha256": "826225696f0362a96c789cad9ba27ff743679561d894deea1c7106c5d270d76e",
+  "code_sha256": {
+    "scripts/round7_add_development.py": "91bd34a2dbe38f6773fa429d33f60fbe63168ecbc9690f9d6ff89b2befa2b4c6",
+    "scripts/round7_verify_development.py": "293ad860d958a38c2cca2b0dde9ca0019747b6bc8e74c156ff85a40c30a74870"
+  },
+  "counts": {
+    "ADM": 300,
+    "BigGAN": 300,
+    "Real": 300
+  },
+  "development_use": "ADM and BigGAN are heavily inspected domains and are used for development only, never expert/gate fitting, calibration, epoch/threshold/fusion selection.",
+  "extends": "results/round7/data_protocol.json",
+  "files_sha256": {
+    "results/round7/assignments_seed1.json": "522f2c89b75e20b2dcf0bade14fc207b3d72db4c9a351d63bff82a8ce96e94bd",
+    "results/round7/development_manifest.jsonl": "3f1b57cf4238f0739c5eadf92b321bfbfd704478c259ff1043269de7389bd77f",
+    "results/round7/fitting_pool_manifest.jsonl": "c812faaf04fa43be76e80d023374e50694a7fdfaed7c8ea540392309c114028a",
+    "results/round7/step_b_isolation.json": "b33e056ea07df94e54c4434309f583ceaa3838e25db85b89f743fefcbd2f80cd"
+  },
+  "final_only_domains": [
+    "GLIDE",
+    "VQDM",
+    "Midjourney",
+    "Wukong"
+  ],
+  "final_only_scope": "No Round 7 model inputs, features or scores for these domains before final evaluation. Earlier independent pilot exposure remains disclosed in the base protocol; data-audit hashing is not model use.",
+  "pillow": "12.2.0",
+  "reserved_test_interpretation": "Future reserved-test ADM/BigGAN results are reported as previously inspected domains, not blind domains.",
+  "sampling": "Existing eligible pool, excluding fitting and reserved test; SHA256 rank(seed|development/{generator}|source_id|pixel_sha256); first 300 per generator.",
+  "seed": 20261104
+}
