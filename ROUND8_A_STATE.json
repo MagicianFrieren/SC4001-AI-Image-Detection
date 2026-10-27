@@ -1,7 +1,7 @@
 {
   "updated": "2026-10-27",
   "base_commit": "f3c6f7008cc82732e97ef7ad1754982c29dbb428",
-  "branch": "codex/round8-a-format-matched",
+  "branch": "main",
   "owner": "User is A: local format matching, repaired-branch fusion and quality-cue ablation",
   "stage": "A development implementation and all six paired runs complete; fresh final-test work remains with protocol owner",
   "entrypoints": [
@@ -21,7 +21,8 @@
     "Verified 276000 predictions and 720 metric cells",
     "Saved 576 mean/SD rows and 192 paired contrast rows",
     "Confirmed 148 byte-identical shared reporting feature batches per seed",
-    "Historical shared-result verifier passed"
+    "Historical shared-result verifier passed",
+    "Merged into main and removed development branch; model handoff archive verified against all twelve completion-receipt hashes"
   ],
   "execution": "First launch crashed in nvcuda64.dll with 0xC0000409 before any feature batch. CUDA, CLIP and real-image global/local diagnostics passed, then all six runs completed under the unchanged frozen protocol. No package, driver, model or experiment-setting changes were made during recovery. See results/round8_a/EXECUTION_NOTE.txt.",
   "historical_preservation": "No existing Round 1-7 tracked files changed; PROJECT_STATE.json remains the historical Round 6 state",
@@ -40,8 +41,10 @@
   "next": "Review and hand off A development artifacts. The protocol owner must define the fresh Round 8 test and freeze the final evaluation before any new final-test scoring. Do not alter or rerun the completed experiment under the same protocol identity.",
   "publication": {
     "requested": "2026-10-27",
-    "target": "origin/codex/round8-a-format-matched",
-    "contents": "Code, development protocol, verified results, runbook and compressed per-image predictions",
-    "excluded": "Source images, downloaded shards, pretrained weights and feature caches"
+    "target": "origin/main",
+    "contents": "Code, development protocol, verified results, runbook, compressed per-image predictions, and fitted heads/bundles with SHA-256 checksums",
+    "excluded": "Source images, downloaded shards, pretrained weights and feature caches",
+    "model_archive": "results/round8_a/model_handoff/round8_a_models.zip",
+    "model_archive_sha256": "c023b09ca182df1b7a97e7d2b68c6172d594ada2f6e10e582e9bf926f8605a85"
   }
 }

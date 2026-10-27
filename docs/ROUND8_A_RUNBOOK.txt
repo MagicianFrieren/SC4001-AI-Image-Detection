@@ -111,11 +111,31 @@ On a fresh checkout, unpack the archive from the repository root:
 
   Expand-Archive -LiteralPath results/round8_a/predictions.zip -DestinationPath .
 
-artifacts/round8_a contains original caches, downloaded shards, feature batches,
-heads and bundles, which are not published in Git. Full reconstruction with
-round8_a_verify.py also requires these corresponding local artifacts. The shared
-predictions support metric recomputation but do not replace feature-cache and
-model-provenance checks.
+Fitted heads and bundles are also published in:
+
+  results/round8_a/model_handoff/round8_a_models.zip
+  results/round8_a/model_handoff/SHA256SUMS.txt
+  results/round8_a/model_handoff/round8_a_models.zip.sha256
+
+This is the same ZIP supplied directly to the teammate. It contains twelve model
+files: experts.joblib and bundle.json for both arms of all three seeds, plus an
+internal checksum list. Each file matches its original completion receipt.
+The external SHA256SUMS.txt also includes the checksum of the ZIP itself.
+
+Check the ZIP hash against round8_a_models.zip.sha256, then unpack from the
+repository root on a fresh checkout:
+
+  Get-FileHash -Algorithm SHA256 results/round8_a/model_handoff/round8_a_models.zip
+  Expand-Archive -LiteralPath results/round8_a/model_handoff/round8_a_models.zip -DestinationPath .
+
+The archive restores the original artifacts/round8_a/seedN/arm/ paths. No raw
+images, source shards, pretrained encoder weights or feature caches are included.
+Those caches remain local under the ignored artifacts directory. Full verification
+with round8_a_verify.py also checks feature-cache hashes, so these two published
+archives alone do not provide every file required by that verifier. They supply
+the fitted models, gate parameters, settings and predictions for handoff. For a
+full cache-level audit, obtain the corresponding verified feature caches from
+the run owner.
 
 The verifier checks hashes, exact identity/condition/model coverage, isolation,
 NumPy gate reconstruction, selection-only fixed weights/thresholds and independent
