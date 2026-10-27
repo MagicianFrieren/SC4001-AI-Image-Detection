@@ -1,0 +1,47 @@
+{
+  "updated": "2026-10-27",
+  "base_commit": "f3c6f7008cc82732e97ef7ad1754982c29dbb428",
+  "branch": "codex/round8-a-format-matched",
+  "owner": "User is A: local format matching, repaired-branch fusion and quality-cue ablation",
+  "stage": "A development implementation and all six paired runs complete; fresh final-test work remains with protocol owner",
+  "entrypoints": [
+    "results/round8_a/summary_zh.txt",
+    "results/round8_a/verification.json",
+    "docs/ROUND8_A_RUNBOOK.txt",
+    "config/round8_a.json",
+    "scripts/round8_a_run.py"
+  ],
+  "completed": [
+    "Fast-forwarded main to Round 7 publication",
+    "Added isolated Round 8 implementation",
+    "Nine synthetic tests passed",
+    "Restored 3397 permitted originals from hash-verified pinned shards",
+    "Frozen code, inputs, weights and local runtime before feature extraction",
+    "Completed unmatched and matched arms for all three data seeds",
+    "Verified 276000 predictions and 720 metric cells",
+    "Saved 576 mean/SD rows and 192 paired contrast rows",
+    "Confirmed 148 byte-identical shared reporting feature batches per seed",
+    "Historical shared-result verifier passed"
+  ],
+  "execution": "First launch crashed in nvcuda64.dll with 0xC0000409 before any feature batch. CUDA, CLIP and real-image global/local diagnostics passed, then all six runs completed under the unchanged frozen protocol. No package, driver, model or experiment-setting changes were made during recovery. See results/round8_a/EXECUTION_NOTE.txt.",
+  "historical_preservation": "No existing Round 1-7 tracked files changed; PROJECT_STATE.json remains the historical Round 6 state",
+  "constraints": [
+    "Development only; no Round 7 reserved-test access",
+    "New final-test protocol belongs to teammate",
+    "Raw scores and original profile only",
+    "Local runtime differs from Round 7, so both controls and matched models are refitted"
+  ],
+  "findings": [
+    "Local JPEG70/JPEG50 mean AUROC improved on ADM and BigGAN; ADM JPEG50 remains below chance",
+    "Local clean BigGAN and resize05 performance decreased",
+    "Matched average versus matched global is generator/condition dependent",
+    "Matched quality gate mean AUROC is below matched average in all eight ADM/BigGAN condition cells"
+  ],
+  "next": "Review and hand off A development artifacts. The protocol owner must define the fresh Round 8 test and freeze the final evaluation before any new final-test scoring. Do not alter or rerun the completed experiment under the same protocol identity.",
+  "publication": {
+    "requested": "2026-10-27",
+    "target": "origin/codex/round8-a-format-matched",
+    "contents": "Code, development protocol, verified results, runbook and compressed per-image predictions",
+    "excluded": "Source images, downloaded shards, pretrained weights and feature caches"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "files_sha256": {
+    "artifacts/round8_a/seed2/unmatched/bundle.json": "3eea9d18c7a83f2e425b22c8018645c7f09af76c7b44b044c477a68b03f86e3b",
+    "artifacts/round8_a/seed2/unmatched/experts.joblib": "434ef93afb36526b3ed51e6866eb3cac9d72beea3c1cd9257eae514a4e62df3d",
+    "results/round8_a/seed2/unmatched/audit.json": "2593864e348ca7c309af17537c513d63003399f6870478340294f0ba625c0dfd",
+    "results/round8_a/seed2/unmatched/metrics.csv": "ba2228ea2ddd8e04eea9c519a306c75f02aed894d11d4616fe26e2a4ede31df4",
+    "results/round8_a/seed2/unmatched/predictions.csv": "234c2785a9a3f87f433e61d9ac18374ff77737359c985b64eba8d622f263b76e",
+    "results/round8_a/seed2/unmatched/settings.json": "06b6bc1f22a188211b4c0da47022735e1969d1484f05d826e27aab1e92cc8ba6"
+  },
+  "signature": "33506cdfed0c6fe2a93dd81782b8327a4ba9d16242610d41a7a7dd8293558fa4",
+  "status": "completed"
+}

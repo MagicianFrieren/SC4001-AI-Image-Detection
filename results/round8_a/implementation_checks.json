@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-27",
+  "status": "passed",
+  "command": ".venv/Scripts/python.exe scripts/round8_a_test.py",
+  "tests_passed": 9,
+  "coverage": [
+    "Native-resolution JPEG matching before geometry and PatchShuffle",
+    "Original reporting views and forbidden-access rejection before decode",
+    "Disjoint fitting roles and deterministic JPEG quality draws",
+    "Score-gate quality-input ablation and independent NumPy gate reconstruction",
+    "Exclusive immutable output publication",
+    "Cross-condition feature-cache rejection before model loading",
+    "End-to-end synthetic fitting, verification, completed-run resume and tamper rejection",
+    "Logit averaging and threshold tie behavior",
+    "Within-data-seed averaging of gate initializations and paired three-seed summary arithmetic"
+  ],
+  "historical_shared_results": {
+    "status": "passed",
+    "rounds_with_provenance_checked": 5,
+    "round6_metric_cells": 1440,
+    "round6_macro_cells": 288
+  },
+  "scope": "Implementation checks, not evidence of scientific benefit. Real results are verified separately."
+}

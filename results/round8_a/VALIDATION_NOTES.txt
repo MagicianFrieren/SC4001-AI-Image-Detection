@@ -1,0 +1,38 @@
+Round 8 A result interpretation checks, 2026-10-27
+
+Computational verification: PASSED for six runs, 276000 predictions and 720
+model-instance/domain/condition cells. Full details: verification.json.
+Statistics: three-data-seed means and sample SD, plus within-seed differences.
+No p-values, population confidence intervals or statistical-significance claims.
+
+Methodological scan coverage: 11/11 considered. Not-applicable items below are
+scope statements, not proof that the underlying dataset has no bias.
+
+1. Simpson's paradox: domain and condition results are reported separately.
+   Fusion directions differ between ADM and BigGAN; no pooled universal claim.
+2. Ecological inference: aggregate AUROC is not an individual-image guarantee.
+3. Selection/Berkson bias: fixed Tiny-GenImage subset, duplicate exclusions and
+   prior development exposure limit generalization; unmeasured bias not resolved.
+4. Collider bias: no causal adjustment/regression claim. Selection on dataset
+   eligibility remains a limitation, not an estimated causal effect.
+5. Base rates: each reported development generator cell uses 300 real/300 fake.
+   AP/threshold metrics do not establish deployment precision at other prevalences.
+6. Regression to mean: paired controls retained; ADM was already a known weak
+   domain, so these results are development evidence rather than a new blind test.
+7. Survivorship: all six planned runs and all expected cells were retained.
+   The initial driver crash and unchanged-protocol recovery are disclosed.
+8. Look-elsewhere: all four predeclared contrasts and all metrics/conditions are
+   published, including losses. No multiplicity-adjusted significance is claimed.
+9. Forking paths: development plan and code/runtime hashes preceded real fitting.
+   Gate/weight/threshold choices use only the designated selection tuning views.
+   This is a local development declaration, not an externally registered study.
+10. Causation: paired comparisons measure this implemented training intervention.
+    They do not establish compression format as the sole cause; source history,
+    resolution and content confounds remain.
+11. Reverse causality: no directional observational claim is made. Training
+    transforms are specified before fitting and scoring, and reporting is fixed.
+
+Three partitions share a fitting pool and development images. Gate initializations
+are averaged within each partition, not counted as nine independent data splits.
+The same reporting feature-cache bytes are used by both arms within every seed;
+see paired_feature_check.json. No Round 7 reserved-test evaluation was performed.

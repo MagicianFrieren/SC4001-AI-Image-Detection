@@ -1,0 +1,129 @@
+Round 8 A: format-matched local branch and fusion
+
+Scope
+
+A owns local JPEG format matching and the fusion/quality-cue ablation.
+The protocol owner supplies a fresh Round 8 test manifest and final evaluation.
+C owns error-case analysis and report figures. This runner performs development
+experiments only. It never opens the Round 7 reserved-test manifest or scores it.
+
+Entry points
+
+  config/round8_a.json          Development design, written before real training
+  scripts/round8_a_common.py   Source isolation, restoration and protocol lock
+  scripts/round8_a_run.py      Feature extraction, heads, fusion and gates
+  scripts/round8_a_verify.py   Read-only run checks; paired summary generation
+  scripts/round8_a_test.py     Synthetic tests without source images or CLIP runs
+  ROUND8_A_STATE.json         Current local progress; historical state is retained
+
+Run from the repository root in PowerShell, using the existing pinned .venv:
+
+  ./.venv/Scripts/python.exe scripts/round8_a_test.py
+  ./.venv/Scripts/python.exe scripts/round8_a_run.py --preflight
+  ./.venv/Scripts/python.exe -u scripts/round8_a_run.py --prepare --download
+  ./.venv/Scripts/python.exe -u scripts/round8_a_run.py --run
+
+The download flag retrieves missing pinned source shards. Existing data/shards
+and Round 7 allowed_images caches are reused read-only. SHA-256 checks precede
+use. Arrow row selection precedes Python image materialization; only permitted
+fitting/development images are decoded. Three unused calibration originals
+across all three splits do not need restoration. Individual runs exclude the
+entire calibration partition.
+
+To run or resume one arm:
+
+  ./.venv/Scripts/python.exe -u scripts/round8_a_run.py --run --seed 20261101 --arm matched
+
+The same command resumes validated feature batches. A completed run is checked
+and skipped. Concurrent prepare/run processes are rejected by an OS lock.
+Code, plan, inputs and runtime are frozen before the first feature extraction.
+Changed inputs or software reject reuse. Do not delete protocol/completion files
+to make a changed experiment look like a continuation.
+
+Checks after training:
+
+  ./.venv/Scripts/python.exe scripts/round8_a_verify.py --seed 20261101 --arm matched
+  ./.venv/Scripts/python.exe scripts/round8_a_verify.py --summary
+
+The second command requires all six runs (two arms, three partition seeds).
+It writes summaries exclusively and accepts only byte-identical existing files.
+The full --run command generates these summaries automatically after completion.
+
+Experiment design
+
+Both arms use the original 224-pixel profile, frozen CLIP ViT-B/32, identical
+logistic head settings and the same Round 7 fitting/development assignments.
+The local expert averages four PatchShuffle feature vectors from 56-pixel tiles.
+
+Unmatched: preserve the existing image processing in expert-fit/gate-fit/tuning.
+Matched: reproduce W1's label-independent Q60-95 JPEG draw, at native resolution,
+before 224-pixel geometry, condition degradation and PatchShuffle. Both experts
+use the same matched image. Gate-fit and selection tuning also use matched views.
+This extends W1 to gate fitting explicitly; W1 itself did not train gates.
+
+Reporting always starts from ORIGINAL images, in both arms. Clean, JPEG70,
+JPEG50 and half-resolution are reported. JPEG50 is never used for tuning.
+Selection reporting uses the same identities as tuning and is not independent
+test evidence. ADM and BigGAN are previously inspected development generators.
+
+Both arms refit global/local heads, average fusion, fixed fusion, score gate and
+quality gate. Raw logits are used throughout; temperature calibration is outside
+this development comparison. Average fusion averages LOGITS, not probabilities.
+Fixed fusion searches the inherited 0.0-to-1.0 grid on selection only.
+
+Score and quality gates share architecture, branch scores, uncertainty inputs,
+partitions and three paired initialization seeds. Score gate zeros the three
+standardized quality inputs. Quality is measured before PatchShuffle, on the
+same processed image given to the global branch. Expert-fit and gate-fit source
+identities are disjoint; development data select no weights, epochs or thresholds.
+
+Comparisons fixed before real training:
+
+  matched local minus unmatched local
+  matched average minus matched global
+  matched quality gate minus matched score gate
+  matched quality gate minus matched average
+
+Every generator, condition and metric is reported, including clean-image costs.
+Gate metrics are averaged over initializations WITHIN each data seed, then paired
+across the three data seeds. Sample SD describes split variation, not a population
+confidence interval. Positive FPR differences mean worse performance.
+
+Environment and provenance
+
+The current local runtime differs from the teammate's Round 7 runtime (including
+PyTorch, scikit-learn and Python). Both arms are recomputed here. No result is
+claimed to be a byte-identical reproduction of Round 7. Pillow remains 12.2.0,
+and source pixel hashes, W1 JPEG transform and inherited model code are checked.
+Round 1-7 scripts, results, README and PROJECT_STATE.json are left unchanged.
+
+Results and limits
+
+results/round8_a contains protocols, per-run settings/metrics/audits/completion
+receipts, metrics_mean_sd.csv, paired_differences.csv and verification.json.
+Per-image prediction CSVs are ignored individually but published together in
+results/round8_a/predictions.zip. The archive contains all 276,000 predictions.
+predictions_archive.json records its SHA-256 and all six CSV hashes, checked
+against the original completion receipts. C can use these CSVs for case analysis
+and figures without downloading images or running a model.
+
+On a fresh checkout, unpack the archive from the repository root:
+
+  Expand-Archive -LiteralPath results/round8_a/predictions.zip -DestinationPath .
+
+artifacts/round8_a contains original caches, downloaded shards, feature batches,
+heads and bundles, which are not published in Git. Full reconstruction with
+round8_a_verify.py also requires these corresponding local artifacts. The shared
+predictions support metric recomputation but do not replace feature-cache and
+model-provenance checks.
+
+The verifier checks hashes, exact identity/condition/model coverage, isolation,
+NumPy gate reconstruction, selection-only fixed weights/thresholds and independent
+metrics. It does not rerun CLIP or prove a scientific benefit. Synthetic tests
+validate implementation behavior; only real experiment results test the hypothesis.
+
+Compression history and content/size differences remain possible confounds.
+The shared fitting pool and development set limit independence between seeds.
+No new blind-test claim can be made until the protocol owner supplies and freezes
+a separate final evaluation. Codex assisted implementation and execution at the
+project owner's request.

@@ -1,0 +1,16 @@
+2026-10-27: initial GPU launch and diagnostic recovery
+
+The first real launch created protocol.json, then exited with Windows status
+0xC0000409 before publishing any feature batch or fitted model. The Windows
+Application Error report identified nvcuda64.dll, version 32.0.15.9282, as the
+faulting module. This identifies the crash location, not a proven root cause.
+
+Subsequent diagnostic processes successfully allocated and computed CUDA tensors,
+loaded the pinned CLIP model and performed FP16 inference. A diagnostic using
+the actual permitted expert-fit originals and unchanged global/local preprocessing
+also passed. Those diagnostic embeddings were not published as experiment results.
+
+The seed-20261101 unmatched run was then launched directly with Python's
+faulthandler enabled. No experiment code, plan, package, driver or protocol hash
+was changed. The original protocol.json is retained. Later completion and
+verification receipts establish which runs finished; this note alone does not.

@@ -1,0 +1,122 @@
+{
+  "clip": {
+    "batch_size": 32,
+    "frozen": true,
+    "head": "StandardScaler then LogisticRegression(C=1, liblinear, max_iter=2000, random_state=20261018)",
+    "local": "four mean-pooled normalized features from 56px PatchShuffle views; seeds 202610220..202610223",
+    "model": "openai/clip-vit-base-patch32",
+    "precision": "FP16 encoder on CUDA as Round 6; embeddings normalized in FP32",
+    "revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+    "weights_sha256": "a63082132ba4f97a80bea76823f544493bffa8082296d62d71581a4feff1576f"
+  },
+  "code_sha256": {
+    "scripts/gate_models.py": "417cd36b667f33046a903c1d51cc867301db3206ffba978aba594d3fb9bfc12a",
+    "scripts/round7_baseline_clip.py": "a450c3f6bb2c4186311fec2db622a7545643902bb47e49bce4f6e73e938bea32",
+    "scripts/round7_baseline_common.py": "c93bfd3d54cd60c9991cdc6fe966cf53395450ea1c090f6e560f23206786d0ae",
+    "scripts/round7_baseline_data.py": "f3bd973f536136ff341c0bf8a0db0bc530eb94cb4467db9c3b0ea55590ddca9a",
+    "scripts/round7_seed_support.py": "2f6a4ec2182ad3411b33e6fece3dd0c669c562ca0f15eea174579ff2cec8e262",
+    "scripts/round7_stepD_common.py": "016ce56d66724da7d6919d41c76a74ce78d40d212536271fc138caf02776c5ec",
+    "scripts/round8_a_common.py": "5535ff2635e35cf02fea06ba526a4dddf9b2a5bad0fe6ab74ae1f895d4d2c475",
+    "scripts/round8_a_run.py": "4489a00e159c754660cb746ea1557be8079a6b6abc0fac1d699d5d742fd118f5",
+    "scripts/round8_a_verify.py": "debe7bfbde01c62e122deceef0df2201e927d74cd3ad985fb15118436a95dd0d",
+    "scripts/score_calibration.py": "b5ec91b05bba2f0327f2b7a3ec6f36ebc1bdb1742256a33de24b1003c0bdf526"
+  },
+  "environment": {
+    "Pillow": "12.2.0",
+    "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+    "joblib": "1.5.3",
+    "numpy": "1.26.4",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "pyarrow": "25.0.1",
+    "python": "3.12.5",
+    "scikit-learn": "1.8.0",
+    "scipy": "1.17.1",
+    "torch": "2.2.0+cu121",
+    "torchvision": "0.17.0+cu121",
+    "transformers": "4.39.3"
+  },
+  "format_match": {
+    "distribution": "discrete uniform integers, inclusive",
+    "draw": "Rejection sampling: SHA256 UTF-8 stepD|seed|source_id|counter, big-endian integer, reject >= 2^256 - (2^256 mod 36), q=60+(integer mod 36). Counter starts at 0. No label or epoch input.",
+    "pillow": "12.2.0",
+    "pipeline": "Decode original with EXIF transpose to RGB, JPEG encode once at native size with Pillow subsampling=2, optimize=False, progressive=False; decode RGB; then unchanged Step C original profile and condition.",
+    "quality_max": 95,
+    "quality_min": 60
+  },
+  "input_sha256": {
+    "results/round7/assignments_seed1.json": "522f2c89b75e20b2dcf0bade14fc207b3d72db4c9a351d63bff82a8ce96e94bd",
+    "results/round7/assignments_seed2.json": "8ffb8a0052a48cea921cea5e402c5d430713d6aab913117fb80380968d6e8c3e",
+    "results/round7/assignments_seed3.json": "e358cde34227a101a4b6c7e24a1109f807e2867cc610e23a943f82ca4103328b",
+    "results/round7/data_protocol.json": "826225696f0362a96c789cad9ba27ff743679561d894deea1c7106c5d270d76e",
+    "results/round7/data_protocol_step_b.json": "0753f0d8374ed5fca157d0a22b95acbdd406f526bfefd57ed0cef84e6712f852",
+    "results/round7/development_manifest.jsonl": "3f1b57cf4238f0739c5eadf92b321bfbfd704478c259ff1043269de7389bd77f",
+    "results/round7/fitting_pool_manifest.jsonl": "c812faaf04fa43be76e80d023374e50694a7fdfaed7c8ea540392309c114028a",
+    "results/round7/source_inventory.json": "0ba7fc46aac197cf06891cd8a901f51aa0eb6954b0456e7321cfd92feee63d71",
+    "results/round7/stepD_protocol.json": "a0695bf5d1ece6f590a4441b9d1e40fc41a4d93b84b8808fcdd5a615463d85d4",
+    "results/round7/step_b_isolation.json": "b33e056ea07df94e54c4434309f583ceaa3838e25db85b89f743fefcbd2f80cd"
+  },
+  "plan": {
+    "ablation": "score_gate and quality_gate use identical experts, architecture, non-quality inputs and paired initializations; score_gate zeros the final three standardized quality features",
+    "aggregation": "Per generator and condition. Average gate metrics within each data seed, then mean and sample SD over the three data seeds. Differences paired within data seed. No pooled gate predictions, no treating nine gates as nine data seeds.",
+    "arms": [
+      "unmatched",
+      "matched"
+    ],
+    "calibration": "raw only, matching Round 7 W1; calibration partition unused",
+    "decision": "Report all specified comparisons, including clean-image costs; no post-hoc pass threshold, architecture search or model selection using development scores",
+    "expert_fit": "Same Round 7 assignments; one clean view per original; refit both global and local heads in both arms in this runtime",
+    "gate_fit": "Disjoint gate_fit originals; clean/jpeg70/resize05 equally weighted; matched views in matched arm; unchanged paired gate_models.py implementation",
+    "gate_seeds": [
+      20261022,
+      20261023,
+      20261024
+    ],
+    "id": "round8_a_development_v1",
+    "limitations": [
+      "Previously inspected ADM/BigGAN development only",
+      "Three splits share the fitting pool and development originals",
+      "Selection reporting is optimistic",
+      "Real images retain prior JPEG history",
+      "Matching gate-fit/tuning is an explicit extension of W1, which did not train gates"
+    ],
+    "matched_views": "Apply unchanged W1 native-size Q60-95 matching before geometry, degradation and PatchShuffle to expert_fit, gate_fit and selection tuning only",
+    "metrics": [
+      "auroc",
+      "average_precision",
+      "balanced_accuracy",
+      "real_false_positive_rate"
+    ],
+    "models": [
+      "global",
+      "local",
+      "average",
+      "fixed",
+      "score_gate",
+      "quality_gate"
+    ],
+    "primary_contrasts": [
+      "matched local - unmatched local",
+      "matched average - matched global",
+      "matched quality_gate - matched score_gate",
+      "matched quality_gate - matched average"
+    ],
+    "profile": "original",
+    "question": "Does native-resolution JPEG format matching help the local branch, and do quality cues improve fusion of the matched experts?",
+    "reporting": "Original (never format-matched) selection and ADM/BigGAN development images; clean/jpeg70/jpeg50/resize05; JPEG50 never used for tuning",
+    "runtime": "Pin actual environment and source/input/model hashes before feature extraction; reject drift on resume. Recomputed controls are not claimed to be byte-identical to Round 7.",
+    "seeds": [
+      20261101,
+      20261102,
+      20261103
+    ],
+    "selection": "Select gate epoch, fixed alpha and thresholds only on selection tuning clean/jpeg70/resize05; matched views in matched arm",
+    "status": "A development plan; separate from teammate-owned final-test protocol",
+    "test_policy": "No Round 7 reserved-test manifest, images or predictions. Fresh Round 8 test construction, final protocol, freeze and evaluation belong to the protocol owner and are not implemented here.",
+    "unmatched_views": "Original decoded images followed by inherited geometry and degradation"
+  },
+  "plan_sha256": "05c2bc8517a5b97773713c5834000651f8d57210b2049054973871b68707950d",
+  "weights_sha256": {
+    "config.json": "b575ef3c36f2a057fa19e221650105052d61cc9c1a972ec15019c6261ec98770",
+    "pytorch_model.bin": "a63082132ba4f97a80bea76823f544493bffa8082296d62d71581a4feff1576f"
+  }
+}

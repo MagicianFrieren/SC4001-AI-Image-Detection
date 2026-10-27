@@ -1,0 +1,16 @@
+{
+  "archive": "results/round8_a/predictions.zip",
+  "archive_sha256": "008d0d1b7cd7fa18d3b6f0d0e279930eb0b1a0a5a9817cb2b187eb05db7ac007",
+  "archive_bytes": 8401662,
+  "files_sha256": {
+    "results/round8_a/seed1/matched/predictions.csv": "87472767fe56ab0c8b9e4c30529d796cd6b3a56f8d8afc10ac0678837f268042",
+    "results/round8_a/seed1/unmatched/predictions.csv": "fa96698a19fcb5ea8343ceb3ecbce03fb5371e0593e183f24db817df4865af60",
+    "results/round8_a/seed2/matched/predictions.csv": "c44f8b528be3849f43d50f86f5abfb790600697ca29fc57421e282c99b340345",
+    "results/round8_a/seed2/unmatched/predictions.csv": "234c2785a9a3f87f433e61d9ac18374ff77737359c985b64eba8d622f263b76e",
+    "results/round8_a/seed3/matched/predictions.csv": "f6ffead9b83f48d0c19a89bd508b06706b7a4cfcd49c94d325956f9ac8fd93d1",
+    "results/round8_a/seed3/unmatched/predictions.csv": "cb06254dae93b183d6bd6decfbeadc430b9e40b711f56c1c034c4aea16a25d6d"
+  },
+  "predictions": 276000,
+  "status": "all six extracted CSV hashes match completed-run receipts",
+  "scope": "Predictions for teammate analysis. Full frozen verification also needs local feature caches and bundles, which are not included."
+}

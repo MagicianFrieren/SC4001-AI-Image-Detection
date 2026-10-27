@@ -1,0 +1,56 @@
+{
+  "contrast_rows": 192,
+  "interpretation": "Development only; SD describes three splits, not a population confidence interval. Positive FPR differences are worse.",
+  "runs": [
+    {
+      "arm": "unmatched",
+      "checks": "hashes, isolation, coverage, NumPy gate reconstruction, tuning thresholds, metrics",
+      "metric_cells": 120,
+      "predictions": 46000,
+      "run_seed": 20261101,
+      "status": "passed"
+    },
+    {
+      "arm": "matched",
+      "checks": "hashes, isolation, coverage, NumPy gate reconstruction, tuning thresholds, metrics",
+      "metric_cells": 120,
+      "predictions": 46000,
+      "run_seed": 20261101,
+      "status": "passed"
+    },
+    {
+      "arm": "unmatched",
+      "checks": "hashes, isolation, coverage, NumPy gate reconstruction, tuning thresholds, metrics",
+      "metric_cells": 120,
+      "predictions": 46000,
+      "run_seed": 20261102,
+      "status": "passed"
+    },
+    {
+      "arm": "matched",
+      "checks": "hashes, isolation, coverage, NumPy gate reconstruction, tuning thresholds, metrics",
+      "metric_cells": 120,
+      "predictions": 46000,
+      "run_seed": 20261102,
+      "status": "passed"
+    },
+    {
+      "arm": "unmatched",
+      "checks": "hashes, isolation, coverage, NumPy gate reconstruction, tuning thresholds, metrics",
+      "metric_cells": 120,
+      "predictions": 46000,
+      "run_seed": 20261103,
+      "status": "passed"
+    },
+    {
+      "arm": "matched",
+      "checks": "hashes, isolation, coverage, NumPy gate reconstruction, tuning thresholds, metrics",
+      "metric_cells": 120,
+      "predictions": 46000,
+      "run_seed": 20261103,
+      "status": "passed"
+    }
+  ],
+  "status": "passed",
+  "summary_rows": 576
+}
