@@ -1,0 +1,20 @@
+{
+  "fresh_test": {
+    "counts": {
+      "ADM": 500,
+      "BigGAN": 500,
+      "GLIDE": 500,
+      "Midjourney": 500,
+      "Real": 500,
+      "VQDM": 500,
+      "Wukong": 500
+    },
+    "status": "passed"
+  },
+  "frozen_files": 342,
+  "metric_cells": 2304,
+  "model_instances": 96,
+  "prediction_rows": 1344000,
+  "scope": "Hashes, exclusions, seeded sampling, exact source/model/condition coverage, saved thresholds, independent metrics, three-seed aggregation and paired/cross-test summaries. No model inference.",
+  "status": "passed"
+}

@@ -1,0 +1,15 @@
+{
+  "corrected_code_sha256": {
+    "scripts/round8_final_handoff.py": "5ec97fefd8b6a42ce8895355649ea4545325e236d8e2c0914905b7d7125978cf",
+    "scripts/round8_final_inference.py": "f259aa6b371314d5fd2f524619d6e0b22dd863b44d76c8926016a01d8e49d359"
+  },
+  "feature_cache_identity": "ae69324a69c8b4601bd7bd91f47e2b546d79d7b8aacc5746f3ee260eac9d4fd1",
+  "old_code_sha256": {
+    "scripts/round8_final_handoff.py": "ba82b9c7cccb5a25d0edac0ef814f1deaebade1cb1eca11170693e57a1f46caf",
+    "scripts/round8_final_inference.py": "91712a0cc837dd6590971f2dd28f67f033624bfbe32fc2551c601ef9ae3663b1"
+  },
+  "old_plan_sha256": "2a6e51c0b18af2d7dbfd3d4417ccbd0ba1109d2fb639b2235636f8a30731be8d",
+  "pre_test": true,
+  "reason": "Match sklearn 1.8: cast scaler mean and scale to feature dtype before subtraction/division.",
+  "unchanged": "CLIP forward pass, image transforms, source IDs, weights, runtime, head parameters, thresholds and numerical tolerances. Existing feature batches are hash-validated and reused."
+}

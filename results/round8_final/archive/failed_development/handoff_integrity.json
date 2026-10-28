@@ -1,0 +1,20 @@
+{
+  "archive_sha256": "c023b09ca182df1b7a97e7d2b68c6172d594ada2f6e10e582e9bf926f8605a85",
+  "note": "Original paths restored from repo root; existing bytes never replaced. Internal checksum file verified in memory.",
+  "predictions_zip_sha256": "008d0d1b7cd7fa18d3b6f0d0e279930eb0b1a0a5a9817cb2b187eb05db7ac007",
+  "restored_files": {
+    "artifacts/round8_a/seed1/matched/bundle.json": "391c36669dfccef5c154d33ae77cd81c4cec4a5a70fd761895bb7748d441f938",
+    "artifacts/round8_a/seed1/matched/experts.joblib": "3e9eae10620f903bddc5f387a64b6137e008229cfb3a6ae5b1a8961287b5daa6",
+    "artifacts/round8_a/seed1/unmatched/bundle.json": "8e5987a14517363481e7e70b880325af3e03b1ab999fa2767939bdd7f1451976",
+    "artifacts/round8_a/seed1/unmatched/experts.joblib": "a4846518e13a08c4e753a931ff599f47a7d35119c6f756c30c675c3a31a2d14a",
+    "artifacts/round8_a/seed2/matched/bundle.json": "ae08cd7728c5c5731b23cdb7f6c64f33dbfec2ef3b218f2da658c000b3311c30",
+    "artifacts/round8_a/seed2/matched/experts.joblib": "7c763368f9877f245e370c1eff7bc9db9f2128c2b744b02d5b68989d59f8442d",
+    "artifacts/round8_a/seed2/unmatched/bundle.json": "3eea9d18c7a83f2e425b22c8018645c7f09af76c7b44b044c477a68b03f86e3b",
+    "artifacts/round8_a/seed2/unmatched/experts.joblib": "434ef93afb36526b3ed51e6866eb3cac9d72beea3c1cd9257eae514a4e62df3d",
+    "artifacts/round8_a/seed3/matched/bundle.json": "3e4561ba24138763827deedff917ae1b99ec38163344ea69ad09d05b9f0f2388",
+    "artifacts/round8_a/seed3/matched/experts.joblib": "5f86826cec563f04740f20bd852c4b9039d094720c734cf41397b81c93c5f924",
+    "artifacts/round8_a/seed3/unmatched/bundle.json": "213a397d54be09a007fac82195a8f6ce8d2fc83d0db3c6f56419e9750fb3af62",
+    "artifacts/round8_a/seed3/unmatched/experts.joblib": "18d443ab13286431db0beea5c382ca22eaa630ecc188e2a90bd5d24c96fbf7b8"
+  },
+  "status": "passed"
+}
