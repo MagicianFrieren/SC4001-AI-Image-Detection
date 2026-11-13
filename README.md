@@ -1,63 +1,104 @@
-# SC4001 AI Image Detection
+# Detecting AI-generated images
 
-**Final submission — 14 November 2026.**
+SC4001 group project: image detection across generators, JPEG compression and resizing.
 
-We study frozen-CLIP global and patch-shuffled local experts for AI-generated image detection across generators and image degradations. The final report covers the Round 7 and Round 8 evaluations, seven improvement attempts, and November development diagnostics.
+We combine global image features with local patch features from frozen CLIP encoders.
+The experiments compare simple averaging with a learned gate that uses image-quality cues to choose between the two branches.
 
-In this setup, format matching improves ranking under JPEG compression but introduces clean-image costs. Quality-aware gating does not consistently outperform simple averaging.
+<p align="center">
+  <a href="reports/final_20261114/SC4001_Report_Final_20261114.pdf">Read the report</a> ·
+  <a href="#results">Explore the results</a> ·
+  <a href="#get-started">Get started</a> ·
+  <a href="https://github.com/MagicianFrieren/SC4001-AI-Image-Detection/releases/tag/final-20261114">Download the submission</a>
+</p>
 
-## Final report and submission
+<p align="center">
+  <img src="reports/final_20261114/figure1_detector_overview.svg" width="900" alt="Global and patch-shuffled local CLIP branches, quality cues and the fusion gate used for image detection">
+</p>
 
-- [Read the final PDF](reports/final_20261114/SC4001_Report_Final_20261114.pdf) — 10 body pages; 14 pages including the cover, references and appendices.
-- [Download the editable Word report](reports/final_20261114/SC4001_Report_Final_20261114.docx).
-- [Download the complete submission ZIP](https://github.com/MagicianFrieren/SC4001-AI-Image-Detection/releases/download/final-20261114/SC4001_Submission_Final_20261114.zip) — report, code, saved inputs, evidence and reproduction instructions.
-- [Release notes](https://github.com/MagicianFrieren/SC4001-AI-Image-Detection/releases/tag/final-20261114), [checksums](reports/final_20261114/SHA256SUMS.txt) and [reproduction guide](docs/FINAL_SUBMISSION.md).
+## Results
 
-The Release ZIP is the complete submission package. GitHub's automatically generated source-code ZIP contains the repository checkout and has a different layout.
+Format matching improves ranking under JPEG compression, with lower scores on clean and resized images.
+Simple averaging scores above the quality-aware gate in all four conditions below.
 
-## Findings
+| Condition | Original average | Original gate | Matched average | Matched gate |
+| :--- | ---: | ---: | ---: | ---: |
+| Clean | **0.8711** | 0.8622 | 0.8268 | 0.8117 |
+| JPEG70 | 0.7556 | 0.7460 | **0.7749** | 0.7663 |
+| JPEG50 | 0.7622 | 0.7511 | **0.7768** | 0.7619 |
+| Resize ½ | **0.7866** | 0.7750 | 0.7747 | 0.7616 |
 
-- On the Round 8 main-generator comparison, format matching raises average-fusion JPEG70 AUROC from **0.7556 to 0.7749**, while clean AUROC falls from **0.8711 to 0.8268**.
-- Clean-image ranking loss accompanies a threshold tradeoff: fewer missed fakes and more false alarms at the original frozen thresholds.
-- The seven modifications address checkpoint selection, gate inputs, learning objectives, condition routing, training-generator coverage, recompression cues and paired-view training. Each has an explicit comparator in the report.
-- Development diagnostics suggest that generator-dependent expert preferences and quality signals contribute to JPEG gating failures. Resizing retains a positive result and follows a different pattern.
+Values are AUROC, averaged over three data seeds and four generators: GLIDE, Midjourney, VQDM and Wukong.
+Higher is better; 0.5 is chance ranking.
+The table compares the Round 8 A original and format-matched arms on the Round 8 test images.
+These images are new, while the generator domains had been inspected in earlier experiments.
 
-The report separates November exploratory development analyses from the earlier frozen final evaluation. It includes the costs and benefits of each modification alongside its experimental evidence.
+[Per-seed results](results/round8_final/main_macro_each_seed.csv) · [Full report](reports/final_20261114/SC4001_Report_Final_20261114.pdf)
 
-## Reproduce the saved analyses
+## Get started
 
-Download and extract the complete submission ZIP, then run these commands **from its extracted root**:
+Use Python 3.12. From the repository root, create an environment and rebuild the report tables:
 
 ```powershell
-python VERIFY_PACKAGE.py
-python -m pip install -r reproduction/requirements_analysis.txt
-python source_tree/scripts/submission_revision_20261114/reproduce.py --package . list
-python source_tree/scripts/submission_revision_20261114/reproduce.py --package . run report-tables --workspace ../rebuild-report-tables
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+python -m pip install -r reports/final_20261114/requirements_analysis.txt
+python scripts/report_evidence_20261111/build_evidence.py `
+  --root output/analysis/report_evidence_20261111/sources `
+  --output ../sc4001-table-rebuild
 ```
 
-The four supported commands are `report-tables`, `report-figures`, `mechanism-predictions` and `mechanism-bootstrap`. All four were run from the supplied package; 30 archived numerical or image comparisons matched exactly. See the [verification record](reports/final_20261114/verification/saved_analysis_reproduction.json).
+On Linux or macOS, activate with `source .venv/bin/activate` and use the single-line commands in the [reproduction guide](docs/FINAL_SUBMISSION.md).
+The command reads the included result snapshots and writes eight CSV tables to the chosen output directory.
+It needs no GPU or image downloads.
 
-The [final reproduction guide](docs/FINAL_SUBMISSION.md) also gives commands for a normal Git checkout. Historical training requires the separately indexed images, weights and feature caches; the verified submission workflow reconstructs saved-result analyses.
+See the [reproduction guide](docs/FINAL_SUBMISSION.md) for figure rebuilding and the four analysis commands in the complete submission ZIP.
 
-## Repository map
+## What we tried
 
-| Path | Contents |
+We tested seven changes: checkpoint selection, gate inputs, ranking objectives, condition routing, training-generator coverage, recompression cues and paired-view training.
+The [comparison table](output/analysis/report_evidence_20261111/tables/improvement_comparisons.csv) gives each change's baseline and result.
+Checkpoint selection recovered performance to approximately the averaging baseline; the gate still lacked a consistent advantage.
+
+The development diagnostics trace part of the JPEG loss to a mismatch between the expert preferred on source-selection data and the expert that works better on another generator.
+Feature interventions suggest that quality cues contribute to this mismatch.
+Resizing shows a different pattern, including a positive gating result in the development analysis.
+
+<details>
+<summary>Expert preferences across generators</summary>
+
+![Observed mismatch between expert advantage and gate preference across two generator-transfer directions](reports/final_20261114/figure4_transfer_mismatch.png)
+
+The diagnostics reuse the development image pools across seeds.
+The loss decomposition describes the fitted models' behaviour; the report discusses its scope alongside the feature interventions.
+
+[Analysis figures](output/analysis/report_evidence_20261111/figures/) · [Claim and evidence index](output/analysis/report_evidence_20261111/claim_evidence.csv)
+
+</details>
+
+## Project files
+
+| Part | Where to look |
 | --- | --- |
-| [reports/final_20261114](reports/final_20261114/) | Final PDF and Word report, manuscript figures, checksums and verification records |
-| [output/analysis/report_evidence_20261111](output/analysis/report_evidence_20261111/) | Seven-modification comparison, claim-to-evidence mapping, mechanism analyses and source snapshots |
-| [scripts/report_evidence_20261111](scripts/report_evidence_20261111/) | Table, figure and bootstrap analysis scripts |
-| [scripts/submission_revision_20261114](scripts/submission_revision_20261114/) | Submission source assembler and saved-analysis runner |
-| [docs/ROUND7_FINAL.md](docs/ROUND7_FINAL.md) | Round 7 protocol and final evaluation |
-| [docs/ROUND8_FINAL.md](docs/ROUND8_FINAL.md) | Round 8 fresh-image evaluation |
-| [results/round8_final](results/round8_final/) | Frozen final metrics, contrasts, manifests and verification records |
-| [docs/EXPERIMENTS.md](docs/EXPERIMENTS.md) | Earlier pilot and Rounds 2–6 experiment history |
+| Report | [PDF](reports/final_20261114/SC4001_Report_Final_20261114.pdf), [Word source](reports/final_20261114/SC4001_Report_Final_20261114.docx) and [figures](reports/final_20261114/) |
+| Final evaluation | [Round 7](docs/ROUND7_FINAL.md), [Round 8](docs/ROUND8_FINAL.md) and [saved metrics](results/round8_final/) |
+| Improvement studies | [Comparison tables and evidence](output/analysis/report_evidence_20261111/) |
+| Analysis code | [Table, figure and bootstrap scripts](scripts/report_evidence_20261111/) |
+| Experiment history | [Protocols and study notes](docs/README.md) |
+| Complete submission | [Release ZIP and checksums](https://github.com/MagicianFrieren/SC4001-AI-Image-Detection/releases/tag/final-20261114) |
 
-The tracked November `tmp/gate_diagnosis/`, `tmp/gate_failure_mechanism_20261108/`, `tmp/multigen_gate_20261108/`, `tmp/paired_view_global_20261108/` and `tmp/recompression_reliability_20261108/` paths preserve the original experiment source layout. They are archived project-relative paths. Their scripts, configurations and dependencies are also included in the Release ZIP.
+<details>
+<summary>Data, methods and earlier experiments</summary>
 
-## Scope and attribution
+The data are a pinned subset of [Tiny-GenImage](https://huggingface.co/datasets/TheKernel01/Tiny-GenImage), drawn from [GenImage](https://github.com/GenImage-Dataset/GenImage).
+The dataset card declares CC BY-NC-SA 4.0; underlying image rights still apply.
 
-The November diagnostics use repeatedly inspected development data, with shared image pools across seeds. Their loss decomposition is descriptive. The final report discusses these limits together with the observed JPEG losses and resize gains.
+The global branch follows the frozen-feature approach of [UniversalFakeDetect](https://github.com/WisconsinAIVision/UniversalFakeDetect).
+The local branch uses four PatchShuffle views inspired by [SFLD](https://arxiv.org/abs/2502.17105).
+Both use CLIP ViT-B/32 features with logistic regression heads.
 
-Our experts use frozen OpenAI CLIP ViT-B/32 features and separate logistic regression heads. The local expert averages four PatchShuffle views. [UniversalFakeDetect](https://github.com/WisconsinAIVision/UniversalFakeDetect) and [SFLD](https://arxiv.org/abs/2502.17105) inform the design; this implementation uses its own backbone and experimental protocol.
+The [experiment notes](docs/README.md) link the earlier rounds and the November source directories.
+Full training requires the indexed images, weights and feature caches described in the [reproduction guide](docs/FINAL_SUBMISSION.md).
+Contributions and AI use are recorded in the final report.
 
-Data come from a pinned subset of [Tiny-GenImage](https://huggingface.co/datasets/TheKernel01/Tiny-GenImage), a third-party subset of [GenImage](https://github.com/GenImage-Dataset/GenImage). The dataset card declares CC BY-NC-SA 4.0; underlying image rights still apply. Codex assisted with scripts, documentation and analysis under the project owner's direction.
+</details>

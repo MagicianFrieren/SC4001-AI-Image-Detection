@@ -16,3 +16,13 @@ output/analysis/*.zip
 output/analysis/*.zip.sha256
 output/analysis/submission_revision_20261114/
 output/report/
+# Local writing notes and superseded delivery drafts.
+/.local/
+/PROJECT_STATE.json
+/REPORT_EVIDENCE_STATE.json
+/ROUND8_A_STATE.json
+/ROUND7.md
+/output/sc4001_j_group_message_zh.txt
+/output/pdf/sc4001_j_pilot_report_zh.pdf
+/reports/final_20261114/verification/final_document_review.json
+/reports/final_20261114/verification/final_polish_verification.json
