@@ -1,0 +1,28 @@
+Detector overview (Figure 1)
+
+From the extracted submission root, with Python and matplotlib installed:
+
+    python report/build_detector_overview.py
+
+Optional output directory:
+
+    python report/build_detector_overview.py --output-dir rebuilt-figure1
+
+The script writes figure1_detector_overview.png, .pdf and .svg.
+The default output directory is the script's own directory; no repository path,
+images, saved model, predictions or training run is required.
+
+The figure is 16.7 cm wide, with the original 1692:734 aspect ratio.
+PNG is exported at 300 dpi; PDF and SVG are vectors. Edit labels and geometry in
+build_detector_overview.py. SVG glyphs are outlined to prevent font substitution;
+its vector objects remain editable in a vector editor.
+
+Content corrections relative to the original raster:
+- Mathematical subscripts z_g and z_l are rendered with mathtext.
+- Fusion is z = alpha z_g + (1 - alpha) z_l.
+- Format matching applies to training and selection.
+- Both global and local logits enter fusion directly, separately from gate alpha.
+
+All remaining detector components and numerical labels retain their original
+meaning. The quality-cue arrow and local-logit line have a small white crossover
+gap; their crossing is not a junction. Styling uses neutral grayscale for print.

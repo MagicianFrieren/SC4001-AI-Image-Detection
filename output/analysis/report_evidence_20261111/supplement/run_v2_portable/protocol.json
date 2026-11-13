@@ -1,0 +1,22 @@
+{
+  "created_utc": "2026-11-11T12:37:15.040305+00:00",
+  "scope": "Post-hoc frozen mixed-source quality-gate development diagnosis; no new fitting or candidate selection.",
+  "input_sha256": {
+    "output/analysis/multigen_gate_20261108/run_v1_codefix1/predictions.csv.gz": "9736fe2a8f927b36fb04ad3fad257f946dd80724dff8cd71f66162fe40f903d8",
+    "output/analysis/multigen_gate_20261108/run_v1_codefix1/complete.json": "e9d920ca9a386c360ba2b1b8acbeae5bcd4da781d31fc36ef737b87ec700b359",
+    "output/analysis/multigen_gate_20261108/run_v1_codefix1/metrics_seed_condition.csv": "5a2d3bf026c7108cc6704b84b8517aa358b7ab9a4e306ca54f5bd36883e2a0eb",
+    "output/analysis/gate_failure_mechanism_20261108/prediction_constant_alpha.csv": "b254981761ad2993c54dccb23a0e3f757dfda73898665010388e9e4262f5efaf",
+    "output/analysis/gate_failure_mechanism_20261108/prediction_ranking_comparisons.csv": "bdad2209dd84b273963d17a8f013eba44b6bc5877f62cbb6759f75ac0faf4396"
+  },
+  "script_sha256": "9cdec9142ec578c55aa93fbd6ad69b5b57864931a385b8a9fbe32118db70b82e",
+  "repetitions": 1000,
+  "random_seed": 20261111,
+  "population": "300 development Real, 300 ADM, 300 BigGAN originals; all saved data seeds, gate seeds, and four processing conditions.",
+  "resampling": "Independently sample 300 IDs with replacement from each of Real, ADM, BigGAN. The same identity multiplicities are paired across all conditions, seeds, models; Real is shared across both targets.",
+  "aggregation": "Equal average over three gate initializations within each data seed, then three data seeds, then generators and conditions. Balanced complete cells make direct row averaging algebraically identical.",
+  "functional": "A=AUROC(average); C=AUROC(mean target-cell alpha * global + (1-alpha) * local); Q=AUROC(actual quality gate). Mean preference=C-A; image-specific=Q-C; total=Q-A.",
+  "mean_alpha_bootstrap": "Recompute each frozen gate's target-cell alpha mean from the resampled 300 Real + 300 fake identities, then evaluate that constant-weight diagnostic on those same resampled IDs. This estimates the sampling variation of the descriptive functional, not of a trained/deployable method.",
+  "interval": "Two-sided 2.5/97.5 percentile intervals, conditional on fixed experts/gates/source data. No multiple-comparison correction; exploratory scopes retained in full.",
+  "no_final_test_access": true,
+  "models_fitted": 0
+}

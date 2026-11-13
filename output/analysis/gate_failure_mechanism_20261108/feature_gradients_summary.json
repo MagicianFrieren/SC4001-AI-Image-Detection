@@ -1,0 +1,2402 @@
+[
+  {
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.03285424656212737,
+      "seed_sd": 0.005533129327197683,
+      "each_seed": [
+        -0.0373724283624865,
+        -0.034507321950038417,
+        -0.026682989373857182
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.03289007257644754,
+      "seed_sd": 0.00547321624058468,
+      "each_seed": [
+        0.0373724283624865,
+        0.034507321950038417,
+        0.026790467416817714
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.02283027028456411,
+      "seed_sd": 0.005273189765074075,
+      "each_seed": [
+        -0.02277654236084369,
+        -0.01758414977070837,
+        -0.028130118722140284
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.022904640255038387,
+      "seed_sd": 0.005177216738292644,
+      "each_seed": [
+        0.022806727903729698,
+        0.017777074139245178,
+        0.028130118722140284
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.05214059653766669,
+      "seed_sd": 0.0027325194875870264,
+      "each_seed": [
+        -0.05089275913663221,
+        -0.050254766422968056,
+        -0.05527426405339981
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.05214059653766669,
+      "seed_sd": 0.0027325194875870264,
+      "each_seed": [
+        0.05089275913663221,
+        0.050254766422968056,
+        0.05527426405339981
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "condition": "clean",
+    "generator": "Real",
+    "feature": "eight_pixel_boundary_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.042260554801607265,
+      "seed_sd": 0.008315107697941344,
+      "each_seed": [
+        -0.03966904751292326,
+        -0.05156281102247335,
+        -0.0355498058694252
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.04231899685171666,
+      "seed_sd": 0.008249156143017996,
+      "each_seed": [
+        0.039687693130718044,
+        0.05156281102247335,
+        0.03570648640195859
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "condition": "clean",
+    "generator": "Real",
+    "feature": "high_frequency_energy_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.00528047326338379,
+      "seed_sd": 0.007017165383456413,
+      "each_seed": [
+        -0.007614279164858747,
+        0.002606223027141712,
+        -0.010833363652434336
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.01878888751179891,
+      "seed_sd": 0.000714257001967758,
+      "each_seed": [
+        0.018037951046959464,
+        0.019459709573025365,
+        0.0188690019154119
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "condition": "clean",
+    "generator": "Real",
+    "feature": "log_laplacian_variance",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.030454571529377836,
+      "seed_sd": 0.0022478602667339465,
+      "each_seed": [
+        -0.028560799231545014,
+        -0.03293869404324661,
+        -0.029864221313341894
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.031056460162188364,
+      "seed_sd": 0.0023151811422171993,
+      "each_seed": [
+        0.029145049198477924,
+        0.03363079000353339,
+        0.03039354128455378
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "condition": "jpeg50",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.008278317369761453,
+      "seed_sd": 0.018796408126266397,
+      "each_seed": [
+        -0.0205540773336836,
+        -0.01764154207199299,
+        0.013360667296392228
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.019087913517169507,
+      "seed_sd": 0.004117477150093573,
+      "each_seed": [
+        0.023520279708284613,
+        0.018361433594206254,
+        0.015382027249017655
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "condition": "jpeg50",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.028263547584295612,
+      "seed_sd": 0.0006881770869471132,
+      "each_seed": [
+        -0.02770350367625451,
+        -0.02805535767979718,
+        -0.029031781396835137
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.028689827757643158,
+      "seed_sd": 0.00029662218915828167,
+      "each_seed": [
+        0.028535747818930077,
+        0.028501954057164252,
+        0.029031781396835137
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "condition": "jpeg50",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.05540922700251629,
+      "seed_sd": 0.009612200793023424,
+      "each_seed": [
+        -0.05119097513994198,
+        -0.06640931280905406,
+        -0.04862739305855283
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.05540922700251629,
+      "seed_sd": 0.009612200793023424,
+      "each_seed": [
+        0.05119097513994198,
+        0.06640931280905406,
+        0.04862739305855283
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "condition": "jpeg50",
+    "generator": "Real",
+    "feature": "eight_pixel_boundary_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.01157788604577363,
+      "seed_sd": 0.019854944523317687,
+      "each_seed": [
+        -0.022333647342664412,
+        -0.023734372258360115,
+        0.011334361463703634
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.023305733475014533,
+      "seed_sd": 0.0027295189863484615,
+      "each_seed": [
+        0.025245512692617156,
+        0.024487172836188398,
+        0.020184514896238046
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "condition": "jpeg50",
+    "generator": "Real",
+    "feature": "high_frequency_energy_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.010216730020365168,
+      "seed_sd": 0.005461687609360873,
+      "each_seed": [
+        -0.011558070771470655,
+        -0.00420933449877821,
+        -0.014882784790846641
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.02292240435131,
+      "seed_sd": 0.002020322699959958,
+      "each_seed": [
+        0.022564118044588452,
+        0.025097900931242673,
+        0.021105194078098872
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "condition": "jpeg50",
+    "generator": "Real",
+    "feature": "log_laplacian_variance",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.03244942604489954,
+      "seed_sd": 0.005941109611380273,
+      "each_seed": [
+        -0.02942046185798936,
+        -0.03929455682123054,
+        -0.028633259455478715
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.033196164505782395,
+      "seed_sd": 0.0059338288924411986,
+      "each_seed": [
+        0.030164848202647494,
+        0.04003335123732866,
+        0.029390294077371024
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.019019794973845008,
+      "seed_sd": 0.01796879609019532,
+      "each_seed": [
+        -0.02946458055431415,
+        -0.029323427868393273,
+        0.0017286235011724042
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.023942918849261603,
+      "seed_sd": 0.010173127190744964,
+      "each_seed": [
+        0.030147676880021245,
+        0.029478725417316956,
+        0.012202354250446605
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.027711941739052438,
+      "seed_sd": 0.0025257297796485176,
+      "each_seed": [
+        -0.026817383685757378,
+        -0.02575523754263724,
+        -0.030563203988762697
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.02790152158893609,
+      "seed_sd": 0.0023765046231854076,
+      "each_seed": [
+        0.027139292905924844,
+        0.025999648895849128,
+        0.03056562296503429
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.05993215584135155,
+      "seed_sd": 0.007347573348451776,
+      "each_seed": [
+        -0.055369485968857136,
+        -0.0684081148046768,
+        -0.056018866750520695
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.05993215584135155,
+      "seed_sd": 0.007347573348451776,
+      "each_seed": [
+        0.055369485968857136,
+        0.0684081148046768,
+        0.056018866750520695
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "condition": "jpeg70",
+    "generator": "Real",
+    "feature": "eight_pixel_boundary_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.023609945203988486,
+      "seed_sd": 0.01770117412732998,
+      "each_seed": [
+        -0.030283111356052352,
+        -0.03700456667563536,
+        -0.003542157580277742
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.028963295249128575,
+      "seed_sd": 0.009303022074721248,
+      "each_seed": [
+        0.030972730727028695,
+        0.03709738741726532,
+        0.0188197676030917
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "condition": "jpeg70",
+    "generator": "Real",
+    "feature": "high_frequency_energy_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.00754503577839464,
+      "seed_sd": 0.007357835506234495,
+      "each_seed": [
+        -0.010256169326642259,
+        0.0007836981025379353,
+        -0.013162636111079597
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.022997842538159213,
+      "seed_sd": 0.0017328457897749679,
+      "each_seed": [
+        0.02274866805959325,
+        0.024841786805683958,
+        0.02140307274920042
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "condition": "jpeg70",
+    "generator": "Real",
+    "feature": "log_laplacian_variance",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.03163262627341097,
+      "seed_sd": 0.005607778150269893,
+      "each_seed": [
+        -0.028865609699975366,
+        -0.03808613359803736,
+        -0.027946135522220198
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.032813851315048985,
+      "seed_sd": 0.005447279326998374,
+      "each_seed": [
+        0.030077335019753713,
+        0.03908684808881437,
+        0.029277370836578873
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.025846889660958744,
+      "seed_sd": 0.012580753304368288,
+      "each_seed": [
+        -0.037720542136311395,
+        -0.027158348487784745,
+        -0.012661778358780093
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.026377863589138892,
+      "seed_sd": 0.011797134895951123,
+      "each_seed": [
+        0.03776537662401189,
+        0.027158348487784745,
+        0.014209865655620048
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.025417517025193317,
+      "seed_sd": 0.004483666866000267,
+      "each_seed": [
+        -0.0270374900013613,
+        -0.020349005647827503,
+        -0.028866055426391143
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.025443715055754174,
+      "seed_sd": 0.004470776295759154,
+      "each_seed": [
+        0.02707971240095358,
+        0.020385377339917795,
+        0.028866055426391143
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.058739594626352476,
+      "seed_sd": 0.0030343839192475404,
+      "each_seed": [
+        -0.058735176832690604,
+        -0.055707422015905124,
+        -0.06177618503046169
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.058739594626352476,
+      "seed_sd": 0.0030343839192475404,
+      "each_seed": [
+        0.058735176832690604,
+        0.055707422015905124,
+        0.06177618503046169
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "condition": "resize05",
+    "generator": "Real",
+    "feature": "eight_pixel_boundary_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.025940111033725954,
+      "seed_sd": 0.014726764170220116,
+      "each_seed": [
+        -0.03624950168918817,
+        -0.032497159007488445,
+        -0.009073672404501241
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.027640449316078525,
+      "seed_sd": 0.011994308253256696,
+      "each_seed": [
+        0.0364332258593924,
+        0.03251113938490483,
+        0.013976982703938344
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "condition": "resize05",
+    "generator": "Real",
+    "feature": "high_frequency_energy_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.027591154224442655,
+      "seed_sd": 0.00349429766898525,
+      "each_seed": [
+        -0.027089214638485962,
+        -0.0243749697536893,
+        -0.031309278281152715
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.027628370418268478,
+      "seed_sd": 0.003463592244510422,
+      "each_seed": [
+        0.02714241241334311,
+        0.0244334205603096,
+        0.031309278281152715
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "condition": "resize05",
+    "generator": "Real",
+    "feature": "log_laplacian_variance",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.06175861711513945,
+      "seed_sd": 0.004022981037877957,
+      "each_seed": [
+        -0.057889236830526165,
+        -0.06591935725484285,
+        -0.06146725726004934
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.06175861711513945,
+      "seed_sd": 0.004022981037877957,
+      "each_seed": [
+        0.057889236830526165,
+        0.06591935725484285,
+        0.06146725726004934
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.03456011441646246,
+      "seed_sd": 0.03657928556067173,
+      "each_seed": [
+        -0.06447132468208111,
+        -0.045431505962779985,
+        0.0062224873954737055
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.04008008682698719,
+      "seed_sd": 0.027538091409991007,
+      "each_seed": [
+        0.06447132468208111,
+        0.045552153526799456,
+        0.01021678227208101
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.006675868879924849,
+      "seed_sd": 0.031840771270779174,
+      "each_seed": [
+        0.03835608576135804,
+        -0.02532306405012552,
+        0.00699458492854203
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.027205176399478077,
+      "seed_sd": 0.016703398596563945,
+      "each_seed": [
+        0.042134845692964856,
+        0.030315418857230565,
+        0.009165264648238811
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.03204997940591447,
+      "seed_sd": 0.03773042580716488,
+      "each_seed": [
+        -0.04896247351505684,
+        -0.0583652823433431,
+        0.01117781764065652
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.04162666997273679,
+      "seed_sd": 0.02430008362826924,
+      "each_seed": [
+        0.0527601381098427,
+        0.0583652823433431,
+        0.013754589465024593
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "condition": "clean",
+    "generator": "Real",
+    "feature": "eight_pixel_boundary_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.04952734824844315,
+      "seed_sd": 0.04730199820157425,
+      "each_seed": [
+        -0.09236859677428126,
+        -0.05744866670277208,
+        0.0012352187317239275
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.05238824662796199,
+      "seed_sd": 0.04282161205087949,
+      "each_seed": [
+        0.09236859677428126,
+        0.057594681649600986,
+        0.007201461460003709
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "condition": "clean",
+    "generator": "Real",
+    "feature": "high_frequency_energy_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.021890751992686575,
+      "seed_sd": 0.04258337737584087,
+      "each_seed": [
+        0.0694458272285557,
+        -0.012714072599203942,
+        0.008940501348707972
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.03523156031747599,
+      "seed_sd": 0.031298608963236815,
+      "each_seed": [
+        0.07057030939168432,
+        0.024118292356397952,
+        0.01100607920434571
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "condition": "clean",
+    "generator": "Real",
+    "feature": "log_laplacian_variance",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.020941021288492484,
+      "seed_sd": 0.031086284225462717,
+      "each_seed": [
+        -0.024208232057339987,
+        -0.050264661700331,
+        0.011649829892193523
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.03501122140752441,
+      "seed_sd": 0.018589243829536188,
+      "each_seed": [
+        0.04041236015684386,
+        0.050301782106095205,
+        0.014319521959634186
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "condition": "jpeg50",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.06191966641947435,
+      "seed_sd": 0.04752883472373998,
+      "each_seed": [
+        -0.10843706636262819,
+        -0.06388176653617961,
+        -0.013440166359615249
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.06210534442649256,
+      "seed_sd": 0.04726830211084166,
+      "each_seed": [
+        0.10843706636262819,
+        0.06392590059386566,
+        0.013953066322983843
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "condition": "jpeg50",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.0395090201042153,
+      "seed_sd": 0.047156364915212426,
+      "each_seed": [
+        0.09394801657253597,
+        0.013299224627456861,
+        0.011279819112653078
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.04182220133681064,
+      "seed_sd": 0.04526913519616845,
+      "each_seed": [
+        0.09396395929224464,
+        0.018948572645930493,
+        0.012554072072256795
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "condition": "jpeg50",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.010966293870223817,
+      "seed_sd": 0.022200925054375903,
+      "each_seed": [
+        0.029727280756667678,
+        -0.013543644425834807,
+        0.016715245279838576
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.02294411018526046,
+      "seed_sd": 0.011265326426330434,
+      "each_seed": [
+        0.03594487778938097,
+        0.016066087972128464,
+        0.01682136479427194
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "condition": "jpeg50",
+    "generator": "Real",
+    "feature": "eight_pixel_boundary_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.05361720104637845,
+      "seed_sd": 0.03670269704565784,
+      "each_seed": [
+        -0.08892447730714453,
+        -0.056264675021242216,
+        -0.0156624508107486
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.05370911216553293,
+      "seed_sd": 0.036595404437269975,
+      "each_seed": [
+        0.08892447730714453,
+        0.056328445424665675,
+        0.015874413764788608
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "condition": "jpeg50",
+    "generator": "Real",
+    "feature": "high_frequency_energy_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.03333315979725358,
+      "seed_sd": 0.037436484570439375,
+      "each_seed": [
+        0.076542609755127,
+        0.012822945095230576,
+        0.010633924541403154
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.035704360697215644,
+      "seed_sd": 0.03555922032488151,
+      "each_seed": [
+        0.07655441391890865,
+        0.018872802320833396,
+        0.011685865851904897
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "condition": "jpeg50",
+    "generator": "Real",
+    "feature": "log_laplacian_variance",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.012604604827094487,
+      "seed_sd": 0.018378520070616845,
+      "each_seed": [
+        0.02829431143004921,
+        -0.007615418373053577,
+        0.01713492142428782
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.020735330497121496,
+      "seed_sd": 0.012172806817497299,
+      "each_seed": [
+        0.03421469435365171,
+        0.01054495467725155,
+        0.017446342460461235
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.06556494882014953,
+      "seed_sd": 0.056718742380629336,
+      "each_seed": [
+        -0.12021226938323369,
+        -0.06950258255687929,
+        -0.006979994520335622
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.06615831445765986,
+      "seed_sd": 0.05584598360776339,
+      "each_seed": [
+        0.12021226938323369,
+        0.06958460205457719,
+        0.008678071935168728
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.03732166996885875,
+      "seed_sd": 0.04971058332665051,
+      "each_seed": [
+        0.09464503458802813,
+        0.006078128594726967,
+        0.011241846723821156
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.041933449773914194,
+      "seed_sd": 0.04591145421289252,
+      "each_seed": [
+        0.0948533452251651,
+        0.01820756989931792,
+        0.012739434197259557
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.001280250718505278,
+      "seed_sd": 0.025689817051457824,
+      "each_seed": [
+        0.012070346153586797,
+        -0.03089651409734605,
+        0.014985415788243422
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.027317827284769666,
+      "seed_sd": 0.010442377542671532,
+      "each_seed": [
+        0.03505869892897992,
+        0.03145379067732945,
+        0.015440992247999621
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "condition": "jpeg70",
+    "generator": "Real",
+    "feature": "eight_pixel_boundary_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.05808152127391041,
+      "seed_sd": 0.04658212720261779,
+      "each_seed": [
+        -0.10371047571536901,
+        -0.059932677273419666,
+        -0.010601410832942547
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.05836041978845702,
+      "seed_sd": 0.046204534008372516,
+      "each_seed": [
+        0.10371047571536901,
+        0.060024419815048545,
+        0.01134636383495348
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "condition": "jpeg70",
+    "generator": "Real",
+    "feature": "high_frequency_energy_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.03649774738752568,
+      "seed_sd": 0.04519993668049139,
+      "each_seed": [
+        0.0886816735887308,
+        0.009591744612943038,
+        0.0112198239609032
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.03980535338876851,
+      "seed_sd": 0.04254133849563087,
+      "each_seed": [
+        0.08881176203024133,
+        0.01822523220892618,
+        0.012379065927138047
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "condition": "jpeg70",
+    "generator": "Real",
+    "feature": "log_laplacian_variance",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.007260265207914657,
+      "seed_sd": 0.021618580893205192,
+      "each_seed": [
+        0.023545649781775608,
+        -0.017266954133439618,
+        0.015502099975407982
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.02389355867328626,
+      "seed_sd": 0.011169409718106146,
+      "each_seed": [
+        0.036723497502107835,
+        0.018618859265253942,
+        0.016338319252497003
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.058033921117041316,
+      "seed_sd": 0.05096311971998177,
+      "each_seed": [
+        -0.10547982674153027,
+        -0.06445900474495761,
+        -0.004162931864636086
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.059345073910282965,
+      "seed_sd": 0.048892715637770874,
+      "each_seed": [
+        0.10547982674153027,
+        0.06445900474495761,
+        0.008096390244361042
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.002642619523812093,
+      "seed_sd": 0.029885146959605646,
+      "each_seed": [
+        0.024141828583880556,
+        -0.031483469261576476,
+        0.015269499249132198
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.026505036855263994,
+      "seed_sd": 0.008731824601406828,
+      "each_seed": [
+        0.03153711412815048,
+        0.031555596504015224,
+        0.016422399933626274
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.03270782476449562,
+      "seed_sd": 0.048103608071330815,
+      "each_seed": [
+        -0.06287591118191305,
+        -0.058014028285828405,
+        0.022766465174254596
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.04806215809741421,
+      "seed_sd": 0.022057383676510525,
+      "each_seed": [
+        0.06339012372369694,
+        0.058014028285828405,
+        0.022782322282717277
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "condition": "resize05",
+    "generator": "Real",
+    "feature": "eight_pixel_boundary_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.08348056258733623,
+      "seed_sd": 0.06864902435404019,
+      "each_seed": [
+        -0.14629802566184852,
+        -0.09394262390647722,
+        -0.010201038193682949
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.08359041686516037,
+      "seed_sd": 0.06847316657606825,
+      "each_seed": [
+        0.14629802566184852,
+        0.09394262390647722,
+        0.010530601027155353
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "condition": "resize05",
+    "generator": "Real",
+    "feature": "high_frequency_energy_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.011320371687546349,
+      "seed_sd": 0.037257141037884925,
+      "each_seed": [
+        0.04566869791630007,
+        -0.02828677879541744,
+        0.016579195941756417
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.031538000034422274,
+      "seed_sd": 0.01537875360365807,
+      "each_seed": [
+        0.04789242052277523,
+        0.029352931333102725,
+        0.017368648247388863
+      ]
+    }
+  },
+  {
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "condition": "resize05",
+    "generator": "Real",
+    "feature": "log_laplacian_variance",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.031069769655878775,
+      "seed_sd": 0.04792455089220737,
+      "each_seed": [
+        -0.0522690173600997,
+        -0.06473871818645406,
+        0.023798426578917436
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.04772299936426344,
+      "seed_sd": 0.02132897491451561,
+      "each_seed": [
+        0.05459444936174096,
+        0.06476927993390495,
+        0.023805268797144397
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.00036167663775607236,
+      "seed_sd": 0.001301504122865524,
+      "each_seed": [
+        -0.0018506434807580192,
+        0.0005592898910570989,
+        0.00020632367643270318
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.0025498737588175936,
+      "seed_sd": 0.0022752992647216757,
+      "each_seed": [
+        0.0049098705744606485,
+        0.002369774354225382,
+        0.0003699763477667509
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.005562405395015181,
+      "seed_sd": 0.007378577542819629,
+      "each_seed": [
+        0.013917233318498687,
+        0.002831035807467168,
+        -6.105294092031276e-05
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.006392138861079664,
+      "seed_sd": 0.008266880894445753,
+      "each_seed": [
+        0.015774993014195954,
+        0.003221519359122423,
+        0.00017990420992061327
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.0013526281199835622,
+      "seed_sd": 0.0026298148218830263,
+      "each_seed": [
+        0.004364874174812401,
+        0.0001792306195004625,
+        -0.00048622043436217724
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.0028112798092355153,
+      "seed_sd": 0.002510792034393499,
+      "each_seed": [
+        0.005478812457765895,
+        0.002461016823420286,
+        0.000494010146520365
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "condition": "clean",
+    "generator": "Real",
+    "feature": "eight_pixel_boundary_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.0008196945729512722,
+      "seed_sd": 0.0008655148499323243,
+      "each_seed": [
+        -0.0015703946147631231,
+        -0.0010157052444902661,
+        0.00012701614039957272
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.002150775486330537,
+      "seed_sd": 0.001795015157565923,
+      "each_seed": [
+        0.003935135056434548,
+        0.0021719002010621947,
+        0.0003452912014948683
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "condition": "clean",
+    "generator": "Real",
+    "feature": "high_frequency_energy_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.005429113854002753,
+      "seed_sd": 0.007041932462372948,
+      "each_seed": [
+        0.013365356586746582,
+        0.0029942410877769493,
+        -7.225611251527132e-05
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.006471032943014842,
+      "seed_sd": 0.00827515691165482,
+      "each_seed": [
+        0.015850455636864796,
+        0.0033618418775408516,
+        0.00020080131463888137
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "condition": "clean",
+    "generator": "Real",
+    "feature": "log_laplacian_variance",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.0017539314701533082,
+      "seed_sd": 0.003098909307996855,
+      "each_seed": [
+        0.005306637421382861,
+        0.00034764499837687074,
+        -0.0003924880092998069
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.002927295707501136,
+      "seed_sd": 0.0027790868040450194,
+      "each_seed": [
+        0.005928276336733471,
+        0.0024111376089819476,
+        0.0004424731767879908
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "condition": "jpeg50",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.0006945691072791694,
+      "seed_sd": 0.002531923721871296,
+      "each_seed": [
+        0.001452992187062925,
+        -0.003486378595493747,
+        -5.032091340668605e-05
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.002333969025112625,
+      "seed_sd": 0.0018569854219845543,
+      "each_seed": [
+        0.002931350208598862,
+        0.003818743220988144,
+        0.00025181364575086953
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "condition": "jpeg50",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.005333299868985303,
+      "seed_sd": 0.007012464477020858,
+      "each_seed": [
+        0.013234150862185092,
+        0.0029181506435886815,
+        -0.00015240189881786723
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.00678706999705156,
+      "seed_sd": 0.008946924951299152,
+      "each_seed": [
+        0.016971522087428133,
+        0.003196565563313788,
+        0.00019312234041276164
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "condition": "jpeg50",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.0020065488886868124,
+      "seed_sd": 0.003443408769404787,
+      "each_seed": [
+        0.005975432141563036,
+        0.00022956387697279471,
+        -0.00018534935247539278
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.003063714036199546,
+      "seed_sd": 0.0036874806312187642,
+      "each_seed": [
+        0.007234370882236878,
+        0.0017211705821086251,
+        0.0002356006442531364
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "condition": "jpeg50",
+    "generator": "Real",
+    "feature": "eight_pixel_boundary_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.00011419674272197213,
+      "seed_sd": 0.0030065286531947132,
+      "each_seed": [
+        0.0031663241320376463,
+        -0.0028445578962859124,
+        2.0823992414182446e-05
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.0025214605486392635,
+      "seed_sd": 0.0020942884292477902,
+      "each_seed": [
+        0.004178685361369626,
+        0.003218052543308347,
+        0.0001676437412398184
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "condition": "jpeg50",
+    "generator": "Real",
+    "feature": "high_frequency_energy_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.004589979608573848,
+      "seed_sd": 0.006351776098312253,
+      "each_seed": [
+        0.011797208778979586,
+        0.0021640514701938515,
+        -0.00019132142345189545
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.006001811190131431,
+      "seed_sd": 0.008074230341749204,
+      "each_seed": [
+        0.015229350265468516,
+        0.0025424192213149743,
+        0.00023366408361079978
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "condition": "jpeg50",
+    "generator": "Real",
+    "feature": "log_laplacian_variance",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.0024454091138006156,
+      "seed_sd": 0.0029153633355390673,
+      "each_seed": [
+        0.005639837605218959,
+        0.0017680118814786285,
+        -7.162214529574119e-05
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.0032705079719437553,
+      "seed_sd": 0.0035093056230298364,
+      "each_seed": [
+        0.007117592695582335,
+        0.0024493177783034164,
+        0.00024461344194551455
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.0011865087340420125,
+      "seed_sd": 0.0016428604810954286,
+      "each_seed": [
+        -0.0005232843769709246,
+        -0.0030573059727590263,
+        2.106414760391318e-05
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.0020250353572691267,
+      "seed_sd": 0.0015505121884215513,
+      "each_seed": [
+        0.002481329307746833,
+        0.00329619986384847,
+        0.0002975769002120775
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.005595917810991976,
+      "seed_sd": 0.007176068710129742,
+      "each_seed": [
+        0.013656940197346486,
+        0.0032270024463848736,
+        -9.618921075543047e-05
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.0069988141940658735,
+      "seed_sd": 0.009101467441053229,
+      "each_seed": [
+        0.01733198612106965,
+        0.003492311971158957,
+        0.0001721444899690116
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.0016768029509452494,
+      "seed_sd": 0.003517301161509403,
+      "each_seed": [
+        0.005736992181203233,
+        -0.0004402112915886502,
+        -0.0002663720367788345
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.0028009552695001175,
+      "seed_sd": 0.0032212808543601967,
+      "each_seed": [
+        0.006434380623776971,
+        0.001673673871635523,
+        0.00029481131308785915
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "condition": "jpeg70",
+    "generator": "Real",
+    "feature": "eight_pixel_boundary_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.0006188929044185685,
+      "seed_sd": 0.002084942577269031,
+      "each_seed": [
+        0.0010668021691000729,
+        -0.002950300026765737,
+        2.681914440995883e-05
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.0022184418824183795,
+      "seed_sd": 0.0016955413306017455,
+      "each_seed": [
+        0.0031942922285838077,
+        0.003200430815736222,
+        0.0002606026029351082
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "condition": "jpeg70",
+    "generator": "Real",
+    "feature": "high_frequency_energy_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.005008395570198633,
+      "seed_sd": 0.0066452401223935165,
+      "each_seed": [
+        0.012508005697161241,
+        0.0026643295443550107,
+        -0.00014714853092035233
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.006474093098122079,
+      "seed_sd": 0.00857484886215899,
+      "each_seed": [
+        0.016246198594061335,
+        0.002969162589870811,
+        0.00020691811043408904
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "condition": "jpeg70",
+    "generator": "Real",
+    "feature": "log_laplacian_variance",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.0021902078020162026,
+      "seed_sd": 0.003314411710410851,
+      "each_seed": [
+        0.005976614091446082,
+        0.0007793640094786291,
+        -0.00018535469487610443
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.00300494359492068,
+      "seed_sd": 0.0033001962113915584,
+      "each_seed": [
+        0.006678009163499555,
+        0.0020474654337198465,
+        0.00028935618754263626
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.00033547393355499826,
+      "seed_sd": 0.0007949968436049008,
+      "each_seed": [
+        0.001248039977035797,
+        -0.00020704941260562756,
+        -3.456876376517465e-05
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.0021557356838779696,
+      "seed_sd": 0.001750456486855772,
+      "each_seed": [
+        0.003577611885645205,
+        0.002688903270832583,
+        0.00020069189515612164
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.004787597722363667,
+      "seed_sd": 0.00654571679489119,
+      "each_seed": [
+        0.012231405870699569,
+        0.0022009022400397964,
+        -6.951494364836454e-05
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.006157306675081911,
+      "seed_sd": 0.00807495615480468,
+      "each_seed": [
+        0.01533710070582938,
+        0.0029828435390567756,
+        0.0001519757803595755
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.0011974721094795274,
+      "seed_sd": 0.002827117416387874,
+      "each_seed": [
+        0.004454891200522009,
+        -0.0006170021663530119,
+        -0.0002454727057304145
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.002484130544020245,
+      "seed_sd": 0.002340990697311527,
+      "each_seed": [
+        0.005015394154012971,
+        0.002039940062213829,
+        0.0003970574158339339
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "condition": "resize05",
+    "generator": "Real",
+    "feature": "eight_pixel_boundary_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.00025219475570347497,
+      "seed_sd": 0.001984940767824526,
+      "each_seed": [
+        0.001612460363506766,
+        -0.0023387691765016853,
+        -3.027545411550548e-05
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.0021373667701325223,
+      "seed_sd": 0.001670979447823503,
+      "each_seed": [
+        0.0031494409614962683,
+        0.00305398623470337,
+        0.00020867311419792825
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "condition": "resize05",
+    "generator": "Real",
+    "feature": "high_frequency_energy_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.004600659499946509,
+      "seed_sd": 0.0061245958267669934,
+      "each_seed": [
+        0.011528953564989779,
+        0.0023652231951660756,
+        -9.219826031632977e-05
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.005991552679122259,
+      "seed_sd": 0.007866019832117578,
+      "each_seed": [
+        0.014937104400289862,
+        0.0028815300251769723,
+        0.0001560236118999436
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "condition": "resize05",
+    "generator": "Real",
+    "feature": "log_laplacian_variance",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.0009243261064646593,
+      "seed_sd": 0.0024275336721537744,
+      "each_seed": [
+        0.0037078672331821833,
+        -0.0007535280571659307,
+        -0.0001813608566222747
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.002449304962547832,
+      "seed_sd": 0.002224028917310887,
+      "each_seed": [
+        0.004755149774170201,
+        0.002275471114309806,
+        0.0003172939991634896
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.00030545821150500734,
+      "seed_sd": 0.0005479234064496508,
+      "each_seed": [
+        8.002828782685343e-05,
+        -0.0009326783632728099,
+        -6.372455906906558e-05
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.002053126079117781,
+      "seed_sd": 0.0015923579089833842,
+      "each_seed": [
+        0.003282121283493687,
+        0.0026230193756696415,
+        0.00025423757819001386
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.005248932124725744,
+      "seed_sd": 0.006491064268503902,
+      "each_seed": [
+        0.012495568451285438,
+        0.0032835077459770876,
+        -3.2279823085295274e-05
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.006470582616536275,
+      "seed_sd": 0.008002112264272151,
+      "each_seed": [
+        0.015469552701532238,
+        0.003787055653682642,
+        0.00015513949439394556
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.0008902661952464702,
+      "seed_sd": 0.002332591273786376,
+      "each_seed": [
+        0.00357655704553014,
+        -0.0006227708168148661,
+        -0.00028298764297586364
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.0024072741919224103,
+      "seed_sd": 0.0022132231752498414,
+      "each_seed": [
+        0.004766600902577249,
+        0.002078222338842611,
+        0.00037699933434737096
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "condition": "clean",
+    "generator": "Real",
+    "feature": "eight_pixel_boundary_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.0008196945729512722,
+      "seed_sd": 0.0008655148499323243,
+      "each_seed": [
+        -0.0015703946147631231,
+        -0.0010157052444902661,
+        0.00012701614039957272
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.002150775486330537,
+      "seed_sd": 0.001795015157565923,
+      "each_seed": [
+        0.003935135056434548,
+        0.0021719002010621947,
+        0.0003452912014948683
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "condition": "clean",
+    "generator": "Real",
+    "feature": "high_frequency_energy_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.005429113854002753,
+      "seed_sd": 0.007041932462372948,
+      "each_seed": [
+        0.013365356586746582,
+        0.0029942410877769493,
+        -7.225611251527132e-05
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.006471032943014842,
+      "seed_sd": 0.00827515691165482,
+      "each_seed": [
+        0.015850455636864796,
+        0.0033618418775408516,
+        0.00020080131463888137
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "condition": "clean",
+    "generator": "Real",
+    "feature": "log_laplacian_variance",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.0017539314701533082,
+      "seed_sd": 0.003098909307996855,
+      "each_seed": [
+        0.005306637421382861,
+        0.00034764499837687074,
+        -0.0003924880092998069
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.002927295707501136,
+      "seed_sd": 0.0027790868040450194,
+      "each_seed": [
+        0.005928276336733471,
+        0.0024111376089819476,
+        0.0004424731767879908
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "condition": "jpeg50",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.000796417603041332,
+      "seed_sd": 0.004684141838414996,
+      "each_seed": [
+        0.005841309154719791,
+        -0.00341510682290342,
+        -3.694952269237474e-05
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.003352493628634497,
+      "seed_sd": 0.0029512228156545087,
+      "each_seed": [
+        0.005988714493765865,
+        0.0039045358022280654,
+        0.0001642305899095611
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "condition": "jpeg50",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.004375167382246125,
+      "seed_sd": 0.006213205427597001,
+      "each_seed": [
+        0.011458086798656746,
+        0.0018227026644203892,
+        -0.00015528731633876076
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.005539170309435185,
+      "seed_sd": 0.007552064325662825,
+      "each_seed": [
+        0.014186059081730722,
+        0.0021940722314069644,
+        0.00023737961516787185
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "condition": "jpeg50",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.001269976279737219,
+      "seed_sd": 0.0026875404681759403,
+      "each_seed": [
+        0.004367988583387865,
+        -0.0004359170701167111,
+        -0.0001221426740594967
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.0028592850161387445,
+      "seed_sd": 0.0030364517427155804,
+      "each_seed": [
+        0.006182804143447598,
+        0.002164843726709319,
+        0.0002302071782593174
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "condition": "jpeg50",
+    "generator": "Real",
+    "feature": "eight_pixel_boundary_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.00011419674272197213,
+      "seed_sd": 0.0030065286531947132,
+      "each_seed": [
+        0.0031663241320376463,
+        -0.0028445578962859124,
+        2.0823992414182446e-05
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.0025214605486392635,
+      "seed_sd": 0.0020942884292477902,
+      "each_seed": [
+        0.004178685361369626,
+        0.003218052543308347,
+        0.0001676437412398184
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "condition": "jpeg50",
+    "generator": "Real",
+    "feature": "high_frequency_energy_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.004589979608573848,
+      "seed_sd": 0.006351776098312253,
+      "each_seed": [
+        0.011797208778979586,
+        0.0021640514701938515,
+        -0.00019132142345189545
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.006001811190131431,
+      "seed_sd": 0.008074230341749204,
+      "each_seed": [
+        0.015229350265468516,
+        0.0025424192213149743,
+        0.00023366408361079978
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "condition": "jpeg50",
+    "generator": "Real",
+    "feature": "log_laplacian_variance",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.0024454091138006156,
+      "seed_sd": 0.0029153633355390673,
+      "each_seed": [
+        0.005639837605218959,
+        0.0017680118814786285,
+        -7.162214529574119e-05
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.0032705079719437553,
+      "seed_sd": 0.0035093056230298364,
+      "each_seed": [
+        0.007117592695582335,
+        0.0024493177783034164,
+        0.00024461344194551455
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.0002484313399134704,
+      "seed_sd": 0.0034495581124444133,
+      "each_seed": [
+        0.0030887347047831443,
+        -0.003800347382129488,
+        -3.3681342394067226e-05
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.0028834348821007317,
+      "seed_sd": 0.0023369633414321495,
+      "each_seed": [
+        0.0041774306727694185,
+        0.004287187783303234,
+        0.00018568619022954271
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.004719939319965943,
+      "seed_sd": 0.006418388380452557,
+      "each_seed": [
+        0.0120036610046094,
+        0.0022639360651391886,
+        -0.00010777910985076061
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.0060603281822124815,
+      "seed_sd": 0.008253505546916135,
+      "each_seed": [
+        0.015495617169611857,
+        0.002505372428533289,
+        0.00017999494849229854
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.0007620871603193905,
+      "seed_sd": 0.002839492514827872,
+      "each_seed": [
+        0.003949396502799304,
+        -0.0014975345583551289,
+        -0.00016560046348600347
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.0026690241960476385,
+      "seed_sd": 0.0024778738471334235,
+      "each_seed": [
+        0.005216734232867414,
+        0.002522883227618341,
+        0.00026745512765716017
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "condition": "jpeg70",
+    "generator": "Real",
+    "feature": "eight_pixel_boundary_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.0006188929044185685,
+      "seed_sd": 0.002084942577269031,
+      "each_seed": [
+        0.0010668021691000729,
+        -0.002950300026765737,
+        2.681914440995883e-05
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.0022184418824183795,
+      "seed_sd": 0.0016955413306017455,
+      "each_seed": [
+        0.0031942922285838077,
+        0.003200430815736222,
+        0.0002606026029351082
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "condition": "jpeg70",
+    "generator": "Real",
+    "feature": "high_frequency_energy_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.005008395570198633,
+      "seed_sd": 0.0066452401223935165,
+      "each_seed": [
+        0.012508005697161241,
+        0.0026643295443550107,
+        -0.00014714853092035233
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.006474093098122079,
+      "seed_sd": 0.00857484886215899,
+      "each_seed": [
+        0.016246198594061335,
+        0.002969162589870811,
+        0.00020691811043408904
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "condition": "jpeg70",
+    "generator": "Real",
+    "feature": "log_laplacian_variance",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.0021902078020162026,
+      "seed_sd": 0.003314411710410851,
+      "each_seed": [
+        0.005976614091446082,
+        0.0007793640094786291,
+        -0.00018535469487610443
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.00300494359492068,
+      "seed_sd": 0.0033001962113915584,
+      "each_seed": [
+        0.006678009163499555,
+        0.0020474654337198465,
+        0.00028935618754263626
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.0002262847381582836,
+      "seed_sd": 0.001989263262191961,
+      "each_seed": [
+        0.002339602939474199,
+        -0.0016098504437855271,
+        -5.089828121382117e-05
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.0022078504662981125,
+      "seed_sd": 0.001758090116924735,
+      "each_seed": [
+        0.0035347158868450582,
+        0.0028750010777471124,
+        0.0002138344343021657
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.004840180901730875,
+      "seed_sd": 0.0064545689822021225,
+      "each_seed": [
+        0.012149323989827541,
+        0.002448059845544264,
+        -7.68411301791785e-05
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.006084647069269137,
+      "seed_sd": 0.00789142343610214,
+      "each_seed": [
+        0.015039240309988926,
+        0.003068859521000043,
+        0.00014584137681844262
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.0008193973679403082,
+      "seed_sd": 0.0026614856391290404,
+      "each_seed": [
+        0.0038472803897323625,
+        -0.001150009961703602,
+        -0.00023907832420783605
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.0024215539365033813,
+      "seed_sd": 0.002027534557385931,
+      "each_seed": [
+        0.004451435896134731,
+        0.0024168509503637308,
+        0.00039637496301168305
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "condition": "resize05",
+    "generator": "Real",
+    "feature": "eight_pixel_boundary_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": -0.00025219475570347497,
+      "seed_sd": 0.001984940767824526,
+      "each_seed": [
+        0.001612460363506766,
+        -0.0023387691765016853,
+        -3.027545411550548e-05
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.0021373667701325223,
+      "seed_sd": 0.001670979447823503,
+      "each_seed": [
+        0.0031494409614962683,
+        0.00305398623470337,
+        0.00020867311419792825
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "condition": "resize05",
+    "generator": "Real",
+    "feature": "high_frequency_energy_ratio",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.004600659499946509,
+      "seed_sd": 0.0061245958267669934,
+      "each_seed": [
+        0.011528953564989779,
+        0.0023652231951660756,
+        -9.219826031632977e-05
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.005991552679122259,
+      "seed_sd": 0.007866019832117578,
+      "each_seed": [
+        0.014937104400289862,
+        0.0028815300251769723,
+        0.0001560236118999436
+      ]
+    }
+  },
+  {
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "condition": "resize05",
+    "generator": "Real",
+    "feature": "log_laplacian_variance",
+    "d_alpha_d_standardized_q_mean": {
+      "mean": 0.0009243261064646593,
+      "seed_sd": 0.0024275336721537744,
+      "each_seed": [
+        0.0037078672331821833,
+        -0.0007535280571659307,
+        -0.0001813608566222747
+      ]
+    },
+    "d_alpha_d_standardized_q_abs_mean": {
+      "mean": 0.002449304962547832,
+      "seed_sd": 0.002224028917310887,
+      "each_seed": [
+        0.004755149774170201,
+        0.002275471114309806,
+        0.0003172939991634896
+      ]
+    }
+  }
+]

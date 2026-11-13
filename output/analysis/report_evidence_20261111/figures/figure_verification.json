@@ -1,0 +1,90 @@
+{
+  "status": "passed",
+  "operation": "aggregate reconstruction and figure rendering only",
+  "source_sha256": {
+    "output/analysis/gate_diagnosis_20261108/method_comparison.csv": "43927778ed19a4c75ab1dae3bf5f34e2312d17905751ba7fa748f81281b567df",
+    "output/analysis/multigen_gate_20261108/run_v1_codefix1/metrics_seed_condition.csv": "5a2d3bf026c7108cc6704b84b8517aa358b7ab9a4e306ca54f5bd36883e2a0eb",
+    "output/analysis/multigen_gate_20261108/run_v1_codefix1/summary.json": "da066b486472b214a4aec60fd012c3a61a568f5a9259ebd57a75d3d032706e0c",
+    "output/analysis/recompression_reliability_20261108/reliability_cells.csv": "760521e43559de63133d1b262a95a7d88e507a64a5f2ed33c53070f8b2a4d3fb",
+    "output/analysis/recompression_reliability_20261108/detection_diagnostics.csv": "73fe55590f9dec1b87c96feded04f278715d044afaffce8e6ea70aa90345dbcb",
+    "output/analysis/recompression_reliability_20261108/summary.json": "c37cf418ef89fdc3ce0d8f128399430e400b50b385f84beaf8a3bec7c67a6703",
+    "output/analysis/paired_view_global_20261108/metrics.csv": "89aa9adcd413f340e2311d07511e7895b3678401bbd8edce4befb9ceed281fda",
+    "output/analysis/gate_failure_mechanism_20261108/source_target_transfer.csv": "678ab6e9862c0326744ef00deb3ebb76bceac81943630a534f4c7c0f214075cc",
+    "output/analysis/gate_failure_mechanism_20261108/prediction_ranking_seed_means.csv": "57e967fee067d3137ae77424e73b36c73f2f3f7b145a49cd5cb95f395cc05b5c",
+    "output/analysis/gate_failure_mechanism_20261108/prediction_constant_seed_means.csv": "dfe8ec567457de3c059d0b43e7933cd8ff361d5270b69df34013a6dc12a5ce56"
+  },
+  "script_sha256": "97e6e76c3b89b8b73e4952faa476cebeb37af6c1246e76c0dda49ce5076be6da",
+  "checks": {
+    "diagnostic_original_quality_gate_mean": {
+      "status": "passed",
+      "max_abs_error": 0.0
+    },
+    "diagnostic_auc_checkpoint_quality_gate_mean": {
+      "status": "passed",
+      "max_abs_error": 0.0
+    },
+    "diagnostic_bounded_ranking_quality_gate_mean": {
+      "status": "passed",
+      "max_abs_error": 0.0
+    },
+    "diagnostic_original_view_quality_gate_mean": {
+      "status": "passed",
+      "max_abs_error": 0.0
+    },
+    "diagnostic_quality_condition_gate_mean": {
+      "status": "passed",
+      "max_abs_error": 0.0
+    },
+    "multigen_source_only_score_gate_macro": {
+      "status": "passed",
+      "max_abs_error": 0.0
+    },
+    "multigen_source_only_quality_gate_macro": {
+      "status": "passed",
+      "max_abs_error": 0.0
+    },
+    "multigen_mixed_score_gate_macro": {
+      "status": "passed",
+      "max_abs_error": 0.0
+    },
+    "multigen_mixed_quality_gate_macro": {
+      "status": "passed",
+      "max_abs_error": 0.0
+    },
+    "reliability_primary_reconstruction": {
+      "status": "passed",
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    "mixed_training_all_delta": {
+      "status": "passed",
+      "max_abs_error": 4.163336342344337e-17
+    },
+    "pair_credit_identity_all_seed_cells": {
+      "status": "passed",
+      "max_abs_error": 1.0408340855860843e-16
+    },
+    "actual_gate_auroc_cross_file": {
+      "status": "passed",
+      "max_abs_error": 1.1102230246251565e-16
+    },
+    "decomposition_cross_file": {
+      "status": "passed",
+      "max_abs_error": 2.0122792321330962e-16
+    }
+  },
+  "input_files_unchanged": true,
+  "output_sha256": {
+    "captions_en.txt": "f2f72f97b98044b9c8b9222335cee217fcf503d496cd51c4837d4d3545509b53",
+    "figure1_improvement_attempts.pdf": "2eeefe8bdb26e1a99b22200ebfaef9b4ccb45cf63f11dd22a4e905edf1b75e93",
+    "figure1_improvement_attempts.png": "873fff418de291bf4b36352ee0b1040722ce07ee6f8d483a8563e516b1936152",
+    "figure1_seed_differences.csv": "ac4149d60817c53ea8000160fd200c1baf715b88ebf511d25d1bbcc0964f623e",
+    "figure2_failure_mechanism.pdf": "c16d70359fbad1c0125e9635b175c716d3a873b8dbaf1f44e99a274e6d2bbd98",
+    "figure2_failure_mechanism.png": "ec55fe2c382f56d14154d6644433a10ce729caded6bbd98a7863ad84703af1e3",
+    "figure2_pair_credit_mean_data.csv": "5d1386c79580be66169658ab5adbca563c92eb202056e3071e8310fa3292cf6e",
+    "figure2_pair_credit_seed_data.csv": "f8ab969f6a07218293de9ce5899131e7e06347ece922dd5d4e8ad844231dd9e4",
+    "figure2_transfer_data.csv": "f77d64c0bf7520b7da9b44701374dec6e5155917b650697c1f4e52e628a82952"
+  },
+  "no_model_fitting": true,
+  "no_final_test_access": true,
+  "visual_qa": "Requires visual inspection of the generated PNGs; not asserted by this script."
+}

@@ -1,0 +1,79 @@
+{
+  "baselines": "Average and existing matched tuning-selected fixed, recomputed on same tuning; settings and all dev metric cells verified unchanged.",
+  "condition_classes": [
+    "clean",
+    "jpeg70",
+    "resize05"
+  ],
+  "condition_classifier": {
+    "C": 1.0,
+    "inputs": [
+      "log_laplacian_variance",
+      "high_frequency_ratio",
+      "block_boundary_ratio"
+    ],
+    "max_iter": 1000,
+    "pipeline": "StandardScaler + LogisticRegression",
+    "random_state": 0,
+    "solver": "lbfgs",
+    "target": "condition metadata only, not authenticity",
+    "training_partition": "gate_fit"
+  },
+  "constraints": "One variant only, no blending parameter, no hyperparameter search, no final/reserved test access, no images/feature extraction/GPU, no publish/push.",
+  "development_conditions": [
+    "clean",
+    "jpeg70",
+    "jpeg50",
+    "resize05"
+  ],
+  "development_generators": [
+    "ADM",
+    "BigGAN"
+  ],
+  "diagnostics": "Tuning condition-classifier accuracy/confusion; after all models/settings frozen, same diagnostics on development TUNE classes and JPEG50 mean predicted probabilities. No diagnostic controls selection.",
+  "environment": {
+    "device": "CPU",
+    "numpy": "1.26.4",
+    "scikit_learn": "1.8.0"
+  },
+  "fixed_inputs": "Existing matched expert raw_batches: matched gate_fit and matched tuning; original reporting/development views. No experts refit.",
+  "frozen_at_utc": "2026-11-08T07:31:21.755180+00:00",
+  "fusion_selection": "For each TUNE condition independently, alpha in 0,.1,...,1 maximizes selection AUROC; np.isclose ties choose closest .5 then earliest/smaller grid alpha.",
+  "hypothesis": "Three quality proxies may identify degradation conditions more transferably than directly learning authenticity-dependent expert reliability.",
+  "id": "exploratory_quality_condition_gate_v1",
+  "inference": "Soft alpha=sum P(condition | q)*selected alpha_condition; only q enters condition classifier. JPEG50 treated identically with no mapped label.",
+  "input_sha256": {
+    "artifacts/round8_a/seed1/matched/bundle.json": "391c36669dfccef5c154d33ae77cd81c4cec4a5a70fd761895bb7748d441f938",
+    "artifacts/round8_a/seed1/matched/experts.joblib": "3e9eae10620f903bddc5f387a64b6137e008229cfb3a6ae5b1a8961287b5daa6",
+    "artifacts/round8_a/seed2/matched/bundle.json": "ae08cd7728c5c5731b23cdb7f6c64f33dbfec2ef3b218f2da658c000b3311c30",
+    "artifacts/round8_a/seed2/matched/experts.joblib": "7c763368f9877f245e370c1eff7bc9db9f2128c2b744b02d5b68989d59f8442d",
+    "artifacts/round8_a/seed3/matched/bundle.json": "3e4561ba24138763827deedff917ae1b99ec38163344ea69ad09d05b9f0f2388",
+    "artifacts/round8_a/seed3/matched/experts.joblib": "5f86826cec563f04740f20bd852c4b9039d094720c734cf41397b81c93c5f924",
+    "results/round8_a/seed1/matched/complete.json": "ae03539307420070a5e216263f6c9c5431a111c36374da2cc35b3b58201c9163",
+    "results/round8_a/seed1/matched/metrics.csv": "7c0b44f0b2215a636eea4f08f5250429c93f1ceba08bf14a74e9ae2cec950a24",
+    "results/round8_a/seed2/matched/complete.json": "5544b6b42546264083ba76f431700fce6b4f93a2359e8cf516c61ae09c845418",
+    "results/round8_a/seed2/matched/metrics.csv": "22d0f2d398f70b9f4b179fd1dca4f513a145c2b6ee2c8fcd61ffb00834f3a866",
+    "results/round8_a/seed3/matched/complete.json": "66423fc9bfc2654988c8462ae68deb083878daa60980af7b72b5dead9db5aa4d",
+    "results/round8_a/seed3/matched/metrics.csv": "f403f2d209c2a54d84ac901552a10e65cc8fff103e7edf96db137fb4192a3e32",
+    "scripts/gate_models.py": "417cd36b667f33046a903c1d51cc867301db3206ffba978aba594d3fb9bfc12a",
+    "scripts/round7_baseline_clip.py": "a450c3f6bb2c4186311fec2db622a7545643902bb47e49bce4f6e73e938bea32",
+    "scripts/round7_baseline_common.py": "c93bfd3d54cd60c9991cdc6fe966cf53395450ea1c090f6e560f23206786d0ae",
+    "scripts/round7_baseline_data.py": "f3bd973f536136ff341c0bf8a0db0bc530eb94cb4467db9c3b0ea55590ddca9a",
+    "scripts/score_calibration.py": "b5ec91b05bba2f0327f2b7a3ec6f36ebc1bdb1742256a33de24b1003c0bdf526"
+  },
+  "limitations": "Exploratory previously inspected ADM/BigGAN development; shared pool/images across seeds; no significance or independent-generalization claim.",
+  "primary": "All 8 development AUROC cells and equally weighted 8-cell macro; three data seeds reported separately.",
+  "run_seeds": [
+    20261101,
+    20261102,
+    20261103
+  ],
+  "script_sha256": "24c54dc09c5215943669b80330725f4a4ee9febdbecd41ba91e77cb0221592db",
+  "secondary": [
+    "average_precision",
+    "balanced_accuracy",
+    "real_false_positive_rate"
+  ],
+  "status": "frozen before any training or development score",
+  "threshold": "For each model, original pooled tuning Youden-J rule; ties closest probability cutoff .5."
+}

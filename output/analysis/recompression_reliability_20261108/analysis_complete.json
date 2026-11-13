@@ -1,0 +1,12 @@
+{
+  "status": "completed",
+  "prediction_rows": 13032,
+  "reliability_cells": 54,
+  "outputs_sha256": {
+    "source_scales.csv": "a20c9e85b5d313ea3430fc7fd0e39520f7403087374422669752b723252f4ae0",
+    "predictions.csv": "1cdff6d612e0c4b8b7081164de55b37860387231ce818a451e1682da09dc769a",
+    "reliability_cells.csv": "760521e43559de63133d1b262a95a7d88e507a64a5f2ed33c53070f8b2a4d3fb",
+    "detection_diagnostics.csv": "73fe55590f9dec1b87c96feded04f278715d044afaffce8e6ea70aa90345dbcb",
+    "summary.json": "c37cf418ef89fdc3ce0d8f128399430e400b50b385f84beaf8a3bec7c67a6703"
+  }
+}

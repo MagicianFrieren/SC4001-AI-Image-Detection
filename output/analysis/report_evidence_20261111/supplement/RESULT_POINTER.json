@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "final_successful_relative_directory": "run_v2_portable",
+  "identical_result_files_after_portability_change": {
+    "decomposition_each_initialization.csv": true,
+    "ranking_each_initialization.csv": true,
+    "decomposition_intervals.csv": true,
+    "seed_sensitivity.csv": true,
+    "ranking_cell_means.csv": true,
+    "decomposition_seed_cells.csv": true,
+    "report_zh.txt": true,
+    "verification.json": true
+  },
+  "identical_bootstrap_arrays": {
+    "values": true,
+    "scopes": true,
+    "metrics": true
+  },
+  "portable_script_matches_protocol_sha256": true,
+  "computational_correction": "Initial synthetic tied-score validation stopped before bootstrap because an integer rank-credit accumulator truncated half-credit. Cast to float; independent sklearn tied-score checks and 648 weighted bootstrap AUC checks pass. No original study changed.",
+  "rerun_reason": "Add --root for evidence-bundle relocation; same seed, same 1000 repetitions, no model fitting or method change."
+}

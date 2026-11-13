@@ -1,0 +1,16 @@
+{
+  "aggregation": "Gate initializations averaged within run seed first, then data seeds equally. No independence claim or new significance tests.",
+  "constant_alpha_counterfactual": "Replace each gate alpha with its mean across the 600 TARGET images in that cell. Target-dependent descriptive counterfactual, not a deployable selected model.",
+  "created_utc": "2026-11-08T08:09:56.550274+00:00",
+  "example_selection": "Illustrative JPEG pair: within the first deterministic eligible cell/gate, prefer the expert-disagreement category contributing most newly lost average-relative pair credit. Require average and score correct but quality wrong; use first sorted fake/real ID. Post-hoc explanatory choice, not a random sample or new model selection.",
+  "input_sha256": {
+    "complete.json": "e9d920ca9a386c360ba2b1b8acbeae5bcd4da781d31fc36ef737b87ec700b359",
+    "metrics_seed_condition.csv": "5a2d3bf026c7108cc6704b84b8517aa358b7ab9a4e306ca54f5bd36883e2a0eb",
+    "predictions.csv.gz": "9736fe2a8f927b36fb04ad3fad257f946dd80724dff8cd71f66162fe40f903d8",
+    "summary.json": "da066b486472b214a4aec60fd012c3a61a568f5a9259ebd57a75d3d032706e0c"
+  },
+  "label_oracle": "Use true labels: fake score=max(global,local), real score=min(global,local). An unattainable-by-assumption label-oracle upper bound for all samplewise convex logit fusions on these pairs.",
+  "rank_unit": "All 300 fake x 300 real pairs in each cell; 0/0.5/1 credit for wrong/tied/correct ordering.",
+  "scope": "Frozen mixed-source primary AUROC checkpoints only; no model training or candidate selection.",
+  "script_sha256": "0823571fd98745c1e18aae6156636c55a264b64ea2ccaf105952c1568ec2b777"
+}

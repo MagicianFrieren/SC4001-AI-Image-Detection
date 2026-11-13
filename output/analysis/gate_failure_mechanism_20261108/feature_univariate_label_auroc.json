@@ -1,0 +1,4682 @@
+[
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.5940160000000001
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5629120000000001
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.4788
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.595904
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.563888
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.427824
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.635248
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.49604800000000004
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.47451200000000004
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.6160900104058272
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.6177159209157127
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.5202913631633714
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.6104318418314256
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.6149843912591051
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.43769510926118627
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.637161810613944
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5274453694068679
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.5016909469302809
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.057711111111111116
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.09016666666666667
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.4968
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.07291111111111113
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.0994
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.7116444444444445
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "jpeg50",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.08646666666666666
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "jpeg50",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.11321111111111111
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "jpeg50",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.6934222222222223
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.2257888888888889
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.30263333333333337
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.3869222222222223
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.5940160000000001
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5629120000000001
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.4788
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.595904
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.563888
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.427824
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.635248
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.49604800000000004
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.47451200000000004
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.6160900104058272
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.6177159209157127
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.5202913631633714
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.6104318418314256
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.6149843912591051
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.43769510926118627
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.637161810613944
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5274453694068679
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.5016909469302809
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.3417888888888889
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5563
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.1126
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.3559222222222222
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5569444444444445
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.29744444444444446
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "jpeg50",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.3791333333333333
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "jpeg50",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5759000000000001
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "jpeg50",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.31533333333333335
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.35764444444444443
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5414333333333333
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.1378888888888889
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.323488
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.549632
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.07328
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.577088
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.54688
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.43200000000000005
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.33785600000000005
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.551264
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.269184
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.576448
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.544512
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.428288
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.35516800000000004
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.545952
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.1056
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.6192640000000001
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.47129600000000005
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.42566400000000004
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.30137877211238295
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5390218522372529
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.1031477627471384
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.6069198751300728
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.610952133194589
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.5197710718002082
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.31737773152965665
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5391519250780437
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.29448491155046824
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.6039281997918835
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.6086108220603539
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.4350936524453694
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.31633714880332986
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5085848074921957
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.09326222684703434
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.630853277835588
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5473465140478667
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.5028616024973985
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.057711111111111116
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.09016666666666667
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.4968
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.07291111111111113
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.0994
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.7116444444444445
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "jpeg50",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.08646666666666666
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "jpeg50",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.11321111111111111
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "jpeg50",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.6934222222222223
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.2257888888888889
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.30263333333333337
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.3869222222222223
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.058272000000000004
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.082848
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.434752
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.577088
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.54688
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.43200000000000005
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.071296
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.08969600000000001
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.7180799999999999
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.576448
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.544512
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.428288
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.20531200000000002
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.289536
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.35068799999999994
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.6192640000000001
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.47129600000000005
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.42566400000000004
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.056061394380853266
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.09651404786680541
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.554630593132154
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.6069198751300728
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.610952133194589
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.5197710718002082
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.0710197710718002
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.11030176899063475
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.702003121748179
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.6039281997918835
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.6086108220603539
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.4350936524453694
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.23738293444328826
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.30241935483870963
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.3696670135275754
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.630853277835588
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5473465140478667
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.5028616024973985
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.3417888888888889
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5563
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.1126
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.3559222222222222
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5569444444444445
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.29744444444444446
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "jpeg50",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.3791333333333333
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "jpeg50",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5759000000000001
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "jpeg50",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.31533333333333335
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.35764444444444443
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5414333333333333
+  },
+  {
+    "run_seed": 20261101,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.1378888888888889
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.59744
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.575408
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.489056
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.595968
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5735680000000001
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.428064
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.637216
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.45232000000000006
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.499888
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.5961238293444329
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5619146722164412
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.48465140478668056
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.5896201873048907
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5595083246618106
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.43450832466181066
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.6488033298647242
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.47899323621227885
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.5017559833506764
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.057711111111111116
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.09016666666666667
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.4968
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.07291111111111113
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.0994
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.7116444444444445
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "jpeg50",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.08646666666666666
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "jpeg50",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.11321111111111111
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "jpeg50",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.6934222222222223
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.2257888888888889
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.30263333333333337
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.3869222222222223
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.59744
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.575408
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.489056
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.595968
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5735680000000001
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.428064
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.637216
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.45232000000000006
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.499888
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.5961238293444329
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5619146722164412
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.48465140478668056
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.5896201873048907
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5595083246618106
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.43450832466181066
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.6488033298647242
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.47899323621227885
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.5017559833506764
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.3417888888888889
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5563
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.1126
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.3559222222222222
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5569444444444445
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.29744444444444446
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "jpeg50",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.3791333333333333
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "jpeg50",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5759000000000001
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "jpeg50",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.31533333333333335
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.35764444444444443
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5414333333333333
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.1378888888888889
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.33155199999999996
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.56304
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.079296
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.597024
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5612159999999999
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.499296
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.34265599999999996
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.564096
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.27769600000000005
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.5966079999999999
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.560672
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.42768
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.352352
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.534208
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.12147200000000001
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.653408
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.45436799999999994
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.481376
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.29721644120707597
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.4842611862643079
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.09118106139438084
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.594432882414152
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5524193548387096
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.4780176899063475
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.315426638917794
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.48413111342351717
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.2559833506763788
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.5884495317377731
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.549687825182102
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.41402185223725285
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.3509365244536941
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.47593652445369405
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.11212278876170653
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.6624609781477627
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.47931841831425603
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.4802289281997919
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.057711111111111116
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.09016666666666667
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.4968
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.07291111111111113
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.0994
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.7116444444444445
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "jpeg50",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.08646666666666666
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "jpeg50",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.11321111111111111
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "jpeg50",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.6934222222222223
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.2257888888888889
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.30263333333333337
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.3869222222222223
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.056352000000000006
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.08313600000000002
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.45936
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.597024
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5612159999999999
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.499296
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.071104
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.091936
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.7334400000000001
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.5966079999999999
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.560672
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.42768
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.203648
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.28700800000000004
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.368992
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.653408
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.45436799999999994
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.481376
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.05970343392299688
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.07752341311134235
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.5351196670135276
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.594432882414152
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5524193548387096
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.4780176899063475
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.07414151925078044
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.08753902185223726
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.6735171696149844
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.5884495317377731
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.549687825182102
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.41402185223725285
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.26834027055150883
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.26821019771071797
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.3669354838709677
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.6624609781477627
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.47931841831425603
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.4802289281997919
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.3417888888888889
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5563
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.1126
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.3559222222222222
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5569444444444445
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.29744444444444446
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "jpeg50",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.3791333333333333
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "jpeg50",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5759000000000001
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "jpeg50",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.31533333333333335
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.35764444444444443
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5414333333333333
+  },
+  {
+    "run_seed": 20261102,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.1378888888888889
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.5569759999999999
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5203679999999999
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.49881600000000004
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.554048
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.518528
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.45039999999999997
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.602752
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.44144
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.49534399999999995
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.5507934443288242
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5437695109261186
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.5058532778355879
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.5455905306971903
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5431841831425598
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.4998048907388138
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.600156087408949
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.4511576482830385
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.5045525494276795
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.057711111111111116
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.09016666666666667
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.4968
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.07291111111111113
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.0994
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.7116444444444445
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "jpeg50",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.08646666666666666
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "jpeg50",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.11321111111111111
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "jpeg50",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.6934222222222223
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.2257888888888889
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.30263333333333337
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.3869222222222223
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.5569759999999999
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5203679999999999
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.49881600000000004
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.554048
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.518528
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.45039999999999997
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.602752
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.44144
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.49534399999999995
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.5507934443288242
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5437695109261186
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.5058532778355879
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.5455905306971903
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5431841831425598
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.4998048907388138
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.600156087408949
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.4511576482830385
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.5045525494276795
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.3417888888888889
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5563
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.1126
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.3559222222222222
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5569444444444445
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.29744444444444446
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "jpeg50",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.3791333333333333
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "jpeg50",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5759000000000001
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "jpeg50",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.31533333333333335
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.35764444444444443
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5414333333333333
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "source_only",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.1378888888888889
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.289728
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.526976
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.07104
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.5605760000000001
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5122559999999999
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.503328
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.29977600000000004
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.52672
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.28793599999999997
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.5572159999999999
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5107520000000001
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.4481280000000001
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.315392
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.530208
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.108896
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.62128
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.429632
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.489344
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.25455254942767946
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.4552549427679501
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.06802809573361082
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.5180801248699272
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5238033298647242
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.4903746097814776
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.27146201873048903
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.45668574401664935
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.30515088449531735
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.5135275754422477
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5205515088449532
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.5284859521331946
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.2918834547346514
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.4491415192507805
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.07752341311134234
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.5734911550468262
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.4291103017689906
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.5024713839750261
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.057711111111111116
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.09016666666666667
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.4968
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.07291111111111113
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.0994
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.7116444444444445
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "jpeg50",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.08646666666666666
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "jpeg50",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.11321111111111111
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "jpeg50",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.6934222222222223
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.2257888888888889
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.30263333333333337
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_ADM",
+    "heldout_generator": "BigGAN",
+    "partition": "heldout_development",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.3869222222222223
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.041600000000000005
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.07779200000000001
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.45414400000000005
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.5605760000000001
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5122559999999999
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.503328
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.05321600000000001
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.08553600000000003
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.7517440000000001
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.5572159999999999
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5107520000000001
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.4481280000000001
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.17664000000000002
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.281728
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.34975999999999996
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.62128
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.429632
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "gate_fit",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.489344
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.045785639958376666
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.07049947970863683
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.5305671175858482
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.5180801248699272
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5238033298647242
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "clean",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.4903746097814776
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.06048387096774192
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.08259625390218522
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.7172216441207077
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.5135275754422477
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5205515088449532
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "jpeg70",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.5284859521331946
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.21865244536940687
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.24986992715920914
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "BigGAN",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.34170135275754426
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.5734911550468262
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.4291103017689906
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "tuning",
+    "condition": "resize05",
+    "generator": "SD15",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.5024713839750261
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.3417888888888889
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5563
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "clean",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.1126
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.3559222222222222
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5569444444444445
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "jpeg70",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.29744444444444446
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "jpeg50",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.3791333333333333
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "jpeg50",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5759000000000001
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "jpeg50",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.31533333333333335
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "log_laplacian_variance",
+    "raw_q_label_auroc": 0.35764444444444443
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "high_frequency_energy_ratio",
+    "raw_q_label_auroc": 0.5414333333333333
+  },
+  {
+    "run_seed": 20261103,
+    "scenario": "mixed_BigGAN",
+    "heldout_generator": "ADM",
+    "partition": "heldout_development",
+    "condition": "resize05",
+    "generator": "ADM",
+    "feature": "eight_pixel_boundary_ratio",
+    "raw_q_label_auroc": 0.1378888888888889
+  }
+]

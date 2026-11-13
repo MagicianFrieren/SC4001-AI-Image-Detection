@@ -1,0 +1,8 @@
+{
+  "status": "validation_failed_before_bootstrap",
+  "reason": "Synthetic tied-score verification detected integer truncation of half-credit in the new weighted-AUROC helper. No bootstrap or interpretive result was produced.",
+  "fix": "Cast the rank-credit numerator to float before tie correction. The independent sklearn comparison remains mandatory.",
+  "retry_output": "run_v1_codefix1",
+  "models_fitted": 0,
+  "original_studies_changed": false
+}

@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "saved_prediction_rows_independently_reconstructed": 10800,
+  "max_absolute_reconstruction_error": 0.0,
+  "baseline_metric_max_error": {
+    "auroc": 0.0,
+    "average_precision": 0.0,
+    "balanced_accuracy": 0.0,
+    "real_false_positive_rate": 0.0
+  },
+  "no_new_fit_in_verification": true
+}

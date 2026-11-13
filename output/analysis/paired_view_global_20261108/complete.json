@@ -1,0 +1,20 @@
+{
+  "status": "completed",
+  "models_fitted": 3,
+  "prediction_rows": 41400,
+  "metric_rows": 108,
+  "files_sha256": {
+    "freeze.json": "c3b83e17f41a5ad0f919ab26391b6d79ca9c8b35412dbd319ec63bda7a9558ed",
+    "metrics.csv": "89aa9adcd413f340e2311d07511e7895b3678401bbd8edce4befb9ceed281fda",
+    "metrics_mean.csv": "260f0ae7df9d9f664a4839d9ecd7cb094de34786504ca18bf8c14633222ad83f",
+    "models_and_thresholds_frozen.json": "be5a87b04f3944768f2625f41e2509d8830a7dc2f48f20d95cdcbf943a791dfa",
+    "paired_differences.csv": "5d84caa33e4aacf54cf74da15bc15e724c214cb8ebda443ad06d12927a412700",
+    "predictions.csv": "34726022f95199ab2625bdfc8bb3f9744d71e97f24256c3fd894fec4616d8451",
+    "preflight.json": "f7f17035786c888543124c561eaae9d9070561d41e20ebffb6204f80b93b027b",
+    "splits.json": "f9a6a51e58a26a30f829f4a2dcec716ddd4a2a7f1a62def3660f50b7139a1e7b",
+    "summary.json": "afcecab1f05252d20343a617f61520d0656b417e379a8801b18e575f1ef94464",
+    "models/20261101_paired_half.joblib": "7dcb4e3b2eea3cd02d93fcbaa54b3eb96830f6ff3d504ad32016ba8db638dea5",
+    "models/20261102_paired_half.joblib": "69834dd410a047036ac93fe220d77af73e594c03589f497515345ea9e4ca3e00",
+    "models/20261103_paired_half.joblib": "4a72e0701e39a5731d5f7bb9beb31149a4c3a241d6c7798445075ffb03ae8480"
+  }
+}

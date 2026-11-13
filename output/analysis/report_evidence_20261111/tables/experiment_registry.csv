@@ -1,0 +1,12 @@
+﻿experiment_id,name_zh,evidence_stage,protocol_group,question_zh,held_fixed_zh,finding_zh,interpretation_note_zh,source
+F0,冻结模型的新图像评价,published_final_aggregate,R8最终评价,既有模型在新图像上的表现,冻结模型、既定阈值,部分JPEG排序收益伴随漏检或误报代价,只读取已发布汇总；与11月开发实验分开,output\analysis\project_status_20261108\final_main_metrics.csv
+D1,按AUROC选择检查点,exploratory_development,原matched门控协议,BCE检查点选择是否损害排序,原训练轨迹、专家、分区,恢复原质量门控损失，接近平均融合,改变选择准则，不改变优化目标,output\analysis\gate_diagnosis_20261108\diagnosis.txt
+D2,原始视图门控及固定权重,exploratory_development,原始视图小型对照,改变门控看到的训练视图能否改善迁移,专家与原图身份分区,质量门控下降；固定融合小收益由一个seed贡献,固定融合有阈值指标代价,output\analysis\gate_diagnosis_20261108\diagnosis.txt
+D3,有界权重与排序损失,exploratory_development,组合候选,限制不利调权并优化排序,专家与开发条件,权重接近0.5，未产生实质自适应收益,两项修改作为整体评估,output\analysis\gate_diagnosis_20261108\diagnosis.txt
+D4,质量识别退化再融合,exploratory_development,条件路由候选,先识别退化能否提供有效融合权重,推理不用真实退化标签,低于平均融合；退化分类发生来源迁移,分类器与条件权重均依赖来源,output\analysis\gate_diagnosis_20261108\diagnosis.txt
+D5,多生成器门控,exploratory_development,原图视图；本轮重跑单来源对照,扩展生成器覆盖能否改善留出来源,专家、500拟合原图、248选择原图、网络,主AUROC未改善；AP/BA/FPR存在取舍,同时改变拟合和选择构成，不等于增加样本量,output\analysis\multigen_gate_20261108\run_v1_codefix1\report_zh.txt
+D6,JPEG95再压缩稳定性,exploratory_development,固定专家可靠性探针,更稳定是否对应更低单图BCE,专家、信号方向、源域尺度,可靠性AUROC接近0.5；选专家后检测下降,可靠性预测与真假检测是不同终点,output\analysis\recompression_reliability_20261108\report_zh.txt
+D7,原图与匹配图1:1训练,exploratory_development,matched global为主对照,兼顾clean与JPEG表现,原图总权重、骨干、分类器超参数,clean BigGAN局部恢复，其他七条件下降,同时重拟合scaler与分类器，未隔离具体像素机制,output\analysis\paired_view_global_20261108\report_zh.txt
+A1,门控失败机制诊断,posthoc_development_analysis,冻结多来源门控,损失出现在哪些路由与样本对,冻结分数、参数、阈值,来源偏好错配、质量关联反转、部分输入干预恢复,冻结网络输入干预不等于删除特征后重训,output\analysis\gate_failure_mechanism_20261108\diagnosis_zh.txt
+A2,门控损失分解及配对区间,new_posthoc_development_analysis,全八条件；1000次原图配对重采样,总体偏好与逐图调整各贡献多少,保存预测、原图分组、全部seed/init,见supplement目录，补充机制证据精度,目标均值权重仅作诊断；每次重采样重估,supplement/RESULT_POINTER.json
+A3,冻结阈值误报漏检分解,new_published_aggregate_analysis,已发布R8最终汇总,排序改善为何未改善判定,已发布BA/FPR及冻结阈值,导出FNR，显示压缩漏检与clean误报的取舍,只做代数分解，无逐图访问或阈值再选择,tables/final_threshold_tradeoffs.csv

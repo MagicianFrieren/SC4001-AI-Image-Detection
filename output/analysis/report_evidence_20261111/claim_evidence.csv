@@ -1,0 +1,11 @@
+claim_id,claim_zh,evidence_level,experiment_ids,quantitative_support,source_in_package,remaining_question
+C1,修正检查点选择恢复了部分门控损失,受控修改及重放,D1,0.608696→0.624503；三个seed均提升,tables/improvement_comparisons.csv,修正后仍接近平均融合
+C2,门控保留了来源相关的专家偏好,多项机制诊断相互支持,A1,JPEG70 BigGAN局部0.6620高于全局0.6366但平均全局权重72.45%,sources/output/analysis/gate_failure_mechanism_20261108/diagnosis_zh.txt,每张图的正确路由还取决于其具体分数
+C3,质量输入参与JPEG条件的不利调权,关联反转与冻结网络输入干预,A1,块边界特征AUROC 0.7344→0.2974；全部q置均值部分恢复四JPEG单元,sources/output/analysis/gate_failure_mechanism_20261108/diagnosis_zh.txt,内容尺寸压缩历史各自作用及删特征重训效果待分离
+C4,JPEG损失同时存在于整体偏好和逐图调整,描述性分解及原图配对重采样,A2,整体−0.011518；逐图−0.004108；三个seed的JPEG宏平均均负,supplement/run_v2_portable/decomposition_intervals.csv,两部分是诊断分解而非独立因果效应
+C5,门控收益具有处理条件依赖性,完整条件对照,A2,JPEG总差−0.015627；resize总差+0.017269,supplement/run_v2_portable/decomposition_intervals.csv,新生成器上的条件依赖仍需独立评价
+C6,固定样本量增加一种门控来源没有建立主指标收益,固定专家及样本预算对照,D5,多来源0.620198；同轮单来源0.624399；三个seed差值均负,tables/improvement_comparisons.csv,同时改变拟合和选择来源构成
+C7,预定再压缩稳定性信号不足以可靠选择专家,预先固定的信号验证,D6,可靠性AUROC0.508275；选择后检测AUROC0.611096,tables/reliability_endpoint_separate.csv,尚未评估其他扰动方式或作为额外输入的增量价值
+C8,固定1:1混合训练没有兼顾clean与JPEG,配对训练对照,D7,整体0.627307→0.562541；仅clean BigGAN均值上升,tables/improvement_comparisons.csv,scaler与分类器共同改变的贡献未隔离
+C9,排序改善伴随固定阈值下的错误类型取舍,已发布最终聚合指标代数分解,A3,JPEG70平均融合AUROC上升但FNR67.32%→72.63%且FPR7.00%→4.33%,tables/final_matched_unmatched_contrasts.csv,未将取舍单独归因于阈值或表征
+C10,概率极端是候选表达瓶颈,尚待针对性干预的假设,A1,目标JPEG假图大量落入两专家共同低概率区域,sources/output/analysis/gate_failure_mechanism_20261108/diagnosis_zh.txt,raw-logit门控输入消融尚未执行

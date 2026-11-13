@@ -1,0 +1,63 @@
+{
+  "status": "passed",
+  "record_type": "record_of_completed_independent_verification",
+  "execution_record": {
+    "verification_was_executed": true,
+    "command": ".\\.venv\\Scripts\\python.exe tmp/multigen_gate_20261108/verify_study.py",
+    "working_directory": "D:/Projects/SC4001_GrpWorking",
+    "exit_code": 0,
+    "record_saved_without_rerunning_verification_or_experiment": true,
+    "experiment_files_models_and_predictions_modified": false,
+    "verifier_only_correction": "The first verification attempt exposed a verifier precision mismatch. Its independent StandardScaler reconstruction was corrected to cast mean and scale to the input float32 dtype before in-place arithmetic, matching scikit-learn 1.8. The second verification execution passed. No experiment script, protocol, model, or result was changed."
+  },
+  "verifier_path": "tmp/multigen_gate_20261108/verify_study.py",
+  "verifier_sha256": "aa9b8cab23d66223cbe0e491d4cf036ba32060ba678e4a7e9fa632153dcc6980",
+  "study_output": "output/analysis/multigen_gate_20261108/run_v1_codefix1",
+  "required_completion_markers_present_before_scoring": [
+    "complete.json",
+    "models_frozen_before_evaluation.json"
+  ],
+  "checked_hashes": 664,
+  "fits": 54,
+  "checkpoint_models": 108,
+  "prediction_rows": 460800,
+  "instance_metric_cells": 768,
+  "seed_metric_cells": 384,
+  "passed_checks": {
+    "input_and_frozen_output_hashes": true,
+    "donor_125_fit_62_tuning_113_unused_hash_memberships": true,
+    "source_and_mixed_500_fit_248_tuning_counts": true,
+    "per_fold_training_tuning_target_identity_isolation": true,
+    "model_checkpoint_counts_and_recorded_checkpoint_selection": true,
+    "all_per_instance_metrics_recomputed_from_predictions": true,
+    "initialization_to_seed_and_report_macro_aggregation": true,
+    "all_gate_prediction_weights_reconstructed_with_independent_numpy": true,
+    "saved_alpha_fusion_logits_reconstructed": true,
+    "original_view_source_logits_reconstructed_independently": true,
+    "fixed_alpha_tuning_grids_rederived": true,
+    "all_baseline_tuning_thresholds_rederived": true,
+    "gate_scalers_rederived_from_training_inputs": true,
+    "gate_source_tuning_auroc_reconstructed": true,
+    "average_logits_identical_across_source_and_mixed_arms": true,
+    "no_final_or_reserved_test_access": true,
+    "no_fitting_or_retraining": true
+  },
+  "maximum_errors": {
+    "metric_recomputation": 2.220446049250313e-16,
+    "numpy_gate_alpha": 7.748603820800781e-7,
+    "saved_alpha_fusion_logit": 0.0,
+    "source_original_logit_reconstruction": 0.0,
+    "fixed_alpha_grid": 0.0,
+    "baseline_threshold": 0.0,
+    "gate_scaler": 0.0,
+    "numpy_gate_tuning_auroc": 0.0
+  },
+  "fixed_alpha_grids_checked": 9,
+  "baseline_thresholds_independently_rederived": 36,
+  "limitations": [
+    "The bootstrap file hash was verified, but the bootstrap draws and confidence intervals were not independently replayed.",
+    "Independent tuning-threshold re-derivation covers the 36 baseline thresholds only. Gate threshold values were linked exactly to the saved model settings and predictions; gate threshold optimization was not independently rederived.",
+    "Independent NumPy gate reconstruction allows float32 NumPy/PyTorch numerical differences: alpha tolerance 5e-6 and source tuning AUROC tolerance 1e-4. Observed maximum errors are reported above.",
+    "This verifies saved artifacts, isolation, arithmetic and selected-setting consistency. It does not reproduce model training or establish statistical significance, blind-test validity, or generalization beyond the previously inspected development sources."
+  ]
+}

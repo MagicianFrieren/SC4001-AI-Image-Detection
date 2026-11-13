@@ -1,0 +1,9 @@
+{
+  "compared_rows": 576,
+  "max_metric_difference": {
+    "auroc": 0,
+    "balanced_accuracy": 1.1102230246251565e-16,
+    "real_fpr": 0
+  },
+  "note": "AUC in this diagnostic uses logits, while published metrics use sigmoid scores; inspect any numerical saturation tie difference."
+}

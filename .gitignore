@@ -11,3 +11,8 @@ artifacts/
 *.log
 .env*
 !.env.example
+# Local delivery archives and document-rendering workspaces.
+output/analysis/*.zip
+output/analysis/*.zip.sha256
+output/analysis/submission_revision_20261114/
+output/report/

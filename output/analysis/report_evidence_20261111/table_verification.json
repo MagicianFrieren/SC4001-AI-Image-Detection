@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "check": "initial_method_summary_and_csv",
+      "rows": 8,
+      "passed": true
+    },
+    {
+      "check": "multi_source_macros_from_condition_metrics",
+      "rows": 16,
+      "passed": true
+    },
+    {
+      "check": "paired_training_deltas_from_per_seed_cells",
+      "scopes": 4,
+      "passed": true
+    },
+    {
+      "check": "final_published_aggregates_mean_sd_and_linear_fnr_identity",
+      "metric_rows": 320,
+      "derived_fnr_cells": 80,
+      "matched_unmatched_comparisons": 24,
+      "passed": true
+    }
+  ],
+  "source_snapshot_count": 31,
+  "new_training_runs": 0,
+  "final_image_or_prediction_reads": 0,
+  "notes": [
+    "Checks reconstruct published arithmetic and selected contrasts, not model training.",
+    "Historical verification records are copied, not represented as newly executed.",
+    "Seed variability comes from a shared data pool; it is not independent-dataset replication."
+  ]
+}

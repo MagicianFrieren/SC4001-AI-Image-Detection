@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "reviewer": "Codex report_figures agent",
+  "method": "Both final PNGs inspected with view_image after layout correction",
+  "observations": [
+    "All plot titles, legends, axes and captions are readable and within the canvas.",
+    "Corrected title/legend overlap, label crowding, duplicate rounded tick labels and an overlapping annotation.",
+    "Reliability prediction AUROC is explicitly separated from detection AUROC.",
+    "All eight generator-condition ranking cells are retained, including clean/resize gains."
+  ],
+  "images": {
+    "figure1_improvement_attempts.png": {
+      "sha256": "873fff418de291bf4b36352ee0b1040722ce07ee6f8d483a8563e516b1936152",
+      "size_px": [
+        2744,
+        2320
+      ]
+    },
+    "figure2_failure_mechanism.png": {
+      "sha256": "ec55fe2c382f56d14154d6644433a10ce729caded6bbd98a7863ad84703af1e3",
+      "size_px": [
+        2708,
+        2206
+      ]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "source_default_resolves_relative_to_script": true,
+  "source_sha256": "f77d64c0bf7520b7da9b44701374dec6e5155917b650697c1f4e52e628a82952",
+  "script_sha256": "1336f50051e7ad95ee6452a292be3d4ab7dd3b66bab4818e790fe705abbf7a18",
+  "original_png_sha256": "3e0151b4cb03dcd9a6b52ede156cbdefe11f354480e845dfcee4601286c4a4a9",
+  "reproduced_png_sha256": "3e0151b4cb03dcd9a6b52ede156cbdefe11f354480e845dfcee4601286c4a4a9",
+  "png_byte_identical": true,
+  "png_pixel_identical": true,
+  "png_size": [
+    1980,
+    690
+  ],
+  "report_docx_sha256": "0060a140ff723cccb88a62eb2cb3a1b2ce56bb962338abe365091af43ad789d0",
+  "matching_embedded_media": [
+    "word/media/image5.png"
+  ],
+  "no_new_metrics": true,
+  "command": "python report/build_compact_figure.py --output-dir review/compact_figure_reproduction",
+  "observations": "Original report figure and existing full mechanism figure were not modified.",
+  "previous_report_docx_sha256": "9c3bc1e40d9f0288d15d0c19c7a6cfcc7517eedf6b1b27583dfde4e294dfc3d9",
+  "polished_report_embedded_png_byte_identical": true,
+  "polished_report_docx_sha256": "ffcc6e08164bcd92df4c5dd0e78cff1e500b979dcd3e301a7e8efb68f66f4cd2",
+  "formatted_report_embedded_png_byte_identical": true,
+  "previous_formatted_report_docx_sha256": "88fa88923d3749ed39c3b3d7ce6ab34cb268917d9e83eb2d926394a20d7a2e55",
+  "equation_revision_embedded_png_byte_identical": true,
+  "previous_equation_report_docx_sha256": "6dc49818298e6520599a9b1090dd20b58c17c66d38f140b998d75f81fd2cb900",
+  "final_polish_embedded_png_byte_identical": true
+}

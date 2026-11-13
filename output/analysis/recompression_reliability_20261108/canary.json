@@ -1,0 +1,648 @@
+{
+  "status": "measured",
+  "no_label_performance_computed": true,
+  "runtime": {
+    "python": "3.12.5",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "torch": "2.2.0+cu121",
+      "torchvision": "0.17.0+cu121",
+      "transformers": "4.39.3",
+      "numpy": "1.26.4",
+      "scipy": "1.17.1",
+      "scikit-learn": "1.8.0",
+      "Pillow": "12.2.0"
+    },
+    "cuda_runtime": "12.1",
+    "device": "cuda:0",
+    "device_name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+    "CUDA_VISIBLE_DEVICES": null,
+    "encoder_dtype": "float16",
+    "output_dtype": "float32",
+    "batch_size": 32,
+    "torch_threads": 4,
+    "allow_tf32_matmul": false,
+    "allow_tf32_cudnn": true,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": false,
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+  },
+  "extractor_sha256": "c55245cdde75100a85f3def0b4c402d1f9d3da43e63af9cbf9a02ce128a27eda",
+  "source_counts": {
+    "source_tuning": 668,
+    "development": 900
+  },
+  "measurements": [
+    {
+      "condition": "clean",
+      "ids": [
+        "train:10026",
+        "train:10039",
+        "train:10041",
+        "train:10055",
+        "train:10066",
+        "train:10069",
+        "train:10081",
+        "train:10111",
+        "train:1012",
+        "train:10123",
+        "train:10193",
+        "train:10207",
+        "train:10223",
+        "train:10249",
+        "train:10266",
+        "train:10278",
+        "train:10298",
+        "train:10363",
+        "train:10390",
+        "train:10414",
+        "train:10458",
+        "train:10517",
+        "train:1053",
+        "train:10531",
+        "train:10543",
+        "train:10545",
+        "train:10559",
+        "train:10615",
+        "train:10628",
+        "train:10641",
+        "train:10660",
+        "train:10697"
+      ],
+      "old_cache": "artifacts/round8_a/seed1/features/development_clean_0/00000.npz",
+      "seconds_two_identical_passes": 1.2650000000003274,
+      "old_cache_difference": {
+        "g": {
+          "max_absolute": 0.0,
+          "rmse": 0.0,
+          "bit_exact": true
+        },
+        "l": {
+          "max_absolute": 0.0,
+          "rmse": 0.0,
+          "bit_exact": true
+        }
+      },
+      "identical_input_repeat_noise": {
+        "g": {
+          "max_absolute": 0.0,
+          "rmse": 0.0,
+          "bit_exact": true
+        },
+        "l": {
+          "max_absolute": 0.0,
+          "rmse": 0.0,
+          "bit_exact": true
+        }
+      },
+      "head_logit_difference": {
+        "1": {
+          "global": {
+            "old_cache": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            },
+            "identical_input_repeat": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            }
+          },
+          "local": {
+            "old_cache": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            },
+            "identical_input_repeat": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            }
+          }
+        },
+        "2": {
+          "global": {
+            "old_cache": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            },
+            "identical_input_repeat": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            }
+          },
+          "local": {
+            "old_cache": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            },
+            "identical_input_repeat": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            }
+          }
+        },
+        "3": {
+          "global": {
+            "old_cache": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            },
+            "identical_input_repeat": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            }
+          },
+          "local": {
+            "old_cache": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            },
+            "identical_input_repeat": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            }
+          }
+        }
+      },
+      "canary_file": "canary_features/clean.npz",
+      "canary_file_sha256": "4b26c519954b0228a62f8cc78b4cfddeb622ee069ea9ecb81610d7bccf3fea4e"
+    },
+    {
+      "condition": "jpeg70",
+      "ids": [
+        "train:10026",
+        "train:10039",
+        "train:10041",
+        "train:10055",
+        "train:10066",
+        "train:10069",
+        "train:10081",
+        "train:10111",
+        "train:1012",
+        "train:10123",
+        "train:10193",
+        "train:10207",
+        "train:10223",
+        "train:10249",
+        "train:10266",
+        "train:10278",
+        "train:10298",
+        "train:10363",
+        "train:10390",
+        "train:10414",
+        "train:10458",
+        "train:10517",
+        "train:1053",
+        "train:10531",
+        "train:10543",
+        "train:10545",
+        "train:10559",
+        "train:10615",
+        "train:10628",
+        "train:10641",
+        "train:10660",
+        "train:10697"
+      ],
+      "old_cache": "artifacts/round8_a/seed1/features/development_jpeg70_0/00000.npz",
+      "seconds_two_identical_passes": 0.5,
+      "old_cache_difference": {
+        "g": {
+          "max_absolute": 0.0,
+          "rmse": 0.0,
+          "bit_exact": true
+        },
+        "l": {
+          "max_absolute": 0.0,
+          "rmse": 0.0,
+          "bit_exact": true
+        }
+      },
+      "identical_input_repeat_noise": {
+        "g": {
+          "max_absolute": 0.0,
+          "rmse": 0.0,
+          "bit_exact": true
+        },
+        "l": {
+          "max_absolute": 0.0,
+          "rmse": 0.0,
+          "bit_exact": true
+        }
+      },
+      "head_logit_difference": {
+        "1": {
+          "global": {
+            "old_cache": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            },
+            "identical_input_repeat": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            }
+          },
+          "local": {
+            "old_cache": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            },
+            "identical_input_repeat": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            }
+          }
+        },
+        "2": {
+          "global": {
+            "old_cache": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            },
+            "identical_input_repeat": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            }
+          },
+          "local": {
+            "old_cache": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            },
+            "identical_input_repeat": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            }
+          }
+        },
+        "3": {
+          "global": {
+            "old_cache": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            },
+            "identical_input_repeat": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            }
+          },
+          "local": {
+            "old_cache": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            },
+            "identical_input_repeat": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            }
+          }
+        }
+      },
+      "canary_file": "canary_features/jpeg70.npz",
+      "canary_file_sha256": "acca55a4e029dbb2320255ffad4ff08ebbe168e06f166223b78938ea772341ee"
+    },
+    {
+      "condition": "jpeg50",
+      "ids": [
+        "train:10026",
+        "train:10039",
+        "train:10041",
+        "train:10055",
+        "train:10066",
+        "train:10069",
+        "train:10081",
+        "train:10111",
+        "train:1012",
+        "train:10123",
+        "train:10193",
+        "train:10207",
+        "train:10223",
+        "train:10249",
+        "train:10266",
+        "train:10278",
+        "train:10298",
+        "train:10363",
+        "train:10390",
+        "train:10414",
+        "train:10458",
+        "train:10517",
+        "train:1053",
+        "train:10531",
+        "train:10543",
+        "train:10545",
+        "train:10559",
+        "train:10615",
+        "train:10628",
+        "train:10641",
+        "train:10660",
+        "train:10697"
+      ],
+      "old_cache": "artifacts/round8_a/seed1/features/development_jpeg50_0/00000.npz",
+      "seconds_two_identical_passes": 0.48399999999946886,
+      "old_cache_difference": {
+        "g": {
+          "max_absolute": 0.0,
+          "rmse": 0.0,
+          "bit_exact": true
+        },
+        "l": {
+          "max_absolute": 0.0,
+          "rmse": 0.0,
+          "bit_exact": true
+        }
+      },
+      "identical_input_repeat_noise": {
+        "g": {
+          "max_absolute": 0.0,
+          "rmse": 0.0,
+          "bit_exact": true
+        },
+        "l": {
+          "max_absolute": 0.0,
+          "rmse": 0.0,
+          "bit_exact": true
+        }
+      },
+      "head_logit_difference": {
+        "1": {
+          "global": {
+            "old_cache": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            },
+            "identical_input_repeat": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            }
+          },
+          "local": {
+            "old_cache": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            },
+            "identical_input_repeat": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            }
+          }
+        },
+        "2": {
+          "global": {
+            "old_cache": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            },
+            "identical_input_repeat": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            }
+          },
+          "local": {
+            "old_cache": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            },
+            "identical_input_repeat": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            }
+          }
+        },
+        "3": {
+          "global": {
+            "old_cache": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            },
+            "identical_input_repeat": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            }
+          },
+          "local": {
+            "old_cache": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            },
+            "identical_input_repeat": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            }
+          }
+        }
+      },
+      "canary_file": "canary_features/jpeg50.npz",
+      "canary_file_sha256": "cef674d6850301b2377eacfb3251153dbddbea90dd960d5587f8a18b63b49b20"
+    },
+    {
+      "condition": "resize05",
+      "ids": [
+        "train:10026",
+        "train:10039",
+        "train:10041",
+        "train:10055",
+        "train:10066",
+        "train:10069",
+        "train:10081",
+        "train:10111",
+        "train:1012",
+        "train:10123",
+        "train:10193",
+        "train:10207",
+        "train:10223",
+        "train:10249",
+        "train:10266",
+        "train:10278",
+        "train:10298",
+        "train:10363",
+        "train:10390",
+        "train:10414",
+        "train:10458",
+        "train:10517",
+        "train:1053",
+        "train:10531",
+        "train:10543",
+        "train:10545",
+        "train:10559",
+        "train:10615",
+        "train:10628",
+        "train:10641",
+        "train:10660",
+        "train:10697"
+      ],
+      "old_cache": "artifacts/round8_a/seed1/features/development_resize05_0/00000.npz",
+      "seconds_two_identical_passes": 0.4679999999998472,
+      "old_cache_difference": {
+        "g": {
+          "max_absolute": 0.0,
+          "rmse": 0.0,
+          "bit_exact": true
+        },
+        "l": {
+          "max_absolute": 0.0,
+          "rmse": 0.0,
+          "bit_exact": true
+        }
+      },
+      "identical_input_repeat_noise": {
+        "g": {
+          "max_absolute": 0.0,
+          "rmse": 0.0,
+          "bit_exact": true
+        },
+        "l": {
+          "max_absolute": 0.0,
+          "rmse": 0.0,
+          "bit_exact": true
+        }
+      },
+      "head_logit_difference": {
+        "1": {
+          "global": {
+            "old_cache": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            },
+            "identical_input_repeat": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            }
+          },
+          "local": {
+            "old_cache": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            },
+            "identical_input_repeat": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            }
+          }
+        },
+        "2": {
+          "global": {
+            "old_cache": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            },
+            "identical_input_repeat": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            }
+          },
+          "local": {
+            "old_cache": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            },
+            "identical_input_repeat": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            }
+          }
+        },
+        "3": {
+          "global": {
+            "old_cache": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            },
+            "identical_input_repeat": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            }
+          },
+          "local": {
+            "old_cache": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            },
+            "identical_input_repeat": {
+              "max_absolute": 0.0,
+              "rmse": 0.0,
+              "bit_exact": true
+            }
+          }
+        }
+      },
+      "canary_file": "canary_features/resize05.npz",
+      "canary_file_sha256": "25e086e0b0b1170083df8058ab5bcb82f2e93a01107dcee136bcfe28d4387e9a"
+    }
+  ],
+  "input_sha256": {
+    "results/round8_a/protocol.json": "33506cdfed0c6fe2a93dd81782b8327a4ba9d16242610d41a7a7dd8293558fa4",
+    "output/analysis/multigen_gate_20261108/run_v1_codefix1/complete.json": "e9d920ca9a386c360ba2b1b8acbeae5bcd4da781d31fc36ef737b87ec700b359",
+    "output/analysis/multigen_gate_20261108/run_v1_codefix1/splits.json": "d25e46ce358e452c9558ea1082c7ddcade5b1ec7c652dd2ecdf83008982359db",
+    "results/round7/fitting_pool_manifest.jsonl": "c812faaf04fa43be76e80d023374e50694a7fdfaed7c8ea540392309c114028a",
+    "results/round7/development_manifest.jsonl": "3f1b57cf4238f0739c5eadf92b321bfbfd704478c259ff1043269de7389bd77f",
+    "results/round7/step_b_isolation.json": "b33e056ea07df94e54c4434309f583ceaa3838e25db85b89f743fefcbd2f80cd",
+    "scripts/round7_baseline_clip.py": "a450c3f6bb2c4186311fec2db622a7545643902bb47e49bce4f6e73e938bea32",
+    "scripts/round7_baseline_data.py": "f3bd973f536136ff341c0bf8a0db0bc530eb94cb4467db9c3b0ea55590ddca9a",
+    "scripts/round7_baseline_common.py": "c93bfd3d54cd60c9991cdc6fe966cf53395450ea1c090f6e560f23206786d0ae",
+    ".cache/clip-vit-base-patch32/config.json": "b575ef3c36f2a057fa19e221650105052d61cc9c1a972ec15019c6261ec98770",
+    ".cache/clip-vit-base-patch32/pytorch_model.bin": "a63082132ba4f97a80bea76823f544493bffa8082296d62d71581a4feff1576f",
+    "results/round8_a/seed1/matched/complete.json": "ae03539307420070a5e216263f6c9c5431a111c36374da2cc35b3b58201c9163",
+    "artifacts/round8_a/seed1/matched/bundle.json": "391c36669dfccef5c154d33ae77cd81c4cec4a5a70fd761895bb7748d441f938",
+    "artifacts/round8_a/seed1/matched/experts.joblib": "3e9eae10620f903bddc5f387a64b6137e008229cfb3a6ae5b1a8961287b5daa6",
+    "results/round8_a/seed2/matched/complete.json": "5544b6b42546264083ba76f431700fce6b4f93a2359e8cf516c61ae09c845418",
+    "artifacts/round8_a/seed2/matched/experts.joblib": "7c763368f9877f245e370c1eff7bc9db9f2128c2b744b02d5b68989d59f8442d",
+    "results/round8_a/seed3/matched/complete.json": "66423fc9bfc2654988c8462ae68deb083878daa60980af7b72b5dead9db5aa4d",
+    "artifacts/round8_a/seed3/matched/experts.joblib": "5f86826cec563f04740f20bd852c4b9039d094720c734cf41397b81c93c5f924",
+    "artifacts/round8_a/seed1/features/development_clean_0/00000.npz": "599c0d80c80eb944f9bfa0b2a06973d838accaf238ff503feb5969931291687f",
+    "artifacts/round8_a/seed1/features/development_jpeg70_0/00000.npz": "9dc7dcaa55b9f47e64d23edb731d536585369ca8670d3fb54ca64cd4351aa097",
+    "artifacts/round8_a/seed1/features/development_jpeg50_0/00000.npz": "6a10f09353e82f088c0b1ed7787ae00f33374aa85f7b302554e0e70a499b59b4",
+    "artifacts/round8_a/seed1/features/development_resize05_0/00000.npz": "77da98d431e8ade06dc1a0cc6cbe0c6ced24a9b6f762dbaef17991e4adedda0a"
+  },
+  "seconds": 3.32799999999952,
+  "encoder_image_passes": 1280,
+  "guard_events": {
+    "original_path_lookup": 1568,
+    "canary_unperturbed_encode": 32,
+    "source_bytes_hash_and_decode": 32
+  }
+}

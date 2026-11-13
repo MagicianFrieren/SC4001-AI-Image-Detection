@@ -1,0 +1,46 @@
+{
+  "id": "original_matched_half_weight_global_20261108_v1",
+  "question": "Can a fixed 1:1 original/native-format-matched training mixture preserve JPEG robustness while reducing clean-image costs of the matched global expert?",
+  "scope": "Exploratory study on repeatedly inspected ADM/BigGAN development data; not a new blind final evaluation.",
+  "seeds": [20261101, 20261102, 20261103],
+  "arms": ["unmatched", "matched", "paired_half"],
+  "controls": "Frozen same-runtime Round8 A unmatched and matched global heads; verify logits against archived raw batches. No control refit or architecture change.",
+  "training": {
+    "originals_per_seed": 1500,
+    "classes": "750 Real and 750 SD15, exact Round8 expert_fit identities",
+    "views": "Stack original expert_fit_clean_0 global features and same-ID native-size-format-matched expert_fit_clean_1 features as two training observations, not an averaged feature.",
+    "view_weight": 0.5,
+    "total_sample_weight": 1500,
+    "scaler": "StandardScaler fit on both equally represented training views; uniform .5 weighting has the same population mean/variance as unweighted 2N rows. Scaler never sees selection or development.",
+    "classifier": "Unchanged LogisticRegression(C=1,solver=liblinear,max_iter=2000,random_state=20261018), explicit sample_weight=.5 for all 3000 rows.",
+    "encoder": "Existing frozen CLIP ViT-B/32; no image extraction or backbone updates.",
+    "format_matching": "Unchanged Round8 deterministic native-resolution JPEG Q60..95 before original geometry; no new draw, JPEG/resize augmentation or ratio search."
+  },
+  "selection": "Full original Round8 selection identities, 125 Real +125 SD15 per seed. Same original clean/jpeg70/resize05 features for every arm. Recompute each arm's fixed threshold by existing Youden-J tie rule. No model/hyperparameter selection; JPEG50 not used for tuning.",
+  "evaluation": "Original never-format-matched development Real300 + ADM300 + BigGAN300; report clean/jpeg70/jpeg50/resize05. Source selection reporting is descriptive and optimistic.",
+  "primary_comparison": "paired_half minus matched global expert; unmatched is a historical-cost reference, never a substitute for the stronger matched baseline.",
+  "aggregates": {
+    "overall": "Equal mean of 2 fake generators x4 conditions and3 data seeds",
+    "jpeg": "Equal mean of ADM/BigGAN xJPEG70/JPEG50 and3 seeds",
+    "clean_BigGAN": "Mean of BigGAN clean over3 seeds",
+    "clean_ADM": "Mean of ADM clean over3 seeds"
+  },
+  "metrics": ["auroc", "average_precision", "balanced_accuracy", "real_false_positive_rate"],
+  "point_guards": {
+    "jpeg_macro_each_seed_min_delta": -0.01,
+    "each_jpeg_cell_seedmean_min_delta": -0.02,
+    "clean_BigGAN_each_seed_delta_strictly_positive": true,
+    "clean_ADM_seedmean_min_delta": -0.02,
+    "overall_each_seed_delta_strictly_positive": true,
+    "note": "Working tolerances fixed before fitting/outcome scoring, not domain-standard noninferiority margins."
+  },
+  "uncertainty": "1000 class-stratified paired original-image bootstrap draws, seed20261108; common Real draws across generators and same identities across conditions, models and data seeds. Conditional on fitted heads; shared source/development pools do not give independent data-seed replications.",
+  "decision": {
+    "point_guard_failure": "not_supported_for_joint_goal; report which costs/gains caused failure without hiding a real partial benefit",
+    "all_point_guards_pass": "promising_but_uncertain unless all interval conditions also pass",
+    "interval_conditions": "Paired95% conditional lower bounds >0 for overall and clean_BigGAN; JPEG pooled lower bound >=-.01. All point guards must also pass.",
+    "all_pass": "supported_on_this_development_setup_only; fresh final validation still needed"
+  },
+  "exclusions": "No final/reserved manifests/images/predictions; no new gate, local-head refit, model/ratio/C sweep, or performance-driven retry.",
+  "freeze": "Record runner hash, input hashes and exact partitions before training; freeze all3 heads and thresholds before development prediction."
+}

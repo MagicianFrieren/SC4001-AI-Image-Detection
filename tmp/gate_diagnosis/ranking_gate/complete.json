@@ -1,0 +1,41 @@
+{
+  "status": "completed",
+  "seconds": 13.485000000000127,
+  "prediction_rows": 110400,
+  "metric_cells": 288,
+  "all_outcomes_retained": true,
+  "outputs_sha256": {
+    "freeze.json": "2a21119722c6dd514262c397bfcd00abc52151245e1bc0398ee6591bf41b08b3",
+    "metrics_each_initialization.json": "84a19c5724f88645174e21541b0b3b0a937c7d0ef12501997911d5102abefab3",
+    "model_20261101_quality_gate_20261022.json": "51effede4bd196a8c533250eab0ce13e82bd71ebc2e7673504f8a587cf717328",
+    "model_20261101_quality_gate_20261023.json": "84535c2068e79dd84dc415e6ce8f3437735cbb84c674c098aa5f72afbb2bb197",
+    "model_20261101_quality_gate_20261024.json": "a9c0a476c9b3d817058189e0bbee51b5a6980d8a147bf24a174a9790aa13eebc",
+    "model_20261101_score_gate_20261022.json": "aaeeb839f0cd9adf318cba183ba06d1f7a138eccbd6f012343742c985616addb",
+    "model_20261101_score_gate_20261023.json": "ee9bf70a73e3faabf8c27ac5665cd02767d0c7df9fd253e44f6c7e0a3c197719",
+    "model_20261101_score_gate_20261024.json": "6dc0949773c11ebeaea937c94818afa5ebd68abd28f155e4566db5cdde808bee",
+    "model_20261102_quality_gate_20261022.json": "e67b768fcc5e37f53a567a11c38ee1244bacfdacee2115976d84f5a406efd61f",
+    "model_20261102_quality_gate_20261023.json": "d0d147231140ea2b958190caf2ed3cd0ca570fec7ec972a9a771c513fbfcf1e1",
+    "model_20261102_quality_gate_20261024.json": "9a65030dd66e6461f01dc0e6abc2a5c54f74902cbe79fd40c100398f06e80d34",
+    "model_20261102_score_gate_20261022.json": "b573bf203af88f8d65136adeafdc7713cf61135752264b8c5f8ec6e628c0c036",
+    "model_20261102_score_gate_20261023.json": "690333c868193119e78f5bf772374c0fd4011d52e2ea931d8e319804a76129d7",
+    "model_20261102_score_gate_20261024.json": "db31f2a3a2cf1e7bc185698661ab139a2b9c1fdafa2283834deb37b88064b2c9",
+    "model_20261103_quality_gate_20261022.json": "3521e5336f65693edcf9931e3d6e61f73aa899f117d7bd438eba5e5459881b74",
+    "model_20261103_quality_gate_20261023.json": "ff83f97b54ab17cfaaf8ef1573ed387f54aa0b7525f855504c982df4cadef68f",
+    "model_20261103_quality_gate_20261024.json": "33ef43ab1f6c672c23ade0ffd6507ded5a1b71f43fccad0893502cc07099a7f5",
+    "model_20261103_score_gate_20261022.json": "99e612c739f04ed4cc9e07fa3dba4de1975166e99a4fb30ed997c1524f1178a4",
+    "model_20261103_score_gate_20261023.json": "68530e929b0c21b059f8cf9dcabb19a5e2f4666b1d94f325d0c618b08f5ca143",
+    "model_20261103_score_gate_20261024.json": "e79d140223c461bbfe083ae72bc8b25753617e50d51f45119389ebf5e8e9a6ae",
+    "paired_contrasts.json": "8cb692f8ea7912e015da967b8d275f7ce42a4af1304ceaf93fa850f249bcdcdb",
+    "predictions.csv": "aa16e18f2c33350a8599123f1829db5bffa1604c8a4c119c12d135b5ddf9726e",
+    "run_ranking_gate.py": "9ab1cf56ceac64d2d90fbc3889ed8000ea10c95524bb982b498af216fd55a34f",
+    "selection_complete.json": "4f6a260741bbed6ab9789c3330aeef5d91c1f341d90604cfe40da6499fc6b401",
+    "summary.json": "f9d7a0e698b59f2d1183a01002430139675db82aacd7be29df439c2dfebe1f99"
+  },
+  "no_final_test_access": true,
+  "limitations": [
+    "Exploratory previously inspected development, not blind test",
+    "Combined ranking objective and bounded residual; no single-component attribution",
+    "Three shared-pool data seeds; SD is not CI",
+    "No hyperparameter search or performance-driven retry"
+  ]
+}

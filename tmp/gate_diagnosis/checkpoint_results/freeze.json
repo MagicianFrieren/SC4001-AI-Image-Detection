@@ -1,0 +1,44 @@
+{
+  "protocol": {
+    "id": "gate_checkpoint_diagnostic_20261108_v1",
+    "status": "exploratory development experiment; not a new final test",
+    "question": "Does selecting an otherwise unchanged gate by mean per-condition tuning AUROC reduce its loss relative to average and fixed fusion?",
+    "arms": [
+      "matched",
+      "unmatched"
+    ],
+    "data_seeds": [
+      1,
+      2,
+      3
+    ],
+    "gate_seeds": [
+      20261022,
+      20261023,
+      20261024
+    ],
+    "variants": [
+      "score_gate",
+      "quality_gate"
+    ],
+    "intervention": "Select the checkpoint with largest mean tuning AUROC across clean/jpeg70/resize05, with earliest checkpoint for ties within 1e-6 and epoch 0 included.",
+    "controls": "Replay the original BCE optimization, optimizer, initialization and BCE patience stopping without changes; reproduce original BCE-selected checkpoint before interpreting the intervention.",
+    "data": "Only artifacts/round8_a/seedN/arm/bundle.json and their original completion/settings files. Tuning uses the original saved tuning partition. All source image views of one identity remain in the existing partition.",
+    "evaluation": "Report every ADM/BigGAN development condition and every data seed. Average gate initialization metrics within each data seed. Compare against both average and selected fixed fusion, and compare quality_gate against score_gate.",
+    "selection_policy": "No method, checkpoint or parameter selection using development results. No further search in this experiment.",
+    "primary_descriptive_summary": "Equal mean of the eight ADM/BigGAN by clean/jpeg70/jpeg50/resize05 AUROCs, plus all cells and seed-level differences; no significance claim.",
+    "exclusions": "Do not open any Round 7 reserved-test or Round 8 final-test manifest, predictions, images or scores.",
+    "limitations": "ADM/BigGAN development has been inspected before; the three data seeds reuse pools. Source tuning is SD15 only. Any improvement is exploratory and requires independent confirmation."
+  },
+  "inputs_sha256": {
+    "D:\\Projects\\SC4001_GrpWorking\\tmp\\gate_diagnosis\\checkpoint_protocol.json": "3e9f1819e62ba4fba0d67ae67860e2449b772a72948ea2c6b2d765b98170997e",
+    "D:\\Projects\\SC4001_GrpWorking\\tmp\\gate_diagnosis\\checkpoint_diagnostic.py": "5239e209e72403d826bec91dce16384c4342a9b906e3da45d7c391ce100d2426",
+    "D:\\Projects\\SC4001_GrpWorking\\scripts\\gate_models.py": "417cd36b667f33046a903c1d51cc867301db3206ffba978aba594d3fb9bfc12a",
+    "D:\\Projects\\SC4001_GrpWorking\\artifacts\\round8_a\\seed1\\matched\\bundle.json": "391c36669dfccef5c154d33ae77cd81c4cec4a5a70fd761895bb7748d441f938",
+    "D:\\Projects\\SC4001_GrpWorking\\artifacts\\round8_a\\seed1\\unmatched\\bundle.json": "8e5987a14517363481e7e70b880325af3e03b1ab999fa2767939bdd7f1451976",
+    "D:\\Projects\\SC4001_GrpWorking\\artifacts\\round8_a\\seed2\\matched\\bundle.json": "ae08cd7728c5c5731b23cdb7f6c64f33dbfec2ef3b218f2da658c000b3311c30",
+    "D:\\Projects\\SC4001_GrpWorking\\artifacts\\round8_a\\seed2\\unmatched\\bundle.json": "3eea9d18c7a83f2e425b22c8018645c7f09af76c7b44b044c477a68b03f86e3b",
+    "D:\\Projects\\SC4001_GrpWorking\\artifacts\\round8_a\\seed3\\matched\\bundle.json": "3e4561ba24138763827deedff917ae1b99ec38163344ea69ad09d05b9f0f2388",
+    "D:\\Projects\\SC4001_GrpWorking\\artifacts\\round8_a\\seed3\\unmatched\\bundle.json": "213a397d54be09a007fac82195a8f6ce8d2fc83d0db3c6f56419e9750fb3af62"
+  }
+}

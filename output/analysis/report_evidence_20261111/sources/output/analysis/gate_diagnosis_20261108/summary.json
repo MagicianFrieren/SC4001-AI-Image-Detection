@@ -1,0 +1,166 @@
+{
+  "date": "2026-11-08",
+  "status": "analysis completed; no improved final model selected",
+  "scope": "Previously inspected Round 8 A ADM/BigGAN development only. Equal mean of 2 generators x 4 conditions, not Round 8 four-generator final main_macro.",
+  "aggregation": "Average gate-initialization metrics within a data seed, then equal mean of three shared-pool data seeds. No significance test or independent validation.",
+  "experiment_design": "Each candidate frozen before its own development scoring. This was a sequential exploratory investigation, not a single preregistered confirmatory study.",
+  "methods": [
+    {
+      "method": "average",
+      "mean_auroc": 0.6244273148148148,
+      "seed_aurocs": [
+        0.6401902777777777,
+        0.6277180555555555,
+        0.6053736111111111
+      ],
+      "delta_vs_average": 0.0,
+      "paired_seed_deltas_vs_average": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "method": "original_fixed",
+      "mean_auroc": 0.623425,
+      "seed_aurocs": [
+        0.6371833333333334,
+        0.6277180555555555,
+        0.6053736111111111
+      ],
+      "delta_vs_average": -0.0010023148148148309,
+      "paired_seed_deltas_vs_average": [
+        -0.0030069444444442706,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "method": "original_quality_gate",
+      "mean_auroc": 0.608696450617284,
+      "seed_aurocs": [
+        0.6288527777777778,
+        0.6110407407407407,
+        0.5861958333333334
+      ],
+      "delta_vs_average": -0.01573086419753089,
+      "paired_seed_deltas_vs_average": [
+        -0.01133749999999989,
+        -0.016677314814814825,
+        -0.019177777777777738
+      ]
+    },
+    {
+      "method": "auc_checkpoint_quality_gate",
+      "mean_auroc": 0.6245027777777777,
+      "seed_aurocs": [
+        0.6401902777777777,
+        0.6278296296296296,
+        0.6054884259259259
+      ],
+      "delta_vs_average": 7.546296296290222e-05,
+      "paired_seed_deltas_vs_average": [
+        0.0,
+        0.00011157407407413888,
+        0.00011481481481478983
+      ]
+    },
+    {
+      "method": "original_view_quality_gate",
+      "mean_auroc": 0.6021086419753087,
+      "seed_aurocs": [
+        0.6218736111111112,
+        0.6009777777777778,
+        0.5834745370370371
+      ],
+      "delta_vs_average": -0.02231867283950617,
+      "paired_seed_deltas_vs_average": [
+        -0.018316666666666537,
+        -0.026740277777777655,
+        -0.021899074074073988
+      ]
+    },
+    {
+      "method": "original_view_fixed",
+      "mean_auroc": 0.6263347222222223,
+      "seed_aurocs": [
+        0.6401902777777777,
+        0.6334402777777779,
+        0.6053736111111111
+      ],
+      "delta_vs_average": 0.0019074074074074687,
+      "paired_seed_deltas_vs_average": [
+        0.0,
+        0.005722222222222406,
+        0.0
+      ]
+    },
+    {
+      "method": "bounded_ranking_quality_gate",
+      "mean_auroc": 0.6244310185185185,
+      "seed_aurocs": [
+        0.6401902777777778,
+        0.6277180555555555,
+        0.6053847222222222
+      ],
+      "delta_vs_average": 3.703703703616945e-06,
+      "paired_seed_deltas_vs_average": [
+        1.1102230246251565e-16,
+        0.0,
+        1.111111111107288e-05
+      ]
+    },
+    {
+      "method": "quality_condition_gate",
+      "mean_auroc": 0.6210703703703704,
+      "seed_aurocs": [
+        0.6310791666666666,
+        0.6277180555555555,
+        0.6044138888888889
+      ],
+      "delta_vs_average": -0.003356944444444454,
+      "paired_seed_deltas_vs_average": [
+        -0.00911111111111107,
+        0.0,
+        -0.0009597222222221813
+      ]
+    }
+  ],
+  "verification": {
+    "original_gate_replays": 36,
+    "max_replay_weight_difference": 0,
+    "archived_metric_cross_check": {
+      "compared_rows": 576,
+      "max_metric_difference": {
+        "auroc": 0,
+        "balanced_accuracy": 1.1102230246251565e-16,
+        "real_fpr": 0
+      },
+      "note": "AUC in this diagnostic uses logits, while published metrics use sigmoid scores; inspect any numerical saturation tie difference."
+    },
+    "original_view_ablation": {
+      "status": "passed",
+      "published_instance_cells_checked": 192,
+      "max_absolute_metric_difference": {
+        "auroc": 0.0,
+        "average_precision": 0.0,
+        "balanced_accuracy": 0.0,
+        "real_false_positive_rate": 0.0
+      },
+      "scope": "Recomputed published matched reference against saved original dev metrics; original-view selection reconstruction was asserted within 1e-10 during run. No retraining in verification."
+    },
+    "condition_gate": {
+      "status": "passed",
+      "saved_prediction_rows_independently_reconstructed": 10800,
+      "max_absolute_reconstruction_error": 0.0,
+      "baseline_metric_max_error": {
+        "auroc": 0.0,
+        "average_precision": 0.0,
+        "balanced_accuracy": 0.0,
+        "real_false_positive_rate": 0.0
+      },
+      "no_new_fit_in_verification": true
+    }
+  },
+  "next_hypothesis": "Gate reliability must be validated across generators. Retain existing experts and compare expanded multi-generator gate training with leave-one-generator-out selection; apply identical information and evaluation to average/fixed/score/quality controls. No claimed improvement until new independent image evaluation."
+}

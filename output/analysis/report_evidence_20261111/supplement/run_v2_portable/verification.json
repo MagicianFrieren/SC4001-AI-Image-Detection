@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "max_logit_reconstruction_error": 7.105427357601002e-15,
+  "max_point_sklearn_error_including_ties": 1.1102230246251565e-16,
+  "max_bootstrap_sklearn_error_648_checks": 1.1102230246251565e-16,
+  "max_archived_constant_metrics_error": 1.1102230246251565e-16,
+  "max_archived_rank_metrics_error": 9.020562075079397e-17,
+  "max_archived_study_metrics_error": 2.220446049250313e-16,
+  "max_pair_rank_identity_error": 1.0153553345326749e-16,
+  "max_decomposition_identity_error": 0.0,
+  "source_hashes_unchanged": true,
+  "models_fitted": 0,
+  "final_test_accessed": false
+}

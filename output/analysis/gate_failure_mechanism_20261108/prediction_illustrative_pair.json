@@ -1,0 +1,32 @@
+{
+  "condition": "jpeg50",
+  "dominant_expert_disagreement_category": "local_only_rank_correct",
+  "fake": {
+    "average_logit": -11.313828017996787,
+    "global_logit": -12.167899617891727,
+    "label": 1,
+    "local_logit": -10.45975641810185,
+    "quality_gate_alpha": 0.768417239189148,
+    "quality_gate_logit": -11.772323099824105,
+    "score_gate_alpha": 0.6176103949546814,
+    "score_gate_logit": -11.51472341436323,
+    "source_id": "train:10055"
+  },
+  "gate_seed": 20261022,
+  "heldout_generator": "BigGAN",
+  "preferred_dominant_disagreement": true,
+  "real": {
+    "average_logit": -11.941150096920634,
+    "global_logit": -10.31913566553753,
+    "label": 0,
+    "local_logit": -13.563164528303735,
+    "quality_gate_alpha": 0.6448177099227905,
+    "quality_gate_logit": -11.471357266091395,
+    "score_gate_alpha": 0.5871387720108032,
+    "score_gate_logit": -11.658469405451584,
+    "source_id": "train:13078"
+  },
+  "run_seed": 20261101,
+  "scenario": "mixed_ADM",
+  "selection": "Illustrative, deliberately selected ranking-reversal pair; not a random sample or aggregate evidence."
+}

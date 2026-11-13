@@ -6,3 +6,15 @@ results/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 *.md text eol=lf
 *.png binary
 *.pdf binary
+# Preserve the published November analysis and final-report manifest bytes.
+# Archived evidence retains original whitespace as part of its recorded hashes.
+scripts/report_evidence_20261111/** -text -whitespace
+scripts/submission_revision_20261114/** -text -whitespace
+output/analysis/** -text -whitespace
+tmp/gate_diagnosis/** -text -whitespace
+tmp/gate_failure_mechanism_20261108/** -text -whitespace
+tmp/multigen_gate_20261108/** -text -whitespace
+tmp/paired_view_global_20261108/** -text -whitespace
+tmp/recompression_reliability_20261108/** -text -whitespace
+reports/final_20261114/** -text -whitespace
+*.docx binary

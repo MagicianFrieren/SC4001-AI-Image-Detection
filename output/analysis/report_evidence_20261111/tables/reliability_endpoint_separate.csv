@@ -1,0 +1,8 @@
+﻿group,signal,relative_bce_reliability_auroc,ci_low,ci_high
+primary_stratified_macro,stability_scaled,0.50827538161758,0.491809283637917,0.524758056584503
+primary_stratified_macro,stability_raw,0.508232050661187,,
+primary_stratified_macro,stability_probability,0.514434069993555,,
+primary_stratified_macro,score_gate_reference,0.524374772559965,0.513046775871108,0.536326177039022
+Real,stability_scaled,0.506460107719686,0.479905863151841,0.532845118289993
+ADM,stability_scaled,0.468002209482435,0.441098716097698,0.496030682053229
+BigGAN,stability_scaled,0.552179101548511,0.524992681707147,0.57986459987063

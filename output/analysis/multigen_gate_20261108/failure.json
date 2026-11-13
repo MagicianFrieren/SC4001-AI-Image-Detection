@@ -1,0 +1,9 @@
+{
+  "status": "failed_before_training",
+  "error": "Local variable fit shadowed fit() function in main; TypeError dict object is not callable",
+  "gate_fits": 0,
+  "target_scoring_started": false,
+  "original_script_snapshot": "output\\analysis\\multigen_gate_20261108\\run_study_failed_before_training.py",
+  "snapshot_sha256": "2ddd8c35eb09d0ee73dd9e85c9c8f5de4224c3210d07ba3ac9d83d36fa0989f3",
+  "remediation": "Rename local constructed batch variable; run identical scientific plan and split salt in run_v1_codefix1 output folder."
+}

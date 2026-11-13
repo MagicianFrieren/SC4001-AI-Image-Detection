@@ -1,0 +1,57 @@
+冻结质量门控的损失分解与配对不确定性补充分析
+
+新增工作：对全部生成器和处理条件重建已有损失分解，并补充1000次原图配对bootstrap及三个数据seed敏感性。没有训练新模型。
+定义：总体偏好效应=目标单元平均权重融合−等权平均；逐图调整效应=实际门控−目标单元平均权重融合；总效应=实际门控−等权平均。负值代表排序损失。
+
+all_conditions
+  mean_preference_effect: -0.003144 [-0.007851, +0.001413]
+  image_specific_effect: -0.001085 [-0.002826, +0.000739]
+  total_effect: -0.004229 [-0.009121, +0.000334]
+jpeg_conditions
+  mean_preference_effect: -0.011518 [-0.016067, -0.007128]
+  image_specific_effect: -0.004108 [-0.006346, -0.001801]
+  total_effect: -0.015627 [-0.020671, -0.010855]
+clean_conditions
+  mean_preference_effect: -0.004185 [-0.010886, +0.002065]
+  image_specific_effect: +0.001251 [-0.001110, +0.003772]
+  total_effect: -0.002934 [-0.009803, +0.003514]
+resize_conditions
+  mean_preference_effect: +0.014644 [+0.006926, +0.021730]
+  image_specific_effect: +0.002625 [-0.000338, +0.005898]
+  total_effect: +0.017269 [+0.009049, +0.024771]
+ADM_clean
+  mean_preference_effect: +0.004704 [+0.001820, +0.007858]
+  image_specific_effect: +0.000473 [-0.002552, +0.003508]
+  total_effect: +0.005177 [+0.000641, +0.009639]
+ADM_jpeg70
+  mean_preference_effect: -0.006794 [-0.011039, -0.002658]
+  image_specific_effect: -0.004730 [-0.008834, -0.000833]
+  total_effect: -0.011523 [-0.017927, -0.005147]
+ADM_jpeg50
+  mean_preference_effect: -0.006589 [-0.013979, +0.001386]
+  image_specific_effect: -0.004530 [-0.008603, -0.000418]
+  total_effect: -0.011119 [-0.020939, -0.001614]
+ADM_resize05
+  mean_preference_effect: +0.008138 [+0.005126, +0.011156]
+  image_specific_effect: +0.005846 [+0.001600, +0.011062]
+  total_effect: +0.013984 [+0.008168, +0.020508]
+BigGAN_clean
+  mean_preference_effect: -0.013074 [-0.024721, -0.002248]
+  image_specific_effect: +0.002030 [-0.000688, +0.005152]
+  total_effect: -0.011044 [-0.022740, -0.000266]
+BigGAN_jpeg70
+  mean_preference_effect: -0.015072 [-0.026022, -0.004397]
+  image_specific_effect: -0.004359 [-0.006504, -0.002258]
+  total_effect: -0.019431 [-0.030144, -0.009255]
+BigGAN_jpeg50
+  mean_preference_effect: -0.017619 [-0.029058, -0.006847]
+  image_specific_effect: -0.002815 [-0.005336, -0.000320]
+  total_effect: -0.020433 [-0.032228, -0.010282]
+BigGAN_resize05
+  mean_preference_effect: +0.021151 [+0.007393, +0.034301]
+  image_specific_effect: -0.000596 [-0.003227, +0.002278]
+  total_effect: +0.020554 [+0.007385, +0.033548]
+
+平均权重由每次重采样后的600张目标图重新计算。该目标依赖量仅用于诊断，不是一个可部署、经源域选定的候选模型。
+区间条件于已有模型；三个数据seed共享数据池和开发图。完整条件保留，未进行多重比较校正。90000个真假排序对不视为90000个独立样本。
+点估计与历史诊断、原研究指标一致；加权AUROC已用sklearn核对原始数据、有并列分数样例及前三次完整bootstrap。

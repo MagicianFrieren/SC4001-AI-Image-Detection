@@ -1,0 +1,70 @@
+{
+  "status": "passed",
+  "package": "output/analysis/submission_revision_20261114",
+  "executed_from_actual_package": true,
+  "checks": {
+    "report-tables": {
+      "status": "passed",
+      "staged_files": 38,
+      "source_tree_bytes_preserved": true,
+      "script_receipt": "passed"
+    },
+    "report-figures": {
+      "status": "passed",
+      "staged_files": 11,
+      "source_tree_bytes_preserved": true,
+      "script_receipt": "passed"
+    },
+    "mechanism-predictions": {
+      "status": "passed",
+      "staged_files": 5,
+      "source_tree_bytes_preserved": true,
+      "script_receipt": "completed"
+    },
+    "mechanism-bootstrap": {
+      "status": "passed",
+      "staged_files": 6,
+      "source_tree_bytes_preserved": true,
+      "script_receipt": "passed"
+    }
+  },
+  "archived_comparisons": {
+    "tables/experiment_registry.csv": true,
+    "tables/final_matched_unmatched_contrasts.csv": true,
+    "tables/final_threshold_tradeoffs.csv": true,
+    "tables/improvement_comparisons.csv": true,
+    "tables/multigen_metrics_all.csv": true,
+    "tables/paired_training_all.csv": true,
+    "tables/reliability_endpoint_separate.csv": true,
+    "tables/stability_detection_all.csv": true,
+    "figures/captions_en.txt": true,
+    "figures/figure1_improvement_attempts.png": true,
+    "figures/figure1_seed_differences.csv": true,
+    "figures/figure2_failure_mechanism.png": true,
+    "figures/figure2_pair_credit_mean_data.csv": true,
+    "figures/figure2_pair_credit_seed_data.csv": true,
+    "figures/figure2_transfer_data.csv": true,
+    "mechanism/prediction_alpha_distributions.csv": true,
+    "mechanism/prediction_alpha_seed_means.csv": true,
+    "mechanism/prediction_constant_alpha.csv": true,
+    "mechanism/prediction_constant_seed_means.csv": true,
+    "mechanism/prediction_expert_complementarity.csv": true,
+    "mechanism/prediction_pair_decomposition.csv": true,
+    "mechanism/prediction_ranking_comparisons.csv": true,
+    "mechanism/prediction_ranking_seed_means.csv": true,
+    "bootstrap/decomposition_each_initialization.csv": true,
+    "bootstrap/decomposition_intervals.csv": true,
+    "bootstrap/decomposition_seed_cells.csv": true,
+    "bootstrap/ranking_cell_means.csv": true,
+    "bootstrap/ranking_each_initialization.csv": true,
+    "bootstrap/seed_sensitivity.csv": true,
+    "bootstrap/numeric_draw_arrays": true
+  },
+  "all_30_numeric_or_image_comparisons_equal": true,
+  "manifest_sha256": "76d9c3174977e3a57db347ae968b59c90c05a2f039d6bfd2b11a8d7f64f67e0c",
+  "runner_sha256": "22c5abbb76bc5326945a25c15d064c47af60f799427c10a3da04ae379a5a6536",
+  "guard_tests": "runner_verification.json",
+  "scope": "Saved-result analysis only. Historical fitting, CLIP extraction and final-test scoring were not re-executed.",
+  "receipt_directory": "verified_runs/actual_package",
+  "temporary_fixture_cleanup": "Retained: automatic approval rejected the containment-checked PowerShell recursive removal with \"blocked by policy\". No cleanup retry or alternate deletion was attempted. Exclude reproduction/selftest/** from the final delivery archive."
+}

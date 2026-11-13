@@ -1,0 +1,67 @@
+质量门控诊断与小型探索对照（2026-11-08）
+
+结论
+没有发现可解释全部失败的实现错误。质量门控确实改变了融合权重，但现有训练目标、单生成器监督和质量代理的迁移能力没有让它稳定超过平均/固定融合。
+四个针对性候选均未建立稳定的质量门控收益。原始视图选择固定权重出现小幅 AUROC 增益，但只由一个划分贡献，且平衡准确率存在代价；不选定或发布新的最终模型。
+
+数据范围
+仅使用 Round 8 A 保存的 gate_fit/tuning/selection/ADM-BigGAN development 数据和允许的特征缓存。专家不重训，不重新提取 CLIP 特征。
+下列平均是 ADM/BigGAN x clean/JPEG70/JPEG50/resize05 八个开发单元，不能与最终测试四生成器 main_macro 混为一谈。
+各门控先在每个数据 seed 内平均三次初始化，再汇总三个 seed；三个 seed 共享数据池，不是独立研究。全部候选属于连续探索，每项都在其开发评分前锁定；未以已查看的最终测试集选择参数。
+
+有数据支持的诊断
+1. 优化和选择目标不一致。原门控训练、选择 checkpoint 都依据 BCE，固定权重却按每条件 AUROC 选。
+   matched SD15 原始 selection 的 JPEG50：平均融合 BCE 2.1630，质量门控 1.8244；AUROC 反而从 .9259 降到 .9112。
+   将同一训练轨迹改用 AUROC 选 checkpoint，可以恢复大部分损失，但最终接近初始平均融合。
+2. 共同错误严重。matched JPEG50 的 ADM/BigGAN 假图，按专家各自保存阈值，同时漏检比例为 95.67%/84.44%。
+   这说明简单地在两位专家既有判定中择一，补救空间有限；不构成任意 logit 融合或 AUROC 的上界。
+3. 门控仅在 500 张 gate_fit 原图（250 Real、250 SD15）上学习；三种视图不等于 1500 个独立样本。
+   JPEG50 中分配给标签可见的更低 BCE 专家的平均权重：SD15 selection .620、ADM .482、BigGAN .529。
+   这些是描述性诊断，不证明某一特征独立导致失败。
+4. 质量代理存在来源迁移。三个特征是 224px 图上的锐度、高频比例和固定 8px 网格边界差分比，受内容及几何变化影响。
+   新的质量->退化类型分类器在 tuning 上约 91%-93% 准确，开发集降至约 74%-75%，BigGAN 仅 56%-60%。
+   每个 seed 的 300 张 BigGAN JPEG70 中，272/274/271 张被预测为 resize。这是对质量代理迁移不足的直接观测。
+5. 没有发现门控不工作或所有权重固定的问题。matched BigGAN 的质量门控 global 权重从 clean .702 降到 JPEG50 .326；权重变化不等于有效选择。
+   约半数专家 logit 对应极端概率，概率/熵输入会压缩幅度差异；这是有依据的候选局限，尚未单独证明其因果作用。
+
+小型对照结果（AUROC）
+average                          0.624427  delta +0.000000  seeds [0.6401902777777777, 0.6277180555555555, 0.6053736111111111]
+original_fixed                   0.623425  delta -0.001002  seeds [0.6371833333333334, 0.6277180555555555, 0.6053736111111111]
+original_quality_gate            0.608696  delta -0.015731  seeds [0.6288527777777778, 0.6110407407407407, 0.5861958333333334]
+auc_checkpoint_quality_gate      0.624503  delta +0.000075  seeds [0.6401902777777777, 0.6278296296296296, 0.6054884259259259]
+original_view_quality_gate       0.602109  delta -0.022319  seeds [0.6218736111111112, 0.6009777777777778, 0.5834745370370371]
+original_view_fixed              0.626335  delta +0.001907  seeds [0.6401902777777777, 0.6334402777777779, 0.6053736111111111]
+bounded_ranking_quality_gate     0.624431  delta +0.000004  seeds [0.6401902777777778, 0.6277180555555555, 0.6053847222222222]
+quality_condition_gate           0.621070  delta -0.003357  seeds [0.6310791666666666, 0.6277180555555555, 0.6044138888888889]
+
+具体解释
+- AUROC checkpoint：原始 36 次 gate 训练逐一重放，权重最大差异 0；不改变网络或梯度，只改选轮次。新质量门控接近平均融合，差异约 0.00008，不视为有效增益。
+- 原始视图训练/调参 gate：仍用原 matched 专家与相同 BCE gate，质量门控下降至 .602109，排除了“只要把视图改回原图就解决”的简单解释。
+- 有界权重+排序损失：18 次配对 gate，前两数据 seed 均选择 epoch0，第三 seed 选择 epoch1，alpha 约 .501。没有有意义的自适应收益；这是组合候选，不能归因于单一组件。
+- 质量识别退化再融合：不在推理时读取真实退化标签，只用质量特征预测。总体 .621070，低于平均融合；source 上选出的条件权重及质量分类器都没有稳定迁移。
+
+固定融合的小幅候选
+在原始 selection 视图选 alpha，三 seed 为 .5/.6/.5，旧值是 .4/.5/.5。
+相对平均融合的八单元 AUROC 差值为 [0, +.005722, 0]，均值 +.001907；相对旧固定融合为 +.002910。
+改进主要来自 ADM 和 resize；BigGAN clean/JPEG70/JPEG50 降低。
+改用同套原始 selection 阈值后，相对旧固定融合 BA .547500 -> .540625，真实图 FPR .182500 -> .128889。
+这是排序与判定阈值的取舍，不足以声称稳定的新方法改进。
+
+建议的下一项研究（尚未执行）
+优先改变门控能看到的生成器覆盖与验证方法，而非继续扩大 MLP。
+保持专家固定；允许的开发来源中，把多个生成器纳入新 gate 拟合/选择协议，并按原始图像身份分开训练与选择，所有退化视图随原图分区。
+用留一生成器验证来选 gate；平均、固定、普通门控、质量门控采用相同数据权限与阈值规则。需要证明质量输入相对普通门控仍有增益。
+若这个开发阶段有稳定候选，先锁定实现和主指标，再由最终评估负责人用未参与本轮设计的新图像确认。已看过的最终测试成绩不能重新用于选参数。
+较小提升可以成为项目证据，但应报告每个划分、生成器、条件及判定指标的代价，不能只摘一个正数。
+
+复现与证据位置
+tmp/gate_diagnosis/overlap/diagnose_development.py 与 diagnosis.json
+tmp/gate_diagnosis/checkpoint_protocol.json、checkpoint_diagnostic.py、checkpoint_results/
+tmp/gate_diagnosis/original_gate_views/run_original_gate_views.py、protocol.json、summary.json、verification.json、fixed_selection_verification.json
+tmp/gate_diagnosis/ranking_gate/run_ranking_gate.py、freeze.json、summary.json、complete.json
+tmp/gate_diagnosis/condition_gate/run_condition_gate.py、protocol.json、summary.json、verification.json
+这些脚本保留全部正负结果。已冻结实验会拒绝覆盖原结果；需要复现时应先保留现有目录并使用新的独立输出位置。
+
+验证状态
+ANALYZED；原门控重放及归档指标重算已核验，新的候选只有探索性开发评估，未获独立最终测试确认。
+11/11 统计解释风险已按本任务范围检查。主要限制为反复观察的开发集、共享数据池、源域和目标域混淆、聚合掩盖条件差异，以及顺序探索不能视为确认性检验。

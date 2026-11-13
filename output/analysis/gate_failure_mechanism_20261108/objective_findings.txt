@@ -1,0 +1,52 @@
+训练目标、检查点与来源偏好诊断
+状态：ANALYZED。只使用既有冻结模型、拟合/选择缓存及已使用的 development 数据，没有训练或改变模型，没有访问最终测试集。
+
+1. 两种 donor 确实奖励不同专家偏好。
+在本轮各自选择集的 JPEG70 上，跨三个数据 seed 均值为：
+  ADM：global AUC 0.5917，local 0.5318；质量门控 alpha_global 对 Real 为 0.6979，对 ADM 为 0.7147。
+  BigGAN：global AUC 0.6376，local 0.7076；质量门控 alpha_global 对 Real 为 0.3974，对 BigGAN 为 0.3478。
+固定融合的整组选择结果也不同：ADM donor 三个 seed 选择 alpha 0.7/0.8/0.7，BigGAN donor 选择 0.4/0.6/0.4；单来源为 0.5/0.6/0.5。
+所以“多接触一种生成器”不等价于“学会跨生成器规则”。它也可能强化当前 donor 的专家偏好。这里只显示与迁移失败一致的机制线索，不能由总体 alpha 均值单独断言每张图的路由都错误。
+
+质量门控在 donor 自己的 JPEG70 选择数据中，ADM AUC 0.5888（平均融合 0.5834，普通门控 0.5914），BigGAN AUC 0.7242（平均融合 0.7072，普通门控 0.7090）。这解释了为什么源域会奖励某些质量规则，而留出另一生成器却不保证有效。
+
+2. BCE 训练目标与 AUROC 确有冲突，但本轮已经用 AUROC 选检查点，不能再把失败全归于“选错 epoch”。
+单来源质量门控：
+  AUROC 检查点平均 epoch 5.56，选择 BCE 0.88647，AUC 0.94507；
+  BCE 检查点平均 epoch 378.89，选择 BCE 0.74481，AUC 0.93771。
+mixed ADM 质量门控：
+  AUROC 检查点平均 epoch 34.89，BCE 1.91877，AUC 0.80390；
+  BCE 检查点平均 epoch 370.67，BCE 1.82830，AUC 0.79803。
+mixed BigGAN 质量门控：
+  AUROC 检查点平均 epoch 37.00，BCE 1.80514，AUC 0.82121；
+  BCE 检查点平均 epoch 399.67，BCE 1.63843，AUC 0.81005。
+损失下降同时排序指标下降，甚至发生在源域选择集，不能只解释为训练集过拟合。不同目标在当前模型族下确实偏向不同结果。
+
+3. JPEG 的原始专家分数与 gate 的概率输入存在明显问题线索。
+两专家同时给 p(fake)<0.01 的原图比例（跨三个数据 seed 均值）：
+                 source-fit JPEG70    development JPEG70    development JPEG50
+  Real                  85.73%                 85.00%                86.11%
+  SD1.5                 23.07%                     --                    --
+  ADM                       --                 85.00%                92.22%
+  BigGAN                    --                 74.00%                75.11%
+上述 development 单元没有两专家同时 p(fake)>0.99。
+JPEG70 development ADM 的两专家平均绝对概率差仅 0.02116，但原始 logit 平均绝对差 3.38591；Real 对应 0.02150 和 3.81463。
+门控前四个输入是专家概率、概率差和平均熵，而最终融合使用 raw logits。SD1.5 源图中原本可用的概率分离到了留出生成器明显缩窄，大量样本进入接近零的输入区域。注意 sigmoid 是单调函数，不等于数学上丢失排序信息；极端率也不能证明改为 raw-logit 输入必然改善。这是需要干预才能确认的候选机制。
+
+4. BCE 梯度主要来自被专家强烈判断为 Real 的假图。
+融合 z = alpha*zg + (1-alpha)*zl；每例 BCE 对 alpha 的梯度为
+  dL/dalpha = (sigmoid(z)-y)*(zg-zl)。
+这是对单图置信与标签的梯度，不是直接对真/假图片间排序的梯度。
+从初始平均融合 alpha=0.5 看拟合集 JPEG70，平均绝对梯度：Real 0.0224，ADM 3.3393，BigGAN 3.6011。假图约为 Real 的 149/161 倍（按每例计算，不是按两组样本数算总量）。ADM 的平均有符号梯度 -0.7686 倾向增加 global；BigGAN +0.9023 倾向减少 global。99.62%-100% 的 donor JPEG70 假图绝对梯度来自 logit 符号错误的例子。
+这表明优化受“尽量把这些极负的假图分数提高”强烈驱动，同时不同 donor 对提高分数的方向不同。它不证明每次提高分数都损害 AUC，但说明为何单图 BCE 激励不自动等于跨生成器可靠路由。
+
+复核与文件
+108 个保存检查点的 source tuning AUROC 由独立 NumPy 前向和重建缓存精确复现，最大差为 0；所有冻结输入哈希匹配。没有重新训练。
+objective_checkpoints.csv：每个模型/检查点历史摘要。
+objective_source_metrics.csv / objective_source_summary.csv：拟合与选择各来源/条件指标。
+objective_source_gradient.csv / objective_gradient_summary.csv：BCE 梯度描述。
+objective_source_margins.csv：专家 logit 与标签边际描述。
+objective_probability_extremes.csv / objective_probability_extremes_summary.csv：概率极端比例。
+objective_summary.json：检查状态与哈希。
+
+局限：以上为描述性机制诊断，没有独立新测试、因果模型重训或跨训练样本重采样。相同 Real 在不同来源对照表中重复出现，不能将这些表格行当独立样本。本轮已控制 AUROC 检查点选择，目标冲突可以解释轨迹和限制，但不是新的改进证据。此前已失败的 bounded-ranking 尝试不能在这里重新包装为新方案。

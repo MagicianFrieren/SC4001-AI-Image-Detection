@@ -1,0 +1,7 @@
+# Tested with Python 3.12. This is only the lightweight analysis environment.
+# Full historical model training/extraction requires the archived runtime too.
+numpy==1.26.4
+pandas==2.2.3
+scipy==1.17.1
+scikit-learn==1.8.0
+matplotlib==3.9.2

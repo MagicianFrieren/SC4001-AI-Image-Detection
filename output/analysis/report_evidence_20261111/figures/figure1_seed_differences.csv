@@ -1,0 +1,46 @@
+panel,method,label,run_seed,detection_auroc,reference_detection_auroc,delta_detection_auroc,reference,scope
+A,original_quality_gate,BCE checkpoint,20261101,0.6288527777777778,0.6401902777777777,-0.01133749999999989,simple average fusion,2 generators x 4 conditions
+A,original_quality_gate,BCE checkpoint,20261102,0.6110407407407407,0.6277180555555555,-0.01667731481481483,simple average fusion,2 generators x 4 conditions
+A,original_quality_gate,BCE checkpoint,20261103,0.5861958333333334,0.6053736111111111,-0.01917777777777774,simple average fusion,2 generators x 4 conditions
+A,auc_checkpoint_quality_gate,AUROC checkpoint,20261101,0.6401902777777777,0.6401902777777777,0,simple average fusion,2 generators x 4 conditions
+A,auc_checkpoint_quality_gate,AUROC checkpoint,20261102,0.6278296296296296,0.6277180555555555,0.0001115740740741389,simple average fusion,2 generators x 4 conditions
+A,auc_checkpoint_quality_gate,AUROC checkpoint,20261103,0.6054884259259259,0.6053736111111111,0.0001148148148147898,simple average fusion,2 generators x 4 conditions
+A,bounded_ranking_quality_gate,Bounded + ranking,20261101,0.6401902777777778,0.6401902777777777,1.110223024625157e-16,simple average fusion,2 generators x 4 conditions
+A,bounded_ranking_quality_gate,Bounded + ranking,20261102,0.6277180555555555,0.6277180555555555,0,simple average fusion,2 generators x 4 conditions
+A,bounded_ranking_quality_gate,Bounded + ranking,20261103,0.6053847222222222,0.6053736111111111,1.111111111107288e-05,simple average fusion,2 generators x 4 conditions
+A,original_view_quality_gate,Original views,20261101,0.6218736111111112,0.6401902777777777,-0.01831666666666654,simple average fusion,2 generators x 4 conditions
+A,original_view_quality_gate,Original views,20261102,0.6009777777777778,0.6277180555555555,-0.02674027777777765,simple average fusion,2 generators x 4 conditions
+A,original_view_quality_gate,Original views,20261103,0.5834745370370371,0.6053736111111111,-0.02189907407407399,simple average fusion,2 generators x 4 conditions
+A,quality_condition_gate,Condition routing,20261101,0.6310791666666666,0.6401902777777777,-0.00911111111111107,simple average fusion,2 generators x 4 conditions
+A,quality_condition_gate,Condition routing,20261102,0.6277180555555555,0.6277180555555555,0,simple average fusion,2 generators x 4 conditions
+A,quality_condition_gate,Condition routing,20261103,0.6044138888888889,0.6053736111111111,-0.0009597222222221813,simple average fusion,2 generators x 4 conditions
+B,source_only_score_gate,Single-source score,20261101,0.6400976851851852,0.6401902777777777,-9.259259259253305e-05,simple average fusion (this protocol),2 generators x 4 conditions
+B,source_only_score_gate,Single-source score,20261102,0.6281532407407407,0.6277180555555555,0.0004351851851852606,simple average fusion (this protocol),2 generators x 4 conditions
+B,source_only_score_gate,Single-source score,20261103,0.6053796296296297,0.6053736111111111,6.018518518557947e-06,simple average fusion (this protocol),2 generators x 4 conditions
+B,source_only_quality_gate,Single-source quality,20261101,0.6395972222222223,0.6401902777777777,-0.000593055555555444,simple average fusion (this protocol),2 generators x 4 conditions
+B,source_only_quality_gate,Single-source quality,20261102,0.6281949074074075,0.6277180555555555,0.0004768518518519782,simple average fusion (this protocol),2 generators x 4 conditions
+B,source_only_quality_gate,Single-source quality,20261103,0.6054060185185185,0.6053736111111111,3.240740740739767e-05,simple average fusion (this protocol),2 generators x 4 conditions
+B,mixed_score_gate,Multi-source score,20261101,0.6383583333333334,0.6401902777777777,-0.001831944444444344,simple average fusion (this protocol),2 generators x 4 conditions
+B,mixed_score_gate,Multi-source score,20261102,0.6274555555555555,0.6277180555555555,-0.0002624999999999433,simple average fusion (this protocol),2 generators x 4 conditions
+B,mixed_score_gate,Multi-source score,20261103,0.6036074074074074,0.6053736111111111,-0.001766203703703728,simple average fusion (this protocol),2 generators x 4 conditions
+B,mixed_quality_gate,Multi-source quality,20261101,0.6330921296296297,0.6401902777777777,-0.00709814814814802,simple average fusion (this protocol),2 generators x 4 conditions
+B,mixed_quality_gate,Multi-source quality,20261102,0.6272893518518519,0.6277180555555555,-0.0004287037037036256,simple average fusion (this protocol),2 generators x 4 conditions
+B,mixed_quality_gate,Multi-source quality,20261103,0.6002120370370371,0.6053736111111111,-0.005161574074074027,simple average fusion (this protocol),2 generators x 4 conditions
+C,global_auroc,Global expert,20261101,0.6336805555555556,0.6401902777777777,-0.006509722222222125,simple average fusion,2 generators x 4 conditions
+C,global_auroc,Global expert,20261102,0.6399472222222222,0.6277180555555555,0.01222916666666674,simple average fusion,2 generators x 4 conditions
+C,global_auroc,Global expert,20261103,0.6082944444444445,0.6053736111111111,0.002920833333333372,simple average fusion,2 generators x 4 conditions
+C,stable_selected_logit_auroc,Stability selector,20261101,0.6312805555555556,0.6401902777777777,-0.008909722222222083,simple average fusion,2 generators x 4 conditions
+C,stable_selected_logit_auroc,Stability selector,20261102,0.6133430555555556,0.6277180555555555,-0.01437499999999992,simple average fusion,2 generators x 4 conditions
+C,stable_selected_logit_auroc,Stability selector,20261103,0.5886652777777778,0.6053736111111111,-0.01670833333333333,simple average fusion,2 generators x 4 conditions
+D,all,All eight conditions,20261101,0.5776152777777778,0.6336805555555556,-0.05606527777777781,format-matched global expert,all
+D,all,All eight conditions,20261102,0.5603097222222222,0.6399472222222222,-0.07963750000000003,format-matched global expert,all
+D,all,All eight conditions,20261103,0.5496986111111111,0.6082944444444445,-0.0585958333333334,format-matched global expert,all
+D,jpeg,JPEG average,20261101,0.5066861111111111,0.5811694444444444,-0.07448333333333335,format-matched global expert,jpeg
+D,jpeg,JPEG average,20261102,0.4993888888888888,0.6014305555555556,-0.1020416666666668,format-matched global expert,jpeg
+D,jpeg,JPEG average,20261103,0.4983055555555556,0.5835555555555556,-0.08525000000000005,format-matched global expert,jpeg
+D,clean_ADM,ADM clean,20261101,0.5909,0.6781666666666667,-0.08726666666666671,format-matched global expert,clean_ADM
+D,clean_ADM,ADM clean,20261102,0.6390444444444444,0.6988333333333333,-0.05978888888888889,format-matched global expert,clean_ADM
+D,clean_ADM,ADM clean,20261103,0.6002333333333333,0.6536666666666666,-0.05343333333333333,format-matched global expert,clean_ADM
+D,clean_BigGAN,BigGAN clean,20261101,0.7880888888888891,0.7179333333333334,0.07015555555555564,format-matched global expert,clean_BigGAN
+D,clean_BigGAN,BigGAN clean,20261102,0.6538777777777778,0.661,-0.007122222222222252,format-matched global expert,clean_BigGAN
+D,clean_BigGAN,BigGAN clean,20261103,0.6023111111111111,0.5672444444444444,0.03506666666666669,format-matched global expert,clean_BigGAN

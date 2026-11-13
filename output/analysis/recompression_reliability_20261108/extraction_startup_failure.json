@@ -1,0 +1,16 @@
+{
+  "status": "failed_before_extraction",
+  "command": ".\\.venv\\Scripts\\python.exe -u tmp/recompression_reliability_20261108/extract_recompression.py extract --protocol output/analysis/recompression_reliability_20261108/protocol.json",
+  "exit_code": 1,
+  "exception": "NameError: name 'load' is not defined",
+  "location": "extract_recompression.py:249, reading existing canary.json in extract()",
+  "cause": "Helper name typo: the defined JSON reader is read(), but extract() called load().",
+  "extractor_sha256": "c55245cdde75100a85f3def0b4c402d1f9d3da43e63af9cbf9a02ce128a27eda",
+  "protocol_sha256": "360b2a2300f50f3a1e6d95960e520ce3f69cd915ca761f30877968165865e334",
+  "new_model_loading_started": false,
+  "probe_feature_extraction_started": false,
+  "extraction_freeze_created": false,
+  "new_feature_batches_written": 0,
+  "automatic_retry_performed": false,
+  "original_canary_unchanged": true
+}

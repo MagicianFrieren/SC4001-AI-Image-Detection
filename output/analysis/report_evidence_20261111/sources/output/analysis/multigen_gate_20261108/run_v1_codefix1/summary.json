@@ -1,0 +1,301 @@
+{
+  "status": "completed",
+  "macro": [
+    {
+      "arm": "source_only",
+      "model": "global",
+      "checkpoint": "fixed",
+      "auroc": 0.6273074074074074,
+      "average_precision": 0.606096944909044,
+      "balanced_accuracy": 0.5484722222222222,
+      "real_false_positive_rate": 0.12944444444444445,
+      "bce": 3.507933929854356,
+      "each_seed_auroc": [
+        0.6336805555555556,
+        0.6399472222222222,
+        0.6082944444444445
+      ]
+    },
+    {
+      "arm": "source_only",
+      "model": "local",
+      "checkpoint": "fixed",
+      "auroc": 0.581336574074074,
+      "average_precision": 0.5429031087628837,
+      "balanced_accuracy": 0.5141666666666667,
+      "real_false_positive_rate": 0.15527777777777776,
+      "bce": 3.7510317295555815,
+      "each_seed_auroc": [
+        0.6098625,
+        0.5723458333333333,
+        0.5618013888888889
+      ]
+    },
+    {
+      "arm": "source_only",
+      "model": "average",
+      "checkpoint": "fixed",
+      "auroc": 0.6244273148148148,
+      "average_precision": 0.5886848423701325,
+      "balanced_accuracy": 0.5452083333333334,
+      "real_false_positive_rate": 0.15722222222222224,
+      "bce": 3.5527748212157615,
+      "each_seed_auroc": [
+        0.6401902777777777,
+        0.6277180555555555,
+        0.6053736111111111
+      ]
+    },
+    {
+      "arm": "source_only",
+      "model": "fixed",
+      "checkpoint": "fixed",
+      "auroc": 0.6263347222222223,
+      "average_precision": 0.5917481388908689,
+      "balanced_accuracy": 0.546875,
+      "real_false_positive_rate": 0.15611111111111112,
+      "bce": 3.5346009715619577,
+      "each_seed_auroc": [
+        0.6401902777777777,
+        0.6334402777777779,
+        0.6053736111111111
+      ]
+    },
+    {
+      "arm": "source_only",
+      "model": "score_gate",
+      "checkpoint": "auroc",
+      "auroc": 0.6245435185185185,
+      "average_precision": 0.5891606822607179,
+      "balanced_accuracy": 0.5433796296296296,
+      "real_false_positive_rate": 0.14509259259259258,
+      "bce": 3.550009640645191,
+      "each_seed_auroc": [
+        0.6400976851851852,
+        0.6281532407407407,
+        0.6053796296296297
+      ]
+    },
+    {
+      "arm": "source_only",
+      "model": "score_gate",
+      "checkpoint": "bce",
+      "auroc": 0.6129819444444444,
+      "average_precision": 0.5790052120069559,
+      "balanced_accuracy": 0.5421759259259259,
+      "real_false_positive_rate": 0.14907407407407405,
+      "bce": 3.3409932007261545,
+      "each_seed_auroc": [
+        0.6294435185185185,
+        0.6218013888888889,
+        0.5877009259259259
+      ]
+    },
+    {
+      "arm": "source_only",
+      "model": "quality_gate",
+      "checkpoint": "auroc",
+      "auroc": 0.6243993827160494,
+      "average_precision": 0.5889438542435773,
+      "balanced_accuracy": 0.5463657407407407,
+      "real_false_positive_rate": 0.15398148148148147,
+      "bce": 3.548099929204741,
+      "each_seed_auroc": [
+        0.6395972222222222,
+        0.6281949074074075,
+        0.6054060185185185
+      ]
+    },
+    {
+      "arm": "source_only",
+      "model": "quality_gate",
+      "checkpoint": "bce",
+      "auroc": 0.6020489197530864,
+      "average_precision": 0.5636361756218703,
+      "balanced_accuracy": 0.5234259259259259,
+      "real_false_positive_rate": 0.14037037037037037,
+      "bce": 3.445212922156262,
+      "each_seed_auroc": [
+        0.6216944444444444,
+        0.6009777777777777,
+        0.5834745370370371
+      ]
+    },
+    {
+      "arm": "mixed",
+      "model": "global",
+      "checkpoint": "fixed",
+      "auroc": 0.6273074074074074,
+      "average_precision": 0.606096944909044,
+      "balanced_accuracy": 0.5498611111111111,
+      "real_false_positive_rate": 0.15694444444444444,
+      "bce": 3.507933929854356,
+      "each_seed_auroc": [
+        0.6336805555555556,
+        0.6399472222222222,
+        0.6082944444444445
+      ]
+    },
+    {
+      "arm": "mixed",
+      "model": "local",
+      "checkpoint": "fixed",
+      "auroc": 0.581336574074074,
+      "average_precision": 0.5429031087628837,
+      "balanced_accuracy": 0.5349305555555556,
+      "real_false_positive_rate": 0.26722222222222225,
+      "bce": 3.7510317295555815,
+      "each_seed_auroc": [
+        0.6098625,
+        0.5723458333333333,
+        0.5618013888888889
+      ]
+    },
+    {
+      "arm": "mixed",
+      "model": "average",
+      "checkpoint": "fixed",
+      "auroc": 0.6244273148148148,
+      "average_precision": 0.5886848423701325,
+      "balanced_accuracy": 0.5478472222222223,
+      "real_false_positive_rate": 0.21472222222222226,
+      "bce": 3.5527748212157615,
+      "each_seed_auroc": [
+        0.6401902777777777,
+        0.6277180555555555,
+        0.6053736111111111
+      ]
+    },
+    {
+      "arm": "mixed",
+      "model": "fixed",
+      "checkpoint": "fixed",
+      "auroc": 0.6205555555555556,
+      "average_precision": 0.5886313039557832,
+      "balanced_accuracy": 0.5463194444444445,
+      "real_false_positive_rate": 0.1977777777777778,
+      "bce": 3.553557545274653,
+      "each_seed_auroc": [
+        0.6324638888888889,
+        0.6299388888888888,
+        0.5992638888888889
+      ]
+    },
+    {
+      "arm": "mixed",
+      "model": "score_gate",
+      "checkpoint": "auroc",
+      "auroc": 0.6231404320987654,
+      "average_precision": 0.5932956698830757,
+      "balanced_accuracy": 0.5467592592592593,
+      "real_false_positive_rate": 0.17870370370370373,
+      "bce": 3.533174760869462,
+      "each_seed_auroc": [
+        0.6383583333333334,
+        0.6274555555555555,
+        0.6036074074074074
+      ]
+    },
+    {
+      "arm": "mixed",
+      "model": "score_gate",
+      "checkpoint": "bce",
+      "auroc": 0.6035830246913579,
+      "average_precision": 0.5728462902020409,
+      "balanced_accuracy": 0.5447222222222222,
+      "real_false_positive_rate": 0.20703703703703705,
+      "bce": 3.409324543413937,
+      "each_seed_auroc": [
+        0.6180662037037037,
+        0.6072893518518518,
+        0.5853935185185185
+      ]
+    },
+    {
+      "arm": "mixed",
+      "model": "quality_gate",
+      "checkpoint": "auroc",
+      "auroc": 0.6201978395061728,
+      "average_precision": 0.5962924679201009,
+      "balanced_accuracy": 0.5530787037037037,
+      "real_false_positive_rate": 0.1887037037037037,
+      "bce": 3.5196116134698077,
+      "each_seed_auroc": [
+        0.6330921296296297,
+        0.6272893518518519,
+        0.6002120370370371
+      ]
+    },
+    {
+      "arm": "mixed",
+      "model": "quality_gate",
+      "checkpoint": "bce",
+      "auroc": 0.6022541666666666,
+      "average_precision": 0.575429404482433,
+      "balanced_accuracy": 0.5412037037037037,
+      "real_false_positive_rate": 0.21194444444444446,
+      "bce": 3.46778075887365,
+      "each_seed_auroc": [
+        0.6134875,
+        0.6137689814814815,
+        0.5795060185185186
+      ]
+    }
+  ],
+  "primary_checkpoint": "auroc",
+  "bootstrap": [
+    {
+      "comparison": "quality-average",
+      "bootstrap_mean": -0.004163034104938271,
+      "conditional_percentile_95": [
+        -0.008962793209876557,
+        0.0008567708333333374
+      ]
+    },
+    {
+      "comparison": "quality-fixed",
+      "bootstrap_mean": -0.00034453225308641965,
+      "conditional_percentile_95": [
+        -0.0025478819444444585,
+        0.001864155092592588
+      ]
+    },
+    {
+      "comparison": "quality-score",
+      "bootstrap_mean": -0.0029126175925925928,
+      "conditional_percentile_95": [
+        -0.005270212191358018,
+        -0.0005789776234568102
+      ]
+    },
+    {
+      "comparison": "mixed-quality-source-quality",
+      "bootstrap_mean": -0.004142314969135802,
+      "conditional_percentile_95": [
+        -0.008748614969135792,
+        0.0006962885802469369
+      ]
+    },
+    {
+      "comparison": "mixed-score-source-score",
+      "bootstrap_mean": -0.0013679467592592584,
+      "conditional_percentile_95": [
+        -0.004602889660493829,
+        0.0019016743827160356
+      ]
+    },
+    {
+      "comparison": "mixed-fixed-source-fixed",
+      "bootstrap_mean": -0.005733014351851851,
+      "conditional_percentile_95": [
+        -0.009458969907407416,
+        -0.0022887384259259397
+      ]
+    }
+  ],
+  "heldout_sources": [
+    "ADM",
+    "BigGAN"
+  ],
+  "scope": "Previously inspected development, not independent final test"
+}

@@ -1,0 +1,9 @@
+{
+  "status": "completed",
+  "manifest_sha256": "1ebebca33cab3d10d3edfb2f1cb15aec027771133c553352b8b5c001a0a5d718",
+  "extraction_freeze_sha256": "162ce71aa09d4bb12aea4f7c929264f53154fc4452d54c6f308c89c467863152",
+  "image_condition_pairs": 5604,
+  "encoder_image_passes": 56040,
+  "feature_batches": 179,
+  "seconds": 114.73399999999947
+}

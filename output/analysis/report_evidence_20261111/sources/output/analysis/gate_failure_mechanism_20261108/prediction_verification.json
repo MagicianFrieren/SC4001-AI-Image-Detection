@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "paired_seed_cells_checked": 48,
+  "max_error_against_original_study_paired_differences": 3.0010716134398763e-16,
+  "label_oracle_dominates_every_actual_gate": true,
+  "models_trained": 0
+}

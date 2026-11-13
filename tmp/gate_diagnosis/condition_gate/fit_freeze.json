@@ -1,0 +1,10 @@
+{
+  "classifier_sha256": {
+    "condition_classifier_seed1.joblib": "1d238e52ffd1c578c7e965f9001b0615ddbc5f082092e78bc7f69786384fae19",
+    "condition_classifier_seed2.joblib": "33ba0a1d4eb1142e7719ace05adaa375a4099f8782c5e0289677f9c28e4dd7c6",
+    "condition_classifier_seed3.joblib": "74f49d823c72825679dd4cf2bbf973828e4db8f0a57e3c3923ec95e53db25ca7"
+  },
+  "development_scoring_started": false,
+  "frozen_at_utc": "2026-11-08T07:31:21.973881+00:00",
+  "settings_sha256": "36b67131de02ce2327a2a245c1b192a8c4d3119cf5e8256f9eb124f741b47816"
+}

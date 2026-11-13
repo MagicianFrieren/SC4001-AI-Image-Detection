@@ -1,0 +1,15 @@
+{
+  "operation": "replot existing four-row transfer summary; no new metrics",
+  "source": "output/analysis/report_evidence_20261111/figures/figure2_transfer_data.csv",
+  "source_sha256": "f77d64c0bf7520b7da9b44701374dec6e5155917b650697c1f4e52e628a82952",
+  "figure_inches": [
+    6.6,
+    2.3
+  ],
+  "source_unchanged": true,
+  "outputs": {
+    "figure4_transfer_mismatch.pdf": "ff38b9122443b42084185bc8e7ca4e992fdeb6bff575a5c22ba8c08149f0fe6c",
+    "figure4_transfer_mismatch.png": "3e0151b4cb03dcd9a6b52ede156cbdefe11f354480e845dfcee4601286c4a4a9"
+  },
+  "visual_qa": "Passed: final PNG inspected with view_image; labels and legend readable, no clipping or annotation/zero-line overlap."
+}

@@ -1,0 +1,57 @@
+{
+  "draws": 1000,
+  "seed": 20261108,
+  "conditional_on_fitted_models": true,
+  "shared_real_draws": true,
+  "shared_identity_draws_across_conditions": true,
+  "comparisons": [
+    {
+      "comparison": "quality-average",
+      "bootstrap_mean": -0.004163034104938271,
+      "conditional_percentile_95": [
+        -0.008962793209876557,
+        0.0008567708333333374
+      ]
+    },
+    {
+      "comparison": "quality-fixed",
+      "bootstrap_mean": -0.00034453225308641965,
+      "conditional_percentile_95": [
+        -0.0025478819444444585,
+        0.001864155092592588
+      ]
+    },
+    {
+      "comparison": "quality-score",
+      "bootstrap_mean": -0.0029126175925925928,
+      "conditional_percentile_95": [
+        -0.005270212191358018,
+        -0.0005789776234568102
+      ]
+    },
+    {
+      "comparison": "mixed-quality-source-quality",
+      "bootstrap_mean": -0.004142314969135802,
+      "conditional_percentile_95": [
+        -0.008748614969135792,
+        0.0006962885802469369
+      ]
+    },
+    {
+      "comparison": "mixed-score-source-score",
+      "bootstrap_mean": -0.0013679467592592584,
+      "conditional_percentile_95": [
+        -0.004602889660493829,
+        0.0019016743827160356
+      ]
+    },
+    {
+      "comparison": "mixed-fixed-source-fixed",
+      "bootstrap_mean": -0.005733014351851851,
+      "conditional_percentile_95": [
+        -0.009458969907407416,
+        -0.0022887384259259397
+      ]
+    }
+  ]
+}

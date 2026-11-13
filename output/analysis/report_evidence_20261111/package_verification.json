@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "source_snapshots": 37,
+  "source_hashes_match_originals": true,
+  "source_inputs_for_figures_and_supplement_complete": true,
+  "new_model_training_runs": 0,
+  "final_test_images_or_per_image_predictions_read": false,
+  "dependencies": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "matplotlib": "3.9.2",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.8.0"
+  },
+  "scope": "Packaged input hashes and required source availability; detailed arithmetic and bootstrap checks recorded separately.",
+  "audit_followup": "Five missing portability sources noted by independent review are now included, plus reliability_cells.csv required for figures."
+}

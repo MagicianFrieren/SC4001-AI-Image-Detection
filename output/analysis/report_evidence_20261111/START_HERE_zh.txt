@@ -1,0 +1,48 @@
+SC4001 报告证据包：失败分析与针对性改进
+整理日期：2026-11-11
+
+建议先看
+1. report_section_zh.txt：可用于报告的中文正文，强调发现问题、认真改进、部分修正有效以及未解决的困难。
+2. figures/figure1_improvement_attempts.pdf：七项改进的关键对照与三个数据划分；不同协议分面呈现。
+3. figures/figure2_failure_mechanism.pdf：专家优势反转、权重偏好以及全部八条件的排序修复/损害。
+4. tables/improvement_comparisons.csv：16组对照，含各seed差值、正确基线和已有条件区间。
+5. tables/experiment_registry.csv、claim_evidence.csv：每项实验及每个报告判断对应什么证据。
+
+这次实际补了什么
+• 用保存的开发预测补充了门控损失分解的1000次配对bootstrap及全部条件/seed敏感性；最终成功输出由supplement/RESULT_POINTER.json定位，目录为supplement/run_v2_portable。
+• 从已发布最终汇总推导了全部20配置×4条件的假图漏检率，和AUROC、平衡准确率、真实图误报率同表比较。
+• 新增可重建的两张图、完整表格、证据快照和代码；没有新增模型训练。
+
+最值得写入正文的结果
+• 修正检查点选择：原质量门控AUROC 0.6087→0.6245，三个seed均改善，接近平均融合0.6244。
+• JPEG门控损失：总差−0.0156，整体权重偏好对应−0.0115，逐图调整对应−0.0041；两部分在三个seed的JPEG宏平均均负。缩放条件仍有+0.0173收益。
+• 冻结最终评价的JPEG70平均融合：格式匹配使AUROC 0.7556→0.7749，但假图漏检67.32%→72.63%，真实图误报7.00%→4.33%。这解释了排序收益与实际判定代价并存。
+
+使用口径
+开发诊断与已发布最终评价分开；0.6245检查点修正与后续0.6244单来源重跑对照属于不同协议。可靠性AUROC评估哪位专家BCE较低，检测AUROC评估真假排序。三个data seed共用数据池，不能当独立数据集。
+正文集中写结论和证据，范围说明放在末段。完整正负结果保留在表格与附录中。所谓努力以实际对照和修正体现，不用模型数量或重复次数替代分析。
+
+文件说明
+analysis_decisions_zh.txt：为什么补这两项分析、为什么当前报告不需追加训练。
+threshold_analysis_zh.txt：最终汇总的误报/漏检解释。
+review/：独立审计与数据核算；审计时缺少的快照已在打包阶段补齐，以package_verification.json为准。
+sources/：原始报告、协议、聚合表、验证记录及开发预测的原样快照。
+source_manifest.json：每个来源的相对路径与SHA-256。
+table_verification.json、figures/figure_verification.json、supplement/run_v2_portable/verification.json：本次核对范围。
+portability_verification.json：只使用包内快照重新运行三个分析脚本，8张表、4份绘图数据、2张PNG、6份补充CSV及1000次bootstrap数组均与原输出一致。
+supplement/中的早期failure和旧run目录仅为实现修正记录；报告引用run_v2_portable。
+code/：三个分析重建脚本及本地打包脚本，含依赖版本。
+PACKAGE_MANIFEST.json、verify_package.py：交付文件校验。
+
+从解压后的证据包复现（PowerShell；Python 3.12）
+在本文件所在目录运行。可使用已安装依赖的Python；如需新环境，先创建虚拟环境并安装code/requirements.txt。
+
+python verify_package.py
+python code/scripts/report_evidence_20261111/build_evidence.py --root sources --output rebuilt/tables_run
+python code/scripts/report_evidence_20261111/make_figures.py --root sources --output rebuilt/figures
+python code/scripts/report_evidence_20261111/supplement_mechanism.py --root sources --output rebuilt/supplement
+
+补充分析拒绝覆盖已完成输出；重复运行时使用新的输出目录。主输入均已随包保留，复现不需要源图片、预训练权重、GPU或原模型。这里复现的是报告分析，并非从头重训整个检测器。
+
+交付范围
+本包没有读取最终测试图片或逐图预测，没有修改既有模型、阈值或原实验文件。最终表格来自已发布的汇总快照。报告正文与图表尚未插入队友的最终稿，也未提交课程作业或推送Git。

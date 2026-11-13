@@ -1,0 +1,48 @@
+{
+  "id": "bounded_residual_pairwise_ranking_v1",
+  "created_utc": "2026-11-08T07:26:20.084561+00:00",
+  "scope": "One exploratory combined candidate using existing matched gate_fit/tuning; no new experts, no images, no final-test access.",
+  "independence": "Specified before candidate development scoring; no other new ablation development outcomes consulted.",
+  "method": {
+    "architecture": "Original 8->32 ReLU->1 sigmoid, output head initialized to zero",
+    "alpha": "0.5+0.25*(2*sigmoid_output-1), bounded [0.25,0.75]",
+    "features": "Original 8 gate inputs standardized on gate_fit only; score variant masks standardized quality columns 5:8 to zero",
+    "loss": "Equal mean over clean/jpeg70/resize05 of all within-condition fake-real pair softplus(-(zf-zr)/T)",
+    "temperature": "max(1, std(ddof=0) of gate_fit 0.5*(zg+zl), all three conditions), one fixed value per data seed",
+    "optimizer": "AdamW lr=.003 weight_decay=1e-4, full batch, float32 CPU, 2 threads",
+    "run_seeds": [
+      20261101,
+      20261102,
+      20261103
+    ],
+    "gate_seeds": [
+      20261022,
+      20261023,
+      20261024
+    ],
+    "max_epochs": 200,
+    "selection": "Mean per-condition tuning AUROC over clean/jpeg70/resize05, epoch0 included, improvement >1e-6, retain earliest within tolerance",
+    "patience": 40,
+    "threshold": "Pooled tuning Youden J; original np.isclose ties closest probability threshold .5",
+    "baselines": "Average alpha .5 and original tuning-selected fixed alpha, inherited experts",
+    "reporting": "All selection SD15 and development ADM/BigGAN x clean/jpeg70/jpeg50/resize05, initializations averaged within data seed",
+    "claims": "Combined bounded residual plus ranking objective candidate; no single-component causal attribution; no hyperparameter search or performance-driven retries"
+  },
+  "code_sha256": "9ab1cf56ceac64d2d90fbc3889ed8000ea10c95524bb982b498af216fd55a34f",
+  "input_sha256": {
+    "artifacts/round8_a/seed1/matched/bundle.json": "391c36669dfccef5c154d33ae77cd81c4cec4a5a70fd761895bb7748d441f938",
+    "artifacts/round8_a/seed2/matched/bundle.json": "ae08cd7728c5c5731b23cdb7f6c64f33dbfec2ef3b218f2da658c000b3311c30",
+    "artifacts/round8_a/seed3/matched/bundle.json": "3e4561ba24138763827deedff917ae1b99ec38163344ea69ad09d05b9f0f2388"
+  },
+  "environment": {
+    "python": "3.12.5 (tags/v3.12.5:ff3bc82, Aug  6 2024, 20:45:27) [MSC v.1940 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "1.26.4",
+    "scipy": "1.17.1",
+    "sklearn": "1.8.0",
+    "torch": "2.2.0+cu121",
+    "device": "cpu",
+    "threads": 2
+  },
+  "timeout_seconds": 1800
+}

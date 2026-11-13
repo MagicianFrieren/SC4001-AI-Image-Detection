@@ -1,0 +1,22 @@
+Reproduce the compact transfer-mismatch figure
+
+From the extracted submission root, using the package's Python dependencies:
+
+python report/build_compact_figure.py
+
+The script reads evidence/figures/figure2_transfer_data.csv relative to its own
+location and writes figure4_transfer_mismatch.png, .pdf, a caption, and a receipt
+to report/. It can be called from any working directory. It redraws four saved
+summary rows only; it does not train models or compute new performance metrics.
+
+To keep the supplied report figures untouched, choose another output directory:
+
+python report/build_compact_figure.py --output-dir ../figure-rebuild
+
+An alternative saved summary can be selected explicitly:
+
+python report/build_compact_figure.py --source evidence/figures/figure2_transfer_data.csv --output-dir ../figure-rebuild
+
+The supplied image was produced with Python 3.12, matplotlib 3.9.2, and pandas
+2.2.3 using DejaVu Sans. The package includes a receipt comparing regenerated PNG
+pixels with the image embedded in the report. PDF metadata may change on rerun.

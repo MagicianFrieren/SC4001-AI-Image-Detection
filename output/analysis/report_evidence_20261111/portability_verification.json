@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "date": "2026-11-11",
+  "source_root": "sources/ within evidence package only",
+  "commands": [
+    "build_evidence.py --root <package>/sources --output <fresh>/tables_run",
+    "make_figures.py --root <package>/sources --output <fresh>/figures",
+    "supplement_mechanism.py --root <package>/sources --output <fresh>/supplement"
+  ],
+  "checks": [
+    {
+      "group": "tables",
+      "pattern": "*.csv",
+      "files": 8,
+      "result": "byte-identical"
+    },
+    {
+      "group": "figures",
+      "pattern": "*.csv",
+      "files": 4,
+      "result": "byte-identical"
+    },
+    {
+      "group": "figures",
+      "pattern": "*.png",
+      "files": 2,
+      "result": "byte-identical"
+    },
+    {
+      "group": "supplement\\run_v2_portable",
+      "pattern": "*.csv",
+      "files": 6,
+      "result": "byte-identical"
+    }
+  ],
+  "supplement_summary": "all fields equal except elapsed seconds",
+  "supplement_report": "byte-identical",
+  "bootstrap_arrays_identical": [
+    "values",
+    "scopes",
+    "metrics"
+  ],
+  "bootstrap_repetitions": 1000,
+  "figures_png_byte_identical": true,
+  "pdf_note": "PDF regenerated; metadata timestamps need not be byte-identical. Corresponding PNG/data were identical.",
+  "new_model_training": false
+}

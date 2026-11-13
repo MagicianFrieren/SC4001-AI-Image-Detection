@@ -1,127 +1,63 @@
 # SC4001 AI Image Detection
 
-Explore whether global and local image features can improve AI-generated image detection across generators and image degradations.
-This repository contains our frozen-CLIP baseline, fusion experiments, and measured results through **Round 6**.
+**Final submission — 14 November 2026.**
 
-**Current finding:** quality-aware gating has not consistently beaten simple average fusion.
-JPEG and resize augmentation effects depend on preprocessing; combined augmentation lowered ADM performance in our latest comparison.
-These are small exploratory experiments, not a finished detector or a blind benchmark.
+We study frozen-CLIP global and patch-shuffled local experts for AI-generated image detection across generators and image degradations. The final report covers the Round 7 and Round 8 evaluations, seven improvement attempts, and November development diagnostics.
 
-## Start here
+In this setup, format matching improves ranking under JPEG compression but introduces clean-image costs. Quality-aware gating does not consistently outperform simple averaging.
 
-You can review the results on GitHub without downloading images or installing Python.
+## Final report and submission
 
-1. Read the [experiment guide](docs/EXPERIMENTS.md) for the questions, controls, and code behind each round.
-2. Read the [latest interpretation in Chinese](results/round6/interpretation_zh.txt) and [full summary](results/round6/summary_zh.txt).
-3. Inspect the [macro results](results/round6/macro_summary.csv), [paired comparisons](results/round6/macro_contrasts.csv), and [verification record](results/round6/verification.json).
-4. Follow the [reproduction guide](docs/REPRODUCING.md) to check saved results or rerun the experiments.
+- [Read the final PDF](reports/final_20261114/SC4001_Report_Final_20261114.pdf) — 10 body pages; 14 pages including the cover, references and appendices.
+- [Download the editable Word report](reports/final_20261114/SC4001_Report_Final_20261114.docx).
+- [Download the complete submission ZIP](https://github.com/MagicianFrieren/SC4001-AI-Image-Detection/releases/download/final-20261114/SC4001_Submission_Final_20261114.zip) — report, code, saved inputs, evidence and reproduction instructions.
+- [Release notes](https://github.com/MagicianFrieren/SC4001-AI-Image-Detection/releases/tag/final-20261114), [checksums](reports/final_20261114/SHA256SUMS.txt) and [reproduction guide](docs/FINAL_SUBMISSION.md).
 
-The [initial English report](output/pdf/sc4001_j_preliminary_report_en.pdf) covers the pilot only.
-For current progress, use the links above.
+The Release ZIP is the complete submission package. GitHub's automatically generated source-code ZIP contains the repository checkout and has a different layout.
 
-## Latest results
+## Findings
 
-Round 6 separates JPEG70 and half-resolution augmentation during expert training.
-Both augmentation types have weight 1/3 whenever present; each original image keeps total weight 1.
-The gate training, calibration, selection, and development data stay fixed across these comparisons.
+- On the Round 8 main-generator comparison, format matching raises average-fusion JPEG70 AUROC from **0.7556 to 0.7749**, while clean AUROC falls from **0.8711 to 0.8268**.
+- Clean-image ranking loss accompanies a threshold tradeoff: fewer missed fakes and more false alarms at the original frozen thresholds.
+- The seven modifications address checkpoint selection, gate inputs, learning objectives, condition routing, training-generator coverage, recompression cues and paired-view training. Each has an explicit comparator in the report.
+- Development diagnostics suggest that generator-dependent expert preferences and quality signals contribute to JPEG gating failures. Resizing retains a positive result and follows a different pattern.
 
-The table reports average fusion without calibration on ADM, a generator excluded from fitting.
-Each value averages AUROC over clean, JPEG50, and half-resolution development conditions.
-AUROC measures ranking: 0.5 is random ranking, and higher is better.
+The report separates November exploratory development analyses from the earlier frozen final evaluation. It includes the costs and benefits of each modification alongside its experimental evidence.
 
-| Expert training | Original preprocessing | Common 128 preprocessing |
-| --- | ---: | ---: |
-| Clean only | 0.6387 | 0.6731 |
-| Clean + JPEG70 | 0.6546 | 0.6205 |
-| Clean + half-resolution | 0.6082 | 0.6410 |
-| Clean + JPEG70 + half-resolution | 0.5918 | 0.5929 |
+## Reproduce the saved analyses
 
-Original preprocessing fits the image to 224 pixels square.
-Common 128 first fits to 128 pixels square, then resizes to 224 pixels square.
-Half-resolution degradation resizes 224 → 112 → 224 after preprocessing.
-
-Adding resize augmentation to the JPEG-only arm lowered original-preprocessing AUROC by 0.0628; the paired 95% interval was [-0.1003, -0.0254].
-The JPEG-only gain over clean training remains uncertain: +0.0159, with interval [-0.0149, +0.0480].
-Under common 128 preprocessing, both single augmentations lowered ADM AUROC.
-
-![ADM macro AUROC for four expert-training recipes, comparing average fusion, ordinary gating, and quality-aware gating across preprocessing and calibration settings](results/round6/round6_augmentation_ablation.png)
-
-Quality-aware gating still lacks a consistent advantage.
-With original preprocessing and JPEG-only training, average fusion scored 0.6546, ordinary gating 0.6540, and quality-aware gating 0.6501 without calibration.
-Gate scores average three initializations on the same data split.
-See the [Round 6 protocol](results/round6/protocol.json) for the complete comparison.
-
-## Code to read first
-
-| File | Purpose |
-| --- | --- |
-| [run_pilot.py](scripts/run_pilot.py) | Frozen CLIP features, logistic regression, degradation transforms, and baseline evaluation |
-| [local_branch.py](scripts/local_branch.py) | Four deterministic PatchShuffle views for the local expert |
-| [gate_models.py](scripts/gate_models.py) | Matched ordinary and quality-aware gates |
-| [score_calibration.py](scripts/score_calibration.py) | Per-expert temperature calibration |
-| [run_round6.py](scripts/run_round6.py) | Latest matched-dose augmentation experiment |
-| [verify_round6.py](scripts/verify_round6.py) | Full artifact checks, expert refits, and paired uncertainty estimates |
-
-Both experts use frozen OpenAI CLIP ViT-B/32 features and separate logistic regression heads.
-The global expert receives the processed image.
-The local expert averages four feature vectors from shuffled 56-pixel tiles.
-
-Fusion combines expert logits as `alpha * global_logit + (1 - alpha) * local_logit`.
-Average fusion sets `alpha = 0.5`; fixed fusion selects one weight on validation data.
-The learned gates predict a weight for each image.
-Quality-aware gating adds sharpness, frequency, and block-boundary proxies to the ordinary gate inputs.
-The [experiment guide](docs/EXPERIMENTS.md) explains the shared inputs and data partitions.
-
-## Run a saved-result check
-
-The lightweight check needs Python 3.12, NumPy, SciPy, and scikit-learn.
-It reads committed results without images, model weights, a GPU, or retraining.
-Run these commands in PowerShell:
+Download and extract the complete submission ZIP, then run these commands **from its extracted root**:
 
 ```powershell
-git clone https://github.com/MagicianFrieren/SC4001-AI-Image-Detection.git
-cd SC4001-AI-Image-Detection
-py -3.12 -m venv .venv
-./.venv/Scripts/python.exe -m pip install numpy==1.26.4 scipy==1.17.1 scikit-learn==1.8.0
-./.venv/Scripts/python.exe scripts/verify_shared_results.py
+python VERIFY_PACKAGE.py
+python -m pip install -r reproduction/requirements_analysis.txt
+python source_tree/scripts/submission_revision_20261114/reproduce.py --package . list
+python source_tree/scripts/submission_revision_20261114/reproduce.py --package . run report-tables --workspace ../rebuild-report-tables
 ```
 
-Expected output includes `"status": "passed"` and `"round6_metric_cells": 1440`.
-This checks source/protocol hashes and recomputes Round 6 point metrics from predictions.
-It does not repeat model fitting or validate bootstrap intervals.
-For those checks, follow the [full reproduction steps](docs/REPRODUCING.md).
+The four supported commands are `report-tables`, `report-figures`, `mechanism-predictions` and `mechanism-bootstrap`. All four were run from the supplied package; 30 archived numerical or image comparisons matched exactly. See the [verification record](reports/final_20261114/verification/saved_analysis_reproduction.json).
 
-## Data and result files
+The [final reproduction guide](docs/FINAL_SUBMISSION.md) also gives commands for a normal Git checkout. Historical training requires the separately indexed images, weights and feature caches; the verified submission workflow reconstructs saved-result analyses.
 
-We use a pinned subset of [Tiny-GenImage](https://huggingface.co/datasets/TheKernel01/Tiny-GenImage), a third-party subset of [GenImage](https://github.com/GenImage-Dataset/GenImage).
-The manifests record source rows, original-image partitions, and image hashes.
-The pilot contains 1,200 images; Round 2 adds 400 BigGAN images while preserving all pilot assignments.
-Later experiments use subsets of this 1,600-image pool.
+## Repository map
 
-Each `results/roundN/` folder contains its protocol, predictions, metrics, verification record, and interpretation.
-Rounds 4–6 also include gate parameters and training curves.
-Raw images, downloaded weights, feature caches, and fitted joblib experts stay outside Git.
-Use [restore_data.py](scripts/restore_data.py) to recover the manifest images before a full rerun.
+| Path | Contents |
+| --- | --- |
+| [reports/final_20261114](reports/final_20261114/) | Final PDF and Word report, manuscript figures, checksums and verification records |
+| [output/analysis/report_evidence_20261111](output/analysis/report_evidence_20261111/) | Seven-modification comparison, claim-to-evidence mapping, mechanism analyses and source snapshots |
+| [scripts/report_evidence_20261111](scripts/report_evidence_20261111/) | Table, figure and bootstrap analysis scripts |
+| [scripts/submission_revision_20261114](scripts/submission_revision_20261114/) | Submission source assembler and saved-analysis runner |
+| [docs/ROUND7_FINAL.md](docs/ROUND7_FINAL.md) | Round 7 protocol and final evaluation |
+| [docs/ROUND8_FINAL.md](docs/ROUND8_FINAL.md) | Round 8 fresh-image evaluation |
+| [results/round8_final](results/round8_final/) | Frozen final metrics, contrasts, manifests and verification records |
+| [docs/EXPERIMENTS.md](docs/EXPERIMENTS.md) | Earlier pilot and Rounds 2–6 experiment history |
 
-## Interpretation limits
+The tracked November `tmp/gate_diagnosis/`, `tmp/gate_failure_mechanism_20261108/`, `tmp/multigen_gate_20261108/`, `tmp/paired_view_global_20261108/` and `tmp/recompression_reliability_20261108/` paths preserve the original experiment source layout. They are archived project-relative paths. Their scripts, configurations and dependencies are also included in the Release ZIP.
 
-- ADM has been inspected repeatedly during development. It is excluded from fitting, but it is not a blind final test.
-- BigGAN becomes a training generator in the mixed-data experiments. Its gains do not establish unseen-generator generalization.
-- Real sources are JPEG and generated sources are PNG, with different native sizes. Common preprocessing does not erase source history or content confounding.
-- Three gate initializations share one data split. They do not replace repeated training splits or new generator sources.
-- Bootstrap intervals condition on fitted models, share real images across comparisons, and have no multiple-comparison correction.
-- Augmentation changes both the expert's feature standardization and fitted classifier. These results do not isolate a pixel-level failure mechanism.
+## Scope and attribution
 
-We retain clean training as the reference and original-preprocessing JPEG-only training as a candidate for further checks.
-Next priorities are repeated training partitions and genuinely new generator sources.
-Adaptive fusion remains a hypothesis to test.
+The November diagnostics use repeatedly inspected development data, with shared image pools across seeds. Their loss decomposition is descriptive. The final report discusses these limits together with the observed JPEG losses and resize gains.
 
-## References and attribution
+Our experts use frozen OpenAI CLIP ViT-B/32 features and separate logistic regression heads. The local expert averages four PatchShuffle views. [UniversalFakeDetect](https://github.com/WisconsinAIVision/UniversalFakeDetect) and [SFLD](https://arxiv.org/abs/2502.17105) inform the design; this implementation uses its own backbone and experimental protocol.
 
-- [UniversalFakeDetect / UnivFD](https://github.com/WisconsinAIVision/UniversalFakeDetect): frozen-feature detection reference. Our ViT-B/32 experiments do not reproduce its ViT-L/14 results.
-- [SFLD](https://arxiv.org/abs/2502.17105): PatchShuffle reference. Our four-view, 56-pixel implementation is inspired by the method, not a reproduction.
-- [GenImage](https://github.com/GenImage-Dataset/GenImage): benchmark context and baseline implementations.
-
-The Tiny-GenImage card declares CC BY-NC-SA 4.0; underlying image rights still apply.
-Its generator labels are inherited and have not been independently authenticated.
-Codex assisted with scripts, documentation, and result analysis under the project owner's direction.
+Data come from a pinned subset of [Tiny-GenImage](https://huggingface.co/datasets/TheKernel01/Tiny-GenImage), a third-party subset of [GenImage](https://github.com/GenImage-Dataset/GenImage). The dataset card declares CC BY-NC-SA 4.0; underlying image rights still apply. Codex assisted with scripts, documentation and analysis under the project owner's direction.

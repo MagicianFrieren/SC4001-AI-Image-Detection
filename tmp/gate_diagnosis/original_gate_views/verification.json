@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "published_instance_cells_checked": 192,
+  "max_absolute_metric_difference": {
+    "auroc": 0.0,
+    "average_precision": 0.0,
+    "balanced_accuracy": 0.0,
+    "real_false_positive_rate": 0.0
+  },
+  "scope": "Recomputed published matched reference against saved original dev metrics; original-view selection reconstruction was asserted within 1e-10 during run. No retraining in verification."
+}

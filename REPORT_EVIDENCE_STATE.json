@@ -1,0 +1,83 @@
+{
+  "updated": "2026-11-14",
+  "stage": "Final report and reproducible submission frozen for GitHub final-20261114 release",
+  "user_intent": "Explain weak quality-gating results through well-supported failure analysis and concrete targeted improvement attempts",
+  "entrypoint": "output/analysis/submission_revision_20261114/START_HERE_zh.txt",
+  "report": "output/analysis/submission_revision_20261114/report/SC4001_Report_Final_20261114.docx",
+  "package": "output/analysis/SC4001_Submission_Final_20261114.zip",
+  "archive_verification": "output/analysis/submission_revision_20261114/archive_verification.json",
+  "prior_evidence": {
+    "entrypoint": "output/analysis/report_evidence_20261111/START_HERE_zh.txt",
+    "package": "output/analysis/report_evidence_20261111.zip",
+    "preserved": true
+  },
+  "completed": [
+    "Claude feedback incorporated into the supplied manuscript; seven modification rows, transfer figure, clean ranking/error costs, JPEG losses and resize gains included",
+    "Report rendered and all 13 physical pages reviewed; body 9 pages",
+    "Pinned main and analysis-c source plus actual November scripts/configurations packaged; 765 source files verified",
+    "Four saved-result analyses rebuilt from package inputs; 30 archive comparisons equal; compact manuscript figure separately reproduced identically",
+    "English/Chinese commands, historical dependency manifests, full file checksums and package verifier included",
+    "Submission ZIP CRC and all 935 payload file hashes verified",
+    "26 paragraphs polished; numeric values, 6 tables, 5 figures, references and commands preserved; independent semantic review and all 12 page visual reviews passed",
+    "Applied confirmed SC4001 handout format; all 118 paragraphs, 6 tables and 5 media contents preserved; independent format/content review and 14-page visual review passed; formatted submission ZIP verified",
+    "Replaced literal z_g/z_l and four exponent strings with editable OMML; canonical math meaning and table values preserved; rebuilt Figure 1 with matching math and corrected preprocessing/fusion connections; 10 pt math export verified; only pages 4/5 changed, both visually reviewed",
+    "Final cover/table/reference/appendix polish; all text, table values, OMML and figure bytes preserved. Eight changed pages visually reviewed; six remaining pages byte-identical to reviewed v2. Final ZIP 971 payload file hashes and CRC verified."
+  ],
+  "key_findings": [
+    "JPEG quality-gate minus average AUROC -0.015627: mean-weight-preference component -0.011518 and image-specific component -0.004108; both components negative in all three seed JPEG macros",
+    "Resize benefit +0.017269 retained; failure is condition dependent",
+    "Final main-macro R8A average JPEG70 matched vs unmatched: AUROC .755618 to .774896, FPR 7.00% to 4.33%, FNR 67.32% to 72.63%",
+    "Clean matched average AUROC .871087 to .826815, FPR .120000 to .267333, FNR .327167 to .244500"
+  ],
+  "preservation": "Original supplied DOCX, previous evidence archives and model/threshold artifacts unchanged; no new model experiments or final-test scoring. Course-platform submission remains with the team.",
+  "scope": "Lightweight saved-result reconstruction verified. Full historical training/extraction requires indexed large external inputs and was not rerun.",
+  "next": "Use the final PDF and complete submission ZIP from the final-20261114 release; no further model experiments planned.",
+  "historical_state": "PROJECT_STATE.json and ROUND8_A_STATE.json remain historical snapshots; do not infer pending experiments from old advice",
+  "previous_delivery": {
+    "report": "output/analysis/submission_revision_20261114/report/SC4001_Report_Revised_20261114.docx",
+    "package": "output/analysis/SC4001_Report_Code_20261114.zip",
+    "preserved": true
+  },
+  "report_pages": {
+    "body": 10,
+    "total": 14,
+    "cover": 1,
+    "references": 1,
+    "appendix": 2
+  },
+  "language_preference": "State observed results, interpretations and method scope directly. Remove repetitive generic disclaimers and formulaic not-X-but-Y contrasts; retain substantive negative results and concrete limitations.",
+  "prior_deliveries": [
+    {
+      "report": "output/analysis/submission_revision_20261114/report/SC4001_Report_Polished_20261114.docx",
+      "package": "output/analysis/SC4001_Report_Code_Polished_20261114.zip",
+      "preserved": true
+    },
+    {
+      "report": "output/analysis/submission_revision_20261114/report/SC4001_Report_Formatted_20261114.docx",
+      "package": "output/analysis/SC4001_Report_Code_Formatted_20261114.zip",
+      "preserved": true
+    },
+    {
+      "report": "output/analysis/submission_revision_20261114/report/SC4001_Report_Formatted_v2_20261114.docx",
+      "pdf": "output/analysis/submission_revision_20261114/report/SC4001_Report_Formatted_v2_20261114.pdf",
+      "package": "output/analysis/SC4001_Report_Code_Formatted_v2_20261114.zip",
+      "preserved": true
+    }
+  ],
+  "pdf": "output/analysis/submission_revision_20261114/report/SC4001_Report_Final_20261114.pdf",
+  "format_requirements": {
+    "source": "C:/Users/Holy/Downloads/project_handout.pdf",
+    "source_page": 1,
+    "explicit": "A4, single column, Arial 10 pt, maximum 10 main-content pages; cover/references/contents/appendix excluded; PDF+code ZIP to NTULearn",
+    "chosen_layout": "2 cm margins, body 1.05 line spacing, consistent 10 pt editable text including table/caption/reference/footer; enlarged plots and complete-table pagination",
+    "guide": "output/analysis/submission_revision_20261114/FORMAT_GUIDE_zh.txt"
+  },
+  "latest_archive_sha256": "9ef16d6548a306a089a7e43b62d030e30e0c4e3c8a6b0d977e22241b812c5335",
+  "github_final": {
+    "tag": "final-20261114",
+    "repository": "https://github.com/MagicianFrieren/SC4001-AI-Image-Detection",
+    "release": "https://github.com/MagicianFrieren/SC4001-AI-Image-Detection/releases/tag/final-20261114",
+    "report": "reports/final_20261114/SC4001_Report_Final_20261114.pdf",
+    "guide": "docs/FINAL_SUBMISSION.md"
+  }
+}

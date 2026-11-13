@@ -1,0 +1,66 @@
+{
+  "id": "jpeg95_recompression_relative_reliability_20261108_v1",
+  "question": "Does smaller standardized expert-logit change after mild sequential JPEG recompression predict lower original per-image expert loss on generators excluded from expert training and scale estimation?",
+  "scope": "Exploratory development validation on previously inspected generators; no new blind final test, no new expert or gate fitting.",
+  "data_seeds": [
+    20261101,
+    20261102,
+    20261103
+  ],
+  "experts": "Frozen Round8 A matched global/local heads and original CLIP weights, preprocessing and four shuffle seeds.",
+  "extraction": {
+    "source_scope": "source_only_tuning_union",
+    "source_conditions": [
+      "clean",
+      "jpeg70",
+      "resize05"
+    ],
+    "development_conditions": [
+      "clean",
+      "jpeg70",
+      "jpeg50",
+      "resize05"
+    ],
+    "jpeg_quality": 95,
+    "subsampling": 0,
+    "optimize": false,
+    "progressive": false,
+    "batch_size": 32,
+    "device": "cuda:0",
+    "model_dtype": "float16",
+    "paired_fresh_baseline": true,
+    "order": "Original -> existing current-condition 224px image -> JPEG95 encode/decode on that current image -> global view and same four shuffled views. Baseline and probe encoded in matching batch order/shapes. No resize between current image and probe.",
+    "counts": {
+      "source_originals": 668,
+      "development_originals": 900,
+      "image_condition_pairs": 5604,
+      "encoder_image_passes_baseline_plus_probe": 56040
+    },
+    "extractor_sha256": "c55245cdde75100a85f3def0b4c402d1f9d3da43e63af9cbf9a02ce128a27eda"
+  },
+  "normalization": "For each data seed, sigma_global/local are population standard deviations (ddof=0) of existing original-view logits on that seed's source_only gate_fit Real250+SD15250, pooled over clean/jpeg70/resize05. No centering, per-label/condition rescaling, target statistics or calibration fitting. Nonfinite or zero scale is an error.",
+  "primary_signal": "S = abs(z_local_probe-z_local_base)/sigma_local - abs(z_global_probe-z_global_base)/sigma_global. S>0 predicts global is more reliable; direction will not be reversed after inspection.",
+  "primary_target": "R=1 when (2*y-1)*(z_global_base-z_local_base)>0, equivalent to lower original global BCE. Exact equality is excluded with counts; this is relative loss, not necessarily correct classification.",
+  "primary_metric": "AUROC(S,R) computed separately by seed, generator/class group (Real, ADM, BigGAN) and condition. Within condition/seed use weights Real=.5, ADM=.25, BigGAN=.25; then equal average of four conditions and three data seeds. No pooled-label AUROC substitutes for this endpoint.",
+  "reference": "Same relative-loss AUROC using each of the three frozen source_only score_gate AUROC-checkpoint alpha values on fresh baseline inputs; average metrics across gate initializations inside each data seed. No new probe model or feature selection.",
+  "secondary_signals": [
+    "abs(delta_local_raw_logit)-abs(delta_global_raw_logit)",
+    "abs(delta_local_probability)-abs(delta_global_probability)"
+  ],
+  "secondary_rules": "All signals reported with fixed direction; no choosing a winning transform, sign or condition. Source-only tuning results are controls, not used to refit or tune.",
+  "classification_check": "Use frozen source_only per-expert thresholds. Among images on which exactly one original expert is correct, choose global for S>0, local for S<0, expected half credit for S=0. Report coverage, selection accuracy, always-global/local controls, and whole-sample expected accuracy/BA. Separately report selected original-logit AUROC (S=0 uses mean logit, not a random expert draw) and average fusion as descriptive diagnostics, with no new threshold selection.",
+  "bootstrap": "1000 paired original-image resamples, seed 20261108; within Real/ADM/BigGAN groups, same identity multiplicities across four conditions, models and three seeds; shared Real counted once with .5 weight. Conditional on fitted experts and source scales. No multiplicity-adjusted claims for secondary signals.",
+  "nonestimable": "If either relative-loss winner is absent in a prescribed cell, mark AUROC unavailable, report counts and do not silently renormalize macro or claim full success. Report any undefined bootstrap draws; no unreported removal of cells.",
+  "decision": {
+    "supported_signal": "Primary macro 95% conditional interval lower bound > .5, with ADM fake macro, BigGAN fake macro and JPEG70/JPEG50 pooled primary-weight macro each > .5. This supports a relative-loss signal, not improved image detection or incremental value beyond existing scores.",
+    "uncertain": "Primary point estimate > .5 but interval overlaps .5 or required generator/JPEG directions disagree.",
+    "unsupported": "Primary point estimate <= .5, or apparent association vanishes under required class/condition stratification.",
+    "added_value": "Report paired primary AUROC difference from existing score_gate reference separately. Even a positive difference is a stand-alone signal comparison, not proof of incremental information conditional on all existing inputs. Classification usefulness additionally requires the locked routing checks."
+  },
+  "exclusions": "No final/reserved image/manifests/scores, no recompression-quality sweep, no sign selection, no retraining, no new gate, no treating old independent JPEG70 and JPEG50 caches as sequential recompression.",
+  "freeze": "Frozen before full paired extraction and before any probe outcome inspection.",
+  "analysis_sha256": "9587ee0a7d30e6d964bfc600c79e5c531d7c4d6dfb274a3b30170a3535bb231d",
+  "preflight_sha256": "b65392058d32f02be57f0e6d937539e14a15102264eeb3f212a535451b5672c7",
+  "canary_sha256": "e23ca65a04116393cc302286c8f7579b142a1dfab2a89c54fdfce4abad9aa447",
+  "split_sha256": "d25e46ce358e452c9558ea1082c7ddcade5b1ec7c652dd2ecdf83008982359db"
+}

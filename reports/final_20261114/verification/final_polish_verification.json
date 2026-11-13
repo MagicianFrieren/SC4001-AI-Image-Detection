@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "source": "D:\\Projects\\SC4001_GrpWorking\\output\\analysis\\submission_revision_20261114\\report\\SC4001_Report_Formatted_v2_20261114.docx",
+  "source_sha256": "6dc49818298e6520599a9b1090dd20b58c17c66d38f140b998d75f81fd2cb900",
+  "docx": "D:\\Projects\\SC4001_GrpWorking\\output\\analysis\\submission_revision_20261114\\report\\SC4001_Report_Final_20261114.docx",
+  "docx_sha256": "0060a140ff723cccb88a62eb2cb3a1b2ce56bb962338abe365091af43ad789d0",
+  "paragraph_content_preserved_ignoring_whitespace": true,
+  "all_table_values_unchanged": true,
+  "native_math_xml_identical": true,
+  "all_5_figure_bytes_unchanged": true,
+  "edits": [
+    "cover block widths and spacing",
+    "cover title emphasis",
+    "charcoal table headers and subtle alternating rows",
+    "consistent hanging tabs for references",
+    "left-aligned reproduction paragraph for natural path spacing"
+  ],
+  "render_review": "review/final_polish_visual_review.json"
+}

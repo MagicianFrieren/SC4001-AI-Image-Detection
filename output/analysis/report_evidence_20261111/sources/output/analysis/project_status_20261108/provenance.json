@@ -1,0 +1,69 @@
+{
+  "date": "2026-11-08",
+  "repository": "MagicianFrieren/SC4001-AI-Image-Detection",
+  "published_main_commit": "42059e3d0eabcb6393efcb9dd3b879092963af96",
+  "published_analysis_c_commit": "e498d0ed997e679a5db22b4b3ce05db34e6b31a0",
+  "scope": "Published aggregates and reporting only; no raw final images/predictions or model execution.",
+  "files": [
+    {
+      "repository_path": "results/round8_final/metrics_mean_sd.csv",
+      "commit": "42059e3d0eabcb6393efcb9dd3b879092963af96",
+      "snapshot": "sources/round8_metrics_mean_sd.csv",
+      "sha256": "1956c437b27a2c919f51fb806052f687ff25c521685ac9fd6ab146d635db195d"
+    },
+    {
+      "repository_path": "results/round8_final/paired_differences.csv",
+      "commit": "42059e3d0eabcb6393efcb9dd3b879092963af96",
+      "snapshot": "sources/round8_paired_differences.csv",
+      "sha256": "0519e63287dcc1bda6136a54b8db9030a83801ea5fe6910004907f97a1ad1ba1"
+    },
+    {
+      "repository_path": "results/round8_final/verification.json",
+      "commit": "42059e3d0eabcb6393efcb9dd3b879092963af96",
+      "snapshot": "sources/round8_verification.json",
+      "sha256": "0dfc8385cb575534072af32a6aa3b0bf79401b2ce869e79d4c30d8007ad6bc2c"
+    },
+    {
+      "repository_path": "results/round8_final/complete.json",
+      "commit": "42059e3d0eabcb6393efcb9dd3b879092963af96",
+      "snapshot": "sources/round8_complete.json",
+      "sha256": "920171b5b417077965eeb52b2b942164f9794f28df558a82577048e20f967095"
+    },
+    {
+      "repository_path": "results/round8_final/data_audit.json",
+      "commit": "42059e3d0eabcb6393efcb9dd3b879092963af96",
+      "snapshot": "sources/round8_data_audit.json",
+      "sha256": "1f9ff79af3e87b82dbd55c1128e549e090fd53ab4df5aaa65f6f145ae2d22c88"
+    },
+    {
+      "repository_path": "docs/ROUND8_FINAL.md",
+      "commit": "42059e3d0eabcb6393efcb9dd3b879092963af96",
+      "snapshot": "sources/round8_ROUND8_FINAL.txt",
+      "sha256": "e632dffc2b39e2ce8b09dd7db4e7b6a749cd655288e26650cb50d781fe28ad99"
+    }
+  ],
+  "validation": {
+    "published_main_rows_rechecked": 320,
+    "mean_and_sample_sd_arithmetic": "passed",
+    "published_round8_verifier": {
+      "fresh_test": {
+        "counts": {
+          "ADM": 500,
+          "BigGAN": 500,
+          "GLIDE": 500,
+          "Midjourney": 500,
+          "Real": 500,
+          "VQDM": 500,
+          "Wukong": 500
+        },
+        "status": "passed"
+      },
+      "frozen_files": 342,
+      "metric_cells": 2304,
+      "model_instances": 96,
+      "prediction_rows": 1344000,
+      "scope": "Hashes, exclusions, seeded sampling, exact source/model/condition coverage, saved thresholds, independent metrics, three-seed aggregation and paired/cross-test summaries. No model inference.",
+      "status": "passed"
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "status": "passed_with_two_corrected_documentary_findings",
+  "reviewed_utc": "2026-11-11T12:39:05.463912+00:00",
+  "reviewer": "independent subagent failure_evidence",
+  "scope": "Independent read-only source/code/table review; separate small numeric calculations. No model fitting, inference, final images, or final per-image predictions were accessed.",
+  "input_sha256": {
+    "scripts/report_evidence_20261111/build_evidence.py": "7d6861dc131e82365fdbeb80fdb322e641c4c8ec208f442345f1eaa6e69950ef",
+    "output/analysis/project_status_20261108/sources/round8_metrics_mean_sd.csv": "1956c437b27a2c919f51fb806052f687ff25c521685ac9fd6ab146d635db195d",
+    "output/analysis/project_status_20261108/final_main_metrics.csv": "9d940ea4e7e5f5b6fc27632f1daa92ace9df07902fddb4de03f4f6d6abd524cf",
+    "output/analysis/project_status_20261108/sources/round8_ROUND8_FINAL.txt": "e632dffc2b39e2ce8b09dd7db4e7b6a749cd655288e26650cb50d781fe28ad99",
+    "output/analysis/report_evidence_20261111/tables/final_threshold_tradeoffs.csv": "06943cad1a7185a59794798afc6b642e052e82c8389ef4b79b0a18a904ce7766",
+    "output/analysis/report_evidence_20261111/tables/final_matched_unmatched_contrasts.csv": "dadec744ee3840e67e96dd45a5cb370489eb26ad074058c7c38f2eafb041c07f",
+    "output/analysis/report_evidence_20261111/tables/improvement_comparisons.csv": "020b109692130d507724e95ab2605d1f1dc62c974a0ea20db7ba78bd23b250d3",
+    "output/analysis/report_evidence_20261111/tables/experiment_registry.csv": "ec5f7cfb2cb74f421d044a9da33d1894f3333d89f12e1ab986810a0d13bf5d39",
+    "output/analysis/report_evidence_20261111/threshold_analysis_zh.txt": "ae53766a7910344d1d71d9002b4d3133329b01237ca8e8d5b823a612fd6d7796",
+    "output/analysis/report_evidence_20261111/source_manifest.json": "0b439cd757aee3b94bad7a67e4713ab9f37b1524bfe5778cfc9e4c3af4e27a10",
+    "output/analysis/report_evidence_20261111/supplement/run_v1_codefix1/protocol.json": "73757868f1e80fef7bcffda05fd6f723b72a8ef8c467e584e4b8f26b1b47bb2b",
+    "output/analysis/report_evidence_20261111/supplement/run_v1_codefix1/verification.json": "0401e3735e4894005c56eba95f97dcf1a602340f70c64ae1fb873943f6252d44",
+    "output/analysis/gate_diagnosis_20261108/summary.json": "7c2c461c849b3cdc55949b55664ad7f54c604edc4475fe5a6dc16a4a1546b172",
+    "output/analysis/gate_diagnosis_20261108/method_comparison.csv": "43927778ed19a4c75ab1dae3bf5f34e2312d17905751ba7fa748f81281b567df",
+    "output/analysis/multigen_gate_20261108/run_v1_codefix1/summary.json": "da066b486472b214a4aec60fd012c3a61a568f5a9259ebd57a75d3d032706e0c",
+    "output/analysis/recompression_reliability_20261108/summary.json": "c37cf418ef89fdc3ce0d8f128399430e400b50b385f84beaf8a3bec7c67a6703",
+    "output/analysis/paired_view_global_20261108/summary.json": "afcecab1f05252d20343a617f61520d0656b417e379a8801b18e575f1ef94464"
+  },
+  "arithmetic_checks": [
+    {
+      "check": "Reconstruct published main_macro from GLIDE, Midjourney, VQDM, Wukong per-generator seed aggregates",
+      "rows": 320,
+      "seed_values_per_row": 3,
+      "max_absolute_error": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "check": "Recompute FNR within each seed from 2-2*BA-FPR; compare seed values, mean, sample SD",
+      "cells": 80,
+      "max_absolute_error": 4.996003610813204e-16,
+      "passed": true
+    },
+    {
+      "check": "Recompute mean comparison delta from three paired seed differences",
+      "rows": 16,
+      "max_absolute_error": 1.0001765041178778e-16,
+      "passed": true
+    },
+    {
+      "check": "Source-manifest snapshot existence",
+      "snapshot_count": 31,
+      "missing": [],
+      "passed": true
+    }
+  ],
+  "coverage": {
+    "final_model_arm_configurations": 20,
+    "final_conditions": 4,
+    "derived_fnr_cells": 80,
+    "matched_unmatched_contrasts": 24,
+    "selected_improvement_comparisons": 16
+  },
+  "findings": [
+    {
+      "id": "R1",
+      "issue": "Registry A2 pointed at nonexistent supplement/summary.json rather than the completed codefix output.",
+      "status": "fixed_and_observed",
+      "evidence": "supplement/run_v1_codefix1/summary.json"
+    },
+    {
+      "id": "R2",
+      "issue": "The main_macro description could incorrectly imply ADM/BigGAN were absent from final evaluation; they were included individually but previously exposed in development.",
+      "status": "fixed_and_observed",
+      "evidence": "ADM/BigGAN也在最终评价中单列，但此前已用于开发。本表仅展示主宏平均。"
+    }
+  ],
+  "protocol_identity_checks": [
+    "Checkpoint replay .624503 is distinct from multigen same-protocol source-only rerun .624399.",
+    "Relative-BCE reliability AUROC is separated from fake/real detection AUROC.",
+    "Paired-half uses matched global as primary reference, with all four planned summary scopes retained.",
+    "Final main_macro includes exactly GLIDE, Midjourney, VQDM, Wukong; ADM/BigGAN final results are separate.",
+    "FNR seed SD is derived from paired seed values, not inferred from marginal BA/FPR SDs."
+  ],
+  "evidence_sufficiency": "Existing evidence supports the report narrative of weak performance, targeted repairs, partial recovery and remaining limitations. New training is not required for that bounded claim.",
+  "useful_no_training_additions": [
+    "The completed threshold FNR/FPR decomposition makes practical tradeoffs explicit.",
+    "The completed all-condition paired decomposition retains counterexamples and quantifies uncertainty conditional on frozen models.",
+    "Retain a provenance/protocol registry and portable source snapshots; do not merge distinct protocols into a leaderboard."
+  ],
+  "new_training_only_if_stronger_mechanistic_claims_are_sought": [
+    "Controlled fixed-scaler versus refit-scaler arms to isolate scaling effects in mixture training.",
+    "Raw-logit versus probability gate-input ablation with other factors fixed.",
+    "Feature removal followed by retraining, distinct from frozen-network input replacement.",
+    "Fixed-budget expert-level multi-generator training, distinct from the completed gate-only study."
+  ],
+  "portable_source_check": {
+    "output/analysis/multigen_gate_20261108/run_v1_codefix1/predictions.csv.gz": false,
+    "output/analysis/multigen_gate_20261108/run_v1_codefix1/complete.json": false,
+    "output/analysis/gate_failure_mechanism_20261108/prediction_constant_alpha.csv": false,
+    "output/analysis/gate_failure_mechanism_20261108/prediction_ranking_comparisons.csv": false,
+    "output/analysis/project_status_20261108/sources/round8_complete.json": false
+  },
+  "limits": [
+    "Arithmetic review does not repeat training or independently replay all historical bootstrap intervals.",
+    "Three seeds share pools; seed SD is not a population confidence interval.",
+    "The final threshold decomposition is descriptive, not an isolation of threshold versus calibration versus representation causes.",
+    "Checkpoint/routing repairs are post-final development studies without independent new final confirmation.",
+    "No claim is made that the selected comparison table contains every possible pairwise contrast; complete archived metric tables remain available."
+  ]
+}
