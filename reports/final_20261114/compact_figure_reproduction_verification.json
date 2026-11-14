@@ -11,7 +11,7 @@
     1980,
     690
   ],
-  "report_docx_sha256": "0060a140ff723cccb88a62eb2cb3a1b2ce56bb962338abe365091af43ad789d0",
+  "report_docx_sha256": "f8089652ca890a7f84af7477d4ad880a2c56d29b38c28b3518f6996cb6e748f9",
   "matching_embedded_media": [
     "word/media/image5.png"
   ],
@@ -25,5 +25,7 @@
   "previous_formatted_report_docx_sha256": "88fa88923d3749ed39c3b3d7ce6ab34cb268917d9e83eb2d926394a20d7a2e55",
   "equation_revision_embedded_png_byte_identical": true,
   "previous_equation_report_docx_sha256": "6dc49818298e6520599a9b1090dd20b58c17c66d38f140b998d75f81fd2cb900",
-  "final_polish_embedded_png_byte_identical": true
+  "final_polish_embedded_png_byte_identical": true,
+  "pre_matric_report_docx_sha256": "0060a140ff723cccb88a62eb2cb3a1b2ce56bb962338abe365091af43ad789d0",
+  "matric_revision_embedded_png_byte_identical": true
 }

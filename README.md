@@ -9,7 +9,7 @@ The experiments compare simple averaging with a learned gate that uses image-qua
   <a href="reports/final_20261114/SC4001_Report_Final_20261114.pdf">Read the report</a> ·
   <a href="#results">Explore the results</a> ·
   <a href="#get-started">Get started</a> ·
-  <a href="https://github.com/MagicianFrieren/SC4001-AI-Image-Detection/releases/tag/final-20261114">Download the submission</a>
+  <a href="https://github.com/MagicianFrieren/SC4001-AI-Image-Detection/releases/tag/final-20261114-v2">Download the submission</a>
 </p>
 
 <p align="center">
@@ -85,7 +85,7 @@ The loss decomposition describes the fitted models' behaviour; the report discus
 | Improvement studies | [Comparison tables and evidence](output/analysis/report_evidence_20261111/) |
 | Analysis code | [Table, figure and bootstrap scripts](scripts/report_evidence_20261111/) |
 | Experiment history | [Protocols and study notes](docs/README.md) |
-| Complete submission | [Release ZIP and checksums](https://github.com/MagicianFrieren/SC4001-AI-Image-Detection/releases/tag/final-20261114) |
+| Complete submission | [Release ZIP and checksums](https://github.com/MagicianFrieren/SC4001-AI-Image-Detection/releases/tag/final-20261114-v2) |
 
 <details>
 <summary>Data, methods and earlier experiments</summary>

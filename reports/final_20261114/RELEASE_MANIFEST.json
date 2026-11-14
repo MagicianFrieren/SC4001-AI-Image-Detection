@@ -1,11 +1,11 @@
 {
-  "version": "final-20261114",
+  "version": "final-20261114-v2",
   "date": "2026-11-14",
-  "release_url": "https://github.com/MagicianFrieren/SC4001-AI-Image-Detection/releases/tag/final-20261114",
-  "archive": "SC4001_Submission_Final_20261114.zip",
-  "archive_bytes": 185450500,
-  "archive_sha256": "9ef16d6548a306a089a7e43b62d030e30e0c4e3c8a6b0d977e22241b812c5335",
-  "archive_payload_files": 971,
+  "release_url": "https://github.com/MagicianFrieren/SC4001-AI-Image-Detection/releases/tag/final-20261114-v2",
+  "archive": "SC4001_Submission_Final_20261114_v2.zip",
+  "archive_bytes": 185453730,
+  "archive_sha256": "85138853a7f018b136e242ecbeccd06a234178c375f777dccead7428b983d35c",
+  "archive_payload_files": 973,
   "report_pages": {
     "body": 10,
     "total": 14
@@ -1200,5 +1200,12 @@
     }
   ],
   "reproduction": "Download and extract the Release ZIP. The checked reproduce.py commands require its source_tree/evidence/reproduction layout.",
-  "scope": "Final report and saved-result analyses. No new model fitting, threshold selection or final-test scoring."
+  "scope": "Final report and saved-result analyses. No new model fitting, threshold selection or final-test scoring.",
+  "previous_release": {
+    "version": "final-20261114",
+    "release_url": "https://github.com/MagicianFrieren/SC4001-AI-Image-Detection/releases/tag/final-20261114",
+    "archive": "SC4001_Submission_Final_20261114.zip",
+    "archive_sha256": "9ef16d6548a306a089a7e43b62d030e30e0c4e3c8a6b0d977e22241b812c5335"
+  },
+  "revision": "Added matriculation numbers on the cover; all other report pages and scientific files preserved"
 }

@@ -17,7 +17,7 @@ Both have been checked against the report's archived outputs.
 
 ## From the complete submission
 
-Download [SC4001_Submission_Final_20261114.zip](https://github.com/MagicianFrieren/SC4001-AI-Image-Detection/releases/download/final-20261114/SC4001_Submission_Final_20261114.zip) and extract it into a new directory.
+Download [SC4001_Submission_Final_20261114_v2.zip](https://github.com/MagicianFrieren/SC4001-AI-Image-Detection/releases/download/final-20261114-v2/SC4001_Submission_Final_20261114_v2.zip) and extract it into a new directory.
 It includes the report, source snapshot, saved inputs and analysis runner.
 Run the following commands from the extracted root:
 
@@ -50,7 +50,7 @@ The current `main` branch contains the reader-facing documentation and analysis 
 
 The [final PDF](../reports/final_20261114/SC4001_Report_Final_20261114.pdf) has 10 body pages and 14 pages overall.
 The [Word report](../reports/final_20261114/SC4001_Report_Final_20261114.docx) is editable.
-The `final-20261114` [release](https://github.com/MagicianFrieren/SC4001-AI-Image-Detection/releases/tag/final-20261114) preserves the submitted files and source layout.
+The `final-20261114-v2` [release](https://github.com/MagicianFrieren/SC4001-AI-Image-Detection/releases/tag/final-20261114-v2) preserves the submitted files and source layout.
 
 <details>
 <summary>Checksums and source manifests</summary>
@@ -58,7 +58,7 @@ The `final-20261114` [release](https://github.com/MagicianFrieren/SC4001-AI-Imag
 The submission ZIP has SHA-256:
 
 ```text
-9ef16d6548a306a089a7e43b62d030e30e0c4e3c8a6b0d977e22241b812c5335
+85138853a7f018b136e242ecbeccd06a234178c375f777dccead7428b983d35c
 ```
 
 [Download checksums](../reports/final_20261114/SHA256SUMS.txt) · [Package file manifest](../reports/final_20261114/verification/release_package_manifest.json) · [Source manifest](../reports/final_20261114/verification/source_tree_manifest.json)
